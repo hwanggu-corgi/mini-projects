@@ -67,8 +67,16 @@
         .slider.round:before {
         border-radius: 50%;
         }
+
+        @media (prefers-color-scheme: dark) {
+           .dark-scheme   { background:  #333; color: white; }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .light-scheme   { background: white; color:  #555; }
+        }
     </style>
-    <body>
+    <body class="">
         <label class="switch">
             <input type="checkbox"/>
             <span class="slider round"></span>
