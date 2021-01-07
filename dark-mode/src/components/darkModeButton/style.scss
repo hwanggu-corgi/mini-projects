@@ -1,3 +1,12 @@
+:root {
+    --dark-scheme-bg: #333;
+    --dark-sceme-color: white;
+}
+
+.manual-dark-mode-on.dark-scheme {
+    background: var(--dark-scheme-bg);
+    color: var(--dark-sceme-color);
+}
 
 /* The switch - the box around the slider */
 .switch {
