@@ -15,8 +15,8 @@
         }
 
         .manual-dark-mode-on.dark-scheme {
-            background:  --dark-scheme-bg;
-            color: white;
+            background: var(--dark-scheme-bg);
+            color: var(--dark-sceme-color);
         }
 
         /* The switch - the box around the slider */
@@ -83,7 +83,10 @@
         }
 
         @media (prefers-color-scheme: dark) {
-           .dark-scheme   { background:  #333; color: white; }
+           .dark-scheme   {
+                background: var(--dark-scheme-bg);
+                color: var(--dark-sceme-color);
+            }
         }
     </style>
     <body class="dark-scheme">
@@ -101,11 +104,16 @@
     </body>
     <script>
         // check for event listener on toggle button
+        var body = document.querySelector("body");
         var checkbox = document.querySelector(".switch");
 
         // if toggled, then set to dark mode
         checkbox.addEventListener('change', e => {
-
+            if(e.target.checked) {
+                body.classList.add("manual-dark-mode-on");
+            } else {
+                body.classList.remove("manual-dark-mode-on");
+            }
         });
     </script>
 </html>
