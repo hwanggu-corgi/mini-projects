@@ -5,9 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
+        :root {
+            --dark-scheme-bg: #333;
+            --dark-sceme-color: white;
+        }
         body {
             background: white;
             color:  #555;
+        }
+
+        .manual-dark-mode-on.dark-scheme {
+            background:  --dark-scheme-bg;
+            color: white;
         }
 
         /* The switch - the box around the slider */
@@ -78,10 +87,22 @@
         }
     </style>
     <body class="dark-scheme">
+        <h1>Dark mode</h1>
+        <p>Dark mode can be set by changing to dark mode on Windows/Mac</p>
+        <ul>
+            <li>Windows: https://www.pcmag.com/how-to/how-to-enable-dark-mode-in-windows-10</li>
+            <li>Mac: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/</li>
+        </ul>
+        <p>Or by toggling the button below</p>
         <label class="switch">
             <input type="checkbox"/>
             <span class="slider round"></span>
         </label>
     </body>
+    <script>
+        // check for event listener on toggle button
+
+        // if toggled, then set to dark mode
+    </script>
 </html>
 
