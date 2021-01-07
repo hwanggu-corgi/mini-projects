@@ -1,6 +1,6 @@
 import './App.scss';
 
-import DarkModeButton from './components/darkModeButton';
+import DarkModeButton from './components/DarkModeButton';
 
 function App() {
   return (
