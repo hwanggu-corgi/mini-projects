@@ -4,12 +4,6 @@ import { Component } from 'react';
 class DarkModeButton extends Component {
 
     handleToggle = e => {
-        // if body doesn't have dark-scheme class, add it
-        if (!document.body.classList.contains("dark-scheme")) {
-            document.body.classList.add("dark-scheme");
-        }
-
-
         if(e.target.checked) {
             document.body.classList.add("manual-dark-mode-on");
         } else {
