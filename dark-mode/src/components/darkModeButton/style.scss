@@ -1,8 +1,18 @@
+// Reference
+//  - How to create a toggle switch: https://www.w3schools.com/howto/howto_css_switch.asp
+
 // Add dark-scheme class to <body> in html
 
 :root {
     --dark-scheme-bg: #333;
     --dark-sceme-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-scheme   {
+         background: var(--dark-scheme-bg);
+         color: var(--dark-sceme-color);
+     }
 }
 
 .manual-dark-mode-on {
@@ -73,15 +83,8 @@ input {
 /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
-}
 
-.slider.round:before {
-    border-radius: 50%;
+    &:before {
+        border-radius: 50%;
+    }
 }
-
-@media (prefers-color-scheme: dark) {
-    .dark-scheme   {
-         background: var(--dark-scheme-bg);
-         color: var(--dark-sceme-color);
-     }
- }
