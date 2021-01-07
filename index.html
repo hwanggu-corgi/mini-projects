@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
+        body {
+            background: white;
+            color:  #555;
+        }
+
         /* The switch - the box around the slider */
         .switch {
         position: relative;
@@ -71,12 +76,8 @@
         @media (prefers-color-scheme: dark) {
            .dark-scheme   { background:  #333; color: white; }
         }
-
-        @media (prefers-color-scheme: light) {
-            .light-scheme   { background: white; color:  #555; }
-        }
     </style>
-    <body class="">
+    <body class="dark-scheme">
         <label class="switch">
             <input type="checkbox"/>
             <span class="slider round"></span>
