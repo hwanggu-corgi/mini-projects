@@ -1,4 +1,6 @@
-import './App.css';
+import './App.scss';
+
+import DarkModeButton from './components/darkModeButton';
 
 function App() {
   return (
@@ -10,10 +12,7 @@ function App() {
           <li>Mac: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/</li>
       </ul>
       <p>Or by toggling the button below</p>
-      <label className="switch">
-          <input type="checkbox"/>
-          <span className="slider round"></span>
-      </label>
+      <DarkModeButton/>
     </main>
   );
 }
