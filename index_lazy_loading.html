@@ -47,8 +47,9 @@
         // Check if it has reached the bottom of the page
         window.onscroll = (e) => {
             const scroll = e.target.scrollingElement;
-            if (scroll.)
-            console.log(e);
+            if (scroll.scrollHeight == scroll.scrollTop + scroll.clientHeight) {
+                console.log(e);
+            }
         }
         // if it has reached the bottom of page, then load more images
 
