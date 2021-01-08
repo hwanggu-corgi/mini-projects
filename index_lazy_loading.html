@@ -14,20 +14,26 @@
         </main>
     </body>
     <script>
+        let page = 1;
         // load images
-        let load = () => {
-            let url = `https://api.unsplash.com/search/photos?page=${page}&query=corgi`;
+        // let load = () => {
+        //     const url = `https://api.unsplash.com/search/photos?page=${page}&query=corgi`;
+        //     const Http = new XMLHttpRequest();
+        //     Http.open("GET", url);
+        //     Http.send();
 
-            $.ajax({
-                url: url,
-                type: "GET",
-                success: (res) => {
-                    console.log(res);
-                }
-            }, err => {
-                console.log(err);
-            })
-        };
+        //     console.log("I am here");
+        //     Http.onreadystatechange = e => {
+        //         if (e.target.readyState == 4 && e.target.status == 200) {
+        //             console.log(Http.responseText);
+        //         } else if (e.target.readyState == 4 && e.target.status >= 400) {
+        //             const parsed = JSON.parse(e.target.response);
+        //             for (let i = 0; i < parsed.errors.length; i++) {
+        //                 console.error(`ERROR: ${parsed.errors[i]}`);
+        //             }
+        //         }
+        //     };
+        // };
 
         // Check if it has reached the bottom of the page
         // if it has reached the bottom of page, then trigger api, and load more images
