@@ -6,7 +6,18 @@ import { Component } from 'react';
 class App extends Component {
 
   componentDidMount() {
+    this.handleInit();
     document.addEventListener("scroll", this.handleLazyLoading)
+  }
+
+  handleInit = e => {
+    const main = document.querySelector("main");
+    for (let i = 0; i < 10; i++) {
+      let img = document.createElement("img");
+      img.src = corgi;
+      img.alt = "Corgi";
+      main.appendChild(img);
+    }
   }
 
   handleLazyLoading = e => {
@@ -18,7 +29,8 @@ class App extends Component {
     if (scroll.scrollHeight <= scroll.scrollTop + scroll.clientHeight) {
       for (let i = 0; i < 20; i++) {
           let img = document.createElement("img");
-          img.src = "./corgi.jpg";
+          img.src = corgi;
+          img.alt = "Corgi";
           main.appendChild(img);
       }
     }
@@ -27,16 +39,6 @@ class App extends Component {
   render() {
     return (
       <main>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
-          <img src={corgi} alt="Corgi"/>
       </main>
     );
   }
