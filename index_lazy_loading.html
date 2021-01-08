@@ -14,26 +14,21 @@
         </main>
     </body>
     <script>
-        let page = 1;
-        let main = document.querySelector("main");
-
         // load images
-        let load = (page) => {
+        let load = () => {
             let url = `https://api.unsplash.com/search/photos?page=${page}&query=corgi`;
 
             $.ajax({
                 url: url,
                 type: "GET",
                 success: (res) => {
-
+                    console.log(res);
                 }
-            }, () => {
-
+            }, err => {
+                console.log(err);
             })
-
-
         };
-        let page = 1;
+
         // Check if it has reached the bottom of the page
         // if it has reached the bottom of page, then trigger api, and load more images
         //
