@@ -23,42 +23,20 @@
         </main>
     </body>
     <script>
-        let page = 1;
         let main = document.querySelector("main");
-        // load images
-        // let load = () => {
-        //     const url = `https://api.unsplash.com/search/photos?page=${page}&query=corgi`;
-        //     const Http = new XMLHttpRequest();
-        //     Http.open("GET", url);
-        //     Http.send();
 
-        //     console.log("I am here");
-        //     Http.onreadystatechange = e => {
-        //         if (e.target.readyState == 4 && e.target.status == 200) {
-        //             console.log(Http.responseText);
-        //         } else if (e.target.readyState == 4 && e.target.status >= 400) {
-        //             const parsed = JSON.parse(e.target.response);
-        //             for (let i = 0; i < parsed.errors.length; i++) {
-        //                 console.error(`ERROR: ${parsed.errors[i]}`);
-        //             }
-        //         }
-        //     };
-        // };
-
-        // Check if it has reached the bottom of the page
         window.onscroll = (e) => {
             const scroll = e.target.scrollingElement;
-            if (scroll.scrollHeight == scroll.scrollTop + scroll.clientHeight) {
+            // Check if it has reached the bottom of the page
+            // if it has reached the bottom of page, then load more images
+            if (scroll.scrollHeight <= scroll.scrollTop + scroll.clientHeight) {
                 for (let i = 0; i < 20; i++) {
                     let img = document.createElement("img");
                     img.src = "./corgi.jpg";
                     main.appendChild(img);
                 }
-
             }
         }
-        // if it has reached the bottom of page, then load more images
-
     </script>
 </html>
 
