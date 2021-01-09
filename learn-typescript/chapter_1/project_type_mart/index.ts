@@ -1,6 +1,6 @@
 import products from './products';
 
-let productName: string = products[0].name;
+let productName: string = products[1].name;
 
 let product = products.filter(item => {
   if (item.name == productName) {
@@ -8,6 +8,6 @@ let product = products.filter(item => {
   }
 })[0];
 
-if (Boolean(product.preOrder) == true) {
+if (product.preOrder == 'true') {
   console.log("we’ll send a message when it’s on the way");
 }
