@@ -8,4 +8,4 @@ let product = products.filter(item => {
   }
 });
 
-console.log(product);
+console.log(product[0].name);
