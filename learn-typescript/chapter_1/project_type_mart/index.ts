@@ -1,6 +1,6 @@
 import products from './products';
 
-let productName: string = products[3].name;
+let productName: string = products[0].name;
 let shipping: number;
 let shippingAddress: string = "123 Springfield Avenue, New York";
 let taxPercent: number;
