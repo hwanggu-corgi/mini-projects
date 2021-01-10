@@ -58,7 +58,7 @@ function outputImage(onChar = "X", offChar = " ") {
       text += "\n"; // new line
     }
 
-    text += imageData[i] ? onChar : offChar * 2;
+    text += imageData[i] ? onChar : offChar;
   }
 
   console.log(text);
@@ -88,4 +88,8 @@ function createImageData(): boolean[] {
   // create array of size `length` containing `false` values
   const length = imageWidth * imageHeight;
   return new Array(length).fill(false);
+}
+
+function drawDot(x: number, y:number) {
+  imageData[y * imageWidth + x] = true;
 }
