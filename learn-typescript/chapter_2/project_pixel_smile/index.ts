@@ -103,5 +103,7 @@ function drawHorizontalLine(
   y: number,
   length: number
 ) {
-
+  for(let i = 0; i < length; i++) {
+    drawDot(x + i, y)
+  }
 }
