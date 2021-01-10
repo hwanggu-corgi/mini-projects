@@ -107,3 +107,14 @@ function drawHorizontalLine(
     drawDot(x + i, y)
   }
 }
+
+
+function drawVerticalLine(
+  x: number,
+  y: number,
+  length: number
+) {
+  for(let i = 0; i < length; i++) {
+    drawDot(x, y + i)
+  }
+}
