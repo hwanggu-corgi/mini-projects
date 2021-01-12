@@ -5,21 +5,18 @@ import { orders, Order, PriceBracket } from "./orders";
 let getMaxPrice = (price: PriceBracket) => {
   if (price == PriceBracket.Low) {
     return 10.0
-  }
-
-  if (price == PriceBracket.Medium) {
+  } else if (price == PriceBracket.Medium) {
     return 20.0
-  }
-
-  if (price == PriceBracket.High) {
+  } else {
     return 30.0
   }
 }
 
 /// Add your getOrders() function below:
-let GetOrderFunction = (price: PriceBracket, orders:Order) => Order;
-getOrders: GetOrderFunction = (price: PriceBracket, orders: Order) => {
+let getOrders = (price: PriceBracket, orders: Order) => {
+    let filteredOrder: Order[][] = [];
 
+    orders[0].filter(order => order.price < getMaxPrice(price));
 }
 
 /// Add your printOrders() function below:
