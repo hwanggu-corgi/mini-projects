@@ -3,7 +3,7 @@ import { orders, Order, PriceBracket } from "./orders";
 
 /// Add your getMaxPrice() function below:
 let getMaxPrice = (price: PriceBracket) => {
-  return orders.filter(item => );
+  return
 }
 
 /// Add your getOrders() function below:
