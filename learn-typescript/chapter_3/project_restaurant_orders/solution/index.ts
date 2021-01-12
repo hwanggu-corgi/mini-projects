@@ -2,8 +2,8 @@ import { restaurants, Restaurant } from "./restaurants";
 import { orders, Order, PriceBracket } from "./orders";
 
 /// Add your getMaxPrice() function below:
-let getMaxPrice = (PriceBracket) => {
-
+let getMaxPrice = (price: PriceBracket) => {
+  return orders.filter(item => );
 }
 
 /// Add your getOrders() function below:
