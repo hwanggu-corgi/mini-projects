@@ -13,10 +13,14 @@ let getMaxPrice = (price: PriceBracket) => {
 }
 
 /// Add your getOrders() function below:
-let getOrders = (price: PriceBracket, orders: Order) => {
-    let filteredOrder: Order[][] = [];
+let getOrders: (price: PriceBracket, orders: Order[][]) => Order[][] = function(price: PriceBracket, orders: Order[][]) {
+    let filteredOrders: Order[][] = [];
 
-    orders[0].filter(order => order.price < getMaxPrice(price));
+    orders.forEach(order => {
+      filteredOrders.push(order.filter(order => order.price <= getMaxPrice(price)));
+    });
+
+    return filteredOrders;
 }
 
 /// Add your printOrders() function below:
