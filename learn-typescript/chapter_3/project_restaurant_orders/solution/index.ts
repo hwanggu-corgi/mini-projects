@@ -33,7 +33,7 @@ let printOrders = function(restaurants: Restaurant[], orders: Order[][]): void {
       console.log(`Restaurant Name ${restaurant.name}`);
 
       orders[restaurantIndex].forEach((order, orderIndex) => {
-        console.log(`Order ${orderIndex+1}: \$${order.price}`);
+        console.log(`- Order ${orderIndex+1}: \$${order.price}`);
       });
 
     });
@@ -41,5 +41,4 @@ let printOrders = function(restaurants: Restaurant[], orders: Order[][]): void {
 
 /// Main
 const elligibleOrders = getOrders(PriceBracket.Low, orders);
-console.log(elligibleOrders);
-// printOrders(restaurants, elligibleOrders);
+printOrders(restaurants, elligibleOrders);
