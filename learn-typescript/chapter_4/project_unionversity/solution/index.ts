@@ -28,5 +28,9 @@ function searchEvents(options: SearchEventsOptions) {
         if (typeof options.query == 'number') {
             return true ? event.id === options.query : false;
         }
+
+        if (typeof options.query == 'string') {
+            return true ? event.keywords.includes(options.query) : false;
+        }
     })
 }
