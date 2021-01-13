@@ -42,3 +42,5 @@ function enroll(event: Course | StudyGroup) {
 
 let results = searchEvents({query: 'art', eventType: 'courses'});
 enroll(results[0]);
+
+console.log(enrolledEvents);
