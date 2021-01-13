@@ -1,5 +1,5 @@
 import courses from './courses';
-import studyGroups from './studyGroup';
+import studyGroups from './studyGroups';
 
 type Course = {
     id: number,
@@ -34,3 +34,5 @@ function searchEvents(options: SearchEventsOptions) {
         }
     })
 }
+
+console.log(searchEvents({query: 'art', eventType: 'courses'}));
