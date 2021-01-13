@@ -35,4 +35,10 @@ function searchEvents(options: SearchEventsOptions) {
     })
 }
 
-console.log(searchEvents({query: 'art', eventType: 'courses'}));
+let enrolledEvents: (Course | StudyGroup)[] = [];
+function enroll(event: Course | StudyGroup) {
+  enrolledEvents.push(event);
+}
+
+let results = searchEvents({query: 'art', eventType: 'courses'});
+enroll(results[0]);
