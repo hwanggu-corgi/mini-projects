@@ -23,5 +23,5 @@ type SearchEventsOptions = {
 };
 
 function searchEvents(options: SearchEventsOptions) {
-
+    let events = options.eventType;
 }
