@@ -24,4 +24,7 @@ type SearchEventsOptions = {
 
 function searchEvents(options: SearchEventsOptions) {
     let events: (Course | StudyGroup)[] = options.eventType == 'courses' ? courses : studyGroups;
+    return events.filter((event: Course | StudyGroup) => {
+        return
+    })
 }
