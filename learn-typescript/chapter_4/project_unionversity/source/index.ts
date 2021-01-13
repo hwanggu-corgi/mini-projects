@@ -10,5 +10,18 @@ type Course = {
 };
 
 type StudyGroup = {
-
+    id: number,
+    courseId: number,
+    title: string,
+    keywords: string[],
+    eventType: string
 };
+
+type SearchEventsOptions = {
+    query: string | number,
+    eventType: 'courses' | 'groups'
+};
+
+function searchEvents(options: SearchEventsOptions) {
+
+}
