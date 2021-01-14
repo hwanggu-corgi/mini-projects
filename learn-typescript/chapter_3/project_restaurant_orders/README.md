@@ -6,6 +6,7 @@ of previous project `Restaurant Recommender` that filters orders instead of rest
 This program uses array methods, functions, and practices writing clean code using `function types`.
 
 ## Setup Instruction
-1. Type `tsc index.ts` in terminal to compile code
-2. In the same folder, type `node index.js` to run program
+1. [if not installed] Install typescript by typing `npm install -g typescript` in terminal
+2. Type `tsc index.ts` in terminal to compile code
+3. In the same folder, type `node index.js` to run program
 
