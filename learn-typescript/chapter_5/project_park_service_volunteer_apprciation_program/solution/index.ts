@@ -27,6 +27,12 @@ function combineVolunteers(
     if (typeof id == 'string') {
       id = parseInt(id, 10);
     }
+
+    return {
+      id: id,
+      name: volunteer.name,
+      activities: volunteer.activities
+    }
   });
 }
 
