@@ -1,45 +1,47 @@
 import {
-    RaccoonMeadowsVolunteers,
-    RaccoonMeadowsActivity,
-    raccoonMeadowsVolunteers,
-  } from './raccoon-meadows-log';
+  RaccoonMeadowsVolunteers,
+  RaccoonMeadowsActivity,
+  raccoonMeadowsVolunteers,
+} from './raccoon-meadows-log';
 
-  import {
-    WolfPointVolunteers,
-    WolfPointActivity,
-    wolfPointVolunteers,
-  } from './wolf-point-log';
+import {
+  WolfPointVolunteers,
+  WolfPointActivity,
+  wolfPointVolunteers,
+} from './wolf-point-log';
 
-  type CombinedActivity = RaccoonMeadowsActivity | WolfPointActivity;
+type CombinedActivity = RaccoonMeadowsActivity | WolfPointActivity;
 
-  type Volunteers = {
-    id: number;
-    name: string;
-    activities: CombinedActivity[];
-  };
+type Volunteers = {
+  id: number;
+  name: string;
+  activities: CombinedActivity[];
+};
 
-  function combineVolunteers(
-    volunteers: (RaccoonMeadowsVolunteers | WolfPointVolunteers)[]
-  ) {
+function combineVolunteers(
+  volunteers: (RaccoonMeadowsVolunteers | WolfPointVolunteers)[]
+) {
+  volunteers.map(volunteer => {
 
-  }
+  });
+}
 
-  function calculateHours(volunteers: Volunteers[]) {
-    return volunteers.map((volunteer) => {
-      let hours = 0;
+function calculateHours(volunteers: Volunteers[]) {
+  return volunteers.map((volunteer) => {
+    let hours = 0;
 
-      volunteer.activities.forEach((activity) => {
+    volunteer.activities.forEach((activity) => {
 
-      });
-
-      return {
-        id: volunteer.id,
-        name: volunteer.name,
-        hours: hours,
-      };
     });
-  }
 
-  const combinedVolunteers = combineVolunteers(
-    [].concat(wolfPointVolunteers, raccoonMeadowsVolunteers)
-  );
+    return {
+      id: volunteer.id,
+      name: volunteer.name,
+      hours: hours,
+    };
+  });
+}
+
+const combinedVolunteers = combineVolunteers(
+  [].concat(wolfPointVolunteers, raccoonMeadowsVolunteers)
+);
