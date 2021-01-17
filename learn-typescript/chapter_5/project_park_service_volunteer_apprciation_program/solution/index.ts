@@ -73,5 +73,6 @@ function calculateHours(volunteers: Volunteers[]) {
 const combinedVolunteers = combineVolunteers(
   [].concat(wolfPointVolunteers, raccoonMeadowsVolunteers)
 );
-
+const result = calculateHours(combinedVolunteers);
 console.log(combinedVolunteers);
+console.log(result);
