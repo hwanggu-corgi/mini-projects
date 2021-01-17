@@ -44,13 +44,21 @@ function isVerified(verified: string | boolean): boolean {
   return verified;
 }
 
+function getHours(activity: CombinedActivity): number {
+  if ('hours' in activity) {
+    return activity.hours;
+  }
+
+  return activity.time;
+}
+
 function calculateHours(volunteers: Volunteers[]) {
   return volunteers.map((volunteer) => {
     let hours = 0;
 
     volunteer.activities.forEach((activity) => {
       if (isVerified(activity.verified)) {
-        hours += activity.hours;
+        hours += getHours(activity);
       }
     });
 
