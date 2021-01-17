@@ -36,12 +36,22 @@ function combineVolunteers(
   });
 }
 
+function isVerified(verified: string | boolean): boolean {
+  if (typeof verified === 'string') {
+    return true ? verified == 'Yes' : false;
+  }
+
+  return verified;
+}
+
 function calculateHours(volunteers: Volunteers[]) {
   return volunteers.map((volunteer) => {
     let hours = 0;
 
     volunteer.activities.forEach((activity) => {
-
+      if (isVerified(activity.verified)) {
+        hours += activity.hours;
+      }
     });
 
     return {
