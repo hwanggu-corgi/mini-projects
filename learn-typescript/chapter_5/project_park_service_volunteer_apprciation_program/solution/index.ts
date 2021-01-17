@@ -80,4 +80,4 @@ const combinedVolunteers = combineVolunteers(
 );
 const result = calculateHours(combinedVolunteers);
 console.log(combinedVolunteers);
-console.log(result);
+console.log(result.sort(byHours));
