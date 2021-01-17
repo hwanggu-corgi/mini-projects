@@ -70,6 +70,11 @@ function calculateHours(volunteers: Volunteers[]) {
   });
 }
 
+function byHours(a, b) {
+  return b.hours - a.hours;
+}
+
+
 const combinedVolunteers = combineVolunteers(
   [].concat(wolfPointVolunteers, raccoonMeadowsVolunteers)
 );
