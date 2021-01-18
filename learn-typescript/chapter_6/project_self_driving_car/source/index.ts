@@ -4,6 +4,14 @@ interface Events {
   [obstacle:string]: boolean
 }
 
+interface Steering extends Control {
+  turn: (direction: string) => void
+}
+
+interface Control {
+  execute: (command: string) => void
+}
+
 interface AutonomousCar {
   isRunning?: boolean
   respond: (events: Events) => void
@@ -11,14 +19,7 @@ interface AutonomousCar {
 
 interface AutonomousCarProps {
   isRunning?: boolean
-}
-
-interface Control {
-  execute: (command: string) => void
-}
-
-interface Steering extends Control {
-  turn: (direction: string) => void
+  steeringControl: Steering
 }
 
 class Car implements AutonomousCar {
