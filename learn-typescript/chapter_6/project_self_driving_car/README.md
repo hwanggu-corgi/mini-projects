@@ -2,7 +2,7 @@
 
 Is the last project for Codecademy's course `Learn Typescript`.
 
-This program was written under the objective of allowing a car object to react to obstacles in the road.
+This program was written under the course objective of allowing a car object to return appropriate response when faced with obstacles.
 
 This program practices writing type-safe code involving `interfaces` and `classes`.
 
