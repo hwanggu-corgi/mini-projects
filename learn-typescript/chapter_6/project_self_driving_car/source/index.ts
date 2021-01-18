@@ -12,6 +12,7 @@ interface Control {
   execute: (command: string) => void
 }
 
+
 interface AutonomousCar {
   isRunning?: boolean
   respond: (events: Events) => void
@@ -22,10 +23,13 @@ interface AutonomousCarProps {
   steeringControl: Steering
 }
 
+
 class Car implements AutonomousCar {
   isRunning;
+  steeringControl;
   constructor(props: AutonomousCarProps) {
     this.isRunning = props.isRunning;
+    this.steeringControl = props.steeringControl;
   }
 
   respond(event: Events) {
