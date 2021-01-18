@@ -32,12 +32,14 @@ class Car implements AutonomousCar {
     this.steeringControl = props.steeringControl;
   }
 
-  respond(event: Events) {
+  respond(events: Events) {
     if (!this.isRunning) {
       return console.log("Car is turned off");
     }
 
+    Object.keys(events).forEach(eventKey => {
 
+    });
   }
 }
 
@@ -53,7 +55,7 @@ class SteeringControl implements Steering {
 
 let steering = new SteeringControl();
 console.log(steering.turn("right"));
-let autonomousCar = new Car({isRunning: true});
+let autonomousCar = new Car({isRunning: true, steeringControl: steering});
 
 
 autonomousCar.respond(getObstacleEvents());
