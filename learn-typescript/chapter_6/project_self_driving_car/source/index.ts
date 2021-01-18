@@ -36,6 +36,10 @@ class Car implements AutonomousCar {
   }
 }
 
+class SteeringControl implements Steering {
+
+}
+
 let autonomousCar = new Car({isRunning: true});
 
 
