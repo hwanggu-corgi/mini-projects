@@ -1,8 +1,8 @@
 # Self Driving Car
 
-Is seventh project for Codecademy's course `Learn Typescript`.
+Is the last project for Codecademy's course `Learn Typescript`.
 
-This program was partially written to help the Park Service determine this season’s top volunteers.
+This program was written under the objective of allowing a car object to react to obstacles in the road.
 
 This program practices writing type-safe code involving `interfaces` and `classes`.
 
