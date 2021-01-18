@@ -4,7 +4,7 @@ Is seventh project for Codecademy's course `Learn Typescript`.
 
 This program was partially written to help the Park Service determine this season’s top volunteers.
 
-This program practices writing type-safe code using `Unions` and `type narrowing`.
+This program practices writing type-safe code involving `interfaces` and `classes`.
 
 ## Setup Instruction
 1. [if not installed] Install typescript by typing `npm install -g typescript` in terminal
