@@ -37,9 +37,17 @@ class Car implements AutonomousCar {
 }
 
 class SteeringControl implements Steering {
+  execute(command: string) {
+    console.log(`Executing: ${command}`);
+  }
 
+  turn(direction: string) {
+    this.execute(`turn ${direction}`);
+  }
 }
 
+let steering = new SteeringControl();
+console.log(steering.turn("right"));
 let autonomousCar = new Car({isRunning: true});
 
 
