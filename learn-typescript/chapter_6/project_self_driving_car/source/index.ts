@@ -1,11 +1,24 @@
 import { getObstacleEvents } from './computer-vision';
 
+interface Events {
+  [obstacle:string]: boolean
+}
+
 interface AutonomousCar {
   isRunning?: boolean
+  respond: (events: Events) => void
 }
 
 interface AutonomousCarProps {
   isRunning?: boolean
+}
+
+interface Control {
+  execute: (command: string) => void
+}
+
+interface Steering extends Control {
+  turn: (direction: string) => void
 }
 
 class Car implements AutonomousCar {
@@ -13,9 +26,17 @@ class Car implements AutonomousCar {
   constructor(props: AutonomousCarProps) {
     this.isRunning = props.isRunning;
   }
+
+  respond(event: Events) {
+    if (!this.isRunning) {
+      return console.log("Car is turned off");
+    }
+
+
+  }
 }
 
 let autonomousCar = new Car({isRunning: true});
 
 
-console.log(autonomousCar.isRunning);
+autonomousCar.respond(getObstacleEvents());
