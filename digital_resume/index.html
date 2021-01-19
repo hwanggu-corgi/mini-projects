@@ -19,10 +19,29 @@
             margin: 0 auto;
         }
 
+        article header {
+            display: flex;
+        }
+
+        article section:first-child {
+            flex-grow: 1;
+        }
+
+        .resume-header ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .resume-header li {
+            flex-grow: 1;
+            border-right: black solid 1px;
+            text-align: center;
+        }
+
     </style>
     <body>
         <main>
-            <header>
+            <header class="resume-header">
                 <h1>Hyungmo (Moe) Gu</h1>
                 <p>Calgary, AB, Canada</p>
                 <ul>
