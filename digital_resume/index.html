@@ -19,24 +19,45 @@
             margin: 0 auto;
         }
 
-        article header {
-            display: flex;
+        @media only screen and (min-width: 660px) {
+            article header {
+                display: flex;
+            }
         }
 
         article section:first-child {
             flex-grow: 1;
         }
 
+        .resume-header {
+            text-align: center;
+        }
+
         .resume-header ul {
-            display: flex;
             list-style: none;
         }
 
         .resume-header li {
             flex-grow: 1;
-            border-right: black solid 1px;
-            text-align: center;
         }
+
+        .resume-header li:last-child {
+            border-right: none;
+        }
+
+
+        @media only screen and (min-width: 660px) {
+            .resume-header ul {
+                display: flex;
+            }
+
+
+            .resume-header li {
+                flex-grow: 1;
+                border-right: black solid 1px;
+            }
+        }
+
 
     </style>
     <body>
