@@ -18,6 +18,11 @@ export const data = {
         "Strong ability to work independently and in collaboration with team members",
         "Committed to refining front-end skills through Codecademy’s Learn Typescript Course"
     ],
+    "techSkills": [
+        "Python", "HTML5", "CSS3", "SASS", "React", "ES6 JavaScript", "Typescript",
+        "AngularJS", "Angular", "Bootstrap", "Ionic Framework", "Bash", "Unit Testing",
+        "Kanban", "Git", "Mac", "Linux", "Windows"
+    ],
     "workExp": [
         {
             "title": "Junior Developer",

@@ -9,10 +9,10 @@ function App() {
             <h1>Hyungmo (Moe) Gu</h1>
             <p>Calgary, AB, Canada</p>
             <ul>
-                <li>Web: <a href="https://www.hyungmogu.com">hyungmogu.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/hyungmo-gu/">/in/hyungmo-gu/</a></li>
-                <li><a href="mailto:guhyungm7@gmail.com">guhyungm7@gmail.com</a></li>
-                <li>T: 1-825-365-1143</li>
+                <li>Web: <a href={data.info.web.url}>{data.info.web.label}</a></li>
+                <li>LinkedIn: <a href={data.info.linkedIn.url}>{data.info.linkedIn.label}</a></li>
+                <li><a href={'mailto:' + data.info.email}>{data.info.email}</a></li>
+                <li>T: {data.info.tel}</li>
             </ul>
             <hr></hr>
         </header>
@@ -24,7 +24,7 @@ function App() {
         </section>
         <section>
             <h2><u>Technical Skills</u></h2>
-            <p>Python, HTML5, CSS3, SASS, React, ES6 JavaScript, Typescript, AngularJS, Angular, Bootstrap, Ionic Framework, Bash, Unit Testing, Kanban, Git, Mac, Linux, Windows</p>
+            <p></p>
         </section>
         <section class="work-experience">
             <h2><u>Work Experience</u></h2>
