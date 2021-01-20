@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1, h2, h3, p {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+hr {
+  border-color: black;
+  border-width: 2px;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 660px) {
+  article header {
+      display: flex;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.qualification ul,
+.work-experience ul,
+.project-experience ul {
+  padding-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+article section:first-child {
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 660px) {
+  .resume-header {
+      text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.resume-header ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-header li {
+  flex-grow: 1;
+}
+
+.resume-header li:last-child {
+  border-right: none;
+}
+
+
+@media only screen and (min-width: 730px) {
+  .resume-header ul {
+      display: flex;
+  }
+
+
+  .resume-header li {
+      flex-grow: 1;
+      border-right: black solid 1px;
   }
 }
