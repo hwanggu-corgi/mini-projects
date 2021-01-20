@@ -53,56 +53,7 @@ function App() {
         </section>
         <section class="project-experience">
             <h2><u>Project Experience</u></h2>
-            <article>
-                <header>
-                    <div>
-                        <h3>Simple Publish</h3>
-                        <a href="https://github.com/hyungmogu/simple-publish">https://github.com/hyungmogu/simple-publish</a>
-                    </div>
-                    <div>
-                        <p>January 2021</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Developed pixel perfect clone of GitHub’s create new repository page using React and SASS</li>
-                    <li>Used React components to reduce repeating codes and improve app’s modularity</li>
-                    <li>Utilized SASS for-loop to mock bootstrap’s grid system involving paddings and margins</li>
-                    <li>Leveraged 7-1 SASS’s architecture to improve readability and maintainability of style codes</li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <div>
-                        <h3>hyungmogu.com</h3>
-                        <a href="https://www.hyungmogu.com">https://www.hyungmogu.com</a>
-                    </div>
-                    <div>
-                        <p>November 2020</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Created a React and SASS based portfolio website from design to publishing</li>
-                    <li>Engineered typewriter effect on homepage using CSS animations, React DOM and ES6 Javascript</li>
-                    <li>Utilized media queries and flexbox properties for full responsiveness of the website </li>
-                    <li>Iterative design of template through prototypes using Adobe Illustrator and Bootstrap</li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <div>
-                        <h3>Web App Dashboard</h3>
-                        <a href="https://github.com/hyungmogu/web-app-dashboard">https://github.com/hyungmogu/web-app-dashboard</a>
-                    </div>
-                    <div>
-                        <p>January 2018</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Crafted the front-end of interactive dashboard app from mockup using HTML5, SASS and Chart.js</li>
-                    <li>Leveraged BEM methodology to ensure naming consistency of over 500 lines of style codes</li>
-                    <li>Utilized CSS animations on SVG icons to improve loading speed and user interactivity</li>
-                </ul>
-            </article>
+            {data.projectExp.map(item => <ProjectExpItem {...item} />)}
         </section>
         <section class="education">
             <h2><u>Education</u></h2>

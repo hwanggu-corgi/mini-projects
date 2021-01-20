@@ -28,6 +28,16 @@ export const data = {
                 "Utilized media queries and flexbox properties for full responsiveness of the website ",
                 "Iterative design of template through prototypes using Adobe Illustrator and Bootstraps"
             ]
+        },
+        {
+            "name": "Web App Dashboard",
+            "url": "https://github.com/hyungmogu/web-app-dashboard",
+            "date": "January 2018",
+            "details": [
+                "Crafted the front-end of interactive dashboard app from mockup using HTML5, SASS and Chart.js",
+                "Leveraged BEM methodology to ensure naming consistency of over 500 lines of style codes",
+                "Utilized CSS animations on SVG icons to improve loading speed and user interactivity"
+            ]
         }
     ],
     "education": [
