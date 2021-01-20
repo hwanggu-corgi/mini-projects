@@ -1,38 +1,37 @@
 
 
 export function EducationItem(props) {
-  const name = props.name;
-  const location = props.location;
   return (
     <article>
         <header>
-            <section>
+            <div>
                 <h3>{props.name}</h3>
                 <p>{props.location}</p>
-            </section>
-            <section>
-            <p>{props.date}</p>
-            </section>
+            </div>
+            <div>
+              <p>{props.date}</p>
+            </div>
         </header>
     </article>
   );
 }
 
 
-export function ProjectExperienceItem(props) {
-  const name = props.name;
-  const location = props.location;
+export function ProjectExpItem(props) {
   return (
     <article>
-        <header>
-            <section>
-                <h3>{props.name}</h3>
-                <p>{props.location}</p>
-            </section>
-            <section>
-            <p>{props.date}</p>
-            </section>
-        </header>
+      <header>
+          <div>
+              <h3>{props.name}</h3>
+              <a href={props.url}>{props.url}</a>
+          </div>
+          <div>
+              <p>{props.date}</p>
+          </div>
+      </header>
+      <ul>
+          {props.details.map(detail => <li>{detail}</li>)}
+      </ul>
     </article>
   );
 }

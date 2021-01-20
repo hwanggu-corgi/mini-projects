@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { EducationItem } from './components/Resume';
+import { ProjectExpItem, EducationItem } from './components/Resume';
 import { data } from './data';
 
 function App() {
   return (
-    <main>
+    <section class="resume">
         <header class="resume-header">
             <h1>Hyungmo (Moe) Gu</h1>
             <p>Calgary, AB, Canada</p>
@@ -35,13 +35,13 @@ function App() {
             <h2><u>Work Experience</u></h2>
             <article>
                 <header>
-                    <section>
+                    <div>
                         <h3>Junior Developer</h3>
                         <p>SiteMax Systems Inc., Vancouver, BC, Canada</p>
-                    </section>
-                    <section>
+                    </div>
+                    <div>
                         <p>January 2018 - December 2019</p>
-                    </section>
+                    </div>
                 </header>
                 <ul>
                     <li>Contributed to company’s growth by delivering over 300 AngularJS applications</li>
@@ -55,13 +55,13 @@ function App() {
             <h2><u>Project Experience</u></h2>
             <article>
                 <header>
-                    <section>
+                    <div>
                         <h3>Simple Publish</h3>
                         <a href="https://github.com/hyungmogu/simple-publish">https://github.com/hyungmogu/simple-publish</a>
-                    </section>
-                    <section>
+                    </div>
+                    <div>
                         <p>January 2021</p>
-                    </section>
+                    </div>
                 </header>
                 <ul>
                     <li>Developed pixel perfect clone of GitHub’s create new repository page using React and SASS</li>
@@ -72,13 +72,13 @@ function App() {
             </article>
             <article>
                 <header>
-                    <section>
+                    <div>
                         <h3>hyungmogu.com</h3>
                         <a href="https://www.hyungmogu.com">https://www.hyungmogu.com</a>
-                    </section>
-                    <section>
+                    </div>
+                    <div>
                         <p>November 2020</p>
-                    </section>
+                    </div>
                 </header>
                 <ul>
                     <li>Created a React and SASS based portfolio website from design to publishing</li>
@@ -89,13 +89,13 @@ function App() {
             </article>
             <article>
                 <header>
-                    <section>
+                    <div>
                         <h3>Web App Dashboard</h3>
                         <a href="https://github.com/hyungmogu/web-app-dashboard">https://github.com/hyungmogu/web-app-dashboard</a>
-                    </section>
-                    <section>
+                    </div>
+                    <div>
                         <p>January 2018</p>
-                    </section>
+                    </div>
                 </header>
                 <ul>
                     <li>Crafted the front-end of interactive dashboard app from mockup using HTML5, SASS and Chart.js</li>
@@ -108,7 +108,7 @@ function App() {
             <h2><u>Education</u></h2>
             {data.education.map(item => <EducationItem {...item} />)}
         </section>
-    </main>
+    </section>
   );
 }
 

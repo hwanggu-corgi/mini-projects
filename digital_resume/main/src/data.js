@@ -6,6 +6,8 @@ export const data = {
         "Strong ability to work independently and in collaboration with team members",
         "Committed to refining front-end skills through Codecademy’s Learn Typescript Course"
     ],
+    "projectExp": [
+    ],
     "education": [
         {
             "name": "Python Web Development Techdegree",

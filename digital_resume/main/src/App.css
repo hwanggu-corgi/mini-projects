@@ -21,16 +21,14 @@ hr {
   border-width: 2px;
 }
 
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 @media only screen and (min-width: 660px) {
   article header {
       display: flex;
   }
+}
+
+article div:first-child {
+  flex-grow: 1;
 }
 
 .qualification ul,
@@ -39,8 +37,10 @@ main {
   padding-left: 20px;
 }
 
-article section:first-child {
-  flex-grow: 1;
+.resume {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 660px) {
