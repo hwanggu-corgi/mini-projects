@@ -4,8 +4,8 @@ import { data } from './data';
 
 function App() {
   return (
-    <section class="resume">
-        <header class="resume-header">
+    <section className="resume">
+        <header className="resume-header">
             <h1>Hyungmo (Moe) Gu</h1>
             <p>Calgary, AB, Canada</p>
             <ul>
@@ -16,7 +16,7 @@ function App() {
             </ul>
             <hr></hr>
         </header>
-        <section class="qualification">
+        <section className="qualification">
             <h2><u>Highlights of Qualification</u></h2>
             <ul>
               {data.highlights.map(item => <li>{item}</li>)}
@@ -26,15 +26,15 @@ function App() {
             <h2><u>Technical Skills</u></h2>
             <p>{data.techSkills.join(", ")}</p>
         </section>
-        <section class="work-experience">
+        <section className="work-experience">
             <h2><u>Work Experience</u></h2>
             {data.workExp.map(item => <WorkExpItem {...item} />)}
         </section>
-        <section class="project-experience">
+        <section className="project-experience">
             <h2><u>Project Experience</u></h2>
             {data.projectExp.map(item => <ProjectExpItem {...item} />)}
         </section>
-        <section class="education">
+        <section className="education">
             <h2><u>Education</u></h2>
             {data.education.map(item => <EducationItem {...item} />)}
         </section>
