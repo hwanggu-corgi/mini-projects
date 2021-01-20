@@ -3,17 +3,8 @@
   width: 100%;
 }
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
   margin: 0;
-}
-
-h1, h2, h3, p {
-  margin-bottom: 0.5em;
-  margin-top: 0;
 }
 
 hr {
@@ -38,9 +29,15 @@ article div:first-child {
 }
 
 .resume {
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
+
+  h1, h2, h3, p {
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 660px) {
