@@ -10,8 +10,23 @@ export const data = {
         {
             "name": "Simple Publish",
             "url": "https://github.com/hyungmogu/simple-publish",
+            "date": "January 2021",
             "details": [
-
+                "Developed pixel perfect clone of GitHub’s create new repository page using React and SASS",
+                "Used React components to reduce repeating codes and improve app’s modularity",
+                "Utilized SASS for-loop to mock bootstrap’s grid system involving paddings and margins",
+                "Leveraged 7-1 SASS’s architecture to improve readability and maintainability of style codes"
+            ]
+        },
+        {
+            "name": "hyungmogu.com",
+            "url": "https://www.hyungmogu.com",
+            "date": "November 2020",
+            "details": [
+                "Created a React and SASS based portfolio website from design to publishing",
+                "Engineered typewriter effect on homepage using CSS animations, React DOM and ES6 Javascript",
+                "Utilized media queries and flexbox properties for full responsiveness of the website ",
+                "Iterative design of template through prototypes using Adobe Illustrator and Bootstraps"
             ]
         }
     ],
