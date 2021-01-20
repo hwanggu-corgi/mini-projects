@@ -6,6 +6,19 @@ export const data = {
         "Strong ability to work independently and in collaboration with team members",
         "Committed to refining front-end skills through Codecademy’s Learn Typescript Course"
     ],
+    "workExp": [
+        {
+            "title": "Junior Developer",
+            "location": "SiteMax Systems Inc., Vancouver, BC, Canada",
+            "date": "January 2018 - December 2019",
+            "details": [
+                "Contributed to company’s growth by delivering over 300 AngularJS applications",
+                "Maintained company’s 2000 web based apps with tasks including fixing bugs and improving UI",
+                "Developed libraries of HTML, Bash and Python snippets to boost production speed and quality",
+                "Assisted with developing company’s SiteMax 3.5 mobile application using Ionic Framework, Angular, SASS and Postmans"
+            ]
+        }
+    ],
     "projectExp": [
         {
             "name": "Simple Publish",

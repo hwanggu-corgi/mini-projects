@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { ProjectExpItem, EducationItem } from './components/Resume';
+import { WorkExpItem, ProjectExpItem, EducationItem } from './components/Resume';
 import { data } from './data';
 
 function App() {
@@ -33,23 +32,7 @@ function App() {
         </section>
         <section class="work-experience">
             <h2><u>Work Experience</u></h2>
-            <article>
-                <header>
-                    <div>
-                        <h3>Junior Developer</h3>
-                        <p>SiteMax Systems Inc., Vancouver, BC, Canada</p>
-                    </div>
-                    <div>
-                        <p>January 2018 - December 2019</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Contributed to company’s growth by delivering over 300 AngularJS applications</li>
-                    <li>Maintained company’s 2000 web based apps with tasks including fixing bugs and improving UI</li>
-                    <li>Developed libraries of HTML, Bash and Python snippets to boost production speed and quality</li>
-                    <li>Assisted with developing company’s SiteMax 3.5 mobile application using Ionic Framework, Angular, SASS and Postman</li>
-                </ul>
-            </article>
+            {data.workExp.map(item => <WorkExpItem {...item} />)}
         </section>
         <section class="project-experience">
             <h2><u>Project Experience</u></h2>
