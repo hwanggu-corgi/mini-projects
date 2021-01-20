@@ -1,4 +1,4 @@
-import './App.css';
+import './App.sass';
 import { WorkExpItem, ProjectExpItem, EducationItem } from './components/Resume';
 import { data } from './data';
 
