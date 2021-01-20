@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { EducationItem } from './components/Resume';
+import { data } from './data';
 
 function App() {
   return (
@@ -105,39 +106,7 @@ function App() {
         </section>
         <section class="education">
             <h2><u>Education</u></h2>
-            <article>
-                <header>
-                    <section>
-                        <h3>Python Web Development Techdegree</h3>
-                        <p>Team Treehouse, Vancouver, BC</p>
-                    </section>
-                    <section>
-                        <p>January 2019 - September 2019</p>
-                    </section>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <section>
-                        <h3>Full-Stack Web Developer Nanodegree</h3>
-                        <p>Udacity, Vancouver, BC</p>
-                    </section>
-                    <section>
-                        <p>October 2016 - October 2017</p>
-                    </section>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <section>
-                        <h3>Bachelor’s Degree in Physics (Hon. BSc)</h3>
-                        <p>University of Toronto,  Toronto, ON</p>
-                    </section>
-                    <section>
-                        <p>September 2009 - November 2014</p>
-                    </section>
-                </header>
-            </article>
+            {data.education.map(item => <EducationItem {...item} />)}
         </section>
     </main>
   );
