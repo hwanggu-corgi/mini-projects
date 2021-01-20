@@ -7,7 +7,9 @@ export const data = {
         "linkedIn": {
             "label": "/in/hyungmo-gu/",
             "url": "https://www.linkedin.com/in/hyungmo-gu/"
-        }
+        },
+        "email":"guhyungm7@gmail.com",
+        "tel": "1-825-365-1143"
     },
     "highlights": [
         "Emerging web developer with over 2 years of hands-on experience",
