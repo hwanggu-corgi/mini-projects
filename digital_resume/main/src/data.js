@@ -1,4 +1,14 @@
 export const data = {
+    "info": {
+        "web": {
+            "label": "hyungmogu.com",
+            "url": "https://www.hyungmogu.com"
+        },
+        "linkedIn": {
+            "label": "/in/hyungmo-gu/",
+            "url": "https://www.linkedin.com/in/hyungmo-gu/"
+        }
+    },
     "highlights": [
         "Emerging web developer with over 2 years of hands-on experience",
         "Developed HTML templates from mockups that are both pixel-perfect and responsive",

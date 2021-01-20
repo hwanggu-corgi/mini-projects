@@ -10,7 +10,7 @@ function App() {
             <p>Calgary, AB, Canada</p>
             <ul>
                 <li>Web: <a href="https://www.hyungmogu.com">hyungmogu.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/hyungmo-gu/"> /in/hyungmo-gu/</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/hyungmo-gu/">/in/hyungmo-gu/</a></li>
                 <li><a href="mailto:guhyungm7@gmail.com">guhyungm7@gmail.com</a></li>
                 <li>T: 1-825-365-1143</li>
             </ul>
@@ -19,11 +19,7 @@ function App() {
         <section class="qualification">
             <h2><u>Highlights of Qualification</u></h2>
             <ul>
-                <li>Emerging web developer with over 2 years of hands-on experience</li>
-                <li>Developed HTML templates from mockups that are both pixel-perfect and responsive</li>
-                <li>Strong skills in HTML5, CSS3 and ES6 JavaScript and comfort in React</li>
-                <li>Strong ability to work independently and in collaboration with team members</li>
-                <li>Committed to refining front-end skills through Codecademy’s Learn Typescript Course</li>
+              {data.highlights.map(item => <li>{item}</li>)}
             </ul>
         </section>
         <section>
