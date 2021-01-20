@@ -5,6 +5,23 @@ export const data = {
         "Strong skills in HTML5, CSS3 and ES6 JavaScript and comfort in React",
         "Strong ability to work independently and in collaboration with team members",
         "Committed to refining front-end skills through Codecademy’s Learn Typescript Course"
+    ],
+    "education": [
+        {
+            "name": "Python Web Development Techdegree",
+            "location": "Team Treehouse, Vancouver, BC",
+            "date": "January 2019 - September 2019"
+        },
+        {
+            "name": "Full-Stack Web Developer Nanodegree",
+            "location": "Udacity, Vancouver, BC",
+            "date": "October 2016 - October 2017"
+        },
+        {
+            "name": "Bachelor’s Degree in Physics (Hon. BSc)",
+            "location": "University of Toronto, Toronto, ON",
+            "date": "September 2009 - November 2014"
+        }
     ]
 
 };
