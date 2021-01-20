@@ -7,6 +7,13 @@ export const data = {
         "Committed to refining front-end skills through Codecademy’s Learn Typescript Course"
     ],
     "projectExp": [
+        {
+            "name": "Simple Publish",
+            "url": "https://github.com/hyungmogu/simple-publish",
+            "details": [
+
+            ]
+        }
     ],
     "education": [
         {
