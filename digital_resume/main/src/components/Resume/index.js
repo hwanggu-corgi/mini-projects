@@ -8,10 +8,10 @@ export function EducationItem(props) {
         <header>
             <section>
                 <h3>{props.name}</h3>
-                <p>Team Treehouse, Vancouver, BC</p>
+                <p>{props.location}</p>
             </section>
             <section>
-                <p>January 2019 - September 2019</p>
+            <p>{props.date}</p>
             </section>
         </header>
     </article>

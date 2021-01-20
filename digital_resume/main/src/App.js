@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { EducationItem } from './components/Resume';
 
 function App() {
   return (
