@@ -24,7 +24,7 @@ function App() {
         </section>
         <section>
             <h2><u>Technical Skills</u></h2>
-            <p></p>
+            <p>{data.techSkills.join(", ")}</p>
         </section>
         <section class="work-experience">
             <h2><u>Work Experience</u></h2>
