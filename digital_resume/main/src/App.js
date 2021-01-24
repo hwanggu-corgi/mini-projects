@@ -1,8 +1,17 @@
 import './App.scss';
+import styled from 'styled-components';
+
 import { WorkExpItem, ProjectExpItem, EducationItem } from './components/Resume';
 import { data } from './data';
 
 function App() {
+  const Resume = styled.section`
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  `;
+
   return (
     <section className="resume">
         <header className="resume-header">
