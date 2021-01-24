@@ -1,3 +1,10 @@
+import styled from 'styled-components';
+
+const Ul = styled.ul`
+    padding-left: 20px;
+`;
+
+
 export function WorkExpItem(props) {
   return (
     <article>
@@ -10,9 +17,9 @@ export function WorkExpItem(props) {
             <p>{props.date}</p>
           </div>
       </header>
-      <ul>
+      <Ul>
         {props.details.map(detail => <li>{detail}</li>)}
-      </ul>
+      </Ul>
     </article>
   );
 }
@@ -29,9 +36,9 @@ export function ProjectExpItem(props) {
               <p>{props.date}</p>
           </div>
       </header>
-      <ul>
+      <Ul>
           {props.details.map(detail => <li>{detail}</li>)}
-      </ul>
+      </Ul>
     </article>
   );
 }

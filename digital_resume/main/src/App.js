@@ -4,14 +4,19 @@ import styled from 'styled-components';
 import { WorkExpItem, ProjectExpItem, EducationItem } from './components/Resume';
 import { data } from './data';
 
-function App() {
-  const Resume = styled.section`
+const Resume = styled.section`
     font-family: Arial, Helvetica, sans-serif;
     max-width: 700px;
     margin: 0 auto;
     padding: 20px;
-  `;
+`;
 
+const Ul = styled.ul`
+    padding-left: 20px;
+`;
+
+
+function App() {
   return (
     <section className="resume">
         <header className="resume-header">
@@ -27,9 +32,9 @@ function App() {
         </header>
         <section className="qualification">
             <h2><u>Highlights of Qualification</u></h2>
-            <ul>
+            <Ul>
               {data.highlights.map(item => <li>{item}</li>)}
-            </ul>
+            </Ul>
         </section>
         <section>
             <h2><u>Technical Skills</u></h2>
