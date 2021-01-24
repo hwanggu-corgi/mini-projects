@@ -2,34 +2,47 @@ import styled from 'styled-components';
 import { data } from '../../data';
 
 
-const div = styled.div`
+const Article = styled.article`
+  margin-bottom: 1em;
+`;
+
+const Div = styled.div`
   &:first-child {
     flex-grow: 1;
   }
 `;
 
-const h1 = styled.h1`
+const H1 = styled.h1`
   margin-bottom: 0.5em;
   margin-top: 0;
 `;
 
-const p = styled.p`
-  &:first-child {
-    flex-grow: 1;
-  }
+const H3 = styled.h3`
+  margin-bottom: 0.5em;
+  margin-top: 0;
+`;
+
+const P = styled.p`
+  margin-bottom: 0;
+  margin-top: 0;
+`;
+
+const Hr = styled.hr`
+  border-color: black;
+  border-width: 2px;
 `;
 
 export function EducationItem(props) {
     return (
       <article>
         <header>
-          <div>
-            <h3>{props.name}</h3>
-            <p>{props.location}</p>
-          </div>
-          <div>
-            <p>{props.date}</p>
-          </div>
+          <Div>
+            <H3>{props.name}</H3>
+            <P>{props.location}</P>
+          </Div>
+          <Div>
+            <P>{props.date}</P>
+          </Div>
         </header>
       </article>
     );
@@ -50,13 +63,13 @@ export function ProjectExpItem(props) {
     return (
       <article>
         <Header>
-          <div>
-            <h3>{props.name}</h3>
+          <Div>
+            <H3>{props.name}</H3>
             <a href={props.url}>{props.url}</a>
-          </div>
-          <div>
-              <p>{props.date}</p>
-          </div>
+          </Div>
+          <Div>
+              <P>{props.date}</P>
+          </Div>
         </Header>
         <Ul>
           {props.details.map(detail => <li>{detail}</li>)}
@@ -79,13 +92,13 @@ export function WorkExpItem(props) {
     return (
       <article>
         <Header>
-          <div>
-            <h3>{props.title}</h3>
-            <p>{props.location}</p>
-          </div>
-          <div>
-            <p>{props.date}</p>
-          </div>
+          <Div>
+            <H3>{props.title}</H3>
+            <P>{props.location}</P>
+          </Div>
+          <Div>
+            <P>{props.date}</P>
+          </Div>
         </Header>
         <Ul>
           {props.details.map(detail => <li>{detail}</li>)}
@@ -126,15 +139,15 @@ export function ResumeHeader(props) {
 
     return (
         <Header>
-          <h1>Hyungmo (Moe) Gu</h1>
-          <p>Calgary, AB, Canada</p>
+          <H1>Hyungmo (Moe) Gu</H1>
+          <P>Calgary, AB, Canada</P>
           <Ul>
             <Li>Web: <a href={data.info.web.url}>{data.info.web.label}</a></Li>
             <Li>LinkedIn: <a href={data.info.linkedIn.url}>{data.info.linkedIn.label}</a></Li>
             <Li><a href={'mailto:' + data.info.email}>{data.info.email}</a></Li>
             <Li>T: {data.info.tel}</Li>
           </Ul>
-          <hr></hr>
+          <Hr></Hr>
         </Header>
     );
 }

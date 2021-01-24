@@ -13,6 +13,11 @@ function App() {
     padding: 20px;
   `;
 
+  const H2 = styled.h2`
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  `;
+
   const Ul = styled.ul`
       padding-left: 20px;
   `;
@@ -21,25 +26,25 @@ function App() {
     <section className="resume">
         <ResumeHeader/>
         <section className="qualification">
-            <h2><u>Highlights of Qualification</u></h2>
+            <H2><u>Highlights of Qualification</u></H2>
             <Ul>
               {data.highlights.map(item => <li>{item}</li>)}
             </Ul>
         </section>
         <section>
-            <h2><u>Technical Skills</u></h2>
+            <H2><u>Technical Skills</u></H2>
             <p>{data.techSkills.join(", ")}</p>
         </section>
         <section className="work-experience">
-            <h2><u>Work Experience</u></h2>
+            <H2><u>Work Experience</u></H2>
             {data.workExp.map(item => <WorkExpItem {...item} />)}
         </section>
         <section className="project-experience">
-            <h2><u>Project Experience</u></h2>
+            <H2><u>Project Experience</u></H2>
             {data.projectExp.map(item => <ProjectExpItem {...item} />)}
         </section>
         <section className="education">
-            <h2><u>Education</u></h2>
+            <H2><u>Education</u></H2>
             {data.education.map(item => <EducationItem {...item} />)}
         </section>
     </section>
