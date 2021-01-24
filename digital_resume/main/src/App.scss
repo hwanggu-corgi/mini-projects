@@ -35,35 +35,3 @@ body {
     border-width: 2px;
   }
 }
-
-
-
-.resume-header {
-  & ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  & li {
-    flex-grow: 1;
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-}
-
-@media only screen and (min-width: 730px) {
-  .resume-header {
-      text-align: center;
-
-      & ul {
-        display: flex;
-      }
-
-      & li {
-        flex-grow: 1;
-        border-right: black solid 1px;
-      }
-  }
-}
