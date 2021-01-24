@@ -33,35 +33,35 @@ const Hr = styled.hr`
 `;
 
 export function EducationItem(props) {
-    return (
-      <article>
-        <header>
-          <Div>
-            <H3>{props.name}</H3>
-            <P>{props.location}</P>
-          </Div>
-          <Div>
-            <P>{props.date}</P>
-          </Div>
-        </header>
-      </article>
-    );
+  const Header = styled.header`
+    @media only screen and (min-width: 660px) {
+      display: flex;
+    }
+  `;
+
+  return (
+    <Article>
+      <Header>
+        <Div>
+          <H3>{props.name}</H3>
+          <P>{props.location}</P>
+        </Div>
+        <Div>
+          <P>{props.date}</P>
+        </Div>
+      </Header>
+    </Article>
+  );
 }
 
 
 export function ProjectExpItem(props) {
-    const Header = styled.header`
-      @media only screen and (min-width: 660px) {
-        display: flex;
-      }
-    `;
-
     const Ul = styled.ul`
       padding-left: 20px;
     `;
 
     return (
-      <article>
+      <Article>
         <Header>
           <Div>
             <H3>{props.name}</H3>
@@ -74,23 +74,17 @@ export function ProjectExpItem(props) {
         <Ul>
           {props.details.map(detail => <li>{detail}</li>)}
         </Ul>
-      </article>
+      </Article>
     );
 }
 
 export function WorkExpItem(props) {
-    const Header = styled.header`
-      @media only screen and (min-width: 660px) {
-        display: flex;
-      }
-    `;
-
     const Ul = styled.ul`
       padding-left: 20px;
     `;
 
     return (
-      <article>
+      <Article>
         <Header>
           <Div>
             <H3>{props.title}</H3>
@@ -103,7 +97,7 @@ export function WorkExpItem(props) {
         <Ul>
           {props.details.map(detail => <li>{detail}</li>)}
         </Ul>
-      </article>
+      </Article>
     );
 }
 

@@ -23,7 +23,7 @@ function App() {
   `;
 
   return (
-    <section className="resume">
+    <Resume>
         <ResumeHeader/>
         <section className="qualification">
             <H2><u>Highlights of Qualification</u></H2>
@@ -47,7 +47,7 @@ function App() {
             <H2><u>Education</u></H2>
             {data.education.map(item => <EducationItem {...item} />)}
         </section>
-    </section>
+    </Resume>
   );
 }
 
