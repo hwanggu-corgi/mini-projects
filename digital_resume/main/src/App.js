@@ -1,7 +1,7 @@
 import './App.scss';
 import styled from 'styled-components';
 
-import { WorkExpItem, ProjectExpItem, EducationItem } from './components/Resume';
+import { WorkExpItem, ProjectExpItem, EducationItem, ResumeHeader } from './components/Resume';
 import { data } from './data';
 
 const Resume = styled.section`
@@ -19,17 +19,7 @@ const Ul = styled.ul`
 function App() {
   return (
     <section className="resume">
-        <header className="resume-header">
-            <h1>Hyungmo (Moe) Gu</h1>
-            <p>Calgary, AB, Canada</p>
-            <ul>
-                <li>Web: <a href={data.info.web.url}>{data.info.web.label}</a></li>
-                <li>LinkedIn: <a href={data.info.linkedIn.url}>{data.info.linkedIn.label}</a></li>
-                <li><a href={'mailto:' + data.info.email}>{data.info.email}</a></li>
-                <li>T: {data.info.tel}</li>
-            </ul>
-            <hr></hr>
-        </header>
+        <ResumeHeader/>
         <section className="qualification">
             <h2><u>Highlights of Qualification</u></h2>
             <Ul>
