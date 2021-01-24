@@ -19,7 +19,7 @@ function App() {
   `;
 
   const Ul = styled.ul`
-      padding-left: 20px;
+    padding-left: 20px;
   `;
 
   return (
