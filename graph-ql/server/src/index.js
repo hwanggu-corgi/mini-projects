@@ -21,6 +21,8 @@ const path = require('path');
 //   }
 // `
 
+const prisma = new PrismaClient();
+
 let links = [{
     id: 'link-0',
     url: 'www.howtographql.com',
@@ -31,7 +33,9 @@ let idCount = links.length;
 const resolvers = {
     Query: {
         info: () => `This is the API of a Hackernews Clone`,
-        feed: () => links,
+        feed: async (parent, args, context) => {
+            return context.prisma.link.findMany()
+        },
     },
     Mutation: {
         post: (parent, args) => {
@@ -74,6 +78,9 @@ const server = new ApolloServer({
         'utf8'
     ),
     resolvers,
+    context: {
+        prisma,
+    }
 })
 
 server
