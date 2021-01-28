@@ -27,6 +27,7 @@ let links = [{
     description: 'Fullstack tutorial for GraphQL'
 }]
 
+let idCount = links.length;
 const resolvers = {
     Query: {
         info: () => `This is the API of a Hackernews Clone`,
@@ -41,7 +42,20 @@ const resolvers = {
             }
             links.push(link)
             return link
-        }
+        },
+        updateLink: (parent, args) => {
+            const link = {
+                id: `link-${idCount++}`,
+                description: args.description,
+                url: args.url,
+            }
+            links.push(link)
+            return link
+        },
+        deleteLink: (parent, args) => {
+            console.log(parent);
+            console.log(args);
+        },
     },
 }
 
