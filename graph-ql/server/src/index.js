@@ -1,4 +1,6 @@
 const { ApolloServer } = require('apollo-server');
+const { PrismaClient } = require('@prisma/client');
+
 const fs = require('fs');
 const path = require('path');
 
@@ -38,7 +40,7 @@ const resolvers = {
         },
     },
     Mutation: {
-        post: (parent, args) => {
+        post: (parent, args, context, info) => {
             const newLink = context.prisma.link.create({
                 data: {
                     url: args.url,
@@ -47,7 +49,17 @@ const resolvers = {
             })
             return newLink
         },
-        updateLink: (parent, args) => {
+        updateLink: (parent, args, context, info) => {
+            const newLink = context.prisma.link.update({
+                where: {
+                    id: args.id
+                },
+                data: {
+                    url: args.url,
+                    description: args.description,
+                },
+            });
+
             const index = links.findIndex(e => e.id == `link-${args.id}`);
             const link = links[index];
             if (index > -1) {
@@ -80,7 +92,7 @@ const server = new ApolloServer({
     resolvers,
     context: {
         prisma,
-    }
+    },
 })
 
 server
