@@ -52,7 +52,7 @@ const resolvers = {
         updateLink: (parent, args, context, info) => {
             const newLink = context.prisma.link.update({
                 where: {
-                    id: args.id
+                    id: parseInt(args.id)
                 },
                 data: {
                     url: args.url,
@@ -60,15 +60,6 @@ const resolvers = {
                 },
             });
 
-            // const index = links.findIndex(e => e.id == `link-${args.id}`);
-            // const link = links[index];
-            // if (index > -1) {
-            //     links[index] = {
-            //         id: `link-${index}`,
-            //         description: args.description ? args.description : links[index].description,
-            //         url: args.url ? args.url : links[index].url,
-            //     }
-            // }
             return newLink
         },
         deleteLink: (parent, args) => {
