@@ -53,8 +53,14 @@ const resolvers = {
             return link
         },
         deleteLink: (parent, args) => {
-            console.log(parent);
-            console.log(args);
+            const index = links.find(e => e.id === `link-${args.id}`);
+            const link = links[index];
+            console.log(link);
+            if (index > -1) {
+                links.splice(index, 1);
+            }
+
+            return link;
         },
     },
 }
