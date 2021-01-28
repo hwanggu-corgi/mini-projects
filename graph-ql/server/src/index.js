@@ -53,7 +53,7 @@ const resolvers = {
             return link
         },
         deleteLink: (parent, args) => {
-            const index = links.find(e => e.id === `link-${args.id}`);
+            const index = links.findIndex(e => e.id == `link-${args.id}`);
             const link = links[index];
             console.log(link);
             if (index > -1) {
