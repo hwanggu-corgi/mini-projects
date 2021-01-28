@@ -60,16 +60,16 @@ const resolvers = {
                 },
             });
 
-            const index = links.findIndex(e => e.id == `link-${args.id}`);
-            const link = links[index];
-            if (index > -1) {
-                links[index] = {
-                    id: `link-${index}`,
-                    description: args.description ? args.description : links[index].description,
-                    url: args.url ? args.url : links[index].url,
-                }
-            }
-            return link
+            // const index = links.findIndex(e => e.id == `link-${args.id}`);
+            // const link = links[index];
+            // if (index > -1) {
+            //     links[index] = {
+            //         id: `link-${index}`,
+            //         description: args.description ? args.description : links[index].description,
+            //         url: args.url ? args.url : links[index].url,
+            //     }
+            // }
+            return newLink
         },
         deleteLink: (parent, args) => {
             const index = links.findIndex(e => e.id == `link-${args.id}`);
