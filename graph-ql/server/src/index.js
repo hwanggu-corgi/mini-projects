@@ -1,19 +1,6 @@
 const { ApolloServer } = require('apollo-server');
 
 // 1
-const typeDefs = `
-  type Query {
-    info: String!
-    feed: [Link!]!
-  }
-
-  type Link {
-    id: ID!
-    description: String!
-    url: String!
-  }
-`
-
 let links = [{
     id: 'link-0',
     url: 'www.howtographql.com',
@@ -26,6 +13,7 @@ Query: {
     // 2
     feed: () => links,
 },
+
 // 3
 Link: {
     id: (parent) => parent.id,
