@@ -44,18 +44,21 @@ const resolvers = {
             return link
         },
         updateLink: (parent, args) => {
-            const link = {
-                id: `link-${idCount++}`,
-                description: args.description,
-                url: args.url,
+            const index = links.findIndex(e => e.id == `link-${args.id}`);
+
+            if (index > -1) {
+                links[index] = {
+                    id: `link-${index}`,
+                    description: args.description ? args.description : links[index],
+                    url: args.url,
+                }
             }
-            links.push(link)
             return link
         },
         deleteLink: (parent, args) => {
             const index = links.findIndex(e => e.id == `link-${args.id}`);
             const link = links[index];
-            console.log(link);
+
             if (index > -1) {
                 links.splice(index, 1);
             }
