@@ -39,13 +39,13 @@ const resolvers = {
     },
     Mutation: {
         post: (parent, args) => {
-            const link = {
-                id: `link-${idCount++}`,
-                description: args.description,
-                url: args.url,
-            }
-            links.push(link)
-            return link
+            const newLink = context.prisma.link.create({
+                data: {
+                    url: args.url,
+                    description: args.description,
+                },
+            })
+            return newLink
         },
         updateLink: (parent, args) => {
             const index = links.findIndex(e => e.id == `link-${args.id}`);
