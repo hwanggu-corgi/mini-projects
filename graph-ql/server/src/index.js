@@ -45,12 +45,12 @@ const resolvers = {
         },
         updateLink: (parent, args) => {
             const index = links.findIndex(e => e.id == `link-${args.id}`);
-
+            const link = links[index];
             if (index > -1) {
                 links[index] = {
                     id: `link-${index}`,
-                    description: args.description ? args.description : links[index],
-                    url: args.url,
+                    description: args.description ? args.description : links[index].description,
+                    url: args.url ? args.url : links[index].url,
                 }
             }
             return link
