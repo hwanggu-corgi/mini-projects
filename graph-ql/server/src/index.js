@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
 const { PrismaClient } = require('@prisma/client');
-const { PubSub } = require('spollo-server');
+const { PubSub } = require('apollo-server');
 const { getUserId } = require('./utils');
 
 const fs = require('fs');
