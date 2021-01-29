@@ -5,6 +5,11 @@ const { getUserId } = require('./utils');
 const fs = require('fs');
 const path = require('path');
 
+const Query = require('./resolvers/Query')
+const Mutation = require('./resolvers/Mutation')
+const User = require('./resolvers/User')
+const Link = require('./resolvers/Link')
+
 // 1
 // is useful for small server
 // const typeDefs = `
@@ -34,47 +39,54 @@ let links = [{
 
 let idCount = links.length;
 const resolvers = {
-    Query: {
-        info: () => `This is the API of a Hackernews Clone`,
-        feed: async (parent, args, context) => {
-            return context.prisma.link.findMany()
-        },
-    },
-    Mutation: {
-        post: (parent, args, context, info) => {
-            const newLink = context.prisma.link.create({
-                data: {
-                    url: args.url,
-                    description: args.description,
-                },
-            })
-            return newLink
-        },
-        updateLink: (parent, args, context, info) => {
-            const newLink = context.prisma.link.update({
-                where: {
-                    id: parseInt(args.id)
-                },
-                data: {
-                    url: args.url,
-                    description: args.description,
-                },
-            });
-
-            return newLink
-        },
-        deleteLink: (parent, args) => {
-            const index = links.findIndex(e => e.id == `link-${args.id}`);
-            const link = links[index];
-
-            if (index > -1) {
-                links.splice(index, 1);
-            }
-
-            return link;
-        },
-    },
+    Query,
+    Mutation,
+    User,
+    Link
 }
+
+// const resolvers = {
+//     Query: {
+//         info: () => `This is the API of a Hackernews Clone`,
+//         feed: async (parent, args, context) => {
+//             return context.prisma.link.findMany()
+//         },
+//     },
+//     Mutation: {
+//         post: (parent, args, context, info) => {
+//             const newLink = context.prisma.link.create({
+//                 data: {
+//                     url: args.url,
+//                     description: args.description,
+//                 },
+//             })
+//             return newLink
+//         },
+//         updateLink: (parent, args, context, info) => {
+//             const newLink = context.prisma.link.update({
+//                 where: {
+//                     id: parseInt(args.id)
+//                 },
+//                 data: {
+//                     url: args.url,
+//                     description: args.description,
+//                 },
+//             });
+
+//             return newLink
+//         },
+//         deleteLink: (parent, args) => {
+//             const index = links.findIndex(e => e.id == `link-${args.id}`);
+//             const link = links[index];
+
+//             if (index > -1) {
+//                 links.splice(index, 1);
+//             }
+
+//             return link;
+//         },
+//     },
+// }
 
 const server = new ApolloServer({
     typeDefs: fs.readFileSync(
