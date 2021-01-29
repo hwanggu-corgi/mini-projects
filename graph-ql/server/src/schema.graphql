@@ -1,18 +1,6 @@
-type Query {
-  info: String!
-  feed: [Link!]!
-}
-
 type AuthPayload {
   token: String
   user: User
-}
-
-type User {
-  id: ID!
-  name: String!
-  email: String!
-  links: [Link!]!
 }
 
 type Link {
@@ -20,6 +8,22 @@ type Link {
   description: String!
   url: String!
   postedBy: User
+}
+
+type Query {
+  info: String!
+  feed: [Link!]!
+}
+
+type Subscription {
+  newLink: Link
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  links: [Link!]!
 }
 
 type Mutation {
