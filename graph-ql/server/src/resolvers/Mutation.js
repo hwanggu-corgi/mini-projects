@@ -10,7 +10,7 @@ async function post(parent, args, context, info) {
     data: {
       url: args.url,
       description: args.description,
-      // postedBy: { connect: { id: userId } },
+      postedBy: { connect: { id: userId } },
     }
   })
 }
