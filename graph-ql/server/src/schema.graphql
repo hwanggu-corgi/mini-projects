@@ -8,6 +8,20 @@ type Link {
   description: String!
   url: String!
   postedBy: User
+  votes: [Vote!]!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  links: [Link!]!
+}
+
+type Vote {
+  id: ID!
+  link: Link!
+  user: User!
 }
 
 type Query {
@@ -17,13 +31,6 @@ type Query {
 
 type Subscription {
   newLink: Link
-}
-
-type User {
-  id: ID!
-  name: String!
-  email: String!
-  links: [Link!]!
 }
 
 type Mutation {
