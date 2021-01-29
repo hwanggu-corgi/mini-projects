@@ -5,11 +5,12 @@ const { APP_SECRET, getUserId } = require('../utils');
 async function post(parent, args, context, info) {
   const { userId } = context;
 
+  console.log("I am here");
   return await context.prisma.link.create({
     data: {
       url: args.url,
       description: args.description,
-      postedBy: { connect: { id: userId } },
+      // postedBy: { connect: { id: userId } },
     }
   })
 }
