@@ -11,6 +11,7 @@ const Mutation = require('./resolvers/Mutation');
 const Subscription = require('./resolvers/Subscription');
 const User = require('./resolvers/User');
 const Link = require('./resolvers/Link');
+const Vote = require('./resolvers/Vote');
 
 // 1
 // is useful for small server
@@ -39,7 +40,8 @@ const resolvers = {
     Mutation,
     Subscription,
     User,
-    Link
+    Link,
+    Vote,
 }
 
 const server = new ApolloServer({
