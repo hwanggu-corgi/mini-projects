@@ -4,7 +4,7 @@ import Link from './Link';
 
 // <> </> means React.Fragment
 
-const FEED_QUERY = gql`
+export const FEED_QUERY = gql`
   {
     feed {
       id
@@ -13,25 +13,35 @@ const FEED_QUERY = gql`
         createdAt
         url
         description
+        postedBy {
+          id
+          name
+        }
+        votes {
+          id
+          user {
+            id
+          }
+        }
       }
     }
   }
 `;
 
-
 const LinkList = () => {
-    const { data } = useQuery(FEED_QUERY);
+  const { data } = useQuery(FEED_QUERY);
 
-    return (
-        <div>
-        {data && (
-            <>
-            {data.feed.links.map((link) => (
-                <Link key={link.id} link={link} />
-            ))}
-            </>
-        )}
-        </div>
-    );
+  return (
+    <div>
+      {data && (
+        <>
+          {data.feed.links.map((link, index) => (
+            <Link key={link.id} link={link} index={index} />
+          ))}
+        </>
+      )}
+    </div>
+  );
 };
+
 export default LinkList;
