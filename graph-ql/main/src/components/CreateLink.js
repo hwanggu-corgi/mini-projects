@@ -1,5 +1,6 @@
 import { useMutation, gql } from '@apollo/client';
 import React, { useState } from 'react';
+import { FEED_QUERY } from './LinkList';
 
 const CREATE_LINK_MUTATION = gql`
   mutation PostMutation(

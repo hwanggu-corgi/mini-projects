@@ -1,3 +1,9 @@
+import React from 'react';
+import { useMutation, gql } from '@apollo/client';
+
+import { AUTH_TOKEN, LINKS_PER_PAGE } from '../constants';
+import { FEED_QUERY } from './LinkList';
+
 const VOTE_MUTATION = gql`
   mutation VoteMutation($linkId: ID!) {
     vote(linkId: $linkId) {
@@ -85,3 +91,5 @@ const Link = (props) => {
     </div>
   );
 };
+
+export default Link;
