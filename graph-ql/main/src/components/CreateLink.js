@@ -16,6 +16,8 @@ const CREATE_LINK_MUTATION = gql`
 `;
 
 const CreateLink = () => {
+    const history = useHistory();
+
     const [formState, setFormState] = useState({
         description: '',
         url: ''
@@ -23,10 +25,11 @@ const CreateLink = () => {
 
     const [createLink] = useMutation(CREATE_LINK_MUTATION, {
         variables: {
-            description: formState.description,
-            url: formState.url
-        }
-    });
+          description: formState.description,
+          url: formState.url
+        },
+        onCompleted: () => history.push('/')
+      });
 
 
     return (
