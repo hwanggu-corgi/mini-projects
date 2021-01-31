@@ -5,6 +5,7 @@ import CreateLink from './CreateLink';
 import Header from './Header';
 import Login from './Login';
 import Search from './Search';
+import LinkList from './LinkList';
 
 const App = () => (
   <div className="center w85">
@@ -24,6 +25,12 @@ const App = () => (
         />
         <Route exact path="/login" component={Login} />
         <Route exact path="/search" component={Search} />
+        <Route exact path="/top" component={LinkList} />
+        <Route
+          exact
+          path="/new/:page"
+          component={LinkList}
+        />
       </Switch>
     </div>
   </div>

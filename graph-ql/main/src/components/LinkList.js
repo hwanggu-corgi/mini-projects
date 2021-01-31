@@ -15,6 +15,7 @@ export const FEED_QUERY = gql`
   ) {
     feed(take: $take, skip: $skip, orderBy: $orderBy) {
       id
+      createdAt
       links {
         id
         url
@@ -29,7 +30,6 @@ export const FEED_QUERY = gql`
             id
           }
         }
-        createdAt
       }
       count
     }
@@ -115,7 +115,7 @@ const LinkList = () => {
   );
 
   const pageIndex = page ? (page - 1) * LINKS_PER_PAGE : 0;
-
+  console.log(getQueryVariables(isNewPage, page));
   const {
     data,
     loading,
