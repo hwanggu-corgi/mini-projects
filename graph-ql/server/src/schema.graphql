@@ -23,7 +23,7 @@ type Feed {
 
 type Link {
   id: ID!
-  _description: String!
+  description: String!
   url: String!
   postedBy: User
   votes: [Vote!]!
