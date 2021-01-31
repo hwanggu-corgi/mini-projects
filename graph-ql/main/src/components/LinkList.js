@@ -9,13 +9,11 @@ import { LINKS_PER_PAGE } from '../constants';
 
 export const FEED_QUERY = gql`
   query FeedQuery(
-    $id: Int
     $take: Int
     $skip: Int
     $orderBy: LinkOrderByInput
   ) {
     feed(take: $take, skip: $skip, orderBy: $orderBy) {
-      id
       links {
         id
         url
