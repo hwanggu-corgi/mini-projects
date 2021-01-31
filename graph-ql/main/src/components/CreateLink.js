@@ -31,34 +31,36 @@ const CreateLink = () => {
           description: formState.description,
           url: formState.url
         },
-        update: (cache, { data: { post } }) => {
-            const take = LINKS_PER_PAGE;
-            const skip = 0;
-            const orderBy = { createdAt: 'desc' };
+        // update: (cache, { data: { post } }) => {
+        //     const take = LINKS_PER_PAGE;
+        //     const skip = 0;
+        //     const orderBy = { createdAt: 'desc' };
 
-            const data = cache.readQuery({
-              query: FEED_QUERY,
-              variables: {
-                take,
-                skip,
-                orderBy
-              }
-            });
+        //     const data = cache.readQuery({
+        //       query: FEED_QUERY,
+        //       variables: {
+        //         take,
+        //         skip,
+        //         orderBy
+        //       }
+        //     });
 
-            cache.writeQuery({
-              query: FEED_QUERY,
-              data: {
-                feed: {
-                  links: [post, ...data.feed.links]
-                }
-              },
-              variables: {
-                take,
-                skip,
-                orderBy
-              }
-            });
-          },
+        //     console.log("here");
+
+        //     cache.writeQuery({
+        //       query: FEED_QUERY,
+        //       data: {
+        //         feed: {
+        //           links: [post, ...data.feed.links]
+        //         }
+        //       },
+        //       variables: {
+        //         take,
+        //         skip,
+        //         orderBy
+        //       }
+        //     });
+        //   },
           onCompleted: () => history.push('/new/1')
       });
 

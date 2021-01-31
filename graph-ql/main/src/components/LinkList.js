@@ -8,12 +8,15 @@ import { LINKS_PER_PAGE } from '../constants';
 // <> </> means React.Fragment
 
 export const FEED_QUERY = gql`
-  query {
-    feed {
+  query FeedQuery(
+    $take: Int
+    $skip: Int
+    $orderBy: LinkOrderByInput
+  ) {
+    feed(take: $take, skip: $skip, orderBy: $orderBy) {
       id
       links {
         id
-        createdAt
         url
         description
         postedBy {
@@ -26,7 +29,9 @@ export const FEED_QUERY = gql`
             id
           }
         }
+        createdAt
       }
+      count
     }
   }
 `;
