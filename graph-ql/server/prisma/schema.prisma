@@ -38,3 +38,5 @@ model Vote {
 
   @@unique([linkId, userId])
 }
+
+scalar DateTime
