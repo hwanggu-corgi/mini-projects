@@ -37,32 +37,9 @@ const Link = (props) => {
     variables: {
       linkId: link.id
     },
-    update(cache, { data: { vote } }) {
-      const { feed } = cache.readQuery({
-        query: FEED_QUERY
-      });
-
-      const updatedLinks = feed.links.map((feedLink) => {
-        if (feedLink.id === link.id) {
-          return {
-            ...feedLink,
-            votes: [...feedLink.votes, vote]
-          };
-        }
-        return feedLink;
-      });
-
-      cache.writeQuery({
-        query: FEED_QUERY,
-        data: {
-          feed: {
-            links: updatedLinks
-          }
-        }
-      });
-    },
-    onError() {
-      alert("Error");
+    onError(e) {
+      console.log(e);
+      alert("Already voted");
     }
   });
 
