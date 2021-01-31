@@ -18,6 +18,7 @@ export const FEED_QUERY = gql`
         id
         url
         description
+        createdAt
         postedBy {
           id
           name
@@ -120,10 +121,6 @@ const LinkList = () => {
   } = useQuery(FEED_QUERY, {
     variables: getQueryVariables(isNewPage, page)
   });
-
-  console.log(data);
-  console.log(loading);
-  console.log(error);
 
   subscribeToMore({
     document: NEW_LINKS_SUBSCRIPTION,

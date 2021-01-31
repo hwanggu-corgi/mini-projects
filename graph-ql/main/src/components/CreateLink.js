@@ -18,7 +18,6 @@ const CREATE_LINK_MUTATION = gql`
 `;
 
 const CreateLink = () => {
-    console.log("hello 2");
     const history = useHistory();
 
     const [formState, setFormState] = useState({
