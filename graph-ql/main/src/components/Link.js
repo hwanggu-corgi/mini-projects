@@ -60,6 +60,9 @@ const Link = (props) => {
           }
         }
       });
+    },
+    onError() {
+      alert("Error");
     }
   });
 
