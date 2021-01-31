@@ -4,27 +4,32 @@ import Link from './Link';
 
 // <> </> means React.Fragment
 
-const NEW_LINKS_SUBSCRIPTION = gql`
+const NEW_VOTES_SUBSCRIPTION = gql`
   subscription {
-    newLink {
+    newVote {
       id
-      url
-      description
-      createdAt
-      postedBy {
+      link {
         id
-        name
-      }
-      votes {
-        id
-        user {
+        url
+        description
+        createdAt
+        postedBy {
           id
+          name
         }
+        votes {
+          id
+          user {
+            id
+          }
+        }
+      }
+      user {
+        id
       }
     }
   }
 `;
-
 
 export const FEED_QUERY = gql`
   {
