@@ -9,13 +9,13 @@ import { LINKS_PER_PAGE } from '../constants';
 
 export const FEED_QUERY = gql`
   query FeedQuery(
+    $id: Int
     $take: Int
     $skip: Int
     $orderBy: LinkOrderByInput
   ) {
     feed(take: $take, skip: $skip, orderBy: $orderBy) {
       id
-      createdAt
       links {
         id
         url
@@ -42,7 +42,6 @@ const NEW_LINKS_SUBSCRIPTION = gql`
       id
       url
       description
-      createdAt
       postedBy {
         id
         name
@@ -65,7 +64,6 @@ const NEW_VOTES_SUBSCRIPTION = gql`
         id
         url
         description
-        createdAt
         postedBy {
           id
           name

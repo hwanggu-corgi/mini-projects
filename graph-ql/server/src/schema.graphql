@@ -15,9 +15,11 @@ type AuthPayload {
 }
 
 type Feed {
+  id: ID!
   links: [Link!]!
   count: Int!
 }
+
 
 type Link {
   id: ID!
@@ -25,7 +27,9 @@ type Link {
   url: String!
   postedBy: User
   votes: [Vote!]!
+  createdAt: DateTime!
 }
+
 
 type User {
   id: ID!
