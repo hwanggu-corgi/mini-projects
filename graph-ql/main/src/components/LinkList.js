@@ -1,9 +1,56 @@
-import { useQuery, gql } from '@apollo/client';
+
 import React from 'react';
+import { useQuery, gql } from '@apollo/client';
+import { useHistory } from 'react-router';
 import Link from './Link';
 import { LINKS_PER_PAGE } from '../constants';
 
 // <> </> means React.Fragment
+
+export const FEED_QUERY = gql`
+  query {
+    feed {
+      id
+      links {
+        id
+        createdAt
+        url
+        description
+        postedBy {
+          id
+          name
+        }
+        votes {
+          id
+          user {
+            id
+          }
+        }
+      }
+    }
+  }
+`;
+
+const NEW_LINKS_SUBSCRIPTION = gql`
+  subscription {
+    newLink {
+      id
+      url
+      description
+      createdAt
+      postedBy {
+        id
+        name
+      }
+      votes {
+        id
+        user {
+          id
+        }
+      }
+    }
+  }
+`;
 
 const NEW_VOTES_SUBSCRIPTION = gql`
   subscription {
@@ -32,29 +79,16 @@ const NEW_VOTES_SUBSCRIPTION = gql`
   }
 `;
 
-export const FEED_QUERY = gql`
-  {
-    feed {
-      id
-      links {
-        id
-        createdAt
-        url
-        description
-        postedBy {
-          id
-          name
-        }
-        votes {
-          id
-          user {
-            id
-          }
-        }
-      }
-    }
+const getLinksToRender = (isNewPage, data) => {
+  if (isNewPage) {
+    return data.feed.links;
   }
-`;
+  const rankedLinks = data.feed.links.slice();
+  rankedLinks.sort(
+    (l1, l2) => l2.votes.length - l1.votes.length
+  );
+  return rankedLinks;
+};
 
 const getQueryVariables = (isNewPage, page) => {
   const skip = isNewPage ? (page - 1) * LINKS_PER_PAGE : 0;
