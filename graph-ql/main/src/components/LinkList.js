@@ -1,6 +1,7 @@
 import { useQuery, gql } from '@apollo/client';
 import React from 'react';
 import Link from './Link';
+import { LINKS_PER_PAGE } from '../constants';
 
 // <> </> means React.Fragment
 
