@@ -100,6 +100,56 @@ const LinkList = () => {
     }
   });
 
-  // ...
+  subscribeToMore({
+    document: NEW_VOTES_SUBSCRIPTION
+  });
+
+  return (
+    <>
+      {loading && <p>Loading...</p>}
+      {error && <pre>{JSON.stringify(error, null, 2)}</pre>}
+      {data && (
+        <>
+          {getLinksToRender(isNewPage, data).map(
+            (link, index) => (
+              <Link
+                key={link.id}
+                link={link}
+                index={index + pageIndex}
+              />
+            )
+          )}
+          {isNewPage && (
+            <div className="flex ml4 mv3 gray">
+              <div
+                className="pointer mr2"
+                onClick={() => {
+                  if (page > 1) {
+                    history.push(`/new/${page - 1}`);
+                  }
+                }}
+              >
+                Previous
+              </div>
+              <div
+                className="pointer"
+                onClick={() => {
+                  if (
+                    page <=
+                    data.feed.count / LINKS_PER_PAGE
+                  ) {
+                    const nextPage = page + 1;
+                    history.push(`/new/${nextPage}`);
+                  }
+                }}
+              >
+                Next
+              </div>
+            </div>
+          )}
+        </>
+      )}
+    </>
+  );
 };
 export default LinkList;
