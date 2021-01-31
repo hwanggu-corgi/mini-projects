@@ -23,8 +23,7 @@ type Feed {
 
 type Link {
   id: ID!
-  test: string
-  description: String!
+  _description: String!
   url: String!
   postedBy: User
   votes: [Vote!]!
@@ -63,3 +62,5 @@ type Mutation {
   deleteLink(id: ID!): Link
   vote(linkId: ID!): Vote
 }
+
+scalar DateTime
