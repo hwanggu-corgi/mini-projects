@@ -11,7 +11,6 @@ const CREATE_LINK_MUTATION = gql`
   ) {
     post(description: $description, url: $url) {
       id
-      createdAt
       url
       description
     }
@@ -19,6 +18,7 @@ const CREATE_LINK_MUTATION = gql`
 `;
 
 const CreateLink = () => {
+    console.log("hello 2");
     const history = useHistory();
 
     const [formState, setFormState] = useState({

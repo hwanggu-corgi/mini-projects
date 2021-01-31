@@ -120,6 +120,10 @@ const LinkList = () => {
     variables: getQueryVariables(isNewPage, page)
   });
 
+  console.log(data);
+  console.log(loading);
+  console.log(error);
+
   subscribeToMore({
     document: NEW_LINKS_SUBSCRIPTION,
     updateQuery: (prev, { subscriptionData }) => {

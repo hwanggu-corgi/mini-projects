@@ -25,6 +25,7 @@ const VOTE_MUTATION = gql`
 `;
 
 const Link = (props) => {
+  console.log("hello");
   const { link } = props;
   const authToken = localStorage.getItem(AUTH_TOKEN);
 
