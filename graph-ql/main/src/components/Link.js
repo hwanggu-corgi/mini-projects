@@ -3,7 +3,6 @@ import { useMutation, gql } from '@apollo/client';
 
 import { timeDifferenceForDate } from '../utils';
 import { AUTH_TOKEN, LINKS_PER_PAGE } from '../constants';
-import { FEED_QUERY } from './LinkList';
 
 const VOTE_MUTATION = gql`
   mutation VoteMutation($linkId: ID!) {
