@@ -36,11 +36,7 @@ const Link = (props) => {
     variables: {
       linkId: link.id
     },
-    onCompleted(e) {
-      console.log(e);
-    },
     onError(e) {
-      console.log(e);
       alert("Already voted");
     }
   });
