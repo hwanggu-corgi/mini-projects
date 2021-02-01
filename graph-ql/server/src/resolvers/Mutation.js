@@ -3,18 +3,21 @@ const jwt = require('jsonwebtoken');
 const { APP_SECRET, getUserId } = require('../utils');
 
 async function post(parent, args, context, info) {
-  console.log("I am here");
+  console.log(context);
   const userId = getUserId(context)
   console.log("I am here 2");
+  console.log(userId);
+  console.log(args);
   const newLink = await context.prisma.link.create({
     data: {
       url: args.url,
       description: args.description,
       postedBy: { connect: { id: userId } },
     }
-  })
+  });
+  console.log("I am here 3");
   context.pubsub.publish("NEW_LINK", newLink)
-
+  console.log("I am here 4");
   return newLink
 }
 
