@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import IconArrowUp from '../../assets/icons/icon-arrow-up.svg';
 
 export function ExpandButton() {
     let Button = styled.button`
         cursor: pointer;
-        box-shadow: transparent;
         background-color: white;
         line-height: 1.75em;
         letter-spacing: 0.3125em;
@@ -12,10 +12,17 @@ export function ExpandButton() {
         border-style: solid;
         border-color: #979797;
         border-radius: 50px 50px;
+        display: flex;
+        align-items:center;
     `;
+
+    let Strong = styled.strong`
+        margin-right: 0.875em;
+    `;
+
     return (
         <Button>
-            <strong>More</strong><span>^</span>
+            <Strong>More</Strong><img src={IconArrowUp} alt="Up Arrow"/>
         </Button>
     );
   }
