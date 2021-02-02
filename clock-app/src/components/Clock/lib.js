@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import IconArrowUp from '../../assets/icons/icon-arrow-up.svg';
+import { IconArrowUp } from './icons';
 
 export function ExpandButton() {
     let Button = styled.button`
@@ -20,16 +20,17 @@ export function ExpandButton() {
         margin: 0 0.875em;
     `;
 
-    let Img = styled.img`
-        filter: red;
+    let Svg = styled.svg`
+        fill: red;
+        &:hover{
+            fill: #999999;
+        }
     `;
 
     return (
         <Button>
             <Span>More</Span>
-            <svg>
-              <use xlink:href="#icon-1"></use>
-            </svg>
+            <Svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#303030" cx="20" cy="20" r="20"/><path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6"/></g></Svg>
         </Button>
     );
   }
