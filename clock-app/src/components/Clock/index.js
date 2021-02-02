@@ -8,22 +8,30 @@ let H1 = styled.h1`
     font-size: 200px;
     line-height: 200px;
     font-weight: bold;
-    line-spacing: -5px;
+    letter-spacing: -5px;
 `;
 
 let H2 = styled.h2`
     font-size: 56px;
     line-height: 68px;
-    line-spacing: 5px;
+    letter-spacing: 5px;
 `;
 
 let H3 = styled.h3`
-    font-size: 56px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 28px;
-    line-spacings: 4.8px;
-
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
 `;
+
+let H4 = styled.h4`
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    letter-spacing: 4px;
+`;
+
 
 function Clock() {
   return (
@@ -31,6 +39,7 @@ function Clock() {
             <H1>Lorem</H1>
             <H2>Lorem ipsum dolor sit</H2>
             <H3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</H3>
+            <H4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</H4>
             <section>
 
 
