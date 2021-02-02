@@ -8,7 +8,7 @@ let H1 = styled.h1`
     font-size: 200px;
     line-height: 200px;
     font-weight: bold;
-    line-spacing: 5px;
+    line-spacing: -5px;
 `;
 
 let H2 = styled.h2`
@@ -18,6 +18,11 @@ let H2 = styled.h2`
 `;
 
 let H3 = styled.h3`
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 28px;
+    line-spacings: 4.8px;
+
 `;
 
 function Clock() {
@@ -25,6 +30,7 @@ function Clock() {
       <div>
             <H1>Lorem</H1>
             <H2>Lorem ipsum dolor sit</H2>
+            <H3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</H3>
             <section>
 
 
