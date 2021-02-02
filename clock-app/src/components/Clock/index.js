@@ -24,6 +24,7 @@ function Clock() {
   return (
       <div>
             <H1>Lorem</H1>
+            <H2>Lorem ipsum dolor sit</H2>
             <section>
 
 
