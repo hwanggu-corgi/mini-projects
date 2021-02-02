@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ExpandButton } from './lib';
 
 let color_primary = '#000000';
 let color_secondary = '#303030';
