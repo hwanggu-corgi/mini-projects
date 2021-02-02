@@ -16,13 +16,20 @@ export function ExpandButton() {
         align-items:center;
     `;
 
-    let Strong = styled.strong`
-        margin-right: 0.875em;
+    let Span = styled.span`
+        margin: 0 0.875em;
+    `;
+
+    let Img = styled.img`
+        filter: red;
     `;
 
     return (
         <Button>
-            <Strong>More</Strong><img src={IconArrowUp} alt="Up Arrow"/>
+            <Span>More</Span>
+            <svg>
+              <use xlink:href="#icon-1"></use>
+            </svg>
         </Button>
     );
   }
