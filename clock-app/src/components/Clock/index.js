@@ -60,10 +60,15 @@ let P = styled.p`
     margin: 0 0 1rem 0;
 `;
 
+let MainSection = styled.section`
+    width: 100%;
+    height: 100%;
+`;
+
 
 function Clock() {
   return (
-      <div>
+      <MainSection>
             <H1>Lorem</H1>
             <H2>Lorem ipsum dolor sit</H2>
             <H3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</H3>
@@ -74,23 +79,10 @@ function Clock() {
             <P>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</P>
             <P>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl. dui, eu pulvinar nunc sapien ornare nisl.</P>
             <ExpandButton/>
-            <section>
-
-
-            , it's currently
-
-            in
-
-            More
-            Less
-
-            Current timezone
-            Day of the year
-            Day of the week
-            Week number
-
-            </section>
-        </div>
+            <Display/>
+            <Quote/>
+            <Detail/>
+        </MainSection>
   );
 }
 
