@@ -22,7 +22,6 @@ export function ExpandButton() {
         align-items:center;
 
         &:hover{
-            transform: rotate(180deg);
             span {
                 color: ${hoveredColor};
             }
