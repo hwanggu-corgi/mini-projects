@@ -27,6 +27,7 @@ export function ExpandButton() {
             }
             circle {
                 fill: ${hoveredColor};
+                transform: rotate(${toggled ? '180deg' : '0deg'});
             }
         }
     `;
