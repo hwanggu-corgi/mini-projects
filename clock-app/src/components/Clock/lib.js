@@ -1,12 +1,17 @@
 import { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-let borderColor = "#979797";
-let hoveredColor = "#999999";
+const borderColor = "#979797";
+const hoveredColor = "#999999";
 
 export function ExpandButton() {
     const [toggled, setToggle] = useState(false);
+
     let Button = styled.button`
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+
         cursor: pointer;
         width: 146px;
         line-height: 1.75em;
@@ -17,12 +22,9 @@ export function ExpandButton() {
         border-style: solid;
         border-color: ${borderColor};
         border-radius: 50px 50px;
-        display: flex;
-        justify-content: flex-end;
-        align-items:center;
 
         &:hover{
-            span {
+            strong {
                 color: ${hoveredColor};
             }
             circle {
@@ -32,11 +34,12 @@ export function ExpandButton() {
     `;
 
     let Strong = styled.strong`
-        margin: 0 1em 0 0;
+        margin: 0 0 0 1.2em;
     `;
 
     let Svg = styled.svg`
         transform: ${toggled ? "rotate(180deg)" : "none"}
+
     `;
 
     return (
