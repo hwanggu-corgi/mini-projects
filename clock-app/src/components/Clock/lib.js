@@ -22,12 +22,12 @@ export function ExpandButton() {
         align-items:center;
 
         &:hover{
+            transform: rotate(180deg);
             span {
                 color: ${hoveredColor};
             }
             circle {
                 fill: ${hoveredColor};
-                transform: rotate(${toggled ? '180deg' : '0deg'});
             }
         }
     `;
