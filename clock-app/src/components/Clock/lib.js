@@ -56,7 +56,7 @@ export function Display() {
 
 export function Quote() {
     return (
-
+        "The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value."
     );
 }
 
