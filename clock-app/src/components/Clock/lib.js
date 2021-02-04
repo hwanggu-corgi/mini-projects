@@ -49,3 +49,15 @@ export function ExpandButton() {
         </Button>
     );
   }
+
+export function Display() {
+    return;
+}
+
+export function Quote() {
+    return;
+}
+
+export function Detail() {
+    return;
+}
