@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-let color_primary = '#000000';
-let color_secondary = '#303030';
-let color_white = '#FFFFFF';
+const color_primary = '#000000';
+const color_secondary = '#303030';
+const color_white = '#FFFFFF';
 
 const borderColor = "#979797";
 const hoveredColor = "#999999";
 
 const refershIconColor = "#979797";
 
-let H1 = styled.h1`
+const H1 = styled.h1`
     font-size: 200px;
     line-height: 200px;
     font-weight: bold;
@@ -18,14 +18,14 @@ let H1 = styled.h1`
     margin: 0 0 1rem 0;
 `;
 
-let H2 = styled.h2`
+const H2 = styled.h2`
     font-size: 56px;
     line-height: 68px;
     letter-spacing: 5px;
     margin: 0 0 1rem 0;
 `;
 
-let H3 = styled.h3`
+const H3 = styled.h3`
     font-size: 24px;
     font-weight: bold;
     line-height: 28px;
@@ -34,7 +34,7 @@ let H3 = styled.h3`
     margin: 0 0 1rem 0;
 `;
 
-let H4 = styled.h4`
+const H4 = styled.h4`
     font-size: 20px;
     font-weight: normal;
     line-height: 28px;
@@ -43,14 +43,14 @@ let H4 = styled.h4`
     margin: 0 0 1rem 0;
 `;
 
-let H5 = styled.h5`
+const H5 = styled.h5`
     font-size: 18px;
     font-weight: bold;
     line-height: 28px;
     margin: 0 0 1rem 0;
 `;
 
-let H6 = styled.h6`
+const H6 = styled.h6`
     font-size: 15px;
     font-weight: normal;
     line-height: 28px;
@@ -59,13 +59,13 @@ let H6 = styled.h6`
     margin: 0 0 1rem 0;
 `;
 
-let P = styled.p`
+const P = styled.p`
     font-size: 18px;
     line-height: 28px;
     margin: 0 0 1rem 0;
 `;
 
-let MainSection = styled.section`
+const MainSection = styled.section`
     width: 100vw;
     height: 100vh;
 `;
@@ -161,13 +161,23 @@ function Quote() {
 }
 
 function Display() {
+    const Span = styled.span`
+        font-size: 40px;
+        font-weight: normal;
+        line-height: 28px;
+    `;
+
+    const H1NoWrap = styled(H1)`
+        white-space: nowrap;
+    `;
+
     return(
         <article>
             <H4>
                 <svg width="23" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.157 17.366a.802.802 0 00-.891-.248 8.463 8.463 0 01-2.866.482c-4.853 0-8.8-3.949-8.8-8.8a8.773 8.773 0 013.856-7.274.801.801 0 00-.334-1.454A7.766 7.766 0 0012 0C5.382 0 0 5.382 0 12s5.382 12 12 12c4.2 0 8.02-2.134 10.218-5.709a.805.805 0 00-.061-.925z" fill="#FFF" fill-rule="nonzero"/></svg>
                 Good evening, it's currently
             </H4>
-            <H1>23:14 <span>BST</span></H1>
+            <H1NoWrap>23:14 <Span>BST</Span></H1NoWrap>
             <H3>In London, UK</H3>
         </article>
     );
