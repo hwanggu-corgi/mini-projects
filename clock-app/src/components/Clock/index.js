@@ -208,17 +208,21 @@ function Detail() {
             <div>
                 <section>
                     <H6>Current Timezone</H6>
+                    <H2>Europe/London</H2>
                 </section>
                 <section>
                     <H6>Day of Year</H6>
+                    <H2>295</H2>
                 </section>
             </div>
             <div>
                 <section>
                     <H6>Day of Week</H6>
+                    <H2>5</H2>
                 </section>
                 <section>
                     <H6>Week Number</H6>
+                    <H2>42</H2>
                 </section>
             </div>
         </article>
