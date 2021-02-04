@@ -206,12 +206,20 @@ function Detail() {
     return(
         <article>
             <div>
-                <section></section>
-                <section></section>
+                <section>
+                    <H6>Current Timezone</H6>
+                </section>
+                <section>
+                    <H6>Day of Year</H6>
+                </section>
             </div>
             <div>
-                <section></section>
-                <section></section>
+                <section>
+                    <H6>Day of Week</H6>
+                </section>
+                <section>
+                    <H6>Week Number</H6>
+                </section>
             </div>
         </article>
     );
