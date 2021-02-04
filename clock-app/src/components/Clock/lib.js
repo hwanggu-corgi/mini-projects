@@ -55,7 +55,9 @@ export function Display() {
 }
 
 export function Quote() {
-    return;
+    return (
+
+    );
 }
 
 export function Detail() {
