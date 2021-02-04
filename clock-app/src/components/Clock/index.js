@@ -201,3 +201,18 @@ function Refresh() {
         </Button>
     );
 }
+
+function Detail() {
+    return(
+        <article>
+            <div>
+                <section></section>
+                <section></section>
+            </div>
+            <div>
+                <section></section>
+                <section></section>
+            </div>
+        </article>
+    );
+}
