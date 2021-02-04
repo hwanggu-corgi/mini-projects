@@ -135,19 +135,17 @@ function ExpandButton() {
     );
 }
 
-function Display() {
-    return;
-}
-
 function Quote() {
-    return (
-        <article>
-            <P>The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.</P>
-            <H5>Ada Lovelace</H5>
-        <article/>
-    );
-}
+    let Blockquote = styled.blockquote`
 
-function Detail() {
-    return;
+    `;
+
+    return (
+        <Article>
+            <blockquote>
+                <P>The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.</P>
+                <H5>Ada Lovelace</H5>
+            </blockquote>
+        </Article>
+    );
 }
