@@ -86,7 +86,7 @@ export default function Clock() {
         <ExpandButton/>
         <Display/>
         <Quote/>
-        {/* <Detail/> */}
+        <Detail/>
     </MainSection>
   );
 }
@@ -203,28 +203,48 @@ function Refresh() {
 }
 
 function Detail() {
+    const Article = styled.article`
+        display: flex;
+        background-color: ${color_primary};
+        opacity: 75%;
+
+        & div:first-child {
+            border-right: 1px solid ${borderColor}
+        }
+    `;
+
+    const Div = styled.div`
+        width: 50%;
+        margin: 96px;
+        opacity: 100%;
+    `;
+
+    const Section = styled.section`
+        margin-bottom: 42px;
+    `;
+
     return(
-        <article>
-            <div>
-                <section>
+        <Article>
+            <Div>
+                <Section>
                     <H6>Current Timezone</H6>
                     <H2>Europe/London</H2>
-                </section>
-                <section>
+                </Section>
+                <Section>
                     <H6>Day of Year</H6>
                     <H2>295</H2>
-                </section>
-            </div>
-            <div>
-                <section>
+                </Section>
+            </Div>
+            <Div>
+                <Section>
                     <H6>Day of Week</H6>
                     <H2>5</H2>
-                </section>
-                <section>
+                </Section>
+                <Section>
                     <H6>Week Number</H6>
                     <H2>42</H2>
-                </section>
-            </div>
-        </article>
+                </Section>
+            </Div>
+        </Article>
     );
 }
