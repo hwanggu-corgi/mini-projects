@@ -204,9 +204,10 @@ function Refresh() {
 
 function Detail() {
     const Article = styled.article`
-        display: flex;
         background-color: ${color_primary};
-        opacity: 75%;
+        display: flex;
+        padding: 74px;
+        opacity: 20%;
 
         & div:first-child {
             border-right: 1px solid ${borderColor}
@@ -215,11 +216,14 @@ function Detail() {
 
     const Div = styled.div`
         width: 50%;
-        margin: 96px;
-        opacity: 100%;
+
+        & h2, & h6 {
+            color: white;
+        }
     `;
 
     const Section = styled.section`
+        margin: 0 94px 42px 94px;
         margin-bottom: 42px;
     `;
 
