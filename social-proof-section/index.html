@@ -14,8 +14,19 @@
 
     <title>Frontend Mentor | Social proof section</title>
   </head>
+  <style>
+    .social-proof-section {
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-pattern {
+      position: absolute;
+    }
+  </style>
   <body>
-    <article>
+    <article class="social-proof-section">
+      <img class="bg-pattern" src="./images/bg-pattern-top-desktop.svg"/>
       <heder>
         <section>
           <h3>10,000+ of our users love our products.</h3>
@@ -77,6 +88,7 @@
           <blockquote>“ Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone! ”</blockquote>
         </div>
       </section>
+      <img class="bg-pattern" src="./images/bg-pattern-bottom-desktop.svg"/>
     </article>
   </body>
 </html>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import NightImage from '../../assets/imgs/desktop/bg-image-nighttime.jpg';
 import styled from 'styled-components';
 
 const color_primary = '#000000';
@@ -65,30 +66,33 @@ const P = styled.p`
     margin: 0 0 1rem 0;
 `;
 
-const MainSection = styled.section`
-    width: 100vw;
-    height: 100vh;
-`;
-
-
 export default function Clock() {
-  return (
-      <MainSection>
-        <H1>Lorem</H1>
-        <H2>Lorem ipsum dolor sit</H2>
-        <H3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</H3>
-        <H4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</H4>
-        <H5>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</H5>
-        <H6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</H6>
-        <P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</P>
-        <P>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</P>
-        <P>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl. dui, eu pulvinar nunc sapien ornare nisl.</P>
-        <ExpandButton/>
-        <Display/>
-        <Quote/>
-        <Detail/>
-    </MainSection>
-  );
+
+    const MainSection = styled.section`
+        width: 100vw;
+        height: 100vh;
+        background-image: url(${NightImage});
+        background-repeat: no-repeat;
+        background-size: cover;
+    `;
+
+    return (
+        <MainSection>
+            <H1>Lorem</H1>
+            <H2>Lorem ipsum dolor sit</H2>
+            <H3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</H3>
+            <H4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</H4>
+            <H5>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</H5>
+            <H6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</H6>
+            <P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</P>
+            <P>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</P>
+            <P>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl. dui, eu pulvinar nunc sapien ornare nisl.</P>
+            <ExpandButton/>
+            <Display/>
+            <Quote/>
+            <Detail/>
+        </MainSection>
+    );
 }
 
 function ExpandButton() {
@@ -203,7 +207,7 @@ function Refresh() {
 }
 
 function Detail() {
-    const Article = styled.article`
+    const Detail = styled.article`
         background-color: ${color_primary};
         display: flex;
         padding: 74px;
@@ -228,7 +232,7 @@ function Detail() {
     `;
 
     return(
-        <Article>
+        <Detail>
             <Div>
                 <Section>
                     <H6>Current Timezone</H6>
@@ -249,6 +253,6 @@ function Detail() {
                     <H2>42</H2>
                 </Section>
             </Div>
-        </Article>
+        </Detail>
     );
 }
