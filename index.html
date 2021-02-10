@@ -15,6 +15,10 @@
     <title>Frontend Mentor | Social proof section</title>
   </head>
   <style>
+    article {
+      max-width: 1110px;
+    }
+
     .social-proof-section {
       position: relative;
       overflow-x: hidden;
@@ -45,6 +49,13 @@
         right: 0;
       }
 
+    }
+
+    .testimonial-item {
+      max-width: 286px;
+      background-color: #512051;
+      padding: 32px;
+      border-radius: 8px;
     }
   </style>
   <body>
@@ -89,22 +100,22 @@
             </div>
           </section>
         </heder>
-        <section>
-          <div>
+        <section class="testimonials">
+          <div class="testimonial-item">
             <header>
               <h5>Colton Smith</h5>
               <h6>Verified Buyer</h6>
             </header>
             <blockquote>“ We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! ”</blockquote>
           </div>
-          <div>
+          <div class="testimonial-item">
             <header>
               <h5>Irene Roberts</h5>
               <h6>Verified Buyer</h6>
             </header>
             <blockquote>“ Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery. ”</blockquote>
           </div>
-          <div>
+          <div class="testimonial-item">
             <header>
               <h5>Anne Wallace</h5>
               <h6>Verified Buyer</h6>
