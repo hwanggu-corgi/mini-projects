@@ -15,6 +15,11 @@
     <title>Frontend Mentor | Social proof section</title>
   </head>
   <style>
+
+    body {
+      margin: 0;
+    }
+
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
       margin-bottom: 6px;
@@ -40,7 +45,7 @@
       bottom: 0;
     }
 
-    @media screen and (min-width: 1150px) {
+    @media screen and (min-width: 739px) {
       .bg-pattern-bottom {
         left: initial;
         right: 0;
@@ -94,14 +99,14 @@
       margin: 0 auto;
     }
 
-    .social-proof-section header {
+    .social-proof-section .section-header {
       display: flex;
       flex-direction: column;
       margin-bottom: 49px;
     }
 
     @media screen and (min-width: 1150px) {
-      .social-proof-section header {
+      .social-proof-section .section-header {
         flex-direction: row;
         margin-bottom: 72px;
       }
@@ -157,6 +162,15 @@
       margin: 0 auto 0 auto;
     }
 
+    .testimonials-item header {
+      display: flex;
+      margin: 0 0 26px 0;
+    }
+
+    .testimonials-item blockquote {
+      margin: 0;
+    }
+
     .testimonials-item img {
       width: 40px;
       height: 40px;
@@ -195,7 +209,7 @@
     <section class="social-proof-section">
       <img class="bg-pattern bg-pattern-top" src="./images/bg-pattern-top-desktop.svg"/>
       <article>
-        <header>
+        <header class="section-header">
           <section class="jumbotron">
             <h3 class="text-xxlarge">10,000+ of our users love our products.</h3>
             <p class="text-xlarge">We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
@@ -237,9 +251,9 @@
           <div class="testimonials-item">
             <header>
               <img src="./images/image-colton.jpg">
-              <div>
+              <div class="text-large">
                 <h5>Colton Smith</h5>
-                <h6>Verified Buyer</h6>
+                <span>Verified Buyer</span>
               </div>
             </header>
             <blockquote>“ We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! ”</blockquote>
@@ -247,9 +261,9 @@
           <div class="testimonials-item">
             <header>
               <img src="./images/image-irene.jpg">
-              <div>
+              <div class="text-large">
                 <h5>Irene Roberts</h5>
-                <h6>Verified Buyer</h6>
+                <span>Verified Buyer</span>
               </div>
             </header>
             <blockquote>“ Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery. ”</blockquote>
@@ -257,9 +271,9 @@
           <div class="testimonials-item">
             <header>
               <img src="./images/image-anne.jpg">
-              <div>
+              <div class="text-large">
                 <h5>Anne Wallace</h5>
-                <h6>Verified Buyer</h6>
+                <span>Verified Buyer</span>
               </div>
             </header>
             <blockquote>“ Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone! ”</blockquote>
