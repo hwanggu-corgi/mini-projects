@@ -47,10 +47,6 @@
       }
     }
 
-    .ratings {
-      padding-left: 20px;
-    }
-
     .ratings-item {
       display: flex;
       flex-direction: column;
@@ -59,10 +55,14 @@
       max-width: 381px;
       background-color: #F7F2F7;
       border-radius: 8px;
-      margin: 0 0 16px 0;
+      margin: 0 auto 16px auto;
     }
 
     @media screen and (min-width: 1150px) {
+      .ratings {
+        padding-left: 20px;
+      }
+
       .ratings-item {
         flex-direction: row;
         padding: 20px 32px;
@@ -145,19 +145,19 @@
       }
     }
 
-    .testimonial-item {
+    .testimonials-item {
       max-width: 286px;
       background-color: #512051;
       padding: 32px;
       border-radius: 8px;
-      margin: 0 0 16px 0;
+      margin: 0 auto 16px auto;
     }
 
-    .testimonial-item:last-child {
-      margin: 0;
+    .testimonials-item:last-child {
+      margin: 0 auto 0 auto;
     }
 
-    .testimonial-item img {
+    .testimonials-item img {
       width: 40px;
       height: 40px;
       margin: 0 23px 0 0;
@@ -165,11 +165,11 @@
     }
 
     @media screen and (min-width: 1150px) {
-      .testimonial-item {
+      .testimonials-item {
         margin: 0 30px 0 0;
       }
 
-      .testimonial-item:last-child {
+      .testimonials-item:last-child {
         margin: 0;
       }
     }
@@ -234,7 +234,7 @@
           </section>
         </header>
         <section class="testimonials">
-          <div class="testimonial-item">
+          <div class="testimonials-item">
             <header>
               <img src="./images/image-colton.jpg">
               <div>
@@ -244,7 +244,7 @@
             </header>
             <blockquote>“ We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! ”</blockquote>
           </div>
-          <div class="testimonial-item">
+          <div class="testimonials-item">
             <header>
               <img src="./images/image-irene.jpg">
               <div>
@@ -254,7 +254,7 @@
             </header>
             <blockquote>“ Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery. ”</blockquote>
           </div>
-          <div class="testimonial-item">
+          <div class="testimonials-item">
             <header>
               <img src="./images/image-anne.jpg">
               <div>
