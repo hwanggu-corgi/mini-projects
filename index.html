@@ -16,6 +16,13 @@
   </head>
   <style>
 
+    :root {
+      --color-white: #FFFFFF;
+      --color-light-pink:#F7F2F7;
+      --color-purple: #512051;
+      --color-light-purple: #EE69A4;
+    }
+
     * {
       font-size: 12px;
       letter-spacing: -0.23px;
@@ -28,7 +35,7 @@
 
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
-      margin-bottom: 6px;
+      margin-bottom: 0;
     }
 
     .bg-pattern {
@@ -64,7 +71,7 @@
       text-align: center;
       padding: 16px 0;
       max-width: 381px;
-      background-color: #F7F2F7;
+      background-color: var(--color-light-pink);
       border-radius: 8px;
       margin: 0 auto 16px auto;
     }
@@ -79,6 +86,7 @@
         padding: 20px 32px;
         margin: 0 0 16px 0;
         text-align: initial;
+        color: var(--color-purple);
       }
 
       .ratings-item section {
@@ -158,7 +166,7 @@
 
     .testimonials-item {
       max-width: 286px;
-      background-color: #512051;
+      background-color: var(--color-purple);
       padding: 32px;
       border-radius: 8px;
       margin: 0 auto 16px auto;
@@ -173,8 +181,17 @@
       margin: 0 0 26px 0;
     }
 
+    .testimonials-item h5 {
+      color: var(--color-white);
+    }
+
+    .testimonials-item span {
+      color: var(--color-light-purple);
+    }
+
     .testimonials-item blockquote {
       margin: 0;
+      color:var(--color-white);
     }
 
     .testimonials-item img {
