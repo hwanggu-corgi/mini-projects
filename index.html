@@ -17,9 +17,11 @@
   <style>
     article {
       max-width: 1110px;
+      margin: 0 auto;
     }
 
     .social-proof-section {
+      max-height: 568px;
       position: relative;
       overflow-x: hidden;
     }
@@ -32,7 +34,7 @@
       width: 100%;
     }
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 1150px) {
       .bg-pattern-top {
         width: initial;
       }
@@ -43,12 +45,22 @@
       left: -50%;
     }
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 1150px) {
       .bg-pattern-bottom {
         left: initial;
         right: 0;
       }
+    }
 
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1150px) {
+      .testimonials {
+        flex-direction: row;
+      }
     }
 
     .testimonial-item {
@@ -56,6 +68,21 @@
       background-color: #512051;
       padding: 32px;
       border-radius: 8px;
+      margin: 0 0 16px 0;
+    }
+
+    .testimonial-item:last-child {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 1150px) {
+      .testimonial-item {
+        margin: 0 30px 0 0;
+      }
+
+      .testimonial-item:last-child {
+        margin: 0;
+      }
     }
   </style>
   <body>
