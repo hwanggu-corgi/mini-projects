@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const colorGrey = "#EEEEEE";
 const colorOrange = "#FFA341";
 
 export function ChatBox() {
