@@ -14,6 +14,7 @@ export function SubmitButton() {
         color: ${colorOrange};
         padding: 0.5em;
         margin: 1em;
+        cursor: pointer;
     `;
     return (
         <Button>
