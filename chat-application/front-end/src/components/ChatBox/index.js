@@ -2,19 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 
 const colorGrey = "#EEEEEE";
-const colorBlack = "black";
 
 export function ChatTextArea() {
+    const Div = styled.div`
+        background-color: ${colorGrey};
+        padding: 1em;
+        border-radius: 5em;
+        display:flex;
+    `;
+
     const Textarea = styled.textarea`
         border: none;
         resize: none;
+        width: 100%;
         background-color: ${colorGrey};
         text-decoration: none;
-        color: ${colorBlack};
         padding: 1em;
-        border-radius: 5em;
+        overflow-y: scroll;
+
+        &:focus {
+            outline: none;
+        }
     `;
     return (
-        <Textarea/>
+        <Div>
+            <Textarea/>
+        </Div>
     );
 }
