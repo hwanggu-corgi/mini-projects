@@ -11,6 +11,7 @@ export function ChatBox() {
         padding: 1em;
         border-radius: 1.5em;
         max-width: 12em;
+        font-size: 0.8em;
     `;
 
     const Header = styled.header`
@@ -23,7 +24,10 @@ export function ChatBox() {
             <Header>
                 <span>User 1</span>
             </Header>
-            <P></P>
+            <P>This is a test
+
+               This is a test 2
+            </P>
         </article>
     );
 }
