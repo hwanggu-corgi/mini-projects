@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const colorGrey = "#EEEEEE";
 
-export function ChatTextArea() {
+export function ChatBox() {
     const Div = styled.div`
         background-color: ${colorGrey};
         padding: 1em;
