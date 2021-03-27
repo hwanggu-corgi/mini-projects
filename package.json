@@ -1,0 +1,30 @@
+{
+  "name": "hwanggu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "http://hwanggu-corgi.github.io/mini-projects",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hwanggu-corgi:Gu!91237001@github.com/hwanggu-corgi/mini-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hwanggu-corgi/mini-projects/issues"
+  },
+  "homepage": "https://github.com/hwanggu-corgi/mini-projects#readme",
+  "devDependencies": {
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.27.2"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
