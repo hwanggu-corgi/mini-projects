@@ -6,7 +6,7 @@
   "homepage": "http://hwanggu-corgi.github.io/mini-projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d ./"
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/hwanggu-corgi/mini-projects/issues"
   },
-  "homepage": "https://github.com/hwanggu-corgi/mini-projects#readme",
   "devDependencies": {
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
