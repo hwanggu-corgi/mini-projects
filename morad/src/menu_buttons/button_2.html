@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+
+    .burger {
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .burger:hover .burgerLine {
+        background-color: #41b6e6;
+    }
+
+    .burger-wrapper {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .burgerLine {
+        display: block;
+        height: 2px;
+        background-color: white;
+        transition: all .35s ease;
+        margin-bottom: 0.5rem;
+    }
+
+    .burgerLine:first-child {
+        width: 100%;
+    }
+
+    .burgerLine:nth-child(2) {
+        width: 60%;
+    }
+
+    .burgerLine:last-child {
+        margin-bottom: 0;
+        width: 35%;
+    }
+
+    .burger.open .burgerLine:first-child {
+        transform: translateY(10px) translateX(0) rotate(45deg);
+    }
+
+    .burger.open .burgerLine:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.open .burgerLine:last-child {
+        width: 100%;
+        transform: translateY(-10px) translateX(0) rotate(-45deg);
+    }
+</style>
+<body>
+    <button id="menu-2" class="burger" onclick="animateMenu()" aria-label="Close mobile menu">
+        <div class="burger-wrapper">
+            <span class="burgerLine"></span>
+            <span class="burgerLine"></span>
+            <span class="burgerLine"></span>
+        </div>
+    </button>
+    <script>
+        function animateMenu() {
+            const menu = document.getElementById("menu-2");
+            if (menu.classList.contains("open")) {
+                menu.classList.remove("open");
+            } else {
+                menu.classList.add("open");
+            }
+        }
+    </script>
+</body>
+
+</html>

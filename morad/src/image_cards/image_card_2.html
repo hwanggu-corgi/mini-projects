@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .threeColumnWrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 960px) {
+        .threeColumnWrap {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .card  {
+        margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 960px) {
+        .card  {
+            width: calc((100% - 40px)/3);
+            margin-right: 20px;
+        }
+    }
+
+    @media screen and (min-width: 960px) {
+        .card:hover .cardWrap {
+            top: -200px;
+        }
+    }
+
+    .card:last-child {
+        margin-right: 0;
+    }
+
+    .cardWrap {
+        height: 200px;
+        background: orange;
+        color: white;
+        padding: 1rem;
+        position: relative;
+        top: 0;
+        box-sizing:border-box;
+        transition: top 0.5s ease-out;
+    }
+</style>
+<body>
+    <main>
+        <div class="threeColumn">
+            <div class="threeColumnWrap">
+                <div class="card">
+                    <div class="cardWrap">
+                        <div class="cardTitle"><h3>Card Title 1</h3></div>
+                        <div class="cardDescription"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardWrap">
+                        <div class="cardTitle"><h3>Card Title 2</h3></div>
+                        <div class="cardDescription"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardWrap">
+                        <div class="cardTitle"><h3>Card Title 3</h3></div>
+                        <div class="cardDescription"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+    </script>
+</body>
+
+</html>

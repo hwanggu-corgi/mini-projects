@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+</head>
+<style>
+    body{
+        background-color: black;
+        margin: 0;
+    }
+
+    main {
+        position: relative;
+        right: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        transition: all 1s ease-in;
+    }
+
+    main.open {
+        position: absolute;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+    }
+
+    .header--Sticky {
+        position: fixed;
+        top: 0;
+
+    }
+
+    .sldr-main {
+        background-color: white;
+        width: 260px;
+        right: -260px;
+        transition: right 1s ease-in;
+
+        position: fixed;
+        top: 0;
+        height: 100vh;
+    }
+
+    .sldr-main.open {
+        right: 0px;
+    }
+</style>
+<body>
+    <main>
+        <header class="header header--sticky">
+            <button id="menu-2" class="burger" onclick="animateMenuBtn()">
+                Open
+            </button>
+        </header>
+    </main>
+    <nav class="sldr-main">
+        <ul>
+            <li>Menu Item 1</li>
+            <li>Menu Item 2</li>
+            <li>Menu Item 3</li>
+            <li>Menu Item 4</li>
+        </ul>
+    </nav>
+    <script>
+        function animateMenuBtn() {
+            const main = document.querySelector("main");
+            const menu = document.querySelector(".sldr-main");
+
+            menu.classList.toggle("open");
+            main.classList.toggle("open");
+
+            main.style.right = main.classList.contains("open") ? `${menu.offsetWidth}px` : null;
+        }
+    </script>
+</body>
+
+</html>

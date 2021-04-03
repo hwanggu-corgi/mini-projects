@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+</head>
+<style>
+
+</style>
+<body onload="findAndReplaceLearnMoreBtn()">
+    <main>
+        <article class="imgCard imgCardEight">
+            <header>
+                <a class="imgCardImg _ratio-43 _bg-center" href="#"></a>
+            </header>
+            <div class="imgCardBody customFieldContentArea">
+                <h5 class="imgCardTitle">Image card title goes here</h5>
+                <p>Lorem Ipsum dolor <a href="http://www.naver.com ">Learn More</a> sit amet, consectetur <a href="http://www.google.com">adipiscing elit</a>. Cras vitae dui vitae nulla ornare pretium et sit amet purus. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae dui vitae nulla ornare pretium et sit amet purus. Aliquam erat volutpat. Start typing some text. <a href="http://www.google.com">Learn More</a></p>
+                <!-- <div class="imgCargLinkWrap">
+                    <p><a class="imgCardLink btn btnRounded" href="#">Learn More</a></p>
+                </div> -->
+            </div>
+        </article>
+    </main>
+    <script>
+        function findAndReplaceLearnMoreBtn() {
+            // within customField Content Area, find all a tags
+            const candidates = document.querySelectorAll(".customFieldContentArea a");
+
+            for (let candidate of candidates) {
+                if (candidate.innerHTML.toLowerCase().trim() === "learn more") {
+                    console.log(candidate.href);
+                    const div = document.createElement("div");
+                    div.classList.add("btnWrap");
+                    const a = document.createElement("a");
+                    a.href = candidate.href;
+                    a.innerHTML = "Learn More";
+
+                    div.appendChild(a);
+                    candidate.appendChild(div);
+
+                    candidate.parentNode.insertBefore(div, candidate.nextSibling);
+                    candidate.remove();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

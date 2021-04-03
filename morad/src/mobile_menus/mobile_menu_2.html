@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="./mobile_menu_2.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header class="header header--sticky">
+            <button id="menu-2" class="burger" onclick="animateMenuBtn()">
+                Open
+            </button>
+        </header>
+    </main>
+    <nav class="sldr">
+        <section class="sldr-contact">
+            <div class="sldr-contact-wrapper">
+                <h2>Let's Get Started</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <form>
+                    <div class="form-group">
+                        <input id="get-started--email" type="text" placeholder="Email"/>
+                    </div>
+                    <div class="form-group">
+                        <input id="get-started--name" type="text" placeholder="Name"/>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message"></textarea>
+                    </div>
+                    <input type="button" value="Submit"/>
+                </form>
+            </div>
+        </section>
+        <header class="sldr-close">
+            <button id="menu-2" class="burger" onclick="animateMenuBtn()">
+                Close
+            </button>
+        </header>
+        <section class="sldr-main">
+            <ul>
+                <li><a href="#">Menu Item 1</a></li>
+                <li><a href="#">Menu Item 2</a></li>
+                <li><a href="#">Menu Item 3</a></li>
+                <li><a href="#">Menu Item 4</a></li>
+            </ul>
+        </section>
+    </nav>
+    <script>
+        function animateMenuBtn() {
+            const menu = document.querySelector(".sldr");
+            menu.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>
