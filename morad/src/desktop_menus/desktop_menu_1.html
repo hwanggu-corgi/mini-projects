@@ -33,12 +33,14 @@
         flex-grow: 1;
     }
 
-    .header .headerContent > div {
+    .header .headerContent > * {
         height: 100%;
     }
 
     .header .headerMobileMenu {
         margin: 0 20px 0 0;
+        display: flex;
+        align-items: center;
     }
 
     @media screen and (min-width: 700px) {
@@ -63,10 +65,13 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        height: inherit;
     }
 
     .header .headerMenu > ul > li {
         margin: 0 20px;
+        display: flex;
+        align-items: center;
     }
 
     .header .headerMenu > ul > li:last-child {
@@ -98,6 +103,11 @@
     .header .has-children ul li {
         padding: 15px 20px;
         width: 180px;
+    }
+
+    .header .headerBtns {
+        display: flex;
+        align-items: center;
     }
 </style>
 <body>  
