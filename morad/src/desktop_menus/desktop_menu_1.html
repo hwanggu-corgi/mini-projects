@@ -55,6 +55,22 @@
     .header .has-children:hover ul {
         display: initial;
     }
+
+    .header .headerContent {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    .header .headerMenu li {
+        position: relative;
+    }
+
+    .header .headerMenu li.has-children > ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
 </style>
 <body>  
     <main>
