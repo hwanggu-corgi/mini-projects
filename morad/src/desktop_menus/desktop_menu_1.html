@@ -11,92 +11,134 @@
         background-color: black;
     }
 
-    .headerThree * {
+    .header * {
         color: white;
     }
 
-</style>
-<body>
-    <main>
-        <div class="headerThree">
-            <div class="container">
-                <div class="headerLogo">
-                    <a href="/">
-                        <img src="logo.svg" alt="Logo">
-                    </a>
-                </div>
-                <div class="headerContent">
-                    <div class="headerMobileMenu">
-                        <button>Menu Button Goes Here</button>
-                    </div>
+    .container {
+        padding: 15px;
+        margin: 0 auto;
+        max-width: 1140px;
+    }
 
-                    <div class="headerMenu">
-                        <ul>
-                            <li class="has-children">
-                                <a href="/for-buyers"><span class="Title">Buy</span></a>
-                                <ul>
-                                    <li class="no-children">
-                                        <a href="/buyers-questionnaire"><span class="Title">Buyer Request Form</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/why-use-a-real-estate-professional-when-buying"><span class="Title">Why Use A Real Estate Professional When Buying</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/relocation-package"><span class="Title">Relocation Package</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/files/galleries/calgary_mls_districts.pdf" target="_blank"><span class="Title">Calgary Area Map</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/questions-for-your-mortgage-broker"><span class="Title">Questions For Your Mortgage Broker</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/calgary-home-builders"><span class="Title">Calgary Home Builders</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="http://www.creb.com/Housing_Statistics/" target="_blank"><span class="Title">Calgary Real Estate Statistics</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-children">
-                                <a href="/for-sellers"><span class="Title">Sell</span></a>
-                                <ul>
-                                    <li class="no-children">
-                                        <a href="/sell-your-home-today"><span class="Title">Sell Your Home Today</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/calgary-real-estate-recently-sold"><span class="Title">Recently Sold</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/why-use-a-real-estate-professional-when-selling"><span class="Title">Why Use A Real Estate Professional When Selling</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="/get-your-home-ready"><span class="Title">Get Your Home Ready</span></a>
-                                    </li>
-                                    <li class="no-children">
-                                        <a href="http://www.creb.com/Housing_Statistics/" target="_blank"><span class="Title">Calgary Real Estate Statistics</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-children">
-                                <a href="/calgary-real-estate-investing"><span class="Title">Invest</span></a>
-                                <ul>
-                                    <li class="no-children"><a href="/investing-goals"><span class="Title">Investing Goals</span></a></li>
-                                    <li class="no-children"><a href="/investing-strategies"><span class="Title">Investing Strategies</span></a></li>
-                                    <li class="no-children"><a href="/investing-analysis"><span class="Title">Investing Analysis</span></a></li>
-                                    <li class="no-children"><a href="/investing-search"><span class="Title">Investing Search</span></a></li>
-                                    <li class="no-children"><a href="/management"><span class="Title">Management</span></a></li>
-                                    <li class="no-children"><a href="/exit-strategies"><span class="Title">Exit Strategies</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="headerBtns">
-                        <a href="/contact-us" template="default" class="medium">Connect</a>
-                    </div>
+    .header .headerWrapper {
+        display: flex;
+    }
+
+    .header .headerLogo {
+        margin: 0 20px 0 0;
+    }
+
+    .header .headerContent {
+        display: flex; 
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .header .headerMenu ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 700px) {
+        .header .headerMobileMenu {
+            display: none;
+        }
+    }
+
+    .header .has-children ul {
+        display: none;
+    }
+
+    .header .has-children:hover ul {
+        display: initial;
+    }
+</style>
+<body>  
+    <main>
+        <header class="header">
+            <div class="container">
+                <div class="headerWrapper">
+                    <section class="headerLogo">
+                        <a href="/">
+                            <img src="logo.svg" alt="Logo">
+                        </a>
+                    </section>
+                    <section class="headerContent">
+                        <div class="headerMobileMenu">
+                            <button>Menu Button Goes Here</button>
+                        </div>
+    
+                        <nav class="headerMenu">
+                            <ul>
+                                <li class="has-children">
+                                    <a href="/for-buyers">Buy</a>
+                                    <ul>
+                                        <li class="no-children">
+                                            <a href="/buyers-questionnaire">Buyer Request Form</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/why-use-a-real-estate-professional-when-buying">Why Use A Real Estate Professional When Buying</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/relocation-package">Relocation Package</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/files/galleries/calgary_mls_districts.pdf" target="_blank">Calgary Area Map</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/questions-for-your-mortgage-broker">Questions For Your Mortgage Broker</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/calgary-home-builders">Calgary Home Builders</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="http://www.creb.com/Housing_Statistics/" target="_blank">Calgary Real Estate Statistics</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="/for-sellers">Sell</a>
+                                    <ul>
+                                        <li class="no-children">
+                                            <a href="/sell-your-home-today">Sell Your Home Today</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/calgary-real-estate-recently-sold">Recently Sold</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/why-use-a-real-estate-professional-when-selling">Why Use A Real Estate Professional When Selling</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="/get-your-home-ready">Get Your Home Ready</a>
+                                        </li>
+                                        <li class="no-children">
+                                            <a href="http://www.creb.com/Housing_Statistics/" target="_blank">Calgary Real Estate Statistics</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="/calgary-real-estate-investing">Invest</a>
+                                    <ul>
+                                        <li class="no-children"><a href="/investing-goals">Investing Goals</a></li>
+                                        <li class="no-children"><a href="/investing-strategies">Investing Strategies</a></li>
+                                        <li class="no-children"><a href="/investing-analysis">Investing Analysis</a></li>
+                                        <li class="no-children"><a href="/investing-search">Investing Search</a></li>
+                                        <li class="no-children"><a href="/management">Management</a></li>
+                                        <li class="no-children"><a href="/exit-strategies">Exit Strategies</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="headerBtns">
+                            <a href="/contact-us" template="default" class="medium">Connect</a>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </header>
     </main>
 </body>
 
