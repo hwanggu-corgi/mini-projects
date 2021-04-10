@@ -12,141 +12,22 @@
     }
 
     .headerThree * {
-    color: white;
+        color: white;
     }
 
-    .headerThree .container {
-    display: flex;
-    }
-
-    .headerThree .headerMainLeft {
-    width: 130px;
-    }
-
-    @media screen and (min-width: 991px) {
-    .headerThree .headerMainLeft {
-        width: 154px;
-        margin-right: 20px;
-    }
-    }
-
-    .headerThree .headerLogo img {
-    width: 100%;
-    padding: 30px 0;
-    }
-
-    .headerThree .headerMainRight {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
-    }
-
-    .headerThree .headerMenu {
-    display: none;
-    height: 100%;
-    }
-
-    .headerThree .headerBtns {
-    display: none;
-    }
-
-    @media screen and (min-width: 991px) {
-    .headerThree .headerMobileMenu {
-        display: none;
-    }
-    
-    .headerThree .headerMenu,
-    .headerThree .headerBtns {
-        display: initial;
-    }
-
-    .headerThree .headerMenu {
-        display: initial;
-        margin: 0 40px 0 0;
-    }
-    }
-
-    .headerThree .headerMenu > .mainMenu,
-    .headerThree .headerMenu > .mainMenu > .Menu,
-    .headerThree .headerMenu > .mainMenu > .Menu,
-    .headerThree .headerMenu > .mainMenu > .Menu > .blockContents,
-    .headerThree .headerMenu > .mainMenu > .Menu > .blockContents > ul {
-    height: inherit;
-    }
-
-    .headerThree .headerMenu > .mainMenu > .Menu > .blockContents > ul {
-        display: flex;
-        align-items: center;
-        margin: 0;
-    }
-
-    .headerThree .burgerLine {
-    background-color: white;
-    }
-
-    .burger.burgerHover:hover .burgerLine {
-    background-color: #009FD3;
-    }
-
-    .headerThree .headerMenu .blockContents > ul {
-    display: flex;
-    }
-
-    .headerThree .headerMenu .blockContents > ul > li {
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    }
-
-    .headerThree .headerMenu .blockContents > ul > li > a {
-    padding: 10px 0;
-    display: inline-block;
-    }
-
-    .headerThree .headerMenu li.has-children {
-    position: relative;
-    }
-
-    .headerThree .headerMenu li.has-children > ul {
-    position: absolute;
-    visibility: hidden;
-    width: 250px;
-    }
-
-    .headerThree .headerMenu li.has-children:hover > ul {
-    visibility: initial;
-    }
-
-    .headerThree .headerMenu .blockContents > ul > li.has-children > ul {
-    top: 100%;
-    }
-
-    .navPanelThree {
-    display: none;
-    }
 </style>
 <body>
     <main>
         <div class="headerThree">
             <div class="container">
                 <div class="headerLogo">
-                    <a href="/" title="Think Calgary Homes logo">
-                        <img src="/files/_cache/961760c1298dd978a3a22e2f328838a2.png" alt="Think Calgary Homes logo" class="imgEd11">
+                    <a href="/">
+                        <img src="logo.svg" alt="Logo">
                     </a>
                 </div>
-                <div class="headerMainRight">
+                <div class="headerContent">
                     <div class="headerMobileMenu">
-                        <button class="burger burgerOne burgerHover">
-                            <span class="burgerLines">
-                                <span class="burgerLine"></span>
-                                <span class="burgerLine"></span>
-                                <span class="burgerLine"></span>
-                                <span class="burgerLine"></span>
-                                <span class="burgerLine"></span>
-                                <span class="burgerLine"></span>
-                            </span>
-                        </button>
+                        <button>Menu Button Goes Here</button>
                     </div>
 
                     <div class="headerMenu">
