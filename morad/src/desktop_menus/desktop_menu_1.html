@@ -11,10 +11,6 @@
         background-color: black;
     }
 
-    .header * {
-        color: white;
-    }
-
     .container {
         padding: 15px;
         margin: 0 auto;
@@ -35,11 +31,14 @@
         align-items: center;
     }
 
-    .header .headerMenu ul {
+    .header .headerContent {
         display: flex;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    .header .headerMobileMenu {
+        margin: 0 20px 0 0;
     }
 
     @media screen and (min-width: 700px) {
@@ -48,18 +47,35 @@
         }
     }
 
-    .header .has-children ul {
+
+    .header .headerMenu {
         display: none;
+        margin: 0 50px 0 0;
     }
 
-    .header .has-children:hover ul {
-        display: initial;
+    @media screen and (min-width: 700px) {
+        .header .headerMenu {
+            display: initial;
+        }
     }
 
-    .header .headerContent {
+    .header .headerMenu * {
+        color: white;
+    }
+
+    .header .headerMenu > ul {
         display: flex;
-        justify-content: flex-end;
-        flex-grow: 1;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header .headerMenu > ul > li {
+        margin: 0 20px;
+    }
+
+    .header .headerMenu > ul > li:last-child {
+        margin: 0 0 0 20px;
     }
 
     .header .headerMenu li {
@@ -67,9 +83,20 @@
     }
 
     .header .headerMenu li.has-children > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
         position: absolute;
         left: 0;
         top: 100%;
+    }
+
+    .header .has-children ul {
+        display: none;
+    }
+
+    .header .has-children:hover ul {
+        display: initial;
     }
 </style>
 <body>  
