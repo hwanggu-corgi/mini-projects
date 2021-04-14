@@ -36,6 +36,11 @@ $EMAIL_INFO = [
 			line-height: 1.5; 
 			border-collapse: collapse;
 		}
+
+		.emailContentArea {
+			background:#002D56; 
+			width: 600px !important;
+		}
 	</style>
 	<body style="margin: 0; padding: 0;">
 
@@ -44,7 +49,7 @@ $EMAIL_INFO = [
 			<tbody>
 				<tr>
 					<td>
-						<table align="center" border="0" cellpadding="30" cellspacing="0" width="600" style="background:#002D56; width: 600px !important;">
+						<table align="center" border="0" cellpadding="30" cellspacing="0" width="600" class="emailContentArea">
 						<!-- Wrapper Div -->
 						<div style="max-width: 600px; margin: 30px auto; background-color: #ffffff;">
 
