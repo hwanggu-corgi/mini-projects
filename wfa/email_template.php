@@ -50,9 +50,34 @@ $EMAIL_INFO = [
 				<tr>
 					<td>
 						<table align="center" border="0" cellpadding="30" cellspacing="0" width="600" class="emailContentArea">
-						<!-- Wrapper Div -->
-						<div style="max-width: 600px; margin: 30px auto; background-color: #ffffff;">
-
+							<tr>
+								<td class="_no-pb">
+									<!--Add image here-->
+									<a href="<?= $EMAIL_INFO['site_url'] ?>" style="display: inline-block;" title="<?= $EMAIL_INFO['site_name'] ?>">
+										<img src="<?= $EMAIL_INFO['site_logo'] ?>" width="150" alt="<?= $EMAIL_INFO['site_name'] ?>" style="vertical-align: middle"/>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="_no-pb _no-pt">
+									<!--Add content here-->
+									<?php foreach ($EMAIL_INFO['content'] as $content) {
+										echo '<p>'.$content.'</p>';
+									} ?>
+								</td>
+							</tr>
+							<tr>
+								<td class="_no-pt">
+									<!---Add footer here-->
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
 							<!-- Header -->
 							<table border="0" cellspacing="0" cellpadding="30" style="width: 100%;">
 								<tbody>
