@@ -26,15 +26,25 @@ $EMAIL_INFO = [
 		<title><?= $EMAIL_INFO['subject'] ?></title>
 	</head>
 	<style>
+		.emailBackground {
+			background-color: #f5f4f4; 
+			color: #333333; 
+			font-size: 16px; 
+			text-align: left; 
+			width: 100%; 
+			font-family: sans-serif; 
+			line-height: 1.5; 
+			border-collapse: collapse;
+		}
 	</style>
 	<body style="margin: 0; padding: 0;">
 
 		<!-- Container Table -->
-		<table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #f5f4f4; color: #333333; font-size: 16px; text-align: left; width: 100%; font-family: sans-serif; line-height: 1.5; border-collapse: collapse;">
+		<table align="center" border="0" cellpadding="0" cellspacing="0" class="emailBackground">
 			<tbody>
 				<tr>
 					<td>
-
+						<table align="center" border="0" cellpadding="30" cellspacing="0" width="600" style="background:#002D56; width: 600px !important;">
 						<!-- Wrapper Div -->
 						<div style="max-width: 600px; margin: 30px auto; background-color: #ffffff;">
 
