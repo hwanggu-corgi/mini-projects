@@ -27,6 +27,16 @@
           justify-content: flex-end;
 }
 
+.royalBlueTeamOne .royalBlueTeamCTALeft {
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .royalBlueTeamOne .royalBlueTeamCTALeft {
+    padding-bottom: 0;
+  }
+}
+
 .royalBlueTeamOne .royalBlueTeamCTARight .File {
   height: 100%;
 }
