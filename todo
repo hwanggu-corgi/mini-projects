@@ -1,6 +1,6 @@
 []: Fix navigation menu for CLA
 []: Corgi add page 'Candlewood shop' under support
-[]: Fix sign up newsletter on `contact us` page under `about CLA`
+[]: Fix sign up newsletter on `contact us` page under `about CLA` #2
 []: Fix `Learn More` button on `home page`
 []: Add pages
     []: News under `about cla`
@@ -18,7 +18,7 @@
     []: Lake Diving, About Candlewood Lake
         [x]: Added Photo
         [x]: Corgi completed adding conent
-        [ ]: Fix diving flag #3
+        [x]: Fix diving flag
     [x]: Paddle Sports, About Candlewood Lake
         [X]: Added Photo
         [x]: Corgi completed adding conent
