@@ -2,10 +2,9 @@
 []: Corgi add page 'Candlewood shop' under support
 [x]: Fix sign up newsletter on `contact us` page under `about CLA` #2
 []: Fix `Learn More` button on `home page`
-[]: Add pages
-    []: News under `about cla`
-    []: Careers under `about cla`
-[]: Complete Contents
+[x]: Complete Contents
+    [ ]: Fast Facts, About Candlewood Lake
+        [ ]: Add map
     [x]: Camping, About Candlewood Lake 
         [x]: Added Photo
         [x]: Corgi added Content
