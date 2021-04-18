@@ -1,63 +1,97 @@
-<div class="royalBlueTeamCTA royalBlueTeamOne content-style _bg-center" style="background-image: url('/images/gray-bg.jpg');">
-	<div class="royalBlueTeamOneWrap">
-		<div class="container">
-			<div class="row">
-				<div class="royalBlueTeamCTALeft col-lg-6">
-					<mwWidget rel="royalBlueTeamTitle" info="David and Jeff CTA Title" widget="Content">
-						<h2>David Williams and Jeff Rombough</h2>
-						<p>Most importantly, Dave and Jeff believe in a no-pressure approach when serving their clients, which leads to building trust and long term relationships. When it comes to their team environment, they want nothing less than a creative, inspiring, and fun atmosphere to promote an improved quality of life. They both have a common vision in their real estate business philosophy that has drawn them together; they both strive to give their clients the best real estate experience and continually work to improve the quality of the real estate industry by sharing their knowledge.</p>
-					</mwWidget>
-					<div class="row">
-						<div class="col-md-7">
-							<mwWidget rel="royalBlueTeamTitleCTAVideo" info="Royal Blue Team CTA Video" widget="Embed"><iframe src='https://www.youtube.com/embed/fAp8U66yPag' frameborder='0' allowfullscreen></iframe></mwWidget>
+<div id="<?= $teamGallery_id ?>" class="teamGallery teamGalleryOne">
+	<div class="teamGalleryWrap">
+		<div class="row">
+
+			<!-- Items -->
+			<items thumb="768x0" preview="768x0">
+				<div class="teamItem col-lg-3 col-md-4 col-sm-6 ">
+					<a title="{title}" class="teamItemWrap">
+						<div class="teamItemImgHolder">
+							<div class="teamItemImg _ratio-34" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
 						</div>
-						<div class="royalBlueTeamBtns col-md-5">
-							<mwWidget rel="royalBlueTeamBtn1" info="Royal Blue Team CTA Button 1" widget="Button" link_text="Learn More" template="rectangle.rectangle_outline_default.php" button_size="medium" align="mwBtnLeft"></mwWidget>
-							<mwWidget rel="royalBlueTeamBtn2" info="Royal Blue Team CTA Button 2" widget="Button" link_text="Contact" template="rectangle.rectangle_outline_default.php" button_size="medium" align="mwBtnLeft"></mwWidget>
+						<h6 class="teamItemName">{title}</h6>
+						<p class="teamItemToggle"><span>View Bio</span></p>
+					</a>
+
+					<!-- Panel -->
+					<div class="teamPanel">
+						<div class="teamPanelWrap">
+							<div class="container">
+								<div class="row _gutter-80">
+									<div class="teamPanelLeft col-md-6">
+										<div class="teamPanelImgHolder">
+											<div class="teamPanelImg _ratio-34" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+										</div>
+									</div>
+									<div class="teamPanelRight col-md-6">
+										<h3 class="teamPanelName">{title}</h3>
+										<div class="teamItemContent">{description}</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Close Button -->
+							<div class="teamPanelClose">
+								<button class="burger burgerOne open" aria-label="Close Popup">
+									<span class="burgerLines">
+					                    <span class="burgerLine"></span>
+					                    <span class="burgerLine"></span>
+					                    <span class="burgerLine"></span>
+					                    <span class="burgerLine"></span>
+					                    <span class="burgerLine"></span>
+					                    <span class="burgerLine"></span>
+					                </span>
+									<span class="burgerSlashes">
+					                    <span class="burgerSlash"></span>
+					                    <span class="burgerSlash"></span>
+					                    <span class="burgerSlash"></span>
+					                    <span class="burgerSlash"></span>
+					                </span>
+									<span class="burgerText">
+					                    <span class="textOpen" aria-hidden="true">Menu</span>
+										<span class="textClose" aria-hidden="true">Close</span>
+					                </span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="royalBlueTeamCTARight col-lg-6">
-					<mwWidget rel="royalBlueTeamMembers" info="Royal Blue Team Members" widget="File"></mwWidget>
-				</div>
-			</div>
+			</items>
 		</div>
 	</div>
 </div>
-<style>
-    .royalBlueTeamOne .royalBlueTeamCTARight .Image img {
-        height: 100%;
-    }
 
-    .royalBlueTeamOne .royalBlueTeamOneWrap {
-        padding: 90px 0 0 0;
-    }
+<script type="text/javascript">
+	$(document).ready(function () {
 
-    .royalBlueTeamOne .btn p {
-        margin-bottom: 15px;
-    }
+		//-----------------------------------------------------------
+		// Members List Main Function
+		//-----------------------------------------------------------
+		//
+		(function () {
 
-    .royalBlueTeamOne .royalBlueTeamOneBtns {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
+			// Open Team Panel
+			//
+			$('#<?= $teamGallery_id ?> a.teamItemWrap').on('click', function (e) {
+				e.preventDefault();
 
-    .royalBlueTeamOne .royalBlueTeamCTARight .File {
-        height: 100%;
-    }
+				var $panel = $(this).closest('.teamItem').find('.teamPanel');
 
-    .royalBlueTeamOne .royalBlueTeamCTARight .File {
-        height: inherit;
-    }
+				$('body').addClass('_overflow-hidden');
+				$panel.addClass('active');
+				$panel.fadeIn();
+			});
 
-    .royalBlueTeamOne .royalBlueTeamCTARight .blockContents {
-        height: inherit;
-    }
+			// Close Team Panel
+			//
+			$('#<?= $teamGallery_id ?> .teamPanel .burger').on('click', function () {
 
-    .royalBlueTeamOne .royalBlueTeamCTARight .Image {
-        height: inherit;
-        display: flex;
-        justify-content: center;
-    }
-</style>
+				var $panel = $(this).closest('.teamPanel');
+
+				$('body').removeClass('_overflow-hidden');
+				$panel.removeClass('active');
+				$panel.fadeOut();
+			});
+		})();
+	});
+</script>
