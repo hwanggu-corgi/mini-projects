@@ -1,48 +1,19 @@
+<style>
+    .logoGalleryOne .logo {
+        padding-bottom: 61.8%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+</style>
 <div id="----" class="logoGallery logoGalleryOne">
 	<div class="logoGalleryWrap">
 		<div class="row">
 			<items thumb="768x0" preview="768x0">
-				<div class="teamItem col-lg-3 col-md-4 col-sm-6 ">
-                    <div class="teamItemImgHolder">
-                        <div class="teamItemImg _ratio-34" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
-                    </div>
+				<div class="item col-lg-3 col-md-4 col-sm-6 ">
+                    <div class="logo" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
 				</div>
 			</items>
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-	$(document).ready(function () {
-
-		//-----------------------------------------------------------
-		// Members List Main Function
-		//-----------------------------------------------------------
-		//
-		(function () {
-
-			// Open Team Panel
-			//
-			$('#<?= $teamGallery_id ?> a.teamItemWrap').on('click', function (e) {
-				e.preventDefault();
-
-				var $panel = $(this).closest('.teamItem').find('.teamPanel');
-
-				$('body').addClass('_overflow-hidden');
-				$panel.addClass('active');
-				$panel.fadeIn();
-			});
-
-			// Close Team Panel
-			//
-			$('#<?= $teamGallery_id ?> .teamPanel .burger').on('click', function () {
-
-				var $panel = $(this).closest('.teamPanel');
-
-				$('body').removeClass('_overflow-hidden');
-				$panel.removeClass('active');
-				$panel.fadeOut();
-			});
-		})();
-	});
-</script>
