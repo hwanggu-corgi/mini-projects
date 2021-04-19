@@ -5,6 +5,26 @@
         background-position: center;
         background-size: contain;
     }
+
+    .logoGallery .fadeIn {
+        transition: opacity 0.5s ease-in;
+        opacity: 0;
+    }
+
+    .logoGallery .fadeIn-0 {
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    .logoGallery .fadeIn-1 {
+        opacity: 1;
+        transition-delay: 1s;
+    }
+
+    .logoGallery .fadeIn-2 {
+        opacity: 1;
+        transition-delay: 2s;
+    }
 </style>
 <div id="----" class="logoGallery logoGalleryOne">
 	<div class="logoGalleryWrap">
@@ -17,3 +37,43 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+    function initFadeIn() {
+        let i = 0;
+        $('.logoGallery logo').each(function() {
+            $(this).addClass(`fadeIn`);
+        });
+    }
+	$(document).ready(function () {
+
+		//-----------------------------------------------------------
+		// Members List Main Function
+		//-----------------------------------------------------------
+		//
+		(function () {
+
+			// Open Team Panel
+			//
+			$('#<?= $teamGallery_id ?> a.teamItemWrap').on('click', function (e) {
+				e.preventDefault();
+
+				var $panel = $(this).closest('.teamItem').find('.teamPanel');
+
+				$('body').addClass('_overflow-hidden');
+				$panel.addClass('active');
+				$panel.fadeIn();
+			});
+
+			// Close Team Panel
+			//
+			$('#<?= $teamGallery_id ?> .teamPanel .burger').on('click', function () {
+
+				var $panel = $(this).closest('.teamPanel');
+
+				$('body').removeClass('_overflow-hidden');
+				$panel.removeClass('active');
+				$panel.fadeOut();
+			});
+		})();
+	});
+</script>
