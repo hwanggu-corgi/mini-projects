@@ -1,79 +1,52 @@
 <style>
     .logoGalleryOne .logo {
-        padding-bottom: 61.8%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
+    padding-bottom: 61.8%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
     }
 
     .logoGallery .fadeIn {
-        transition: opacity 0.5s ease-in;
-        opacity: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
     }
 
     .logoGallery .fadeIn-0 {
-        opacity: 1;
-        transition-delay: 0s;
+    transition-delay: 0s;
     }
 
     .logoGallery .fadeIn-1 {
-        opacity: 1;
-        transition-delay: 1s;
+    transition-delay: 0.5s;
     }
 
     .logoGallery .fadeIn-2 {
-        opacity: 1;
-        transition-delay: 2s;
+    transition-delay: 1s;
     }
 </style>
 <div id="----" class="logoGallery logoGalleryOne">
-	<div class="logoGalleryWrap">
+    <div class="logoGalleryWrap">
 		<div class="row">
 			<items thumb="768x0" preview="768x0">
 				<div class="item col-lg-3 col-md-4 col-sm-6 ">
-                    <div class="logo" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+                    <a href="{url}">
+                        <div class="logo" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+                    </a>
 				</div>
 			</items>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
-    function initFadeIn() {
+    function initLogoGalleryFadeIn() {
         let i = 0;
-        $('.logoGallery logo').each(function() {
-            $(this).addClass(`fadeIn`);
+        $('.logoGallery .logo').each(function() {
+            $(this).addClass('fadeIn');
+            $(this).addClass(`fadeIn-${i % 3}`);
+            i += 1;
         });
     }
 	$(document).ready(function () {
-
-		//-----------------------------------------------------------
-		// Members List Main Function
-		//-----------------------------------------------------------
-		//
-		(function () {
-
-			// Open Team Panel
-			//
-			$('#<?= $teamGallery_id ?> a.teamItemWrap').on('click', function (e) {
-				e.preventDefault();
-
-				var $panel = $(this).closest('.teamItem').find('.teamPanel');
-
-				$('body').addClass('_overflow-hidden');
-				$panel.addClass('active');
-				$panel.fadeIn();
-			});
-
-			// Close Team Panel
-			//
-			$('#<?= $teamGallery_id ?> .teamPanel .burger').on('click', function () {
-
-				var $panel = $(this).closest('.teamPanel');
-
-				$('body').removeClass('_overflow-hidden');
-				$panel.removeClass('active');
-				$panel.fadeOut();
-			});
-		})();
+        initLogoGalleryFadeIn();
 	});
 </script>
