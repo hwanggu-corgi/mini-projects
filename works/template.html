@@ -1,52 +1,95 @@
-<style>
-    .logoGalleryOne .logo {
-    padding-bottom: 61.8%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0;
-    }
+<!-- Header Four -->
+<div class="header headerFour stickyHeader stickyHeaderWithSpace">
+	<div class="headerWrap">
+		<!-- Header Main -->
+		<div class="headerMain">
 
-    .logoGallery .fadeIn {
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
-    }
+			<!-- Header Main Left -->
+			<div class="headerMainLeft">
 
-    .logoGallery .fadeIn-0 {
-    transition-delay: 0s;
-    }
-
-    .logoGallery .fadeIn-1 {
-    transition-delay: 0.5s;
-    }
-
-    .logoGallery .fadeIn-2 {
-    transition-delay: 1s;
-    }
-</style>
-<div id="----" class="logoGallery logoGalleryOne">
-    <div class="logoGalleryWrap">
-		<div class="row">
-			<items thumb="768x0" preview="768x0">
-				<div class="item col-lg-3 col-md-4 col-sm-6 ">
-                    <a href="{url}">
-                        <div class="logo" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
-                    </a>
+				<!-- Header Logo -->
+				<div class="headerLogo">
+					<mwWidget rel="siteLogo" widget="File" file="logo.png" Info="Header Logo" template="logo.logo.php" global="1"></mwWidget>
 				</div>
-			</items>
+			</div>
+
+			<!-- Header Main Right -->
+			<div class="headerMainRight">
+
+				<!-- Header Menu -->
+				<div class="headerMenu">
+					<div class="mainMenu">
+						<mwWidget rel="siteMenu" info="Main Menu" widget="Menu" menu="mainMenu" template="default.php" global="1"></mwWidget>
+					</div>
+				</div>
+
+                <!-- Header Search Bar -->
+                <div class="headerSearchBar">
+                    <button class="searchBtn" aria-label="Open search bar"><i class="fas fa-search"></i></button>
+                    <div class="searchBar">
+                        <div class="searchBarWrap">
+                            <div class="searchBarForm">
+                                <form action="/search" method="GET">
+                                    <input type="text" name="q" value="" placeholder="Search">
+                                    <button type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Header Buttons -->
+				<div class="headerBtns">
+					<mwWidget rel="headerButton1" info="Header Button 1" widget="Button" link_text="Contact" template="rectangle.rectangle_gray.php" button_size="medium" align="mwBtnCenter" global="1"></mwWidget>
+					<mwWidget rel="headerButton2" info="Header Button 2" widget="Button" link_text="Donate" template="rectangle.rectangle_default.php" button_size="medium" align="mwBtnCenter" global="1"></mwWidget>
+				</div>
+
+				<!-- Header Mobile Menu -->
+				<div class="headerMobileMenu">
+					<button class="burger burgerOne" aria-label="Open mobile menu">
+						<span class="burgerLines">
+	                        <span class="burgerLine"></span>
+	                        <span class="burgerLine"></span>
+	                        <span class="burgerLine"></span>
+	                        <span class="burgerLine"></span>
+	                        <span class="burgerLine"></span>
+	                        <span class="burgerLine"></span>
+	                    </span>
+						<span class="burgerSlashes">
+	                        <span class="burgerSlash"></span>
+	                        <span class="burgerSlash"></span>
+	                        <span class="burgerSlash"></span>
+	                        <span class="burgerSlash"></span>
+	                    </span>
+						<span class="burgerText">
+		                    <span class="textOpen" aria-hidden="true">Menu</span>
+							<span class="textClose" aria-hidden="true">Close</span>
+		                </span>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript">
-    function initLogoGalleryFadeIn() {
-        let i = 0;
-        $('.logoGallery .logo').each(function() {
-            $(this).addClass('fadeIn');
-            $(this).addClass(`fadeIn-${i % 3}`);
-            i += 1;
-        });
-    }
 	$(document).ready(function () {
-        initLogoGalleryFadeIn();
+        //-----------------------------------------------------------
+		// Adding shadow on scroll
+		//-----------------------------------------------------------
+		//
+        (function () {
+            const headerMain = $('.header.headerFour .headerMain');
+			$(window).on('scroll', function(){
+                if($(window).scrollTop() > 0){
+                    headerMain.addClass('onScroll');
+                }
+                else {
+                    headerMain.removeClass('onScroll');
+                }
+            });
+		})();
 	});
 </script>
