@@ -3,33 +3,34 @@
         background-color: var(--color-primary);
         position: relative;
     }
+
+    .footerLogo {
+        position: absolute;
+        width: 161px;
+        top: calc(-161px * 0.45);
+        left: calc(50% - 161px/2);
+    }
+
+    .footerLogo img {
+        width: 100%;
+    }
 </style>
 <div class="footer footerFour">
 	<div class="footerWrap">
 		<div class="container">
-
 			<!-- Main -->
 			<div class="footerMain">
-				<div class="row">
+                <!-- Logo -->
+                <div class="footerLogo">
+                    <mwWidget rel="footerLogo" widget="File" file="logo.png" Info="Footer Logo" template="logo.logo.php" global="1"></mwWidget>
+                </div>
 
-					<!-- Col 1 -->
-					<div class="footerCol footerCol1">
-						<div class="footerColInner">
-
-							<!-- Logo -->
-							<div class="footerLogo">
-								<mwWidget rel="footerLogo" widget="File" file="logo.png" Info="Footer Logo" template="logo.logo.php" global="1"></mwWidget>
-							</div>
-
-							<!-- Description -->
-							<div class="footerDescription">
-								<mwWidget rel="footerDescription" info="Footer Description" widget="Content" global="1">
-									<p>Change the color to match your brand or vision, add your logo, choose the perfect thumbnail, remove the playbar, add speed controls, and more. </p>
-								</mwWidget>
-							</div>
-						</div>
-					</div>
-				</div>
+                <!-- Description -->
+                <div class="footerDescription">
+                    <mwWidget rel="footerDescription" info="Footer Description" widget="Content" global="1">
+                        <p>Change the color to match your brand or vision, add your logo, choose the perfect thumbnail, remove the playbar, add speed controls, and more. </p>
+                    </mwWidget>
+                </div>
 			</div>
 
 			<!-- Secondary -->
