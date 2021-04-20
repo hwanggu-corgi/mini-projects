@@ -1,95 +1,40 @@
-<!-- Header Four -->
-<div class="header headerFour stickyHeader stickyHeaderWithSpace">
-	<div class="headerWrap">
-		<!-- Header Main -->
-		<div class="headerMain">
+<div class="footer footerFour content-style _bg-lightest">
+	<div class="footerWrap">
+		<div class="container">
 
-			<!-- Header Main Left -->
-			<div class="headerMainLeft">
+			<!-- Main -->
+			<div class="footerMain">
+				<div class="row">
 
-				<!-- Header Logo -->
-				<div class="headerLogo">
-					<mwWidget rel="siteLogo" widget="File" file="logo.png" Info="Header Logo" template="logo.logo.php" global="1"></mwWidget>
+					<!-- Col 1 -->
+					<div class="footerCol footerCol1">
+						<div class="footerColInner">
+
+							<!-- Logo -->
+							<div class="footerLogo">
+								<mwWidget rel="footerLogo" widget="File" file="logo.png" Info="Footer Logo" template="logo.logo.php" global="1"></mwWidget>
+							</div>
+
+							<!-- Description -->
+							<div class="footerDescription">
+								<mwWidget rel="footerDescription" info="Footer Description" widget="Content" global="1">
+									<p>Change the color to match your brand or vision, add your logo, choose the perfect thumbnail, remove the playbar, add speed controls, and more. </p>
+								</mwWidget>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<!-- Header Main Right -->
-			<div class="headerMainRight">
+			<!-- Secondary -->
+			<div class="footerSecondary">
 
-				<!-- Header Menu -->
-				<div class="headerMenu">
-					<div class="mainMenu">
-						<mwWidget rel="siteMenu" info="Main Menu" widget="Menu" menu="mainMenu" template="default.php" global="1"></mwWidget>
-					</div>
-				</div>
-
-                <!-- Header Search Bar -->
-                <div class="headerSearchBar">
-                    <button class="searchBtn" aria-label="Open search bar"><i class="fas fa-search"></i></button>
-                    <div class="searchBar">
-                        <div class="searchBarWrap">
-                            <div class="searchBarForm">
-                                <form action="/search" method="GET">
-                                    <input type="text" name="q" value="" placeholder="Search">
-                                    <button type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-				<!-- Header Buttons -->
-				<div class="headerBtns">
-					<mwWidget rel="headerButton1" info="Header Button 1" widget="Button" link_text="Contact" template="rectangle.rectangle_gray.php" button_size="medium" align="mwBtnCenter" global="1"></mwWidget>
-					<mwWidget rel="headerButton2" info="Header Button 2" widget="Button" link_text="Donate" template="rectangle.rectangle_default.php" button_size="medium" align="mwBtnCenter" global="1"></mwWidget>
-				</div>
-
-				<!-- Header Mobile Menu -->
-				<div class="headerMobileMenu">
-					<button class="burger burgerOne" aria-label="Open mobile menu">
-						<span class="burgerLines">
-	                        <span class="burgerLine"></span>
-	                        <span class="burgerLine"></span>
-	                        <span class="burgerLine"></span>
-	                        <span class="burgerLine"></span>
-	                        <span class="burgerLine"></span>
-	                        <span class="burgerLine"></span>
-	                    </span>
-						<span class="burgerSlashes">
-	                        <span class="burgerSlash"></span>
-	                        <span class="burgerSlash"></span>
-	                        <span class="burgerSlash"></span>
-	                        <span class="burgerSlash"></span>
-	                    </span>
-						<span class="burgerText">
-		                    <span class="textOpen" aria-hidden="true">Menu</span>
-							<span class="textClose" aria-hidden="true">Close</span>
-		                </span>
-					</button>
+				<!-- Footer Copyright -->
+				<div class="footerCopyright">
+					<div class="copyrightAutoYear">© Copyright <?= date("Y") ?> </div>
+					<mwWidget rel="footerCopyright" info="Footer Copyright" widget="Embed" global="1">Morad Media Inc. All rights reserved.</mwWidget>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-	$(document).ready(function () {
-        //-----------------------------------------------------------
-		// Adding shadow on scroll
-		//-----------------------------------------------------------
-		//
-        (function () {
-            const headerMain = $('.header.headerFour .headerMain');
-			$(window).on('scroll', function(){
-                if($(window).scrollTop() > 0){
-                    headerMain.addClass('onScroll');
-                }
-                else {
-                    headerMain.removeClass('onScroll');
-                }
-            });
-		})();
-	});
-</script>
