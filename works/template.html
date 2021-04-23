@@ -1,3 +1,6 @@
+<style>
+  
+</style>
 <div id="<?= $carousel_id ?>" class="carouselTeamstersTwo">
 	<div class="carouselContent">
 		<div class="carouselWrap">
@@ -14,7 +17,7 @@
 	$(document).ready(function () {
 		(function () {
 			const arrowLeft = "<svg width='25px' height='10px' viewBox='0 0 30 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><polyline id='Path' stroke='#FFFFFF' points='30 1 2 1 9 10'></polyline></g></svg>";
-            const arrowRight = "<svg width='25px' height='10px' viewBox='0 0 30 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><polyline id='Path' stroke='#FFFFFF' transform='translate(14.000000, 5.500000) scale(-1, -1) translate(-14.000000, -5.500000) ' points='28 1 0 1 7 10'></polyline></g></svg>";
+      const arrowRight = "<svg width='25px' height='10px' viewBox='0 0 30 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><polyline id='Path' stroke='#FFFFFF' transform='translate(14.000000, 5.500000) scale(-1, -1) translate(-14.000000, -5.500000) ' points='28 1 0 1 7 10'></polyline></g></svg>";
 
 			$('#<?= $carousel_id ?> .carouselWrap').slick({
 				prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">' + arrowLeft + '</button>',
@@ -26,24 +29,8 @@
 				accessibility: false,
 				speed: 1000,
 				autoplaySpeed: 6000,
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				responsive: [
-					{
-						breakpoint: 991,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 1
-						}
-					},
-					{
-						breakpoint: 575,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
-					}
-				]
+				slidesToShow: 1,
+				slidesToScroll: 1
 			});
 		})();
 	});
