@@ -1,20 +1,6 @@
 <style>
-  .postListCarouselTeamsters .postsListWrap {
-    display: flex;
-  }
-  
   .postListCarouselTeamsters .postsListWrap .postsItem {
-    padding: 0 15px;
     margin: 0 0 30px 0;
-    width:100%;
-  }
-  
-  .postListCarouselTeamsters .postsListWrap article:first-of-type {
-    padding: 0 15px 0 0;
-  }
-  
-  .postListCarouselTeamsters .postsListWrap article:last-of-type {
-    padding: 0 0 0 15px;
   }
   
   .postListCarouselTeamsters .postsItemWrap {
@@ -53,25 +39,25 @@
     display: none;
   }
   </style>
-  <div id="<?= $postsList_id ?>" class="postListCarouselTeamsters">
-    <div class="postsListWrap">
-      <items>
-        <article class="postsItem">
-          <a class="postsItemWrap" href="/{post_page}/{alias}">
-            <div class="postsItemImgHolder _img-placeholder">
-              <div class="postsItemImg"
-                role="img"
-                aria-label="{title}"
-                style="background-image: url('{thumb_url}?resize=768x0')"></div>
-            </div>
-            <div class="postsItemContent" data-mh="posts-list-group">
-              <h5 class="postsItemTitle">{title}</h5>
-            </div>
-          </a>
-        </article>
-      </items>
-    </div>
-  </div>
+<div id="<?= $postsList_id ?>" class="postListCarouselTeamsters">
+	<div class="postsListWrap row">
+		<items>
+			<article class="postsItem col-lg-4">
+				<a class="postsItemWrap" href="/{post_page}/{alias}">
+					<div class="postsItemImgHolder _img-placeholder">
+						<div class="postsItemImg" role="img" aria-label="{title}"
+							style="background-image: url('{thumb_url}?resize=768x0')"></div>
+					</div>
+					<div class="postsItemContent">
+						<p>{publishTime}</p>
+						<h5 class="postsItemTitle">{title}</h5>
+					</div>
+				</a>
+			</article>
+		</items>
+	</div>
+</div>
+
   
   <script type="text/javascript">
     $(document).ready(function () {
