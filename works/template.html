@@ -21,11 +21,24 @@
   
   .postListCarouselTeamsters .postsItemContent {
     padding: 20px 30px;
+    min-height: 100px;
+  }
+
+  @media screen and (max-height: 1200px) {
+    .postListCarouselTeamsters .postsItemContent {
+      min-height: 120px;
+    }    
   }
   
   .postListCarouselTeamsters .postsItemContent h5 {
     color: var(--color-black-lightened);
     margin: 0;
+  }
+
+  .postListCarouselTeamsters .postsItemContent p {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: var(--color-black-lightened);
   }
   
   .postListCarouselTeamsters .postsItemImg {
@@ -33,6 +46,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  @media screen and (max-height: 767px) {
+    .postListCarouselTeamsters .postsItemImg {
+      padding: 87% 0 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    } 
   }
   
   .postListCarouselTeamsters .blogs-show-more {
