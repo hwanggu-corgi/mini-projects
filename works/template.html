@@ -1,33 +1,111 @@
 <style>
-  .iconBlockTeamsters {
-    text-align: center;
+  .postListCarouselTeamsters .postsListWrap {
+    display: flex;
   }
-
-  .iconBlockTeamsters img {
-    padding: 15px 0 0 0;
-    margin: 0 auto 30px auto;
-    max-width: 68px;
-    max-height: 100px;
+  
+  .postListCarouselTeamsters .postsListWrap .postsItem {
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+    width:100%;
   }
-
-  .iconBlockTeamsters h3 {
-    font-size: 18px;
-    max-width: 140px;
-    margin: 0 auto;
+  
+  .postListCarouselTeamsters .postsListWrap article:first-of-type {
+    padding: 0 15px 0 0;
   }
-
-  .iconBlockTeamsters h3::before {
-    content: "";
+  
+  .postListCarouselTeamsters .postsListWrap article:last-of-type {
+    padding: 0 0 0 15px;
+  }
+  
+  .postListCarouselTeamsters .postsItemWrap {
+    background-color: var(--color-white);
     display: block;
-    height: 5px;
-    width: 80px;
-    background-color: var(--color-grey);
-    margin: 0 auto 30px auto;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 8%);
+    transition: all 0.3s ease-out;
   }
-</style>
-<image resize="150x0" resizable="no" mode="bestfit">
-  <div class="iconBlockTeamsters">
-      <img class="iconImg" src="{src_url}" alt="{alt}"/>
-      <h3>{title}</h3>
+  
+  .postListCarouselTeamsters .postsItemWrap:hover {
+    box-shadow: 0 20px 30px rgb(0 0 0 / 12%);
+  }
+  
+  .postListCarouselTeamsters .postsItemWrap:hover h5 {
+    color: var(--color-primary);  
+  }
+  
+  .postListCarouselTeamsters .postsItemContent {
+    padding: 20px 30px;
+  }
+  
+  .postListCarouselTeamsters .postsItemContent h5 {
+    color: var(--color-black-lightened);
+    margin: 0;
+  }
+  
+  .postListCarouselTeamsters .postsItemImg {
+    padding: 87% 0 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .postListCarouselTeamsters .blogs-show-more {
+    display: none;
+  }
+  </style>
+  <div id="<?= $postsList_id ?>" class="postListCarouselTeamsters">
+    <div class="postsListWrap">
+      <items>
+        <article class="postsItem">
+          <a class="postsItemWrap" href="/{post_page}/{alias}">
+            <div class="postsItemImgHolder _img-placeholder">
+              <div class="postsItemImg"
+                role="img"
+                aria-label="{title}"
+                style="background-image: url('{thumb_url}?resize=768x0')"></div>
+            </div>
+            <div class="postsItemContent" data-mh="posts-list-group">
+              <h5 class="postsItemTitle">{title}</h5>
+            </div>
+          </a>
+        </article>
+      </items>
+    </div>
   </div>
-</image>
+  
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // (function () {
+      // 	$("#<?= $postsList_id ?> .postsListWrap").slick({
+      // 		// prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">' + SVG["arrow-left-1"] + '</button>',
+      // 		// nextArrow: '<button class="slick-next" aria-label="Next" type="button">' + SVG["arrow-right-1"] + '</button>',
+      // 		dots: true,
+      // 		arrows: false,
+      // 		autoplay: false,
+      // 		infinite: true,
+      // 		accessibility: false,
+      // 		speed: 1000,
+      // 		autoplaySpeed: 6000,
+      // 		slidesToShow: 3,
+      // 		slidesToScroll: 3,
+      // 		responsive: [
+      // 			{
+      // 				breakpoint: 991,
+      // 				settings: {
+      // 					slidesToShow: 2,
+      // 					slidesToScroll: 1
+      // 				}
+      // 			},
+      // 			{
+      // 				breakpoint: 575,
+      // 				settings: {
+      // 					arrows: false,
+      // 					slidesToShow: 1,
+      // 					slidesToScroll: 1
+      // 				}
+      // 			}
+      // 		]
+      // 	});
+      // })();
+    });
+  </script>
