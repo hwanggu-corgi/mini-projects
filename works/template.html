@@ -1,5 +1,148 @@
 <style>
-  
+.carouselTeamstersTwo .carouselImg {
+  height: calc(100vh - var(--desktop-header-height));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .carouselTeamstersTwo .carouselImg {
+      height: 490px;
+  }   
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  .carouselTeamstersTwo .carouselImg {
+      height: 600px;
+  }   
+}
+
+.carouselTeamstersTwo .carouselOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0.2;
+}
+
+.carouselTeamstersTwo .carouselInner {
+    bottom: 0;
+    left: 80px;
+    position: absolute;
+    max-width: 720px;
+    padding: 45px;
+    min-height: calc((100vh - var(--desktop-header-height))/2 + 30px);
+}
+@media screen and (max-width: 1300px) {
+  .carouselTeamstersTwo .carouselInner {
+      left: 0px;
+      position: absolute;
+      max-width: 100%;
+      width: 100%;
+      padding: 45px 55px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+  }   
+}
+
+.carouselTeamstersTwo .carouselTitle,
+.carouselTeamstersTwo .carouselDescription {
+    color: var(--color-white);
+}
+
+.carouselTeamstersTwo .carouselInner .wrapper {
+  z-index: 11;
+  position: relative;
+}
+
+@media screen and (max-width: 1300px) {
+  .carouselTeamstersTwo .carouselInner .wrapper {
+      max-width: 500px;
+  }   
+}
+
+.carouselTeamstersTwo .carouselInner .carouselOverlay {
+  background-color: var(--color-white);
+  z-index: 10;
+}
+
+.carouselTeamstersTwo .carouselBtn {
+  margin: 30px 0 0 0;
+}
+
+.carouselTeamstersTwo .carouselDescription > p {
+  line-height: 28px;
+}
+
+.carouselTeamstersTwo .slick-next,
+.carouselTeamstersTwo .slick-prev {
+  transition: background-color 0.3s ease-out;
+}
+
+.carouselTeamstersTwo .slick-next:hover,
+.carouselTeamstersTwo .slick-prev:hover {
+  background-color: var(--color-primary-darkened);
+}
+
+.carouselTeamstersTwo .slick-next {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position: absolute;
+  z-index: 12;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+}
+
+.carouselTeamstersTwo .slick-prev {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position: absolute;
+  z-index: 12;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+}
+
+@media screen and (max-width: 1300px) {
+    .carouselTeamstersTwo .slick-prev,
+    .carouselTeamstersTwo .slick-next {
+        width: 33px;
+        height: 33px;
+    }
+
+    .carouselTeamstersTwo .slick-prev {
+      left: 5px;
+    }
+
+    .carouselTeamstersTwo .slick-next {
+      right: 5px;
+    }
+
+    .carouselTeamstersTwo .slick-prev svg,
+    .carouselTeamstersTwo .slick-next svg {
+        width: 18px;
+        height: 7.2px;
+    }
+  }
+
+.carouselTeamstersTwo .slick-prev::before,
+.carouselTeamstersTwo .slick-next::before {
+    content: none;
+}
+
+.carouselTeamstersTwo .slick-prev path,
+.carouselTeamstersTwo .slick-next path {
+    stroke: var(--color-white);
+}
 </style>
 <div id="<?= $carousel_id ?>" class="carouselTeamstersTwo">
 	<div class="carouselContent">
