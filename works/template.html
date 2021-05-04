@@ -1,3 +1,235 @@
+<style>
+.headerTwo .headTwoWrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 50px;
+  background-color: var(--color-white);
+}
+
+
+@media screen and (max-width: 1610px) {
+  .headerTwo .headTwoWrap {
+    padding: 7px 20px;
+  } 
+}
+
+.headerTwo .logo img {
+  max-width: 210px;
+  margin: 7px 0 0 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1290px) {
+  .headerTwo .logo img {
+    max-width: 140px;
+  }
+}
+
+@media screen and (min-width: 1290px) and (max-width: 1610px) {
+  .headerTwo .logo img {
+    max-width: 170px;
+  }
+}
+
+.headerTwo .menuContent {
+  display: flex;
+  align-items: center;
+}
+
+.headerTwo .mainMenu {
+  font-family: var(--font-secondary-bold);
+  margin: 0 25px 0 0;
+}
+
+@media screen and (max-width: 1480px) {
+  .headerTwo .mainMenu {
+    display: none;
+  }
+}
+
+.headerTwo .mainMenu,
+.headerTwo .mainMenu > .Menu,
+.headerTwo .mainMenu > .Menu > ul {
+  height: 100%;
+}
+
+.headerTwo .Menu>ul {
+  display: flex;
+}
+
+.headerTwo .Menu li {
+  white-space: nowrap;
+}
+
+.headerTwo .Menu li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.headerTwo .mainMenu .Menu>ul>li {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.headerTwo .mainMenu .Menu>ul>li>a {
+  color: var(--color-primary);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.headerTwo .mainMenu .Menu>ul>li::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--color-quaternary);
+  width: 100%;
+  position: absolute;
+  bottom: -6px;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.headerTwo .mainMenu .Menu>ul>li:hover::after {
+  opacity: 1;
+}
+
+.headerTwo .mainMenu .Menu>ul>li ul {
+  top: calc(100% + 7px);
+  left: 0;
+  position: absolute;
+  display: none;
+  background-color: var(--color-primary);
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.headerTwo .mainMenu .Menu>ul>li ul > li {
+  padding: 10px 20px;
+}
+
+.headerTwo .mainMenu .Menu>ul>li ul > li > a {
+  min-width: 250px;
+  display: inline-block;
+  color: var(--color-white);
+  position: relative;
+}
+
+.headerTwo .mainMenu .Menu>ul>li ul > li > a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--color-quaternary);
+  width: 0;
+  position: absolute;
+  bottom: -10px;
+  transition: all 0.3s ease-out;
+}
+
+.headerTwo .mainMenu .Menu>ul>li ul > li:hover > a::after {
+  width: 100%;
+}
+
+.headerTwo .mainMenu .Menu>ul>li:hover ul {
+  display: block;
+}
+
+.headerTwo .searchIcon.access {
+  margin: 0 7px 0 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headerTwo .searchIcon.access a {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .headerTwo .searchIcon.access {
+    display: none;
+  }
+}
+
+.headerTwo .searchIcon.socials {
+  margin: 0 30px 0 0;
+  display: flex;
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .headerTwo .searchIcon.socials {
+    display: none;
+  }
+}
+
+.headerTwo .searchIcon.socials ul {
+  height: 100%;
+}
+
+.headerTwo .searchIcon.socials li {
+  margin: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.headerTwo .searchIcon.socials li:last-child {
+  margin: 0;
+}
+
+.headerTwo .searchIcon.socials a {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.headerTwo .searchIcon.socials a:hover {
+  background-color: var(--color-quaternary);
+}
+
+.headerTwo .searchIcon.socials a span.Title {
+  height: 100%;
+}
+
+.headerTwo .searchIcon.socials a span.fa {
+  color: var(--color-white);
+  font-size: 16px;
+  vertical-align: sub;
+}
+
+.headerTwo .actionButton {
+  margin: 0 35px 0 0;
+}
+
+@media screen and (max-width: 960px) {
+  .headerTwo .actionButton {
+    display: none;
+  }
+}
+
+.headerTwo .headerMobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 1480px) {
+  .headerTwo .headerMobileMenu {
+    display: initial;
+  }
+}
+
+</style>
 <!-- Header Two-->
 <div class="headerTwo stickyAlert">
   <mwPageArea rel="alert" info="Alert" sortable="page"></mwPageArea>
@@ -38,6 +270,131 @@
     </div>
   </div>
 </div>
-<script>
-  
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		//-----------------------------------------------------------
+		// Burger & Sidr
+		//-----------------------------------------------------------
+		//
+		(function () {
+
+			var $burger = $('.headerThree .burger');
+
+			// Init Sidr Plugin
+			$burger.sidr({
+				name: 'sidr-main',
+				source: '.headerThree .headerMenu, .headerThree .headerBtns, .headerThree .utilityBarSns',
+				side: 'right',
+				renaming: false,
+				speed: 400,
+				onOpen: function () {
+					$burger.addClass('open');
+				},
+				onClose: function () {
+					$burger.removeClass('open');
+				}
+			});
+
+			// Sidr Menu
+			var $menu = $('.sidr ul li.has-children > a');
+			var $childMenu = $('.sidr ul li ul');
+
+			// Append an arrow button to <li> that contains child menu
+			$menu.after('<span class="sidrArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path></svg></span>');
+
+			// Hide all child menu
+			$childMenu.hide();
+
+			// Prevent Link
+			$menu.on('click', function (e) {
+				e.preventDefault();
+			});
+
+			// Toggle Child Menu
+			$menu.on('click', function () {
+
+				// This selectors
+				var $this = $(this);
+				var $thisLI = $this.closest('li');
+				var $thisChild = $thisLI.children('ul');
+
+				// Sibling selectors
+				var $siblingLI = $thisLI.siblings('li.has-children');
+				var $siblingChild = $siblingLI.children('ul');
+
+				// Close other child menu
+				$siblingLI.not($thisLI).removeClass('open');
+				$siblingChild.not($thisChild).slideUp(360);
+
+				// Open clicked child menu
+				$thisLI.toggleClass('open');
+				$thisChild.slideToggle(360);
+			});
+		})();
+
+		//-----------------------------------------------------------
+		// Toggle Search
+		//-----------------------------------------------------------
+		//
+		(function () {
+			var $searchBtn = $('.headerThree .searchBtn');
+			var $searchBar = $('.headerThree .searchBar');
+			var $searchBarInput = $('.headerThree .searchBar input[name="q"]');
+
+			$searchBtn.on('click', function (e) {
+				e.preventDefault();
+
+				$('.headerThree').toggleClass('search-bar-open');
+
+				if ($searchBar.hasClass('active')) {
+					$searchBtn.removeClass("active");
+					$searchBar.removeClass("active");
+					$searchBarInput.blur();
+				} else {
+					$searchBtn.addClass("active");
+					$searchBar.addClass("active");
+					$searchBarInput.focus();
+				}
+			});
+
+			$('.searchBarCloseBtn').on('click', function () {
+				$searchBtn.addClass("active");
+				$searchBar.removeClass("active");
+				$searchBarInput.blur();
+			});
+		})();
+
+		//-----------------------------------------------------------
+		// Header Scroll Animation
+		//-----------------------------------------------------------
+		//
+		(function () {
+
+			// Selectors
+			//
+			var $header = $('.headerThree');
+			var $trigger = $('#headerTrigger');
+
+			// This function only works when
+			// #headerTrigger exists
+			//
+			if ($trigger.length) {
+				$header.addClass('blendingHeader');
+			} else {
+				return false;
+			}
+
+			// Scroll Effect
+			//
+			new ScrollMagic.Scene({
+				triggerElement: $trigger,
+				triggerHook: 'onLeave',
+				offset: -($('.headerWrap').outerHeight()),
+				reverse: true
+			})
+				.setClassToggle($header, 'triggered')
+				.addTo(SMController);
+		})();
+	});
 </script>
