@@ -270,25 +270,26 @@
     </div>
   </div>
 </div>
+
 <script type="text/javascript">
 	$(document).ready(function () {
-
+    
 		//-----------------------------------------------------------
 		// Burger & Sidr
 		//-----------------------------------------------------------
 		//
 		(function () {
-
-			var $burger = $('.headerThree .burger');
+			var $burger = $('.headerTwo .burger');
 
 			// Init Sidr Plugin
 			$burger.sidr({
 				name: 'sidr-main',
-				source: '.headerThree .headerMenu, .headerThree .headerBtns, .headerThree .utilityBarSns',
+				source: '.headerTwo .headerMenu, .headerTwo .headerBtns, .headerTwo .utilityBarSns',
 				side: 'right',
 				renaming: false,
 				speed: 400,
 				onOpen: function () {
+          console.log("I am here");
 					$burger.addClass('open');
 				},
 				onClose: function () {
@@ -338,14 +339,14 @@
 		//-----------------------------------------------------------
 		//
 		(function () {
-			var $searchBtn = $('.headerThree .searchBtn');
-			var $searchBar = $('.headerThree .searchBar');
-			var $searchBarInput = $('.headerThree .searchBar input[name="q"]');
+			var $searchBtn = $('.headerTwo .searchBtn');
+			var $searchBar = $('.headerTwo .searchBar');
+			var $searchBarInput = $('.headerTwo .searchBar input[name="q"]');
 
 			$searchBtn.on('click', function (e) {
 				e.preventDefault();
 
-				$('.headerThree').toggleClass('search-bar-open');
+				$('.headerTwo').toggleClass('search-bar-open');
 
 				if ($searchBar.hasClass('active')) {
 					$searchBtn.removeClass("active");
@@ -373,7 +374,7 @@
 
 			// Selectors
 			//
-			var $header = $('.headerThree');
+			var $header = $('.headerTwo');
 			var $trigger = $('#headerTrigger');
 
 			// This function only works when
