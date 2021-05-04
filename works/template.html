@@ -1,4 +1,35 @@
 <style>
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | body - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+body.mobileMenuActive {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | body - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Header Two - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
 .headerTwo .headTwoWrap {
   display: flex;
   justify-content: space-between;
@@ -228,7 +259,15 @@
     display: initial;
   }
 }
-
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Header Two - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
 </style>
 <!-- Header Two-->
 <div class="headerTwo stickyAlert">
@@ -279,123 +318,10 @@
 		//-----------------------------------------------------------
 		//
 		(function () {
-			var $burger = $('.headerTwo .burger');
-
-			// Init Sidr Plugin
-			$burger.sidr({
-				name: 'sidr-main',
-				source: '.headerTwo .headerMenu, .headerTwo .headerBtns, .headerTwo .utilityBarSns',
-				side: 'right',
-				renaming: false,
-				speed: 400,
-				onOpen: function () {
-          console.log("I am here");
-					$burger.addClass('open');
-				},
-				onClose: function () {
-					$burger.removeClass('open');
-				}
-			});
-
-			// Sidr Menu
-			var $menu = $('.sidr ul li.has-children > a');
-			var $childMenu = $('.sidr ul li ul');
-
-			// Append an arrow button to <li> that contains child menu
-			$menu.after('<span class="sidrArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path></svg></span>');
-
-			// Hide all child menu
-			$childMenu.hide();
-
-			// Prevent Link
-			$menu.on('click', function (e) {
-				e.preventDefault();
-			});
-
-			// Toggle Child Menu
-			$menu.on('click', function () {
-
-				// This selectors
-				var $this = $(this);
-				var $thisLI = $this.closest('li');
-				var $thisChild = $thisLI.children('ul');
-
-				// Sibling selectors
-				var $siblingLI = $thisLI.siblings('li.has-children');
-				var $siblingChild = $siblingLI.children('ul');
-
-				// Close other child menu
-				$siblingLI.not($thisLI).removeClass('open');
-				$siblingChild.not($thisChild).slideUp(360);
-
-				// Open clicked child menu
-				$thisLI.toggleClass('open');
-				$thisChild.slideToggle(360);
-			});
-		})();
-
-		//-----------------------------------------------------------
-		// Toggle Search
-		//-----------------------------------------------------------
-		//
-		(function () {
-			var $searchBtn = $('.headerTwo .searchBtn');
-			var $searchBar = $('.headerTwo .searchBar');
-			var $searchBarInput = $('.headerTwo .searchBar input[name="q"]');
-
-			$searchBtn.on('click', function (e) {
-				e.preventDefault();
-
-				$('.headerTwo').toggleClass('search-bar-open');
-
-				if ($searchBar.hasClass('active')) {
-					$searchBtn.removeClass("active");
-					$searchBar.removeClass("active");
-					$searchBarInput.blur();
-				} else {
-					$searchBtn.addClass("active");
-					$searchBar.addClass("active");
-					$searchBarInput.focus();
-				}
-			});
-
-			$('.searchBarCloseBtn').on('click', function () {
-				$searchBtn.addClass("active");
-				$searchBar.removeClass("active");
-				$searchBarInput.blur();
-			});
-		})();
-
-		//-----------------------------------------------------------
-		// Header Scroll Animation
-		//-----------------------------------------------------------
-		//
-		(function () {
-
-			// Selectors
-			//
-			var $header = $('.headerTwo');
-			var $trigger = $('#headerTrigger');
-
-			// This function only works when
-			// #headerTrigger exists
-			//
-			if ($trigger.length) {
-				$header.addClass('blendingHeader');
-			} else {
-				return false;
-			}
-
-			// Scroll Effect
-			//
-			new ScrollMagic.Scene({
-				triggerElement: $trigger,
-				triggerHook: 'onLeave',
-				offset: -($('.headerWrap').outerHeight()),
-				reverse: true
-			})
-				.setClassToggle($header, 'triggered')
-				.addTo(SMController);
+			var $burger = $('.headerTwo .burger').click(function() {
+        $("body").toggleClass('mobileMenuActive');
+        $(this).toggleClass('open');
+      });
 		})();
 	});
 </script>
