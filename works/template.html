@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <td>
-        <input type="text" name="address" value="" title="Address">
+        <input type="text" name="address" value="" title="Address" validations="required|">
       </td>
     </tr>
   </tbody>
@@ -25,7 +25,7 @@
     </tr>
     <tr>
       <td>
-        <input type="text" name="city" value="" title="City">
+        <input type="text" name="city" value="" title="City" validations="required|">
       </td>
     </tr>
   </tbody>
@@ -35,17 +35,117 @@
     </tr>
     <tr>
       <td>
-        <input type="text" name="province" value="" title="Province">
+        <input type="text" name="province" value="" title="Province" validations="required|">
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th>Email:</th>
+      <th>Postal Code (X1Y 2Z3):</th>
     </tr>
     <tr>
       <td>
-        <input type="text" name="email" value="" title="Email" validations="required|isEmail|">
+        <input type="text" name="postal_code" value="" title="Postal Code" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Phone Number (123-456-7890):</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="phone_number" value="" title="Phone Number" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Email Address:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="email" value="" title="Email Address" validations="required|isEmail|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Date of Birth (yyyy/mm/dd):</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="dob" value="" title="Date of Birth" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Year, Make, and Model of Vehicle:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="vehicle_info" value="" title="Year, Make, and Model of Vehicle" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Years Licenses in Canada:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="years_licences_ca" value="" title="Years Licenses in Canada" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>How Many Years of Continuous Auto Insurance:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="number" name="years_of_cont_auto_ins" value="" title="How Many Years of Continuous Auto Insurance" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Number of Convictions in the Last 3 Years:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="number" name="num_convictions_3_years" value="" title="Number of Convictions in the Last 3 Years" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Number of Claims of Any/All Kind in the Last 10 Years:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="number" name="num_claims_10_years" value="" title="Number of Claims of Any/All Kind in the Last 10 Years" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Number of At-Fault Claims in the Last 10 Years:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="number" name="num_at_fault_claims_10_years" value="" title="Number of At-Fault Claims in the Last 10 Years" validations="required|">
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Any Cancellations by Any Insurer in Last 5 Years:</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="number" name="num_at_fault_claims_10_years" value="" title="Number of At-Fault Claims in the Last 10 Years" validations="required|">
       </td>
     </tr>
   </tbody>
