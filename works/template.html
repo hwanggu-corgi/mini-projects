@@ -1,61 +1,11 @@
-<table class="Dialog tall">
+<table class="Dialog Tall">
   <tbody>
     <tr>
       <th>Name:</th>
     </tr>
     <tr>
       <td>
-        <input type="text" name="name" value="" title="Name" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Address:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="address" value="" title="Address" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>City:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="city" value="" title="City" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Province:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="province" value="" title="Province" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Postal Code (X1Y 2Z3):</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="postal_code" value="" title="Postal Code" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Phone Number (123-456-7890):</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="phone_number" value="" title="Phone Number" validations="required|">
+        <input type="text" name="name" value="" title="Name">
       </td>
     </tr>
   </tbody>
@@ -65,133 +15,7 @@
     </tr>
     <tr>
       <td>
-        <input type="email" name="email" value="" title="Email" validations="required">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Do you own your own home, own a condo unit or rent:</th>
-    </tr>
-    <tr>
-      <td>
-        <div class="mwRadios">
-          <input type="radio" name="property_type" value="Home owner" cap="Home owner"
-            title="Do you own your own home, own a condo unit or rent" validations="required|">
-          <input type="radio" name="property_type" value="Condo Owner" cap="Condo Owner"
-            title="Do you own your own home, own a condo unit or rent" validations="required|">
-          <input type="radio" name="property_type" value="Renter" cap="Renter"
-            title="Do you own your own home, own a condo unit or rent" validations="required|">
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Estimated replacement value of dwelling (homeowner only, in CAD):</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="number" name="est_replacement_value" value="" title="Estimated replacement value of dwelling (homeowner only, in CAD)">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>How many years of continuous property insurance:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="number" name="years_of_prop_insurance" value="" title="How many years of continuous property insurance" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Number of claims of any/all kind in the last 10 years:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="number" name="number_of_claims_10_years" value="" title="Number of claims of any/all kind in the last 10 years" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Number of mortgages on the property:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="number" name="num_mortgages" value="" title="Number of mortgages on the property" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Any cancellations by any insurer in last 5 years:</th>
-    </tr>
-    <tr>
-      <td>
-        <div class="mwRadios">
-          <input type="radio" name="any_cancellations_5_years" value="Home owner" cap="Yes"
-            title="Any cancellations by any insurer in last 5 years" validations="required|">
-          <input type="radio" name="any_cancellations_5_years" value="Condo Owner" cap="No"
-            title="Any cancellations by any insurer in last 5 years" validations="required|">
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>If yes, then note reason and date(s) of cancellation:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="cancellation_reasons" value="" title="If yes, then note reason and date(s) of cancellation">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Name of current insurer:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="name_insurer" value="" title="Name of current insurer" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>Policy expiry date (yyyy/mm/dd):</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="policy_exp_date" value="" title="Policy expiry date (yyyy/mm/dd)" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th>What is your occupation:</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="occupation" value="" title="What is your occupation" validations="required|">
-      </td>
-    </tr>
-  </tbody>
-  <tbody style="opacity: 1;">
-    <tr>
-      <td style="text-align: center;">
-        <div class="mwCaptcha" data-theme="light" style="float: left;"></div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td style="text-align: center;">
-        <input type="submit" value="Button" class="mwFormSubmit" style="float: left;">
+        <input type="text" name="email" value="" title="Email" validations="required|isEmail|">
       </td>
     </tr>
   </tbody>
