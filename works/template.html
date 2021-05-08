@@ -130,8 +130,6 @@
   .sliderAxion .slick-current .sliderDescription,
   .sliderAxion .slick-current .sliderBtn {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
   }
   .sliderAxion .slick-current .sliderTitle {
     transition-delay: 300ms;
@@ -236,16 +234,16 @@
 		<items thumb="768x0" preview="1920x0">
 			<div class="sliderItem">
 				<div class="sliderImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
-				<div class="sliderOverlay"></div>
-				<div class="container">
-					<div class="sliderInner">
-						<h2 class="sliderTitle">{title}</h2>
-						<div class="sliderDescription">{description}</div>
-					</div>
-				</div>
 			</div>
 		</items>
 	</div>
+  <div class="sliderOverlay"></div>
+  <div class="container">
+    <div class="sliderInner">
+      <h2 class="sliderTitle">{title}</h2>
+      <div class="sliderDescription">{description}</div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
