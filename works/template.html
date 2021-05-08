@@ -1,19 +1,28 @@
 <style>
   .sliderAxion {
     position: relative;
+    height: 400px;
+    overflow: hidden;
   }
+
+  @media screen and (min-width: 767px) {
+    .sliderAxion {
+      height: 600px;
+    } 
+  }
+
+  .sliderAxion .container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
   .sliderAxion .sliderItem {
     display: flex;
     align-items: center;
     position: relative;
-    height: 400px;
   }
 
-  @media screen and (min-width: 767px) {
-    .sliderAxion .sliderItem {
-      height: 600px;
-    } 
-  }
   .sliderAxion .sliderImg,
   .sliderAxion .sliderOverlay {
     position: absolute;
