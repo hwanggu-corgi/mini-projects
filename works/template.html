@@ -4,7 +4,13 @@
     display: flex;
     align-items: center;
     position: relative;
-    height: 670px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 767px) {
+    .sliderAxion .sliderItem {
+      height: 600px;
+    } 
   }
   .sliderAxion .sliderImg,
   .sliderAxion .sliderOverlay {
@@ -143,7 +149,7 @@
   
   @media (min-width: 992px) {
     .sliderAxion .sliderTitle {
-      font-size: 55px;
+      font-size: var(--font-size-xxxxx-large);
       line-height: 1.1;
     }
     .sliderAxion .slick-prev,
