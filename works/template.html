@@ -1,4 +1,8 @@
 <style>
+  .pageBannerWrap {
+    position: relative;
+  }
+
   .pageBannerAxion img {
     width: 100%;
     height: 500px;
@@ -7,17 +11,17 @@
 </style>
 
 <image resize="1920x600" resizable="no">
-	<div class="pageBanner pageBannerAxion content-style">
+	<div class="pageBannerAxion content-style">
 		<div class="pageBannerWrap" data-fit-img>
 			<img class="pageBannerImg imgEd" src="{src_url}" alt="{alt}"/>
-			<div class="pageBannerContent">
-				<div class="container">
-					<div class="pageBannerInner">
-						<h1 class="pageBannerTitle">{title}</h1>
-						<div class="pageBannerDescription">{description}</div>
-					</div>
-				</div>
-			</div>
 		</div>
+    <div class="pageBannerContent">
+      <div class="container">
+        <div class="pageBannerInner">
+          <h1 class="pageBannerTitle">{title}</h1>
+          <div class="pageBannerDescription">{description}</div>
+        </div>
+      </div>
+    </div>
 	</div>
 </image>
