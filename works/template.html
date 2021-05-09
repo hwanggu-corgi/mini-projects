@@ -1,5 +1,5 @@
 <style>
-  .pageBannerWrap {
+  .pageBannerAxion {
     position: relative;
   }
 
@@ -8,6 +8,28 @@
     height: 500px;
     object-fit: cover;
   }
+
+  .pageBannerAxion h1 {
+    color: var(--color-white);
+  }
+
+  .pageBannerAxion .pageOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: var(--color-black);
+    opacity: 0.4;
+  }
+
+  .pageBannerAxion .pageBannerContent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
 </style>
 
 <image resize="1920x600" resizable="no">
@@ -15,11 +37,14 @@
 		<div class="pageBannerWrap" data-fit-img>
 			<img class="pageBannerImg imgEd" src="{src_url}" alt="{alt}"/>
 		</div>
+    <div class="pageOverlay"></div>
     <div class="pageBannerContent">
       <div class="container">
         <div class="pageBannerInner">
-          <h1 class="pageBannerTitle">{title}</h1>
-          <div class="pageBannerDescription">{description}</div>
+          <h1 class="pageBannerTitle">
+            <mwWidget rel="pageBannerAxionTitle" info="Title" widget="Embed"></mwWidget>  
+          </h1>
+          <mwWidget rel="pageBannerAxionButton" info="Button" widget="Button"></mwWidget>
         </div>
       </div>
     </div>
