@@ -252,10 +252,10 @@
   }
 </style>
 
-<div id="<?= $slider_id ?>" class="slider sliderAxion content-style dots-style-3">
+<div id="<?= $slider_id ?>" class="slider sliderAxion content-style">
   <div class="sliderOverlay"></div>
 	<div class="sliderWrap">
-		<items thumb="768x0" preview="1920x0">
+		<item thumb="768x0" preview="1920x0">
 			<div class="sliderItem">
 				<div class="sliderImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
 				<div class="content">
@@ -265,39 +265,6 @@
 					</div>
 				</div>
 			</div>
-		</items>
+		</item>
 	</div>
 </div>
-
-<script type="text/javascript">
-	$(document).ready(function () {
-		(function () {
-			$("#<?= $slider_id ?> .sliderWrap").slick({
-				prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">' + SVG["arrow-left-1"] + '</button>',
-				nextArrow: '<button class="slick-next" aria-label="Next" type="button">' + SVG["arrow-right-1"] + '</button>',
-				speed: 1000,
-				autoplaySpeed: 6000,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				fade: true,
-				dots: true,
-				arrows: false,
-				autoplay: true,
-				infinite: true,
-				accessibility: false,
-				easing: 'ease',
-				customPaging: function(slider, i) {
-					return '<button type="button">0' + (i + 1) + '</button>';
-				},
-				responsive: [
-					{
-						breakpoint: 991,
-						settings: {
-							dots: false
-						}
-					}
-				]
-			});
-		})();
-	});
-</script>
