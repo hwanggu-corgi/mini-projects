@@ -1,5 +1,13 @@
 <style>
-
+  .popupAxion .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.8;
+  }
 </style>
 <?php $popup_id = newSN('popup-', 1); ?>
 <div id="<?=$popup_id?>" class="popupAxion">
@@ -14,5 +22,7 @@
   </div>
 </div>
 <script>
-
+  function closePopup(e) {
+    e.remove();
+  }
 </script>
