@@ -1,13 +1,50 @@
 <style>
 .accordionMahube {
-  
+  margin: 0 0 10px 0;
+}
+
+.accordionMahube .accordionBtn {
+  display: flex;
+  padding: 20px;
+  background-color: var(--color-white);
+}
+
+.accordionMahube .accordionBtn .accordionTitle {
+  flex-grow: 1;
+  margin: 0 15px 0 0;
+}
+
+.accordionMahube .accordionBtn .accordionTitle .Content {
+  display: flex;
+  align-items: center;
+}
+
+.accordionMahube .accordionBtn .accordionTitle .Content .blockContents {
+  width: 100%;
+}
+
+.accordionMahube .accordionBtn .accordionTitle .Content * {
+  margin: 0;
+  color: var(--color-black);
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+}
+
+.accordionMahube .accordionBtn .accordionIcon {
+  display: flex;
+  align-items: center;
+}
+
+.accordionMahube .accordionContent {
+  padding: 20px;
+  background-color: var(--color-grey-lightened);
 }
 </style>
 <div class="accordion accordionMahube">
 	<div class="accordionWrap">
 		<div class="accordionBtn">
       <div class="accordionTitle">
-			  <mwWidget rel="accordionTitle" info="Accordion Title" widget="Content"><h6>Title</h6></mwWidget>
+			  <mwWidget rel="accordionTitle" info="Accordion Title" widget="Content"><strong>Title</strong></mwWidget>
       </div>
       <div class="accordionIcon"><i class="fas fa-plus"></i></div>
 		</div>
