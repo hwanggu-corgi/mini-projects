@@ -1,55 +1,25 @@
-<style>
-.accordionMahube {
-  margin: 0 0 10px 0;
-}
-
-.accordionMahube .accordionBtn {
-  display: flex;
-  padding: 20px;
-  background-color: var(--color-white);
-}
-
-.accordionMahube .accordionBtn .accordionTitle {
-  flex-grow: 1;
-  margin: 0 15px 0 0;
-}
-
-.accordionMahube .accordionBtn .accordionTitle .Content {
-  display: flex;
-  align-items: center;
-}
-
-.accordionMahube .accordionBtn .accordionTitle .Content .blockContents {
-  width: 100%;
-}
-
-.accordionMahube .accordionBtn .accordionTitle .Content * {
-  margin: 0;
-  color: var(--color-black);
-  font-size: var(--font-size-medium);
-  font-weight: bold;
-}
-
-.accordionMahube .accordionBtn .accordionIcon {
-  display: flex;
-  align-items: center;
-}
-
-.accordionMahube .accordionContent {
-  padding: 20px;
-  background-color: var(--color-grey-lightened);
-}
-</style>
-<div class="accordion accordionMahube">
-	<div class="accordionWrap">
-		<div class="accordionBtn">
-      <div class="accordionTitle">
-			  <mwWidget rel="accordionTitle" info="Accordion Title" widget="Content"><strong>Title</strong></mwWidget>
-      </div>
-      <div class="accordionIcon"><i class="fas fa-plus"></i></div>
-		</div>
-		<div class="accordionContent">
-			<mwPageArea rel="mainContent" info="Accordion Content" sortable="page"></mwPageArea>
+<div id="<?= $teamGallery_id ?>" class="teamGallery teamGalleryMahube">
+	<div class="teamGalleryWrap">
+		<div class="row">
+			<items thumb="768x0" preview="768x0">
+				<div class="teamItem col-xl-4 col-md-6">
+					<a class="teamItemWrap _shadow-6 _shadow-hover">
+						<div class="teamItemHeader">
+							<div class="teamItemImgHolder">
+								<div class="teamItemImg _ratio-34 _bg-top" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+							</div>
+						</div>
+						<div class="teamItemBody" data-mh="team-gallery-two-group">
+							<h6 class="teamItemName">{title}</h6>
+							<div class="teamItemLink btn btnRounded btnSecondaryVibrant">
+								<p>
+									<span class="small">View Bio</span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</items>
 		</div>
 	</div>
 </div>
