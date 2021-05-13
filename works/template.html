@@ -1,46 +1,18 @@
 <style>
-  .popupAxion {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-
-  .popupAxion .popupOverlay {
-    background-color: black;
-    opacity: 0.8;
-  }
-
-  .popupAxion .popupMain {
-    max-width: 400px;
-    margin: 20px;
-    width: 100%;
-    height: 500px;
-    overflow-y: scroll;
-    background-color: white;
-  }
-
-  .popupAxion .popupMainWrap {
-
-  }
+.accordionMahube {
+  
+}
 </style>
-<?php $popup_id = newSN('popup-', 1); ?>
-<div id="<?=$popup_id?>" class="popupAxion">
-  <div class="popupOverlay"></div>
-  <div class="popupMain">
-    <div class="popupMainWrap">
-      <div class="popupContent">
-        <mwPageArea rel="popupContent" info="Content" sortable="page"></mwPageArea>
+<div class="accordion accordionMahube">
+	<div class="accordionWrap">
+		<div class="accordionBtn">
+      <div class="accordionTitle">
+			  <mwWidget rel="accordionTitle" info="Accordion Title" widget="Content"><h6>Title</h6></mwWidget>
       </div>
-      <div class="popupClose">
-        <button onclick="close(this)">Close</button>
-      </div>
-    </div>
-  </div>
+      <div class="accordionIcon"><i class="fas fa-plus"></i></div>
+		</div>
+		<div class="accordionContent">
+			<mwPageArea rel="mainContent" info="Accordion Content" sortable="page"></mwPageArea>
+		</div>
+	</div>
 </div>
-<script>
-  function closePopup(e) {
-    e.remove();
-  }
-</script>
