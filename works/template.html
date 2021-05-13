@@ -1,109 +1,108 @@
 <style>
 .teamGalleryMahube .teamGalleryWrap {
-display: grid;
-grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
--webkit-column-gap: 15px;
-   -moz-column-gap: 15px;
-        column-gap: 15px;
-row-gap: 50px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  row-gap: 50px;
 }
 
 @media screen and (max-width: 991px) {
-.teamGalleryMahube .teamGalleryWrap {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  row-gap: 25px;
-} 
+  .teamGalleryMahube .teamGalleryWrap {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 25px;
+  }
 }
 
 @media screen and (max-width: 475px) {
-.teamGalleryMahube .teamGalleryWrap {
-  grid-template-columns: minmax(0, 1fr);
-} 
+  .teamGalleryMahube .teamGalleryWrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .teamGalleryMahube .teamItem {
-padding: 7px 7px 0 7px;
--webkit-transition: all 0.3s ease-out;
-transition: all 0.3s ease-out;
-background-color: transparent;
+  padding: 7px 7px 0 7px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
 }
 
 .teamGalleryMahube .teamItem:hover {
-background-color: var(--color-grey-lightened);
+  background-color: var(--color-grey-lightened);
 }
 
-.teamGalleryMahube .teamItem > div {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-height: 100%;
-cursor: default;
+.teamGalleryMahube .teamItem>div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  cursor: default;
 }
 
 .teamGalleryMahube .teamItemContent {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
--webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
-padding: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 20px 20px;
 }
 
 .teamGalleryMahube .teamItemContent h3 {
--webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .teamGalleryMahube .teamItemImg {
-margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .teamGalleryMahube a {
-color: inherit;
+  color: inherit;
 }
 
 .teamGalleryMahube h2 {
-font-size: 18px;
-margin: 0 0 5px 0;
+  font-size: 18px;
+  margin: 0 0 5px 0;
 }
 
 @media screen and (max-width: 768px) {
-.teamGalleryMahube h2 {
-  font-size: 16px;
-}
+  .teamGalleryMahube h2 {
+    font-size: 16px;
+  }
 }
 
 .teamGalleryMahube h3 {
-font-weight: bold;
-font-size: 14px;
-color: var(--color-black-lightened);
-font-family: var(--font-secondary);
-margin: 0 0 30px 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--color-black-lightened);
+  font-family: var(--font-secondary);
+  margin: 0 0 30px 0;
 }
 
 .teamGalleryMahube p {
-font-size: 14px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {
-.teamGalleryMahube p {
-  font-size: 13px;
-}
+  .teamGalleryMahube p {
+    font-size: 13px;
+  }
 }
 </style>
 <div id="<?= $teamGallery_id ?>" class="teamGalleryMahube">
 	<div class="teamGalleryWrap">
-		<!-- Items -->
         <items thumb="768x0" preview="768x0">
             <div class="teamItem">
                 <div title="{title}" class="teamItemWrap">
