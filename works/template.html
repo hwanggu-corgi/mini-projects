@@ -16,7 +16,7 @@
   @media screen and (min-width: 991px) {
     .footerMahube .footerMain {
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 60px;
+      column-gap: 60px; 
     } 
   }
   
@@ -141,6 +141,12 @@
         <section class="footerSection footerLogo">
           <img src="/images/logo-footer.svg" alt="Mahube Logo"/>
         </section>
+        <!-- Social Links Mobile -->
+        <section class="footerSection footerSocialLinks mobile">
+          <div class="footerSocialLinksMain">
+            <mwWidget rel="footerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left" socials="facebook, twitter" template="circle.php" global="1"></mwWidget>
+          </div>
+        </section>
         <!-- Description -->
         <section class="footerSection footerDescription">
           <mwWidget rel="footerDescription" info="Footer Description" widget="Content" global="1">
@@ -187,12 +193,6 @@
         <!-- Secondary Logo Mobile -->
         <section class="footerSection footerSecondaryLogo mobile">
           <img src="/images/community-action-footer.svg" alt="Community Action Logo"/>
-        </section>
-        <!-- Social Links Mobile -->
-        <section class="footerSection footerSocialLinks mobile">
-          <div class="footerSocialLinksMain">
-            <mwWidget rel="footerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left" socials="facebook, twitter" template="circle.php" global="1"></mwWidget>
-          </div>
         </section>
       </div>
     </div>
