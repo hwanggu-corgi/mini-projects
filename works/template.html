@@ -1,73 +1,61 @@
-<style>
-.newsletterForm .mwInput {
-  background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid var(--color-grey);
-  border-radius: 0 !important;
-  color: var(--color-white);
-}
-
-.newsletterForm .mwInput.hover,
-.newsletterForm .mwInput.focus {
-  background-color: transparent !important;
-}
-
-.newsletterForm .mwInput input {
-  padding: 0 !important;
-  font-size: var(--font-size-small);
-}
-
-.newsletterForm .mwInput input::placeholder {
-  color: var(--color-grey);
-}
-
-.newsletterForm .sumitBtnWrap {
-  margin: 40px 0 0 0;
-}
-
-.newsletterForm button {
-  font-size: var(--font-size-x-small);
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  font-weight: bold;
-  padding: 10px 30px;
-  cursor: pointer;
-}
-
-.newsletterForm button:hover {
-  color: var(--color-white);
-  background-color: transparent;
-}
-</style>
-
-<table class="Dialog tall newsletterForm">
-	<tbody>
-		<tr>
-			<td>
-				<div class="inputGroup">
-					<input type="text" name="name" value="" title="Name" validations="required|" placeholder="Name"/>
-				</div>
-			</td>
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			<td>
-				<div class="inputGroup">
-					<input type="text" name="email" value="" title="Email" validations="isEmail|" placeholder="Email"/>
-				</div>
-			</td>
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			<td style="text-align: right;">
-        <div class="sumitBtnWrap">
-          <button type="submit">Submit</button>
-        </div>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<div class="footerMahube content-style">
+	<div class="container">
+    <!-- Main -->
+    <div class="footerMain">
+      <div class="footerCol">
+        <!-- Logo -->
+        <section class="footerSection footerLogo">
+          <img src="/images/logo-footer.svg" alt="Mahube Logo"/>
+        </section>
+        <!-- Description -->
+        <section class="footerSection footerDescription">
+          <mwWidget rel="footerDescription" info="Footer Description" widget="Content" global="1">
+          </mwWidget>
+        </section>
+        <!-- Secondary Logo -->
+        <section class="footerSection footerSecondaryLogo">
+          <img src="/images/community-action-footer.svg" alt="Community Action Logo"/>
+        </section>
+      </div>
+      <div class="footerCol">
+        <!-- Address -->
+        <section class="footerSection footerAddress">
+          <div class="footerSectionHeader">
+            <h2 class="footerTitle">
+              <mwWidget rel="footerCol2Title" info="Footer Col 2 Title" widget="Embed" global="1"></mwWidget>
+            </h2>
+            <h3 class="footerSubtitle">
+              <mwWidget rel="footerCol2Subtitle" info="Footer Col 2 Sub Title" widget="Embed" global="1"></mwWidget>
+            </h3>
+          </div>
+          <div class="footerAddressMain">
+            <mwWidget rel="footerContent" info="Footer Content" widget="Content" global="1"></mwWidget>
+          </div>
+        </section>
+        <!-- Social Links -->
+        <section class="footerSection footerSocialLinks">
+          <div class="footerSocialLinksMain">
+            <mwWidget rel="footerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left" socials="facebook, twitter" template="circle.php" global="1"></mwWidget>
+          </div>
+        </section>
+      </div>
+      <div class="footerCol">
+        <section class="footerSection footerNewsletter">
+          <div class="footerSectionHeader">
+            <h2 class="footerTitle">
+              <mwWidget rel="footerCol3Title" info="Footer Col 3 Title" widget="Embed" global="1"></mwWidget>
+            </h2>
+          </div>
+          <div class="footerNewsletterMain">
+            <mwWidget rel="footerNewsletter" widget="Contact" listid="25" global="1"></mwWidget>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Footer Copyright -->
+    <div class="footerCopyright">
+      <div class="copyrightAutoYear">© Copyright <?= date("Y") ?> </div>
+      <mwWidget rel="footerCopyright" info="Footer Copyright" widget="Embed" global="1">Morad Media Inc. All rights reserved.</mwWidget>
+    </div>
+  </div>
+</div>
