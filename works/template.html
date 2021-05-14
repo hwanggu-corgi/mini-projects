@@ -1,3 +1,137 @@
+<style>
+  .footerMahube {
+    background-color: var(--color-primary);
+  }
+  
+  .footerMahube * {
+    color: var(--color-white);
+  }
+  
+  .footerMahube .footerMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 70px 0 35px 0;
+  }
+  
+  @media screen and (min-width: 991px) {
+    .footerMahube .footerMain {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 60px;
+    } 
+  }
+  
+  .footerMahube .footerSectionHeader {
+    margin: 0 0 20px 0;
+  }
+  
+  .footerMahube .footerSectionHeader *:last-child {
+    margin: 0;
+  }
+  
+  .footerMahube .footerSectionHeader .footerTitle {
+    font-size: var(--font-size-large);
+    margin: 0 0 20px 0;
+  }
+  
+  .footerMahube .footerSectionHeader .footerSubtitle {
+    font-size: var(--font-size-small);
+  }
+  
+  .footerMahube p {
+    font-size: var(--font-size-small);
+    margin: 0 0 25px 0;
+  }
+  
+  .footerMahube p:last-child {
+    margin: 0;
+  }
+  
+  .footerMahube .footerCol {
+    margin: 0 0 40px 0;
+  }
+  
+  .footerMahube .footerCol:last-child {
+    margin: 0;
+  }
+  
+  @media screen and (min-width: 991px) {
+    .footerMahube .footerCol {
+      margin: 0;
+    }
+  }
+  
+  .footerMahube .footerCol .footerSection {
+    margin: 0 0 30px 0;
+  }
+  
+  .footerMahube .footerCol .footerSection:last-child {
+    margin: 0;
+  }
+  
+  .footerMahube .footerSection.footerLogo {
+    margin: 0 0 40px 0;
+  }
+  
+  @media screen and (min-width: 991px) {
+    .footerMahube .footerSection.footerLogo {
+      margin: 0 0 20px 0;
+    }
+  }
+  
+  .footerMahube .footerLogo img {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  @media screen and (min-width: 991px) {
+    .footerMahube .footerLogo img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .footerMahube .footerSection.footerDescription {
+    margin: 0 0 15px 0;
+  }
+  
+  .footerMahube .footerSecondaryLogo img {
+    height: 100%;
+    max-height: 70px;
+  }
+  
+  .footerMahube .footerSection.footerAddress {
+    margin: 0 0 30px 0;
+  }
+  
+  .footerMahube .footerSocialLinks a {
+    background-color: var(--color-white);
+  }
+  
+  .footerMahube .footerSocialLinks a:hover {
+    background-color: transparent;
+  }
+  
+  .footerMahube .footerSocialLinks i {
+    color: var(--color-primary);
+  }
+  
+  .footerMahube .footerSocialLinks a:hover i {
+    color: var(--color-white);
+  }
+  
+  .footerMahube table {
+    margin: 0;
+  }
+  
+  .footerMahube .footerNewsletter .mwFormStatus {
+    margin: 0 0 15px 0;
+  }
+  
+  .footerMahube .footerCopyright {
+    padding: 15px 0;
+    border-top: 1px solid var(--color-white);
+  }
+  </style>
 <div class="footerMahube content-style">
 	<div class="container">
     <!-- Main -->
@@ -48,6 +182,16 @@
           </div>
           <div class="footerNewsletterMain">
             <mwWidget rel="footerNewsletter" widget="Contact" listid="25" global="1"></mwWidget>
+          </div>
+        </section>
+        <!-- Secondary Logo Mobile -->
+        <section class="footerSection footerSecondaryLogo mobile">
+          <img src="/images/community-action-footer.svg" alt="Community Action Logo"/>
+        </section>
+        <!-- Social Links Mobile -->
+        <section class="footerSection footerSocialLinks mobile">
+          <div class="footerSocialLinksMain">
+            <mwWidget rel="footerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left" socials="facebook, twitter" template="circle.php" global="1"></mwWidget>
           </div>
         </section>
       </div>
