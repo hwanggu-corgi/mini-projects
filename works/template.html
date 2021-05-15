@@ -1,137 +1,359 @@
 <style>
-  .footerMahube {
-    background-color: var(--color-primary);
-    text-align: center;
+.headerMahube {
+  background-color: var(--color-white);
+}
+
+.headerMahube .headerMahubeSecondaryWrap {
+  display: flex;
+  padding: 15px 0;
+}
+
+.headerMahube .headerMahubeActionMenu {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .headerMahube .headerMahubeActionMenu {
+    align-items: flex-end;
   }
-  
-  .footerMahube * {
-    color: var(--color-white);
-  }
-  
-  .footerMahube .footerMain {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 70px 0 35px 0;
-  }
-  
-  @media screen and (min-width: 991px) {
-    .footerMahube .footerMain {
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 60px; 
-    } 
-  }
-  
-  .footerMahube .footerSectionHeader {
-    margin: 0 0 20px 0;
-  }
-  
-  .footerMahube .footerSectionHeader *:last-child {
-    margin: 0;
-  }
-  
-  .footerMahube .footerSectionHeader .footerTitle {
-    font-size: var(--font-size-large);
-    margin: 0 0 20px 0;
-  }
-  
-  .footerMahube .footerSectionHeader .footerSubtitle {
+}
+
+.headerMahube .headerTollFree {
+  display: none;
+}
+
+@media screen and (min-width: 991px) {
+  .headerMahube .headerTollFree {
+    display: block;
     font-size: var(--font-size-small);
+    margin: 0 30px 0 0;
   }
-  
-  .footerMahube p {
-    font-size: var(--font-size-small);
-    margin: 0 0 25px 0;
+}
+
+.headerMahube .headerTollFree .Embed {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .headerMahube .headerTollFree .Embed {
+    align-items: flex-end;
   }
-  
-  .footerMahube p:last-child {
+}
+
+
+.headerMahube .headerMahubeLogo {
+  flex-grow: 1;
+  position: relative;
+}
+
+.headerMahube .headerMahubeLogo img {
+  max-height: 40px;
+}
+
+@media screen and (min-width: 767px) {
+  .headerMahube .headerMahubeLogo img {
+    max-height: 56px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headerMahube .headerMahubeLogo img {
+    position: absolute;
+    top: 2px;
+    max-height: initial;
+  } 
+}
+
+
+.headerMahube .headerMahubePrimary {
+  background-color: var(--color-grey-lightened);
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .headerMahube .headerMahubePrimary {
+    display: block;
+  } 
+}
+
+.headerMahube .headerMahubePrimaryWrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu {
+  margin: 0 40px 0 0;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li {
+  padding: 15px 0;
+  margin: 0 20px;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li:first-child {
+  margin: 0 20px 0 0;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li:last-child {
+  margin: 0 0 0 20px;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li.has-children > a:after {
+  content: "\F0D7";
+  margin-left: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li > a {
+  font-weight: 500;
+} 
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li:hover > a {
+  color: var(--color-secondary);
+} 
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul > li > a > span {
+  transition: none;
+} 
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  background-color: var(--color-primary);
+  transform-origin: 50% 0;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 360ms;
+  transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+} 
+
+.headerMahube .headerMahubePrimary .mainMenu .blockContents > ul li:hover > ul {
+  transform: perspective(400px) rotate3d(0, 0, 0, 0);
+} 
+
+.headerMahube .headerMahubePrimary .mainMenu ul li ul li {
+  position: relative;
+  min-width: 260px;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu ul li ul li a {
+  display: block;
+  position: relative;
+  padding: 10px 25px;
+  color: var(--color-white);
+  white-space: inherit;
+}
+
+.headerMahube .headerMahubePrimary .mainMenu ul li ul li.has-children > a:after {
+  content: "\F0DA";
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.headerMahube .headerMahubePrimary .socialsAndSearch .Gensoclinks {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headerMahube .headerMahubePrimary .socialsAndSearch .Gensoclinks a {
+  margin: 0 20px;
+}
+
+.headerMahube .headerMahubePrimary .socialsAndSearch .Gensoclinks a:first-child {
+  margin: 0 20px 0 0;
+}
+
+.headerMahube .headerMahubePrimary .socialsAndSearch .Gensoclinks a:last-child {
+  margin: 0 0 0 20px;
+}
+
+.headerMahube .headerMahubeActionMenuContent {
+  margin: 0 25px 0 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .headerMahube .headerMahubeActionMenuContent {
     margin: 0;
+  } 
+}
+
+.headerMahube .headerMahubeActionMenuContent ul {
+  display: flex;
+}
+
+.headerMahube .headerMahubeActionMenuContent li {
+  margin: 0 15px;
+}
+
+.headerMahube .headerMahubeActionMenuContent li:first-child {
+  margin: 0 15px 0 0;
+}
+
+.headerMahube .headerMahubeActionMenuContent li:last-child {
+  margin: 0 0 0 15px;
+}
+
+.headerMahube .headerMahubeActionMenuContent li.login {
+  display: none;
+}
+
+@media screen and (min-width: 991px) {
+  .headerMahube .headerMahubeActionMenuContent li.login {
+    display: block;
   }
-  
-  .footerMahube .footerCol {
-    margin: 0 0 40px 0;
+}
+
+
+.headerMahube .headerMahubeActionMenuContent li.donate {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .headerMahube .headerMahubeActionMenuContent li.donate {
+    display: block;
   }
-  
-  .footerMahube .footerCol:last-child {
-    margin: 0;
+}
+
+.headerMahube .headerMahubeActionMenuContent li.getHelp {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .headerMahube .headerMahubeActionMenuContent li.getHelp {
+    display: block;
   }
-  
-  @media screen and (min-width: 991px) {
-    .footerMahube .footerCol {
-      margin: 0;
-    }
+}
+
+
+.headerMahube .headerMahubeActionMenuContent a {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-small);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.headerMahube .headerMahubeActionMenuContent img {
+  height: 30px;
+  margin: 0px 0 8px 0;
+}
+
+.headerMahube .headerMobileMenu {
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .headerMahube .headerMobileMenu {
+    display: none;
+  } 
+}
+
+
+.headerMahube .mobileNavigationMenu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary);
+  z-index: 999999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0.5s ease-out;
+  transition: visibility 0.5s ease-out;
+}
+
+.headerMahube .mobileNavigationMenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.headerMahube .mobileNavigationMenuHeader .burger .burgerLine,
+.headerMahube .mobileNavigationMenuHeader .burger .burgerSlash {
+  background-color: var(--color-white);
+}
+
+.headerMahube .mobileNavigationMenuHeader .burger:hover .burgerLine,
+.headerMahube .mobileNavigationMenuHeader .burger:hover .burgerSlash {
+  background-color: var(--color-white);
+}
+
+.headerMahube .mobileNavigationMenuHeader {
+  padding: 15px 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: content-box;
+}
+
+@media screen and (min-width: 767px) {
+  .headerMahube .mobileNavigationMenuHeader {
+    height: 56px;
   }
-  
-  .footerMahube .footerCol .footerSection {
-    margin: 0 0 30px 0;
-  }
-  
-  .footerMahube .footerCol .footerSection:last-child {
-    margin: 0;
-  }
-  
-  .footerMahube .footerSection.footerLogo {
-    margin: 0 0 40px 0;
-  }
-  
-  @media screen and (min-width: 991px) {
-    .footerMahube .footerSection.footerLogo {
-      margin: 0 0 20px 0;
-    }
-  }
-  
-  .footerMahube .footerLogo img {
-    width: 100%;
-    max-width: 250px;
-  }
-  
-  @media screen and (min-width: 991px) {
-    .footerMahube .footerLogo img {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-  
-  .footerMahube .footerSection.footerDescription {
-    margin: 0 0 15px 0;
-  }
-  
-  .footerMahube .footerSecondaryLogo img {
-    height: 100%;
-    max-height: 70px;
-  }
-  
-  .footerMahube .footerSection.footerAddress {
-    margin: 0 0 30px 0;
-  }
-  
-  .footerMahube .footerSocialLinks a {
-    background-color: var(--color-white);
-  }
-  
-  .footerMahube .footerSocialLinks a:hover {
-    background-color: transparent;
-  }
-  
-  .footerMahube .footerSocialLinks i {
-    color: var(--color-primary);
-  }
-  
-  .footerMahube .footerSocialLinks a:hover i {
-    color: var(--color-white);
-  }
-  
-  .footerMahube table {
-    margin: 0;
-  }
-  
-  .footerMahube .footerNewsletter .mwFormStatus {
-    margin: 0 0 15px 0;
-  }
-  
-  .footerMahube .footerCopyright {
-    padding: 15px 0;
-    border-top: 1px solid var(--color-white);
-  }
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu a:hover {
+  color: var(--color-quaternary);
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
+  font-size: 32px;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul {
+  padding: 10px 15px;  
+  position: relative;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #DE741A;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li {
+  padding: 0 0 10px 0;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li:last-child {
+  padding: 0;
+}
+
+.headerMahube .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul a {
+  font-size: var(--font-size-medium);
+}
   </style>
 <!-- Header Mahube -->
 <div class="header headerMahube stickyHeader">
