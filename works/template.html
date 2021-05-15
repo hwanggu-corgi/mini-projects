@@ -133,74 +133,148 @@
     border-top: 1px solid var(--color-white);
   }
   </style>
-<div class="footerMahube content-style">
-	<div class="container">
-    <!-- Main -->
-    <div class="footerMain">
-      <div class="footerCol">
-        <!-- Logo -->
-        <section class="footerSection footerLogo">
-          <img src="/images/logo-footer.svg" alt="Mahube Logo"/>
-        </section>
-        <!-- Social Links Mobile -->
-        <section class="footerSection footerSocialLinks mobile">
-          <div class="footerSocialLinksMain">
-            <mwWidget rel="footerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left" socials="facebook, twitter" template="circle.php" global="1"></mwWidget>
-          </div>
-        </section>
-        <!-- Description -->
-        <section class="footerSection footerDescription">
-          <mwWidget rel="footerDescription" info="Footer Description" widget="Content" global="1">
-          </mwWidget>
-        </section>
-        <!-- Secondary Logo -->
-        <section class="footerSection footerSecondaryLogo desktop">
-          <img src="/images/community-action-footer.svg" alt="Community Action Logo"/>
-        </section>
-      </div>
-      <div class="footerCol">
-        <!-- Address -->
-        <section class="footerSection footerAddress">
-          <div class="footerSectionHeader">
-            <h2 class="footerTitle">
-              <mwWidget rel="footerCol2Title" info="Footer Col 2 Title" widget="Embed" global="1"></mwWidget>
-            </h2>
-            <h3 class="footerSubtitle">
-              <mwWidget rel="footerCol2Subtitle" info="Footer Col 2 Sub Title" widget="Embed" global="1"></mwWidget>
-            </h3>
-          </div>
-          <div class="footerAddressMain">
-            <mwWidget rel="footerContent" info="Footer Content" widget="Content" global="1"></mwWidget>
-          </div>
-        </section>
-        <!-- Social Links -->
-        <section class="footerSection footerSocialLinks desktop">
-          <div class="footerSocialLinksMain">
-            <mwWidget rel="footerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left" socials="facebook, twitter" template="circle.php" global="1"></mwWidget>
-          </div>
-        </section>
-      </div>
-      <div class="footerCol">
-        <section class="footerSection footerNewsletter">
-          <div class="footerSectionHeader">
-            <h2 class="footerTitle">
-              <mwWidget rel="footerCol3Title" info="Footer Col 3 Title" widget="Embed" global="1"></mwWidget>
-            </h2>
-          </div>
-          <div class="footerNewsletterMain">
-            <mwWidget rel="footerNewsletter" widget="Contact" listid="25" global="1"></mwWidget>
-          </div>
-        </section>
-        <!-- Secondary Logo Mobile -->
-        <section class="footerSection footerSecondaryLogo mobile">
-          <img src="/images/community-action-footer.svg" alt="Community Action Logo"/>
-        </section>
-      </div>
-    </div>
-    <!-- Footer Copyright -->
-    <div class="footerCopyright">
-      <div class="copyrightAutoYear">© Copyright <?= date("Y") ?> </div>
-      <mwWidget rel="footerCopyright" info="Footer Copyright" widget="Embed" global="1">Morad Media Inc. All rights reserved.</mwWidget>
-    </div>
-  </div>
+<!-- Header Mahube -->
+<div class="header headerMahube stickyHeader">
+	<section class="headerMahubeSecondary">
+		<div class="container">
+			<div class="headerMahubeSecondaryWrap">
+				<div class="headerMahubeLogo">
+					<img src="/images/logo-navbar.svg" alt="Mahube-Otwa Logo" />
+				</div>
+				<div class="headerMahubeActionMenu">
+					<div class="headerTollFree">
+						<mwWidget rel="headerTollFree" info="Header Toll Free Text" widget="Embed" global="1">TOLL FREE (888)
+							458-1385</mwWidget>
+					</div>
+					<div class="headerMahubeActionMenuContent">
+						<ul>
+							<li class="login">
+								<a href="/login">
+									<img src="/images/icons/user.svg" />
+									<span>Login</span>
+								</a>
+							</li>
+							<li class="donate">
+								<a href="/donate">
+									<img src="/images/icons/donate.svg" />
+									<span>Donate</span>
+								</a>
+							</li>
+							<li class="getHelp">
+								<a href="/get-help">
+									<img src="/images/icons/get-help.svg" />
+									<span>Get Help</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="headerMobileMenu">
+						<button class="burger burgerOne" aria-label="Open mobile menu">
+							<span class="burgerLines">
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+							</span>
+							<span class="burgerSlashes">
+								<span class="burgerSlash"></span>
+								<span class="burgerSlash"></span>
+								<span class="burgerSlash"></span>
+								<span class="burgerSlash"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="headerMahubePrimary">
+		<div class="container">
+			<div class="headerMahubePrimaryWrap">
+				<div class="mainMenu">
+					<mwWidget rel="siteMennu" info="Header Menu" widget="Menu" menu="mainMenu" template="default.php" global="1">
+					</mwWidget>
+				</div>
+				<div class="socialsAndSearch">
+					<mwWidget rel="headerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left"
+						socials="facebook, twitter" template="default.php" global="1"></mwWidget>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="mobileNavigationMenu">
+		<div class="container">
+			<div class="mobileNavigationMenuHeader">
+				<div class="headerMobileMenu">
+					<button id="burger-close" class="burger burgerOne" aria-label="Close mobile menu">
+						<span class="burgerLines">
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+						</span>
+						<span class="burgerSlashes">
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div class="mobileNavigationMenuContent">
+				<div class="headerMahubeActionMenuContent">
+					<ul>
+						<li class="login">
+							<a href="/login">
+								<img src="/images/icons/user.svg" />
+								<span>Login</span>
+							</a>
+						</li>
+						<li class="donate">
+							<a href="/donate">
+								<img src="/images/icons/donate.svg" />
+								<span>Donate</span>
+							</a>
+						</li>
+						<li class="getHelp">
+							<a href="/get-help">
+								<img src="/images/icons/get-help.svg" />
+								<span>Get Help</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mainMenu">
+					<mwWidget rel="siteMenu" info="Main Menu" widget="Menu" menu="mainMenu" template="default.php" />
+				</div>
+			</div>
+		</div>
+  </section>
 </div>
+<script type="text/javascript">
+	$(document).ready(function () {
+    
+		//-----------------------------------------------------------
+		// Burger & Sidr
+		//-----------------------------------------------------------
+		//
+		(function () {
+      const body = $("body");
+      const burger = $(".headerMahube .burger");
+      const mobileNavigationMenu = $(".headerMahube .mobileNavigationMenu");
+
+			var $burger = burger.click(function() {
+        burger.each(function() {
+          $(this).toggleClass('open');
+        });
+        body.toggleClass('mobileMenuOpened');
+        mobileNavigationMenu.toggleClass('open');
+      });
+		})();
+	});
+</script>
