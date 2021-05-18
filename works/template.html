@@ -1,7 +1,18 @@
-<div class="contentAreaTall content-style lightGray">
-	<div class="contentAreaWrap">
-		<div class="container">
-			<mwPageArea rel="mainContent" info="Gray Content Area Tall" sortable="page"></mwPageArea>
-		</div>
-	</div>
+<style>
+.threeColMahube {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+}
+</style>
+<div class="threeColMahube">
+  <div class="threeColItem">
+      <mwPageArea rel="column1" info="Column 1" sortable="page"></mwPageArea>
+  </div>
+  <div class="threeColItem">
+      <mwPageArea rel="column2" info="Column 2" sortable="page"></mwPageArea>
+  </div>
+  <div class="threeColItem">
+      <mwPageArea rel="column3" info="Column 3" sortable="page"></mwPageArea>
+  </div>
 </div>
