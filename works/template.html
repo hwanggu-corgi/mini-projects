@@ -68,9 +68,11 @@
       ];
 
       let infoWindows = [];
+      let markers = [];
+      let map = null;
 
       function generateMap() {
-        let map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: mapCenter
         });
@@ -88,6 +90,9 @@
             content: '<b>' + office.name + '</b><br><br>' + office.place
           });
           infoWindows.push(info);
+          markers.push(marker);
+          office.info = infoWindows[infoWindows.length - 1];
+          office.marker = markers[markers.length - 1];
           google.maps.event.addListener(marker, 'click', function () {
             for (let infoWindow of infoWindows) {
               infoWindow.close();
@@ -141,7 +146,7 @@
           let button = document.createElement("button");
           button.className = "locationsItemBtn";
           button.innerHTML = "Get Directions";
-          button.onclick = navigate(office.position);
+          button.onclick = navigate(office.marker, office.info);
           
           div.appendChild(h4);
           div.appendChild(divDescription);
