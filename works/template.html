@@ -24,31 +24,41 @@
           position: {"lat": 46.82491945815597, "lng": -95.8266662594384},
           name: 'Mahube-Otwa - Becker County',
           nameShort: 'Becker County',
-          place: '1125 West River Road P.O. Box 747 Detroit Lakes, MN 56502-0747'
+          place: '1125 West River Road P.O. Box 747 Detroit Lakes, MN 56502-0747',
+          phone: "(218) 847-1385",
+          fax: "(218) 847-1388"
         },
         {
           position: {"lat": 46.92354776725745, "lng": -95.04716649991428},
           name: 'Mahube-Otwa - Hubbard County',
           nameShort: 'Hubbard County',
-          place: '120 North Central P.O. Box 229 Park Rapids, MN 56470-0229'
+          place: '120 North Central P.O. Box 229 Park Rapids, MN 56470-0229',
+          phone: "(218) 732-7204",
+          fax: "(218) 732-7206"
         },
         {
           position: {"lat": 47.31418295760182, "lng": -95.96972217291597},
           name: 'Mahube-Otwa - Mahnomen County',
           nameShort: 'Mahnomen County',
-          place: '118 West Madison Avenue P.O. Box 76 Mahnomen, MN 56557-0076'
+          place: '118 West Madison Avenue P.O. Box 76 Mahnomen, MN 56557-0076',
+          phone: "(218) 935-5022",
+          fax: "(218) 935-2770"
         },
         {
           position: {"lat": 46.28496788823161, "lng": -96.07528288137884},
           name: 'Mahube-Otwa - Otter Tail',
           nameShort: 'Otter Tail',
-          place: '128 W. Cavour Avenue Fergus Falls, MN 56537'
+          place: '128 W. Cavour Avenue Fergus Falls, MN 56537',
+          phone: "(218) 739-3011",
+          fax: "(218) 998-3055"
         },
         {
           position: {"lat": 46.43909972724552, "lng": -95.13867775205173},
           name: 'Mahube-Otwa - Wadena County',
           nameShort: 'Wadena County',
-          place: '311 Jefferson Street S. Wadena, MN 56482'
+          place: '311 Jefferson Street S. Wadena, MN 56482',
+          phone: "(218) 632-3600",
+          fax: "(218) 632-3602"
         }
       ];
 
@@ -98,6 +108,13 @@
 
           let divDescription = document.createElement("div");
           divDescription.className = "locationsItemDescription";
+          
+          let pAddress = document.createElement("p");
+          pAddress.createTextNode(office.place);
+          let pPhone = document.createElement("p");
+          pAddress.createTextNode(office.phone);
+          let pFax = document.createElement("p");
+          pAddress.createTextNode(`${office.fax} Fax`);
           
           let button = document.createElement("button");
           button.className = "locationsItemBtn";
