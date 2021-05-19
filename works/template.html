@@ -8,11 +8,6 @@
   <section class="layoutMapMain">
     <div id="map" class="mapArea"></div>
     <div class="locationsList">
-      <div class="locationsItem"></div>
-      <div class="locationsItem"></div>
-      <div class="locationsItem"></div>
-      <div class="locationsItem"></div>
-      <div class="locationsItem"></div>
     </div>
   </section>
   <script type="text/javascript">
@@ -62,8 +57,9 @@
         }
       ];
 
+      let infoWindows = [];
+
       function generateMap() {
-        let infoWindows = [];
         let map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: mapCenter
@@ -93,37 +89,55 @@
       }
 
       function navigate() {
-        return false;
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(office.position["lat"],office.position["lng"]),
+          map: map,
+          icon: { url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg), scaledSize: new google.maps.Size(50, 50) },
+          clickable: true
+        });
+
+        infoWindows.push(info);
+        
+        for (let infoWindow of infoWindows) {
+          infoWindow.close();
+        }
+
+        info.open(map, marker);
       }
 
       function addListItems() {
-        const locationsList = document.getElementById("<?=$layoutMapTwoId?>").querySelector(".layoutMapMain");
+        const locationsList = document.getElementById("<?=$layoutMapTwoId?>").querySelector(".locationsList");
         for (let office of offices) {
           let div = document.createElement("div");
           div.className = "locationsItem";
           
           let h4 = document.createElement("h4");
           h4.className = "locationsItemTitle";
-          h4.createTextNode(office.nameShort); 
+          h4.innerHtml = office.nameShort; 
 
           let divDescription = document.createElement("div");
           divDescription.className = "locationsItemDescription";
           
           let pAddress = document.createElement("p");
-          pAddress.createTextNode(office.place);
+          pAddress.innerHTML = office.place;
+          divDescription.appendChild(pAddress);
           let pPhone = document.createElement("p");
-          pAddress.createTextNode(office.phone);
+          pPhone.innerHTML = office.phone;
+          divDescription.appendChild(pPhone);
           let pFax = document.createElement("p");
-          pAddress.createTextNode(`${office.fax} Fax`);
+          pFax.innerHTML = `${office.fax} Fax`;
+          divDescription.appendChild(pFax);
           
           let button = document.createElement("button");
           button.className = "locationsItemBtn";
-          button.createTextNode("Get Directions");
+          button.innerHTML = "Get Directions";
           button.onclick = navigate(office.position);
           
           div.appendChild(h4);
           div.appendChild(divDescription);
           div.appendChild(button);
+
+          locationsList.appendChild(div);
         }
       }
       generateMap();
