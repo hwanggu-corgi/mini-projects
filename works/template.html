@@ -1,166 +1,230 @@
-<div id="<?=$layoutMapTwoId?>" class="layoutMapTwo content-style">
-  <section class="layoutMapHeader">
-    <div class="container">  
-      <h3>Mahube-Otwa Locations</h3>
-      <span>Scroll for More <i class="fas fa-caret-down"></i></span>
-    </div>
-  </section>
-  <section class="layoutMapMain">
-    <div id="map" class="mapArea"></div>
-    <div class="locationsList">
-    </div>
-  </section>
-  <script type="text/javascript">
-    function initMap() {
-      const mapCenter = {"lat": 46.82491945815597,"lng": -95.8266662594384};
-      const markerColors = ["#E2CDE4", "#292974", "#771C7D", "#EB9A2A"];
-      const offices = [
-        {
-          position: {"lat": 46.82491945815597, "lng": -95.8266662594384},
-          name: 'Mahube-Otwa - Becker County',
-          nameShort: 'Becker County',
-          place: '1125 West River Road P.O. Box 747 Detroit Lakes, MN 56502-0747',
-          phone: "(218) 847-1385",
-          fax: "(218) 847-1388",
-          marker: null,
-          info: null
-        },
-        {
-          position: {"lat": 46.92354776725745, "lng": -95.04716649991428},
-          name: 'Mahube-Otwa - Hubbard County',
-          nameShort: 'Hubbard County',
-          place: '120 North Central P.O. Box 229 Park Rapids, MN 56470-0229',
-          phone: "(218) 732-7204",
-          fax: "(218) 732-7206",
-          marker: null,
-          info: null
-        },
-        {
-          position: {"lat": 47.31418295760182, "lng": -95.96972217291597},
-          name: 'Mahube-Otwa - Mahnomen County',
-          nameShort: 'Mahnomen County',
-          place: '118 West Madison Avenue P.O. Box 76 Mahnomen, MN 56557-0076',
-          phone: "(218) 935-5022",
-          fax: "(218) 935-2770",
-          marker: null,
-          info: null
-        },
-        {
-          position: {"lat": 46.28496788823161, "lng": -96.07528288137884},
-          name: 'Mahube-Otwa - Otter Tail',
-          nameShort: 'Otter Tail',
-          place: '128 W. Cavour Avenue Fergus Falls, MN 56537',
-          phone: "(218) 739-3011",
-          fax: "(218) 998-3055",
-          marker: null,
-          info: null
-        },
-        {
-          position: {"lat": 46.43909972724552, "lng": -95.13867775205173},
-          name: 'Mahube-Otwa - Wadena County',
-          nameShort: 'Wadena County',
-          place: '311 Jefferson Street S. Wadena, MN 56482',
-          phone: "(218) 632-3600",
-          fax: "(218) 632-3602",
-          marker: null,
-          info: null
-        }
-      ];
-
-      let infoWindows = [];
-      let markers = [];
-      let map = null;
-
-      function generateMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: mapCenter
-        });
-        
-        let i = 0;
-        for (let office of offices) {
-          let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="48.851" height="52.797" viewBox="0 0 48.851 52.797"> <g id="Group_3245" data-name="Group 3245" transform="translate(-882.574 -1509.629)"> <g id="Group_3241" data-name="Group 3241"> <g id="Group_3218" data-name="Group 3218" transform="translate(894 1509.629)"> <ellipse id="Ellipse_43" data-name="Ellipse 43" cx="10" cy="2" rx="10" ry="2" transform="translate(3 34.371)" fill="#d0d0d0"/> <path id="Path_1715" data-name="Path 1715" d="M97.623,0a12.222,12.222,0,0,0-12.29,12.124,12.016,12.016,0,0,0,1.476,5.761l10.143,18.1a.773.773,0,0,0,1.344,0l10.146-18.1a12.015,12.015,0,0,0,1.472-5.756A12.222,12.222,0,0,0,97.623,0Zm0,18.186a6.062,6.062,0,1,1,6.145-6.062A6.111,6.111,0,0,1,97.623,18.186Z" transform="translate(-85.333)" fill="${markerColors[i % markerColors.length]}"/> </g> <circle id="Ellipse_57" data-name="Ellipse 57" cx="6.5" cy="6.5" r="6.5" transform="translate(900 1515)" fill="#fff"/> </g> </g></svg>`;
-          let marker = new google.maps.Marker({
-            position: new google.maps.LatLng(office.position["lat"],office.position["lng"]),
-            map: map,
-            icon: { url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg), scaledSize: new google.maps.Size(50, 50) },
-            clickable: true
-          });
-          let info = new google.maps.InfoWindow({
-            content: '<b>' + office.name + '</b><br><br>' + office.place
-          });
-          infoWindows.push(info);
-          markers.push(marker);
-          office.info = infoWindows[infoWindows.length - 1];
-          office.marker = markers[markers.length - 1];
-          google.maps.event.addListener(marker, 'click', function () {
-            for (let infoWindow of infoWindows) {
-              infoWindow.close();
-            }
-            info.open(map, marker);
-          });
-          i += 1;
-        }
-      }
-
-      function navigate() {
-        let marker = new google.maps.Marker({
-          position: new google.maps.LatLng(office.position["lat"],office.position["lng"]),
-          map: map,
-          icon: { url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg), scaledSize: new google.maps.Size(50, 50) },
-          clickable: true
-        });
-
-        infoWindows.push(info);
-        
-        for (let infoWindow of infoWindows) {
-          infoWindow.close();
-        }
-
-        info.open(map, marker);
-      }
-
-      function addListItems() {
-        const locationsList = document.getElementById("<?=$layoutMapTwoId?>").querySelector(".locationsList");
-        for (let office of offices) {
-          let div = document.createElement("div");
-          div.className = "locationsItem";
-          
-          let h4 = document.createElement("h4");
-          h4.className = "locationsItemTitle";
-          h4.innerHtml = office.nameShort; 
-
-          let divDescription = document.createElement("div");
-          divDescription.className = "locationsItemDescription";
-          
-          let pAddress = document.createElement("p");
-          pAddress.innerHTML = office.place;
-          divDescription.appendChild(pAddress);
-          let pPhone = document.createElement("p");
-          pPhone.innerHTML = office.phone;
-          divDescription.appendChild(pPhone);
-          let pFax = document.createElement("p");
-          pFax.innerHTML = `${office.fax} Fax`;
-          divDescription.appendChild(pFax);
-          
-          let button = document.createElement("button");
-          button.className = "locationsItemBtn";
-          button.innerHTML = "Get Directions";
-          button.onclick = navigate(office.marker, office.info);
-          
-          div.appendChild(h4);
-          div.appendChild(divDescription);
-          div.appendChild(button);
-
-          locationsList.appendChild(div);
-        }
-      }
-      generateMap();
-      addListItems();
-    }
-        
-  </script>
-  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=<?=$googleMapKey?>&callback=initMap">
-  </script>
+<!-- Header Mahube -->
+<div class="header headerMahube stickyHeader">
+	<section class="headerMahubeSecondary">
+		<div class="container">
+			<div class="headerMahubeSecondaryWrap">
+				<div class="headerMahubeLogo">
+					<a href="/" title="Mahube-Otwa Logo">
+						<img src="/images/logo-navbar.svg" alt="Mahube-Otwa Logo" />
+					</a>
+				</div>
+				<div class="headerMahubeActionMenu">
+					<div class="headerTollFree">
+						<mwWidget rel="headerTollFree" info="Header Toll Free Text" widget="Embed" global="1">TOLL FREE (888)
+							458-1385</mwWidget>
+					</div>
+					<div class="headerMahubeActionMenuContent">
+						<ul>
+							<li class="login">
+								<?php if (!User::isIn()) { ?>
+								<a href="/login">
+									<img src="/images/icons/user.svg" />
+									<span>Login</span>
+								</a>
+								<?php } else { ?>
+								<a href="/auth/logout">
+									<img src="/images/icons/user.svg" />
+									<span>Logout</span>
+								</a>
+								<?php }?>
+							</li>
+							<li class="donate">
+								<a href="/donate">
+									<img src="/images/icons/donate.svg" />
+									<span>Donate</span>
+								</a>
+							</li>
+							<li class="getHelp">
+								<a href="/contact-us">
+									<img src="/images/icons/get-help.svg" />
+									<span>Get Help</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="headerMobileMenu">
+						<button class="burger burgerOne" aria-label="Open mobile menu">
+							<span class="burgerLines">
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+								<span class="burgerLine"></span>
+							</span>
+							<span class="burgerSlashes">
+								<span class="burgerSlash"></span>
+								<span class="burgerSlash"></span>
+								<span class="burgerSlash"></span>
+								<span class="burgerSlash"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="headerMahubePrimary">
+		<div class="container">
+			<div class="headerMahubePrimaryWrap">
+				<!-- Main Menu -->
+				<div class="mainMenu">
+					<mwWidget rel="siteMennu" info="Header Menu" widget="Menu" menu="mainMenu" template="default.php" global="1">
+					</mwWidget>
+				</div>
+				<!-- Social and Search -->
+				<div class="socialsAndSearch">
+					<mwWidget rel="headerSocialLinks" info="Social Links" widget="Gensoclinks" icon_size="small" align="left"
+						socials="facebook, twitter" template="default.php" global="1"></mwWidget>
+					<!-- Search Bar -->
+					<div class="headerSearchBar">
+						<button class="searchBtn" aria-label="Open search bar"><i class="fas fa-search"></i></button>
+						<div class="searchBar">
+							<div class="searchBarWrap">
+								<div class="searchBarForm">
+									<form action="/search" method="GET">
+										<input type="text" name="q" value="" placeholder="Search">
+										<button type="submit">
+											<i class="fa fa-search"></i>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="mobileNavigationMenu">
+		<div class="container">
+			<div class="mobileNavigationMenuHeader">
+				<div class="headerMobileMenu">
+					<button id="burger-close" class="burger burgerOne" aria-label="Close mobile menu">
+						<span class="burgerLines">
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+						</span>
+						<span class="burgerSlashes">
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div class="mobileNavigationMenuContent">
+				<div class="actionBtnsAndSearch">
+					<div class="headerMahubeActionMenuContent">
+						<ul>
+							<li class="login">
+								<a href="/login">
+									<img src="/images/icons/user.svg" />
+									<span>Login</span>
+								</a>
+							</li>
+							<li class="donate">
+								<a href="/donate">
+									<img src="/images/icons/donate.svg" />
+									<span>Donate</span>
+								</a>
+							</li>
+							<li class="getHelp">
+								<a href="/contact-us">
+									<img src="/images/icons/get-help.svg" />
+									<span>Get Help</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Search Bar -->
+					<div class="headerSearchBar">
+						<button class="searchBtn" aria-label="Open search bar"><i class="fas fa-search"></i><span>Search</span></button>
+						<div class="searchBar">
+							<div class="searchBarWrap">
+								<div class="searchBarForm">
+									<form action="/search" method="GET">
+										<input type="text" name="q" value="" placeholder="Search">
+										<button type="submit">
+											<i class="fa fa-search"></i>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mainMenu">
+					<mwWidget rel="siteMenu" info="Main Menu" widget="Menu" menu="mainMenu" template="default.php" />
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
+<script type="text/javascript">
+	$(document).ready(function () {
+		//-----------------------------------------------------------
+		// Toggle Search
+		//-----------------------------------------------------------
+		//
+		(function () {
+			var $searchBtn = $('.headerMahube .searchBtn');
+			var $searchBar = $('.headerMahube .searchBar');
+			var $searchBarInput = $('.headerMahube .searchBar input[name="q"]');
+
+			$searchBtn.on('click', function (e) {
+				e.preventDefault();
+
+				$('.headerMahube').toggleClass('search-bar-open');
+
+				if ($searchBar.hasClass('active')) {
+					$searchBtn.removeClass("active");
+					$searchBar.removeClass("active");
+					$searchBarInput.blur();
+				} else {
+					$searchBtn.addClass("active");
+					$searchBar.addClass("active");
+					$searchBarInput.focus();
+				}
+			});
+
+			$('.searchBarCloseBtn').on('click', function () {
+				$searchBtn.addClass("active");
+				$searchBar.removeClass("active");
+				$searchBarInput.blur();
+			});
+		})();
+
+		//-----------------------------------------------------------
+		// Burger & Sidr
+		//-----------------------------------------------------------
+		//
+		(function () {
+			const body = $("body");
+			const burger = $(".headerMahube .burger");
+			const mobileNavigationMenu = $(".headerMahube .mobileNavigationMenu");
+
+			var $burger = burger.click(function () {
+				burger.each(function () {
+					$(this).toggleClass('open');
+				});
+				body.toggleClass('mobileMenuOpened');
+				mobileNavigationMenu.toggleClass('open');
+			});
+		})();
+
+		//-----------------------------------------------------------
+		// mobile menu accordion
+		//-----------------------------------------------------------
+		//
+		(function () {
+			const mobileMenuItem = $(".headerMahube .mobileNavigationMenu li.has-children");
+			
+		})();
+	});
+</script>
