@@ -1,4 +1,7 @@
+<?php $postsList_id = newSN('postsList-', 16); ?>
+
 <div id="<?= $postsList_id ?>" class="postsListMahube">
+  <div class="buttonPrevWrap"></div>
 	<div class="postsListWrap">
     <items>
       <article>
@@ -15,6 +18,7 @@
       </article>
     </items>
 	</div>
+  <div class="buttonNextWrap"></div>
 </div>
 
 <script type="text/javascript">
@@ -49,11 +53,11 @@
 
     (function () {
 			$("#<?= $postsList_id ?> .slick-prev").click(function() {
-				const firstActiveSlide = $("#<?= $postsList_id ?> .slick-active").first()[0];
-        const incomingActiveSlide = $("#<?= $postsList_id ?> .slick-active").last()[0].nextSibling;
+				const incomingActiveSlide = $("#<?= $postsList_id ?> article.slick-active").first()[0].previousElementSibling;
+        const leavingActiveSlide = $("#<?= $postsList_id ?> article.slick-active").last()[0].nextElementSibling;
 
-        console.log(firstActiveSlide);
-        console.log(incomingActiveSlide);
+        incomingActiveSlide.style.visibility = "visible";
+				leavingActiveSlide.style.visibility = "hidden";
       });
 		})();
 	});
