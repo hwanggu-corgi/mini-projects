@@ -50,5 +50,21 @@
 				]
 			});
 		})();
+
+		(function () {
+			console.log($("#<?= $slider_id ?> .slick-prev").first());
+			$(".slick-prev").click(function() {
+				console.log("it's working");
+			});
+			$("#<?= $slider_id ?> .slick-prev").click(function() {
+				console.log("I am here");
+        const firstActiveSlide = $("#<?= $slider_id ?> .slick-active").first();
+        const incomingActiveSlide = $("#<?= $slider_id ?> .slick-active").last().next();
+
+        console.log(firstActiveSlide);
+        console.log(incomingActiveSlide);
+      });
+		})();
+
 	});
 </script>
