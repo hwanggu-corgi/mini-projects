@@ -1,5 +1,3 @@
-<?php $postsList_id = newSN('postsList-', 16); ?>
-
 <div id="<?= $postsList_id ?>" class="postsListMahube">
 	<div class="postsListWrap">
     <items>
@@ -50,21 +48,12 @@
 		})();
 
     (function () {
-			const prevBtn = document.querySelector("#<?= $postsList_id ?> .slick-prev");
-
-      prevBtn.addEventListener("click", function() {
-        const firstActiveSlide = $("#<?= $postsList_id ?> .slick-active").first();
-        const incomingActiveSlide = $("#<?= $postsList_id ?> .slick-active").last().next();
+			$("#<?= $postsList_id ?> .slick-prev").click(function() {
+				const firstActiveSlide = $("#<?= $postsList_id ?> .slick-active").first()[0];
+        const incomingActiveSlide = $("#<?= $postsList_id ?> .slick-active").last()[0].nextSibling;
 
         console.log(firstActiveSlide);
         console.log(incomingActiveSlide);
-      });
-			$("<?= $postsList_id ?> .slick-prev").click(function() {
-				console.log("it's working");
-			});
-			$("#<?= $postsList_id ?> .slick-prev").click(function() {
-				console.log("I am here");
-        
       });
 		})();
 	});
