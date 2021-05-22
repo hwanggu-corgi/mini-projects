@@ -1,3 +1,161 @@
+<style>
+  .postsListMahubeTwo {
+  display: flex;
+  position: relative;
+  padding: 60px 0 30px 0;
+  overflow: hidden;
+}
+
+.postsListMahubeTwo .sliderHideLeft {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 15px 0 0;
+}
+
+.postsListMahubeTwo .sliderHideRight {
+  display: flex;
+  align-items: center;
+}
+
+.postsListMahubeTwo .sliderHideLeft,
+.postsListMahubeTwo .sliderHideRight {
+  flex-grow: 1;
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
+
+.postsListMahubeTwo .postsListWrap {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .postsListMahubeTwo .postsListWrap {
+    max-width: 680px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .postsListMahubeTwo .postsListWrap {
+    max-width: 920px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .postsListMahubeTwo .postsListWrap {
+    max-width: 1100px;
+  }
+}
+
+.postsListMahubeTwo .slick-list {
+  overflow: visible;
+  margin: 0 0 20px 0;
+}
+
+.postsListMahubeTwo .slick-prev-custom,
+.postsListMahubeTwo .slick-next-custom {
+  width: 40px;
+  background-color: var(--color-primary);
+  height: 40px;
+  display: none !important;
+}
+
+@media screen and (min-width: 1260px) {
+  .postsListMahubeTwo .slick-prev-custom,
+  .postsListMahubeTwo .slick-next-custom {
+    display: block !important;
+  } 
+}
+
+.postsListMahubeTwo .slick-prev-custom:hover,
+.postsListMahubeTwo .slick-next-custom:hover {
+  background-color: transparent;
+}
+
+.postsListMahubeTwo .slick-prev-custom svg,
+.postsListMahubeTwo .slick-next-custom svg {
+  width: 20px;
+  height: 20px;
+}
+
+.postsListMahubeTwo .slick-prev-custom path,
+.postsListMahubeTwo .slick-next-custom path {
+  stroke: var(--color-white);
+}
+
+.postsListMahubeTwo .slick-prev-custom:hover path,
+.postsListMahubeTwo .slick-next-custom:hover path {
+  stroke: var(--color-primary);
+}
+
+.postsListMahubeTwo article {
+  min-height: 440px;
+  height: 100%;
+  margin: 0 15px 0 0;
+}
+
+.postsListMahubeTwo article .postsItemWrap {
+  position: relative;
+  height: inherit;
+  min-height: inherit;
+  width: inherit;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 767px) {
+  .postsListMahubeTwo article:hover .postsItemWrap {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+.postsListMahubeTwo article .postsItemTitle a {
+  text-decoration: none;
+}
+
+.postsListMahubeTwo article .postsItemTitle a,
+.postsListMahubeTwo article .postsItemPreview,
+.postsListMahubeTwo article .postsItemBtn {
+  color: var(--color-white);
+}
+
+.postsListMahubeTwo .postsItemBtn:hover  {
+  color: var(--color-primary);
+}
+
+.postsListMahubeTwo .postsItemBody {
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.postsListMahubeTwo .postsItemTitle {
+  font-size: var(--font-size-x-large);
+  margin: 0 0 20px 0;
+}
+
+.postsListMahubeTwo .postsItemOverlay {
+  background-color: black;
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.postsListMahubeTwo .postsItemPreview,
+.postsListMahubeTwo .postsItemBtn {
+  font-size: var(--font-size-small);
+}
+
+.postsListMahubeTwo .postsItemBtn {
+  text-decoration: underline;
+}
+</style>
 <?php $postsList_id = newSN('postsListTwo-', 17); ?>
 
 <div id="postListMahubeTwo" class="postsListMahubeTwo content-style">
