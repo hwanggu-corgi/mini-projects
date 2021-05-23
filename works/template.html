@@ -175,6 +175,36 @@
 			<article>
 				<div class="postsItemWrap" style="background-image: url('{thumb_url}?resize=768x0')">
 					<div class="postsItemOverlay"></div>
+					<img src=""/>
+					<div class="postsItemBody">
+						<h3 class="postsItemTitle">
+							<a href="/{post_page}/{alias}" title="{title}">{title}</a>
+						</h3>
+						<p class="postsItemPreview">{preview_cut}</p>
+						<a class="postsItemBtn" href="/{post_page}/{alias}" title="{title}">Learn More</a>
+					</div>
+				</div>
+			</article>
+		</items>
+	</div>
+  <div class="sliderHideRight">
+		<button class="slick-next-custom" aria-label="Next" type="button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="#666"></path></g></svg>
+		</button>
+	</div>
+</div>
+
+<div id="postListMahubeTwo" class="postsListMahubeTwo content-style">
+  <div class="sliderHideLeft">
+		<button class="slick-prev-custom" aria-label="Previous" type="button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="#666"></path></svg>
+		</button>
+	</div>
+	<div class="postsListWrap">
+		<items>
+			<article>
+				<div class="postsItemWrap" style="background-image: url('{thumb_url}?resize=768x0')">
+					<div class="postsItemOverlay"></div>
 					<div class="postsItemBody">
 						<h3 class="postsItemTitle">
 							<a href="/{post_page}/{alias}" title="{title}">{title}</a>
@@ -225,6 +255,7 @@
       $(window).resize(function() {
 				const documentWidth = $( document ).width();
 			});
+      
 		})();
 	});
 </script>
