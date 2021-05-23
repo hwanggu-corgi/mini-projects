@@ -36,6 +36,7 @@
 @media screen and (min-width: 768px) {
   .postsListMahubeTwo .postsListWrap {
     max-width: 680px;
+    width: calc(100% - 56px);
   }
 }
 
@@ -214,6 +215,12 @@
 					}
 				]
 			});
+
+			const postsListWrap = $('#postListMahubeTwo .postsListWrap');
+      $(window).resize(function() {
+				const documentWidth = $( document ).width();
+			});
+      
 		})();
 	});
 </script>
