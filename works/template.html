@@ -66,7 +66,7 @@
   display: none !important;
 }
 
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 767px) {
   .postsListMahubeTwo .slick-prev-custom,
   .postsListMahubeTwo .slick-next-custom {
     display: block !important;
@@ -98,6 +98,26 @@
   min-height: 440px;
   height: 100%;
   margin: 0 8px;
+}
+
+.postsListMahubeTwo .postsImageLogo {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  margin: 50px 0 0 0;
+  left: calc(50% - (100px)/2);
+  z-index: -2;
+}
+
+.postsListMahubeTwo .postsBackgroundImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.postsListMahubeTwo .blogs-post-crop-icon {
+  display: none;
 }
 
 .postsListMahubeTwo article .postsItemWrap {
@@ -173,7 +193,7 @@
 	<div class="postsListWrap">
 		<items>
 			<article>
-				<div class="postsItemWrap" style="background-image: url('{thumb_url}?resize=768x0')">
+				<div class="postsItemWrap">
 					<div class="postsItemOverlay"></div>
 					<div class="postsItemBody">
 						<h3 class="postsItemTitle">
@@ -182,6 +202,7 @@
 						<p class="postsItemPreview">{preview_cut}</p>
 						<a class="postsItemBtn" href="/{post_page}/{alias}" title="{title}">Learn More</a>
 					</div>
+					<div class="postsBackgroundImage" style="background-image: url('{thumb_url}?resize=768x0')"></div>
 					<img class="postsImageLogo" src="images/logo/mahube-otwa.svg"/>
 				</div>
 			</article>
