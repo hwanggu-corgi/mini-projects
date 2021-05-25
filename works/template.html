@@ -373,7 +373,51 @@
   <hr />
   <div>
     <h3>Information</h3>
-    <contactForm />
+    <table class="Dialog Wide two-column">
+      <tbody>
+        <tr>
+          <th>
+            First Name:
+          </th>
+          <td>
+            <div class="mwInput Text  name-first_name"><input type="text" name="first_name" value="" title="First Name"
+                validations="required" class="mw"></div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th>
+            Last Name:
+          </th>
+          <td>
+            <div class="mwInput Text  name-last_name"><input type="text" name="last_name" value="" title="Last Name"
+                validations="required" class="mw"></div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th>
+            Email Address:
+          </th>
+          <td>
+            <div class="mwInput Text  name-email"><input type="text" name="email" value="" title="Email Address"
+                validations="required" class="mw"></div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="opacity: 1;">
+        <tr>
+          <th>
+            Phone:
+          </th>
+          <td>
+            <input type="text" name="phone" value="" title="Phone" class="mw">
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="Clear"></div>
   <hr />
@@ -474,14 +518,14 @@
   </table>
 </div>
 <script>
-    jQuery(function () {
-      jQuery(".monthsWrap").hide();
-      jQuery("#recurring").click(function () {
-        if ($('#recurring').is(":checked")) {
-          jQuery(".monthsWrap").show();
-        } else {
-          jQuery(".monthsWrap").hide();
-        }
-      });
+  jQuery(function () {
+    jQuery(".monthsWrap").hide();
+    jQuery("#recurring").click(function () {
+      if ($('#recurring').is(":checked")) {
+        jQuery(".monthsWrap").show();
+      } else {
+        jQuery(".monthsWrap").hide();
+      }
     });
+  });
 </script>
