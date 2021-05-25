@@ -1,0 +1,487 @@
+<style>
+  .amountButtonWrap {
+    text-align: center;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount {
+    display: inline-block;
+    box-sizing: content-box;
+    height: auto;
+    font-size: 12pt;
+    font-weight: 600;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount {
+    padding: 0px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background: #222;
+    cursor: pointer
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.init:hover {
+    background: #222
+  }
+
+  .amountButtonWrap .mwPayment-button.amount .mwInput {
+    background: none;
+    border: none;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.init {
+    background: #00C2CB;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.selected {
+    background: #00C2CB;
+    color: #00C2CB;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.small {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.medium {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.large {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.round {
+    border-radius: 200px;
+  }
+
+  .amountButtonWrap .mwPayment-button.amount.border {
+    border: 2px solid black;
+  }
+
+  .mwFormSubmitRow td {
+    text-align: center;
+  }
+
+  .mwFormSubmitRow .mwInput.button.left {
+    float: left;
+  }
+
+  .mwFormSubmitRow .mwInput.button.right {
+    float: right;
+  }
+
+  .mwFormSubmitRow .mwInput.Button.left {
+    float: left;
+  }
+
+  .mwFormSubmitRow .mwInput.Button.right {
+    float: right;
+  }
+
+  .mwFormSubmitRow .mwPayment-button.submit.left {
+    float: left;
+  }
+
+  .mwFormSubmitRow .mwPayment-button.submit.right {
+    float: right;
+  }
+
+  .SimplePayment .fundrasing-off .fundrasingWrap {
+    display: none;
+  }
+
+  .SimplePayment .fundrasing-on .fundrasingWrap {
+    width: 30%;
+    float: right;
+  }
+
+  .SimplePayment .fundrasing-on .doanteForm {
+    width: 70%;
+    max-width: none;
+    float: left;
+  }
+
+  .mwFormSubmitRow button {
+    background: #00C2CB;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 12pt;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mwFormSubmitRow button:hover {
+    background: #888888;
+    color: #fff;
+  }
+
+  .donateForm .Dialog .mwInput.Checkbox {
+    color: #888888 !important;
+    border: 2px solid #00C2CB;
+    background: #fff;
+    border-radius: 50%;
+    background: #efefef;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+
+  .mwPayment-hint {
+    padding: 5px 0;
+    text-align: center;
+    border: 1px solid #00C2CB;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 30px auto 0;
+  }
+
+  .donateWrap .mainContentArea table tr td,
+  .donateWrap .mainContentArea table tr th {
+    padding: 7px 7px 0 !important;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: 50%;
+  }
+
+  .dedicateOption {
+    float: left;
+    width: 100%;
+  }
+
+  .dedicateName {
+    float: left;
+    width: 100%;
+  }
+
+  .donateForm table.Dialog select {
+    color: #000;
+  }
+
+  span.star {
+    color: #00C2CB;
+    font-weight: 900;
+    font-size: 18pt;
+  }
+
+  .mainContentArea hr {
+    margin: 10px 0;
+  }
+</style>
+
+<div class="fundrasingWrap">
+  <div style="padding:30px">
+    <fundraising />
+  </div>
+</div>
+<toggle> Broken toggle <br />
+</toggle>
+<div class="donateForm Dialog">
+  <toggle rel="amounts">
+    <div class="amountButtonWrap">
+      <button action="amount">
+        <format method="number" separator="," decimals="0" currency="$?">{value}</format>
+      </button>
+      <div class="Clear"></div>
+    </div>
+  </toggle>
+  <toggle rel="amount">
+    <table class="Dialog wide mwPayment-input amount">
+      <tbody>
+        <tr>
+          <th>Amount </th>
+          <td class="AmountInput"><input name="amount" value="" title="Amount" type="text" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </toggle>
+  <table class="Dialog wide">
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <toggle rel="recurring" type="simple, advanced"> </toggle>
+          <toggle rel="recurring"> </toggle>
+          <toggle rel="recurring" type="forced, simple">
+            <div class="mwPayment-hint recurring off"> You will pay $<span
+                class="mwPayment-value recurring total"></span> once. </div>
+            <div class="mwPayment-hint recurring on"> You will pay $<span
+                class="mwPayment-value recurring amount"></span> monthly, $<span
+                class="mwPayment-value recurring total"></span> over <span
+                class="mwPayment-value recurring count"></span> months. </div>
+          </toggle>
+        </td>
+      </tr>
+    </tbody>
+    <toggle rel="recurring" type="simple">
+      <tbody>
+        <tr>
+          <th style="text-align: center;"><br /><input type="checkbox" name="rr_recurring" title="Recurring"
+              id="recurring" />
+            Make this donation recurring<br /></th>
+        </tr>
+      </tbody>
+    </toggle>
+    <toggle rel="recurring" type="advanced">
+      <tbody>
+        <tr class="Group">
+          <td colspan="2">
+            <div class="Caption">
+              <h3>Recurring</h3>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td colspan="2"><input type="radio" name="rr_recurring" title="Recurring" value=""
+              cap="I would like to pay the full amount selected above at once" /></td>
+        </tr>
+        <tr class="mwPayment-hint recurring none">
+          <td colspan="2"> You will pay $<span class="mwPayment-value recurring total"></span> once. </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td colspan="2"><input type="radio" name="rr_recurring" title="Recurring" value="on"
+              cap="I would like to give the amount selected above on a monthly basis" /></td>
+        </tr>
+        <tr class="mwPayment-hint recurring monthly">
+          <td colspan="2"> You will pay $<span class="mwPayment-value recurring amount"></span> monthly, $<span
+              class="mwPayment-value recurring total"></span> total over <span
+              class="mwPayment-value recurring count"></span> months. </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td colspan="2"><input type="radio" name="rr_recurring" title="Recurring" value="split"
+              cap="I would like to break down the amount selected above over monthly payments" /></td>
+        </tr>
+        <tr class="mwPayment-hint recurring split">
+          <td colspan="2"> You will pay $<span class="mwPayment-value recurring amount"></span> monthly, $<span
+              class="mwPayment-value recurring total"></span> total over <span
+              class="mwPayment-value recurring count"></span> months. </td>
+        </tr>
+      </tbody>
+    </toggle>
+  </table>
+  <toggle rel="rr_count">
+    <div class="monthsWrap">
+      <table class="Dialog wide">
+        <tbody>
+          <tr>
+            <th>Months</th>
+            <td><input type="text" name="rr_count" title="Count" value="{rr_count}" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </toggle>
+  <div class="Dialog">
+    <toggle rel="mailing">
+      <div>
+        <h3>Mailing Address</h3>
+        <table class="Dialog Wide">
+          <tbody>
+            <tr>
+              <th> Address: </th>
+              <td><input type="text" name="address" value="" title="Address" /></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th> Apt #: </th>
+              <td><input type="text" name="apt" value="" title="Apt #" /></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th> City: </th>
+              <td><input type="text" name="city" value="" title="City" /></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th> State: </th>
+              <td><input type="text" name="state" value="" title="State" /></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th> Country: </th>
+              <td><input type="text" name="country" value="" title="Country" /></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th> Zip/Postal Code: </th>
+              <td><input type="text" name="zip_postal_code" value="" title="Zip/Postal Code" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </toggle>
+    <toggle rel="anonymous, dedication">
+      <hr />
+      <h3>Additional Options</h3>
+    </toggle>
+    <toggle rel="anonymous">
+      <div>
+        <p style="margin: 0;">
+          <input type="checkbox" name="anonymous" />
+          Make Donation Anonymous</p>
+      </div>
+    </toggle>
+    <toggle rel="dedication">
+      <div>
+        <p style="margin: 0;">
+          <input type="checkbox" name="in_memory" />
+          Donation dedication</p>
+      </div>
+    </toggle>
+    <toggle rel="gift">
+      <div>
+        <h5>Gift Designation</h5>
+        <div class="threeColumn">
+          <div class="threeCol">
+            <p style="margin: 0; font-size:12px">
+              <input type="checkbox" name="generaldonation" />
+              General Donation</p>
+          </div>
+          <div class="threeCol">
+            <p style="margin: 0; font-size:12px">
+              <input type="checkbox" name="capitalimprovement" />
+              Capital Improvement Campaign</p>
+          </div>
+          <div class="threeCol">
+            <p style="margin: 0; font-size:12px">
+              <input type="checkbox" name="therapykits" />
+              Therapy Kits</p>
+          </div>
+        </div>
+      </div>
+    </toggle>
+  </div>
+  <hr />
+  <div>
+    <h3>Information</h3>
+    <contactForm />
+  </div>
+  <div class="Clear"></div>
+  <hr />
+  <div class="paymentOptionsTabs Dialog">
+    <toggle rel="payroll, bankdraft">
+      <div class="cell-even">
+        <input type="radio" name="payment" value="card" cap="Credit Card" rel="paymentCard" onclick="mwSwitchTab(this);"
+          class="mwPayment-button invoice off" checked="checked" />
+      </div>
+    </toggle>
+    <toggle rel="payroll">
+      <div class="cell-even">
+        <input type="radio" name="payment" value="payroll" cap="Payroll Deduction" rel="paymentPayroll"
+          onclick="mwSwitchTab(this);" class="mwPayment-button invoice on" />
+      </div>
+    </toggle>
+    <toggle rel="bankdraft">
+      <div class="cell-even">
+        <input type="radio" name="payment" value="bankdraft" cap="Bank Draft" rel="paymentBankDraft"
+          onclick="mwSwitchTab(this);" class="mwPayment-button invoice on" />
+      </div>
+    </toggle>
+  </div>
+  <div class="Clear"></div>
+  <div class="paymentOptions Dialog">
+    <toggle rel="payroll">
+      <div class="tab payroll" id="paymentPayroll" style="display:none">
+        <div class="Cell-60">
+          <values>
+            <input type="radio" name="pay_periods" value="{value}" cap="{value}" class="cell-even" />
+          </values>
+        </div>
+        <div class="Cell-40">
+          <input type="text" name="pay_periods_other" placeholder="Other" />
+        </div>
+        <div class="Clear"></div>
+      </div>
+    </toggle>
+    <toggle rel="bankdraft">
+      <div class="tab bankDraft" id="paymentBankDraft" style="display:none">
+        <div class="Cell-100"> Name of Bank:
+          <input type="text" name="draft_bank_name" />
+          <br />
+        </div>
+        <div class="Cell-50"> Routing #:
+          <input type="text" name="draft_routing" />
+          <br />
+        </div>
+        <div class="Cell-50"> Account #:
+          <input type="text" name="draft_account" />
+          <br />
+        </div>
+        <div class="Clear"></div>
+      </div>
+    </toggle>
+    <div class="tab card" id="paymentCard">
+      <billingForm />
+    </div>
+  </div>
+  <toggle rel="newsletter">
+    <div>
+      <table class="Dialog Wide">
+        <tbody>
+          <tr>
+            <th> <input type="checkbox" name="newsletter" title="Subscribe to our newsletter" />
+              Subscribe to our newsletter. </th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </toggle>
+  <toggle rel="captcha">
+    <table class="Dialog wide">
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <div class="mwCaptcha"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </toggle>
+  <table class="Dialog wide">
+    <tbody>
+      <tr class="mwFormSubmitRow">
+        <td colspan="2">
+          <toggle rel="invoice">
+            <input value="Invoice Toggle" type="button" class="mwPayment-button invoice toggle" />
+            <input value="Invoice ON" type="button" class="mwPayment-button invoice on" />
+            <input value="Invoice OFF" type="button" class="mwPayment-button invoice off" />
+          </toggle>
+          <button action="submit">{label}</button>
+          <div class="mwInput Loader"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script>
+    jQuery(function () {
+      jQuery(".monthsWrap").hide();
+      jQuery("#recurring").click(function () {
+        if ($('#recurring').is(":checked")) {
+          jQuery(".monthsWrap").show();
+        } else {
+          jQuery(".monthsWrap").hide();
+        }
+      });
+    });
+</script>
