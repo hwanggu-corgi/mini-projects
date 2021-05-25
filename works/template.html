@@ -380,8 +380,8 @@
             First Name:
           </th>
           <td>
-            <div class="mwInput Text  name-first_name"><input type="text" name="first_name" value="" title="First Name"
-                validations="required" class="mw"></div>
+            <input type="text" name="first_name" value="" title="First Name"
+                validations="required" class="mw">
           </td>
         </tr>
       </tbody>
@@ -391,8 +391,8 @@
             Last Name:
           </th>
           <td>
-            <div class="mwInput Text  name-last_name"><input type="text" name="last_name" value="" title="Last Name"
-                validations="required" class="mw"></div>
+            <input type="text" name="last_name" value="" title="Last Name"
+                validations="required" class="mw">
           </td>
         </tr>
       </tbody>
@@ -402,8 +402,8 @@
             Email Address:
           </th>
           <td>
-            <div class="mwInput Text  name-email"><input type="text" name="email" value="" title="Email Address"
-                validations="required" class="mw"></div>
+            <input type="text" name="email" value="" title="Email Address"
+                validations="required" class="mw">
           </td>
         </tr>
       </tbody>
@@ -518,13 +518,13 @@
   </table>
 </div>
 <script>
-  jQuery(function () {
-    jQuery(".monthsWrap").hide();
-    jQuery("#recurring").click(function () {
+  $(document).ready(function() {
+    $(".monthsWrap").hide();
+    $("#recurring").click(function () {
       if ($('#recurring').is(":checked")) {
-        jQuery(".monthsWrap").show();
+        $(".monthsWrap").show();
       } else {
-        jQuery(".monthsWrap").hide();
+        $(".monthsWrap").hide();
       }
     });
   });
