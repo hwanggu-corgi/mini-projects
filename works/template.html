@@ -1,13 +1,37 @@
   <style>
-    
+  .shopOne .eShopEventsOne .eventsItemInfo  {
+    margin: 0 0 30px 0;
+  }
+
   .shopOne .eShopEventsOne .eventsItemMore {
     width: 100%;
   }
-  
+
+  .shopOne .eShopEventsOne .eventsItemMore p{
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 767px) {
+    .shopOne .eShopEventsOne .eventsItemMore p{
+      display: block;
+    }
+  }
+
   @media (min-width: 991px) and (max-width: 1200px) {
     .shopOne .eShopEventsOne .eventsItemMore p{
       display: flex;
-      flex-direction: column;
+    }
+  }
+
+  .shopOne .eShopEventsOne .eventsItemMore a{
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  @media (min-width: 767px) {
+    .shopOne .eShopEventsOne .eventsItemMore a{
+      margin: 0;
     }
   }
 
