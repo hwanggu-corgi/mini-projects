@@ -10,9 +10,10 @@
 			<items>
 				<a href="/{post_page}/{alias}" title="{title}" class="newsItem">
 					<div class="newsItemHeader">
-						<div class="newsItemDate">
-							<span class="newsItemMonth">{publishTime}</span>
-							<span class="newsItemDay">{publishTime}</span>
+						<div class="newsItemPostedDate">
+							<span class="newsItemMonth"></span>
+							<span class="newsItemDay"></span>
+							<span class="newsItemDate">{publishTime}</span>
 						</div>
 					</div>
 					<div class="newsItemBody">
@@ -28,17 +29,12 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
-			$(document).ajaxComplete(function (event, request, settings) {
-				$("#<?= $postsList_id ?> .postsListWrap > div[style]:not([class]) > .newsItem").each(function () {
-					$(this)
-						.hide()
-						.insertAfter($("#<?= $postsList_id ?> .postsListWrap > .newsItem").last())
-						.delay(2000)
-						.slideDown('fast', function () {
-							$(this).removeAttr('style');
-						});
-				});
-			});
+			let dateParsed = $("#<?= $postsList_id ?> .newsItemDate").text().split(" ");
+			const month = dateParsed[0].slice(0,3); 
+			const day = dateParsed[1].slice(0, dateParsed[1].length - 1); // take out comma
+			
+			$("#<?= $postsList_id ?> .newsItemMonth").text(month);
+			$("#<?= $postsList_id ?> .newsItemMonth").text(day);
 		})();
 	});
 </script>
