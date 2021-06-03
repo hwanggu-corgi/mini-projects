@@ -8,16 +8,16 @@
 	<section class="newsLiferoadsContent">
 		<div class="newsLiferoadsContentWrap">
 			<items>
-				<a href="/{post_page}/{alias}" title="{title}" class="postsItem">
-					<div class="postsItemHeader">
-						<div class="postsItemDate">
-							<span class="postsItemMonth"><format method="date" mask="M">{publishTime}</format></span>
-							<span class="postsItemDay"><format method="date" mask="D">{publishTime}</format></span>
+				<a href="/{post_page}/{alias}" title="{title}" class="newsItem">
+					<div class="newsItemHeader">
+						<div class="newsItemDate">
+							<span class="newsItemMonth">{publishTime}</span>
+							<span class="newsItemDay">{publishTime}</span>
 						</div>
 					</div>
-					<div class="postsItemBody">
-						<h6 class="postsItemTitle">{title}</h6>
-						<p class="postsItemPreview">{preview_cut}</p>
+					<div class="newsItemBody">
+						<h6 class="newsItemTitle">{title}</h6>
+						<p class="newsItemPreview">{preview_cut}</p>
 					</div>
 				</div>
 			</items>
@@ -28,21 +28,11 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
-
-			// 1. When Ajax completed
 			$(document).ajaxComplete(function (event, request, settings) {
-
-				// 2. Get each ajax loaded ".postsItem"
-				$("#<?= $postsList_id ?> .postsListWrap > div[style]:not([class]) > .postsItem").each(function () {
-
-					// 3.1 Hide the new items
-					// 3.2 Grab them and append them to the list
-					// 3.3 Wait for loader image finishes the animation (around 2secs)
-					// 3.4 Slide down and show the new items
-					// 3.5 Finally clean the style attribute
+				$("#<?= $postsList_id ?> .postsListWrap > div[style]:not([class]) > .newsItem").each(function () {
 					$(this)
 						.hide()
-						.insertAfter($("#<?= $postsList_id ?> .postsListWrap > .postsItem").last())
+						.insertAfter($("#<?= $postsList_id ?> .postsListWrap > .newsItem").last())
 						.delay(2000)
 						.slideDown('fast', function () {
 							$(this).removeAttr('style');
