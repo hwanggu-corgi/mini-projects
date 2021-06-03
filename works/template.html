@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin: 0 0 30px 0;
 }
 
 .newsLiferoads .newsLiferoadsHeader h2 {
@@ -48,7 +49,7 @@
 .newsLiferoads .newsItemDay {
   font-weight: bold;
   color: var(--color-black-pure);
-  font-size: var(--font-size-x-large);
+  font-size: calc(var(--font-size-x-large)/1.16);
   display: block;
 }
 
@@ -56,12 +57,26 @@
   display: none;
 }
 
-.newsLiferoads .newsItemBody h6 {
-  margin: 0;
+.newsLiferoads .newsItemBody h3 {
+  margin: 0 0 10px 0;
+  font-size: calc(var(--font-size-x-large) / 1.16);
+}
+
+@media screen and (min-width: 991px) {
+  .newsLiferoads .newsItemBody h3 {
+    font-size: var(--font-size-x-large);
+  } 
 }
 
 .newsLiferoads .newsItemBody p {
   margin: 0;
+  font-size: calc(var(--font-size-large)/1.16);
+}
+
+@media screen and (min-width: 991px) {
+  .newsLiferoads .newsItemBody p {
+    font-size: var(--font-size-large);
+  }
 }
 </style>
 <?php $postsList_id = newSN('postsList-', 16); ?>
