@@ -1,5 +1,46 @@
-<?php $postsList_id = newSN('postsList-', 16); ?>
+<style>
+.newsLiferoads .newsLiferoadsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
+.newsLiferoads .newsLiferoadsHeader h2 {
+  margin: 0;
+}
+
+.newsLiferoads .newsLiferoadsHeader h2 {
+  margin: 0;
+}
+
+.newsLiferoads .newsItemPostedDate {
+  background-color: white;
+  padding: 15px;
+  display: inline-block;
+}
+
+.newsLiferoads .newsItemMonth {
+  color: var(--color-black-pure);
+  font-size: var(--font-size-small);
+  display: block;
+}
+
+.newsLiferoads .newsItemDay {
+  font-weight: bold;
+  color: var(--color-black-pure);
+  font-size: var(--font-size-x-large);
+  display: block;
+}
+
+.newsLiferoads .newsItemDate {
+  display: none;
+}
+
+.newsLiferoads .newsItemBody h6 {
+  margin: 0;
+}
+</style>
+<?php $postsList_id = newSN('postsList-', 16); ?>
 <div id="<?= $postsList_id ?>" class="newsLiferoads content-style">
 	<section class="newsLiferoadsHeader">
 		<h2 class="newsLiferoadsTitle">News</h2>
@@ -34,7 +75,7 @@
 			const day = dateParsed[1].slice(0, dateParsed[1].length - 1); // take out comma
 			
 			$("#<?= $postsList_id ?> .newsItemMonth").text(month);
-			$("#<?= $postsList_id ?> .newsItemMonth").text(day);
+			$("#<?= $postsList_id ?> .newsItemDay").text(day);
 		})();
 	});
 </script>
