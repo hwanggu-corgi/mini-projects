@@ -1,151 +1,42 @@
-<!-- Wrong Cart -->
-<message rel="wrongCart">
-	<div class="alert alertOne alertError alertAnimated">
-		<div class="alertWrap">
-			<i class="alertIcon fas fa-sad-tear"></i>
-			<div class="alertContent">
-				<h4>You currently have pending items in your cart.</h4>
-				<p>Please select one of the following options below before you proceed in adding more items to your cart.</p>
-				<div class="btnGroup">
-					<div class="btn btnWhite btnRounded btnOutline"><p><a action="resetCart" class="small">Start New Transaction</a></p></div>
-					<div class="btn btnWhite btnRounded btnOutline"><p><a action="resumeCart" class="small">Resume Current Transaction</a></p></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</message>
+<?php $testimonial_id = newSN('testimonial-', 17); ?>
 
-<!-- No Stock -->
-<message rel="noStock" >
-	<div class="alert alertOne alertError alertAnimated">
-		<div class="alertWrap">
-			<i class="alertIcon fas fa-sad-tear"></i>
-			<div class="alertContent">
-				<h4>Sold Out</h4>
-				<p>Sorry, the product was sold out. If you have any questions, please</p>
-				<div class="btn btnWhite btnRounded btnOutline"><p><a href="/contact-us" class="small">Contact Us</a></p></div>
-			</div>
-		</div>
+<section id="<?= $testimonial_id?>" class="testimonialCarouselLiferoads content-style">
+	<div class="testimonialHeader">	
+		<h2 class="testimonialTitle">Our Testimonials</h2>
+		<img class="testimonialImg" src="/images/testimonial.png"/>
 	</div>
-</message>
-
-<!-- Wrong Stock Message -->
-<message rel="wrongStock">
-	<div class="alert alertOne alertError alertAnimated">
-		<div class="alertWrap">
-			<i class="alertIcon fas fa-sad-tear"></i>
-			<div class="alertContent">
-				<h4>Sold Out</h4>
-				<p>Sorry, the product was sold out. If you have any questions, please</p>
-				<div class="btn btnWhite btnRounded btnOutline"><p><a href="/contact-us" class="small">Contact Us</a></p></div>
-			</div>
-		</div>
-	</div>
-</message>
-
-<!-- eShop Life Roads -->
-<?php $postsList_id = newSN('postsList-', 16); ?>
-<div id="<?= $postsList_id ?>" class="newsLiferoads content-style">
-	<section class="newsLiferoadsHeader">
-		<h2 class="newsLiferoadsTitle">News</h2>
-		<a class="viewAllBtn" href="/news">View All</a>
-	</section>
-	<section class="newsLiferoadsContent">
-		<div class="newsLiferoadsContentWrap">
+	<div class="testimonialContent">
+		<div class="testimonialContentWrap">
 			<items>
-				<a href="/{post_page}/{alias}" title="{title}" class="newsItem">
-					<div class="newsItemHeader">
-						<div class="newsItemPostedDate">
-							<span class="newsItemMonth"></span>
-							<span class="newsItemDay"></span>
-							<span class="newsItemDate">{publishTime}</span>
-						</div>
-					</div>
-					<div class="newsItemBody">
-						<h3 class="newsItemTitle">{title}</h3>
-						<p class="newsItemPreview">{preview_cut}</p>
+				<div class="testimonialItem">
+					<div class="testimonialItemWrap">
+						<div class="testimonialText">{description}</div>
+						<h3 class="testimonialAuthor">~{title}</h3>
 					</div>
 				</div>
 			</items>
 		</div>
-	</section>
-</div>
-
+	</div>
+</section>
+	
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
-			let dateParsed = $("#<?= $postsList_id ?> .newsItemDate").text().split(" ");
-			const month = dateParsed[0].slice(0,3); 
-			const day = dateParsed[1].slice(0, dateParsed[1].length - 1); // take out comma
-			
-			$("#<?= $postsList_id ?> .newsItemMonth").text(month);
-			$("#<?= $postsList_id ?> .newsItemDay").text(day);
+			$("#<?= $testimonial_id ?> .testimonialContentWrap").slick({
+				prevArrow: '<button class="slick-prev-custom" aria-label="Previous" type="button">' + SVG["arrow-left-1"] + '</button>',
+				nextArrow: '<button class="slick-next-custom" aria-label="Next" type="button">' + SVG["arrow-right-1"] + '</button>',
+				speed: 1000,
+				autoplaySpeed: 6000,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				fade: false,
+				dots: false,
+				arrows: true,
+				autoplay: true,
+				infinite: true,
+				accessibility: false,
+				easing: 'swing'
+			});
 		})();
 	});
 </script>
-
-<!-- eShop Events One -->
-<div class="eShopEvents eShopEventsOne content-style">
-	<div class="eShopEventsWrap">
-		<groups>
-
-			<!-- No Item Message -->
-			<message rel="noItems">
-				<div class="alert alertOne alertInfo alertAnimated">
-					<div class="alertWrap">
-						<i class="alertIcon fas fa-bell"></i>
-						<div class="alertContent">
-							<h4>No Events have been scheduled at this time.</h4>
-						</div>
-					</div>
-				</div>
-			</message>
-
-			<div class="row">
-
-				<!-- Items -->
-				<items class="eventsItem col-lg-4">
-					<div class="eventsItemWrap _shadow-6 _shadow-hover featured-{item.featured}">
-
-						<!-- Header -->
-						<div class="eventsItemHeader">
-
-							<!-- Image -->
-							<div class="eventsItemImgHolder _img-placeholder">
-								<a action="details"
-								   class="eventsItemImg eventsItemToggle _ratio-43 _bg-center"
-								   role="img"
-								   aria-label="{item.title}"
-								   title="{item.title}"
-								   style="background-image: url('/getimage/eShop/{item.preview}?resize=768x768')"></a>
-							</div>
-
-							<!-- Release Date -->
-							<div class="eventsItemRelease">
-								<span><format method="date" mask="d">{item.release}</format></span>
-								<span><format method="date" mask="M Y">{item.release}</format></span>
-							</div>
-						</div>
-
-						<!-- Body -->
-						<div class="eventsItemBody" data-mh="events-item-group">
-
-							<!-- Title -->
-							<h6 class="eventsItemTitle"><a action="details" class="eventsItemToggle" title="{item.title}">{item.title}</a></h6>
-
-							<!-- Description -->
-							<p class="eventsItemDescription">{item.description}</p>
-
-							<!-- Details Link -->
-							<div class="eventsItemMore btn btnPrimary">
-								<p>
-									<a action="details" class="small">Learn More</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</items>
-			</div>
-		</groups>
-	</div>
-</div>
