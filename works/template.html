@@ -1,5 +1,104 @@
-<?php $testimonial_id = newSN('testimonial-', 17); ?>
+<style>
+	.testimonialCarouselLiferoads {
+  display: flex;
+}
 
+.testimonialCarouselLiferoads .testimonialHeader {
+  width: 400px;
+  background-color: var(--color-primary);
+  padding: 100px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+@media screen and (min-width: 1200px) {
+	.testimonialCarouselLiferoads .testimonialHeader  {
+		width: 490px;
+	}
+}
+
+.testimonialCarouselLiferoads .testimonialTitle {
+  color: var(--color-white);
+  max-width: 242px;
+  margin: 0 auto 30px auto;
+}
+
+.testimonialCarouselLiferoads .testimonialImg {
+  display: block;
+  margin: 0 auto;
+  max-height: 450px;
+}
+
+.testimonialCarouselLiferoads .testimonialItemWrap {
+  max-width: 320px;
+  width: 100%;
+}
+
+.testimonialCarouselLiferoads .testimonialContent  {
+  width: calc(100% - 400px);
+}
+
+@media screen and (min-width: 1200px) {
+	.testimonialCarouselLiferoads .testimonialContent  {
+		width: calc(100% - 490px);
+	}
+}
+
+.testimonialCarouselLiferoads .slick-prev-custom,
+.testimonialCarouselLiferoads .slick-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  padding: 50px 15px;
+  background-color: white;
+  box-sizing: content-box;
+  border: 1px solid var(--color-black-pure);
+  z-index: 10;
+}
+
+.testimonialCarouselLiferoads .slick-prev-custom {
+  border-left: none;
+}
+
+.testimonialCarouselLiferoads .slick-next-custom {
+  right: 0;
+  border-right: none;
+}
+
+.testimonialCarouselLiferoads .testimonialContentWrap,
+.testimonialCarouselLiferoads .slick-list,
+.testimonialCarouselLiferoads .slick-track,
+.testimonialCarouselLiferoads .testimonialItem {
+  height: 100%;
+}
+
+.testimonialCarouselLiferoads .testimonialItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonialCarouselLiferoads .testimonialItem::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-grey);
+}
+
+.testimonialCarouselLiferoads .testimonialAuthor {
+  color: var(--color-black-pure);
+  text-align: right;
+}
+</style>
+
+<?php $testimonial_id = newSN('testimonial-', 17); ?>
 <section id="<?= $testimonial_id?>" class="testimonialCarouselLiferoads content-style">
 	<div class="testimonialHeader">	
 		<h2 class="testimonialTitle">Our Testimonials</h2>
