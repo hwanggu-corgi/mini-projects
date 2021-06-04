@@ -157,7 +157,7 @@
 		</div>
 	</div>
 </section>
-	
+
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
@@ -199,9 +199,7 @@
 		(function () {
 			function moveElement() {
 				const domWidth = $(window).width();
-				const testimonialCarouselLiferoads = $("#<?= $testimonial_id?>");
 				const testimonialContent = $("#<?= $testimonial_id?> .testimonialContent");
-				const testimonialTitle = $("#<?= $testimonial_id?> .testimonialTitle");
 
 				if (domWidth < 1200) {
 					testimonialContent.insertAfter("#<?= $testimonial_id?> .testimonialTitle");
@@ -210,6 +208,9 @@
 				}
 			}
 
+			$(window).resize(function() {
+				moveElement();
+			});
 
 		})();
 	});
