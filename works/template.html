@@ -12,7 +12,6 @@
   justify-content: space-between;
 }
 
-
 @media screen and (min-width: 1200px) {
 	.testimonialCarouselLiferoads .testimonialHeader  {
 		width: 490px;
@@ -97,47 +96,6 @@
   text-align: right;
 }
 </style>
-<?php $testimonialDesktop_id = newSN('testimonial-', 17); ?>
-<?php $testimonialMobile_id = newSN('testimonial-', 18); ?>
-<section class="testimonialCarouselLiferoads content-style">
-	<div id="<?= $testimonial_id?>" class="testimonialCarouselLiferoadsDesktop">
-		<div class="testimonialHeader">	
-			<h2 class="testimonialTitle">Our Testimonials</h2>
-			<img class="testimonialImg" src="/images/testimonial.png"/>
-		</div>
-		<div class="testimonialContent">
-			<div class="testimonialContentWrap">
-				<items>
-					<div class="testimonialItem">
-						<div class="testimonialItemWrap">
-							<div class="testimonialText">{description}</div>
-							<h3 class="testimonialAuthor">~{title}</h3>
-						</div>
-					</div>
-				</items>
-			</div>
-		</div>
-	</div>
-	<div id="<?= $testimonial_id?>" class="testimonialCarouselLiferoadsMobile">
-		<div class="testimonialHeader">	
-			<h2 class="testimonialTitle">Our Testimonials</h2>
-			<img class="testimonialImg" src="/images/testimonial.png"/>
-		</div>
-		<div class="testimonialContent">
-			<div class="testimonialContentWrap">
-				<items>
-					<div class="testimonialItem">
-						<div class="testimonialItemWrap">
-							<div class="testimonialText">{description}</div>
-							<h3 class="testimonialAuthor">~{title}</h3>
-						</div>
-					</div>
-				</items>
-			</div>
-		</div>
-	</div>
-</section>
-		
 <?php $testimonial_id = newSN('testimonial-', 17); ?>
 <section id="<?= $testimonial_id?>" class="testimonialCarouselLiferoads content-style">
 	<div class="testimonialHeader">	
@@ -157,7 +115,7 @@
 		</div>
 	</div>
 </section>
-
+	
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
