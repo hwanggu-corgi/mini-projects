@@ -35,7 +35,23 @@
 				autoplay: true,
 				infinite: true,
 				accessibility: false,
-				easing: 'swing'
+				easing: 'swing',
+				responsive: [
+					{
+						breakpoint: 1700,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 1350,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
 			});
 		})();
 	});
