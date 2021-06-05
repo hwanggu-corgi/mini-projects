@@ -158,3 +158,83 @@ testimonialCarouselLiferoads {
   margin: 0;
 }
 </style>
+<?php $testimonial_id = newSN('testimonial-', 17); ?>
+<section id="<?= $testimonial_id?>" class="testimonialCarouselLiferoads content-style">
+	<div class="testimonialHeader">	
+		<h2 class="testimonialTitle">Our Testimonials</h2>
+		<img class="testimonialImg" src="/images/testimonial.png"/>
+	</div>
+	<div class="testimonialContent">
+		<div class="testimonialContentWrap">
+			<items>
+				<div class="testimonialItem">
+					<div class="testimonialItemWrap">
+						<div class="testimonialText">{description}</div>
+						<h3 class="testimonialAuthor">~{title}</h3>
+					</div>
+				</div>
+			</items>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+	$(document).ready(function () {
+		(function () {
+			const arrowNext = '<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Group" stroke="#000000" stroke-width="2"> <polyline id="Path_17760" transform="translate(4.143500, 7.581000) rotate(180.000000) translate(-4.143500, -7.581000) " points="7.58 0.708 0.707 7.581 7.58 14.454"></polyline> </g> </g> </svg>';
+			const arrowPrev = '<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Group" transform="translate(5.000000, 7.500000) scale(-1, 1) translate(-5.000000, -7.500000) translate(1.000000, 0.000000)" stroke="#000000" stroke-width="2"> <polyline id="Path_17760" transform="translate(4.143500, 7.581000) rotate(180.000000) translate(-4.143500, -7.581000) " points="7.58 0.708 0.707 7.581 7.58 14.454"></polyline> </g> </g> </svg>';
+			$("#<?= $testimonial_id ?> .testimonialContentWrap").slick({
+				prevArrow: '<button class="slick-prev-custom" aria-label="Previous" type="button">' + arrowPrev + '</button>',
+				nextArrow: '<button class="slick-next-custom" aria-label="Next" type="button">' + arrowNext + '</button>',
+				speed: 1000,
+				autoplaySpeed: 6000,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				fade: false,
+				dots: false,
+				arrows: true,
+				autoplay: true,
+				infinite: true,
+				accessibility: false,
+				easing: 'swing',
+				responsive: [
+					{
+						breakpoint: 1700,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 1350,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+		})();
+
+		(function () {
+			function moveElement() {
+				const domWidth = window.outerWidth;
+				console.log(domWidth);
+				console.log("hello world");
+				const testimonialContent = $("#<?= $testimonial_id?> .testimonialContent");
+
+				if (domWidth < 1200) {
+					testimonialContent.insertAfter("#<?= $testimonial_id?> .testimonialTitle");
+				} else {
+					testimonialContent.appendTo("#<?= $testimonial_id?>");
+				}
+			}
+
+			moveElement();
+
+			$(window).resize(function() {
+				moveElement();
+			});
+
+		})();
+	});
+</script>
