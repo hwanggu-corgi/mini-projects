@@ -433,9 +433,17 @@ header.headerLiferoads {
   margin: 0 0 30px 0;
 }
 
-.headerLiferoads .mobileNavigationMenu .actionMenuContent ul {
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
+.headerLiferoads .mobileNavigationMenu .actionMenuContent > ul {
+  display: flex;
+  align-items: flex-end;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent > ul > li {
+  margin: 0 20px 0 0;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent > ul > li:last-child {
+  margin: 0;
 }
 
 .headerLiferoads .mobileNavigationMenu .actionMenuContent > ul > li > a,
@@ -446,17 +454,21 @@ header.headerLiferoads {
   color: var(--color-white);
 }
 
-.headerLiferoads .mobileNavigationMenu .actionMenuContent li.donate a:hover {
-  color: var(--color-primary);
-}
-
 .headerLiferoads .mobileNavigationMenu .actionMenuContent svg,
 .headerLiferoads .mobileNavigationMenu .actionMenuContent g {
   transition: none;
 }
 
-.headerLiferoads .mobileNavigationMenu .actionMenuContent li.volunteer a:hover {
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(3n) > *:hover {
+  color: var(--color-primary);
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(3n + 1) > *:hover {
   color: var(--color-teritary);
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(3n + 2) > *:hover {
+  color: var(--color-quaternary);
 }
 
 .headerLiferoads .mobileNavigationMenu .actionMenuContent svg {
@@ -483,16 +495,6 @@ header.headerLiferoads {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.headerLiferoads .mobileNavigationMenuContent .searchBtn:hover {
-  color: var(--color-quaternary);
-}
-
-.headerLiferoads .mobileNavigationMenuContent .searchBtn svg {
-  height: 40px;
-  width: 50px;
-  margin: 0 0 15px 0;
 }
 
 .headerLiferoads .mobileNavigationMenuContent .searchBtn span {
@@ -581,6 +583,18 @@ header.headerLiferoads {
   .headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
     font-size: var(--font-size-xxx-large);
   } 
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(3n) > a:hover {
+  color: var(--color-primary);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(3n+1) > a:hover {
+  color: var(--color-teritary);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(3n+2) > a:hover {
+  color: var(--color-quaternary);
 }
 
 .headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul::before {
