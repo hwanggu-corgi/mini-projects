@@ -1,3 +1,685 @@
+<style>
+header.headerLiferoads {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 6px 10px rgb(0, 0, 0, 0.1);
+}
+
+.headerLiferoads .alertSection {
+  background-color: var(--color-white);
+}
+
+.headerLiferoads .menuSection {
+  display: flex;
+}
+
+.headerLiferoads .menuSection .headerLogo {
+  width: initial;
+  background-color: var(--color-white);
+}
+
+@media screen and (min-width: 1060px) {
+  .headerLiferoads .menuSection .headerLogo {
+    width: 380px;
+    height: 110px;
+  }
+}
+
+.headerLiferoads .menuSection .headerLogo .File {
+  height: 100%;
+}
+
+.headerLiferoads .menuSection .headerLogo a {
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.headerLiferoads .menuSection .headerLogo img {
+  max-height: 40px;
+  max-width: 280px;
+}
+
+@media screen and (min-width: 1060px) {
+  .headerLiferoads .menuSection .headerLogo img {
+    max-height: 80px;
+    max-width: 280px;
+  } 
+}
+
+.headerLiferoads .menuSection .headerMenu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea {
+  display: none;  
+}
+
+@media screen and (min-width: 1060px) {
+  .headerLiferoads .menuSection .secondaryMenuArea {
+    display: flex;
+  }
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea {
+  background-color: var(--color-quaternary);
+  justify-content: flex-end;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .secondaryMenu .Menu {
+  height: 100%;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .secondaryMenu .Menu .blockContents {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .secondaryMenu .Menu ul {
+  display: flex;
+  margin: 0 15px 0 0;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .secondaryMenu .Menu a {
+  color: var(--color-white);
+  padding: 0 15px;
+  position: relative;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .secondaryMenu .Menu li:not(:last-child) a:after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: var(--color-white);
+  transform: translate(0,-50%);
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .secondaryMenu .Menu a:hover {
+  color: var(--color-secondary);
+}
+
+.headerLiferoads .menuSection .cta {
+  display: flex;
+}
+
+.headerLiferoads .menuSection .secondaryMenuArea .cta .btn a {
+  min-width: 150px;
+}
+
+.headerLiferoads .menuSection .mainMenuArea {
+  height: 100%;
+}
+
+.headerLiferoads .menuSection .mainMenuArea {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-white);
+}
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu {
+  display: none;
+}
+
+@media screen and (min-width: 1400px) {
+  .headerLiferoads .menuSection .mainMenuArea .mainMenu {
+    display: block;
+  } 
+}
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu .Menu {
+  height: 100%;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu .Menu .blockContents {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu .Menu .blockContents > ul {
+  margin: 0 15px;
+  display: flex;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu .Menu .blockContents > ul > li {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu .Menu .blockContents > ul > li > a {
+  color: var(--color-black-pure);
+  font-weight: bold;
+}
+
+
+.headerLiferoads .menuSection .mainMenuArea .mainMenu .Menu .blockContents > ul > li > a:hover {
+  color: var(--color-secondary);
+}
+
+.headerLiferoads .menuSection .socialSNS {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .headerLiferoads .menuSection .socialSNS {
+    display: flex;
+  } 
+}
+
+.headerLiferoads .menuSection .mainMenuArea .socialSNS ul {
+  display: flex;
+  margin: 0 15px;
+}
+
+@media screen and (min-width: 1400px) {
+  .headerLiferoads .menuSection .mainMenuArea .socialSNS ul {
+    margin: 0 20px;
+  } 
+}
+
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .socialSNS ul li a,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS ul li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  background-color: var(--color-white);
+}
+
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li a:hover,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li button:hover {
+  background-color: var(--color-secondary);
+}
+
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li a i,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li button i {
+  color: var(--color-black-pure);
+}
+
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li a:hover i,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS li button:hover i {
+  color: var(--color-white);
+}
+
+.headerLiferoads .socialSNS .headerSearchBar {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerLiferoads .socialSNS .searchBar {
+  display: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  background-color: var(--color-secondary);
+  -webkit-box-shadow: 0 2px 3px rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 15%);
+}
+
+@media screen and (max-width: 1300px) {
+  .headerLiferoads .socialSNS .searchBar {
+      top: calc(100% + 30px);
+      left: 0;
+      margin: 0 20px;
+  } 
+}
+
+.headerLiferoads .socialSNS .searchBar.active {
+  display: block;
+}
+
+.headerLiferoads .socialSNS .searchBarWrap {
+  position: relative;
+  width: 100%;
+  min-width: 360px;
+  padding: 15px 20px;
+}
+
+.headerLiferoads .socialSNS .searchBarForm {
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(13,13,13,.3);
+  -webkit-transition: border-bottom-color .2s cubic-bezier(.25,.46,.45,.94);
+  transition: border-bottom-color .2s cubic-bezier(.25,.46,.45,.94);
+}
+
+.headerLiferoads .socialSNS .searchBarForm form {
+  position: relative;
+  padding-right: 36px;
+}
+
+.headerLiferoads .socialSNS .searchBarForm input {
+  width: 100%;
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: #0d0d0d;
+  background-color: transparent;
+}
+
+.headerLiferoads .socialSNS .searchBarForm button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 42px;
+  color: #0d0d0d;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .headerMobileMenu {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+@media screen and (min-width: 1400px) {
+  .headerLiferoads .menuSection .mainMenuArea .headerMobileMenu {
+    display: none;
+  } 
+}
+
+.headerLiferoads .menuSection .mainMenuArea .headerMobileMenu .burger:hover .burgerLine,
+.headerLiferoads .menuSection .mainMenuArea .headerMobileMenu .burger:hover .burgerSlash {
+  background-color: var(--color-secondary);
+}
+
+.headerLiferoads .menuSection .mainMenuArea .headerMobileMenu .burger .burgerText {
+  display: none;
+}
+
+.headerLiferoads .menuSection .mainMenuArea .headerMobileMenu .burger:hover .burgerText {
+  color: var(--color-secondary);
+}
+
+@media screen and (min-width: 767px) {
+  .headerLiferoads .menuSection .mainMenuArea .headerMobileMenu .burger .burgerText {
+    display: inline-block;
+  }
+}
+
+.headerLiferoads .desktopNavigationMenu .mainMenu > .Menu > .blockContents > ul > li.has-children > a:after {
+  content: "\F0D7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li:hover > ul {
+  -webkit-transform: perspective(400px) rotate3d(0, 0, 0, 0);
+          transform: perspective(400px) rotate3d(0, 0, 0, 0);
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  background-color: var(--color-quaternary);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 360ms;
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+          transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li {
+  position: relative;
+  min-width: 260px;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li a {
+  display: block;
+  position: relative;
+  padding: 10px 25px;
+  color: var(--color-white);
+  white-space: inherit;
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li:hover {
+  background-color: var(--color-quaternary);
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li:hover > a {
+  color: var(--color-secondary);
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li.has-children {
+  padding-right: 15px;
+}
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li.has-children > a:after {
+  content: "\F0DA";
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.headerLiferoads .desktopNavigationMenu .mainMenu ul li ul li ul {
+  top: 0;
+  left: 100%;
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+          transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+}
+
+.headerLiferoads .mobileNavigationMenu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-secondary);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0.5s ease-out;
+  transition: visibility 0.5s ease-out;
+}
+
+.headerLiferoads .mobileNavigationMenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.headerLiferoads .mobileNavigationMenu .mobileNavigationMenuHeader .burger .burgerLine,
+.headerLiferoads .mobileNavigationMenu .mobileNavigationMenuHeader .burger .burgerSlash {
+  background-color: var(--color-white);
+}
+
+.headerLiferoads .mobileNavigationMenu .mobileNavigationMenuHeader .burger:hover .burgerLine,
+.headerLiferoads .mobileNavigationMenu .mobileNavigationMenuHeader .burger:hover .burgerSlash {
+  background-color: var(--color-white);
+}
+
+.headerLiferoads .mobileNavigationMenu .mobileNavigationMenuHeader {
+  margin: 0 0 30px 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.headerLiferoads .mobileNavigationMenu .mobileNavigationMenuContent {
+  position: relative;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionBtnsAndSearch {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 30px 0;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent ul {
+  display: flex;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li {
+  margin: 0 20px 0 0;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li.donate a:hover {
+  color: var(--color-primary);
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent svg,
+.headerLiferoads .mobileNavigationMenu .actionMenuContent g {
+  transition: none;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li.volunteer a:hover {
+  color: var(--color-teritary);
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent svg {
+  height: 45px;
+  width: 50px;
+  margin: 0 0 15px 0;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBtn {
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBtn:hover {
+  color: var(--color-quaternary);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBtn svg {
+  height: 40px;
+  width: 50px;
+  margin: 0 0 15px 0;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBtn span {
+  display: block;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBar {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-teritary);
+  width: 100%;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBar {
+  display: none;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBar.active {
+  display: block;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarWrap {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarForm {
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(13,13,13,.3);
+  -webkit-transition: border-bottom-color .2s cubic-bezier(.25,.46,.45,.94);
+  transition: border-bottom-color .2s cubic-bezier(.25,.46,.45,.94);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarForm form {
+  position: relative;
+  padding-right: 36px;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarForm input {
+  width: 100%;
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: var(--color-white);
+  background-color: transparent;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarForm input::placeholder {
+  color: var(--color-grey-lightened);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarForm button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 42px;
+  color: var(--color-white);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .searchBarForm button:hover {
+  color: var(--color-secondary);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu a {
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu a:hover {
+  color: var(--color-primary);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
+  font-size: var(--font-size-xx-large);
+}
+
+@media screen and (min-width: 425px) {
+  .headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
+    font-size: var(--font-size-xxx-large);
+  } 
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-teritary);
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li {
+  padding: 0 0 10px 0;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li:last-child {
+  padding: 0;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul a {
+  font-size: var(--font-size-medium);
+}
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a .expandCollapseBtn {
+  position: relative;
+  width: 21px;
+  height: 21px;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Collapse Icon"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Expand Icon"] {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > a img[alt="Collapse Icon"] {
+  opacity: 1;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > a img[alt="Expand Icon"] {
+  opacity: 0;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > ul {
+  position: relative;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  -webkit-transition: height 0.3s ease-out, visibility 0s ease-out;
+  transition: height 0.3s ease-out, visibility 0s ease-out;
+  opacity: 0;
+}
+
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > ul {
+  padding: 10px 15px;
+  height: initial;
+  visibility: visible;
+  opacity: 1;
+}
+
+.headerLiferoads .accessibilityMain {
+  position:absolute;
+  background-color: var(--color-white);
+  box-shadow: 0 6px 10px rgb(0,0,0,0.1);
+  width: 160px;
+  right: 0px;
+  transition: all 0.2s linear;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  top: calc(100% + 30px);
+}
+
+.headerLiferoads.accessibilityOpen .accessibilityMain {
+  opacity: 1;
+  visibility: visible;
+}
+
+.headerLiferoads .accessibilityMain a {
+  padding: 5px 15px;
+  display: block;
+  color: var(--color-black-pure);
+}
+
+.headerLiferoads .accessibilityMain a:hover {
+  padding: 5px 15px;
+  display: block;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+</style>
 <!-- Header One -->
 <div class="header headerLiferoads">
 	<div class="desktopNavigationMenu">
@@ -181,33 +863,36 @@
 									<span>Volunteer</span>
 								</a>
 							</li>
-						</ul>
-					</div>
-					<!-- Search Bar -->
-					<div class="search">
-						<button class="searchBtn" aria-label="Open search bar">
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
-							<span>Search</span>
-						</button>
-						<div class="searchBar">
-							<div class="searchBarWrap">
-								<div class="searchBarForm">
-									<form action="/search" method="GET">
-										<input type="text" name="q" value="" placeholder="Search">
-										<button type="submit">
-											<i class="fas fa-search"></i>
-										</button>
-									</form>
+							<li class="search">
+								<button class="searchBtn" aria-label="Open search bar">
+									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+									<span>Search</span>
+								</button>
+								<div class="searchBar">
+									<div class="searchBarWrap">
+										<div class="searchBarForm">
+											<form action="/search" method="GET">
+												<input type="text" name="q" value="" placeholder="Search">
+												<button type="submit">
+													<i class="fas fa-search"></i>
+												</button>
+											</form>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Accessibility Btn -->
-					<div class="accessibility">
-						<button class="accessibilityBtn" aria-label="Open accessibility menu">
-							<i class="fa fa-universal-access"></i>
-							<span>Accessibility</span>
-						</button>
+							</li>
+							<li class="accessibility">
+								<button class="accessibilityBtn" aria-label="Open accessibility menu">
+									<i class="fa fa-universal-access"></i>
+									<span>Accessibility</span>
+								</button>
+							</li>
+							<li class="phone">
+								<a href="tel:+14032631666" title="Telehpone Number">
+									<i class="fas fa-phone-alt"></i>
+								</a>
+							</li>
+						</ul>
 					</div>
 					<!-- Call Btn -->
 					<div class="call">
