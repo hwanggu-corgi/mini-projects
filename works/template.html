@@ -434,14 +434,12 @@ header.headerLiferoads {
 }
 
 .headerLiferoads .mobileNavigationMenu .actionMenuContent ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
 }
 
-.headerLiferoads .mobileNavigationMenu .actionMenuContent li {
-  margin: 0 20px 0 0;
-}
-
-.headerLiferoads .mobileNavigationMenu .actionMenuContent a {
+.headerLiferoads .mobileNavigationMenu .actionMenuContent > ul > li > a,
+.headerLiferoads .mobileNavigationMenu .actionMenuContent > ul > li > button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -463,6 +461,12 @@ header.headerLiferoads {
 
 .headerLiferoads .mobileNavigationMenu .actionMenuContent svg {
   height: 45px;
+  width: 50px;
+  margin: 0 0 15px 0;
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent svg.font-awesome {
+  height: 40px;
   width: 50px;
   margin: 0 0 15px 0;
 }
@@ -679,6 +683,236 @@ header.headerLiferoads {
   color: var(--color-white);
   background-color: var(--color-secondary);
 }
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Header Life Roads - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Alert Life Roads - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.alertLiferoads {
+  background-color: var(--color-black-pure);
+}
+
+.alertLiferoads .alertWrap {
+  display: flex;
+}
+
+.alertLiferoads .alertIcon {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary);
+  padding: 10px 8px;
+  margin: 0 20px 0 0;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertIcon {
+    margin: 0 30px 0 0;
+  }
+}
+
+.alertLiferoads .alertContent {
+  flex-grow: 1;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertContent {
+    flex-direction: row;
+  }
+}
+
+.alertLiferoads .alertContent .alertText {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  margin: 0 0 5px 0;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertContent .alertText {
+    margin: 0 20px 0 0;
+  }
+}
+
+.alertLiferoads .alertContent .alertText .Embed {
+  display: flex;
+  align-items: center;
+}
+
+.alertLiferoads .alertContent .alertBtn .Button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.alertLiferoads .alertContent .alertBtn p {
+  margin: 0;
+}
+
+.alertLiferoads .alertClose {
+  display: flex;
+  align-items: center;
+}
+
+.alertLiferoads .alertClose button {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  margin: 0 20px;
+}
+
+.alertLiferoads .alertClose button:hover {
+  color: var(--color-secondary);
+}
+
+
+.alertLiferoads .alertClose button:hover {
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+}
+
+.alertLiferoads .alertClose i {
+  margin: 0 5px 0 0;
+}
+
+.alertLiferoads .alertClose span {
+  font-size: var(--font-size-x-small);
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertClose span {
+    display: initial;
+  }
+}
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Alert Life Roads - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | News Life Roads - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.newsLiferoads .newsLiferoadsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 0 30px 0;
+}
+
+.newsLiferoads .newsLiferoadsTitle {
+  margin: 0;
+}
+
+.newsLiferoads .viewAllBtn {
+  color: var(--color-black-pure);
+  text-decoration: underline;
+  font-size: calc(var(--font-size-large)/1.16);
+}
+
+@media screen and (min-width: 991px) {
+  .newsLiferoads .viewAllBtn {
+    font-size: var(--font-size-large);
+  }
+}
+
+.newsLiferoads .viewAllBtn:hover {
+  color: var(--color-secondary);
+}
+
+.newsLiferoads .newsItem {
+  display: flex;
+  padding: 0 0 30px 0;
+}
+
+.newsLiferoads .newsItem:not(:last-child) {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.newsLiferoads .newsItemHeader {
+  margin: 0 25px 0 0;
+}
+
+.newsLiferoads .newsItemPostedDate {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  width: 65px;
+  height: 65px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
+
+.newsLiferoads .newsItemMonth {
+  color: var(--color-black-pure);
+  font-size: var(--font-size-small);
+  display: block;
+}
+
+.newsLiferoads .newsItemDay {
+  font-weight: bold;
+  color: var(--color-black-pure);
+  font-size: calc(var(--font-size-x-large)/1.16);
+  display: block;
+}
+
+.newsLiferoads .newsItemDate {
+  display: none;
+}
+
+.newsLiferoads .newsItemBody h3 {
+  margin: 0 0 10px 0;
+  font-size: calc(var(--font-size-x-large) / 1.16);
+}
+
+@media screen and (min-width: 991px) {
+  .newsLiferoads .newsItemBody h3 {
+    font-size: var(--font-size-x-large);
+  } 
+}
+
+.newsLiferoads .newsItem:hover .newsItemBody h3 {
+  color: var(--color-secondary); 
+}
+
+.newsLiferoads .newsItemBody p {
+  margin: 0;
+  font-size: calc(var(--font-size-large)/1.16);
+}
+
+@media screen and (min-width: 991px) {
+  .newsLiferoads .newsItemBody p {
+    font-size: var(--font-size-large);
+  }
+}
 </style>
 <!-- Header One -->
 <div class="header headerLiferoads">
@@ -893,13 +1127,6 @@ header.headerLiferoads {
 								</a>
 							</li>
 						</ul>
-					</div>
-					<!-- Call Btn -->
-					<div class="call">
-						<button class="callBtn" aria-label="Make a call">
-								<i class="fas fa-phone-alt"></i>
-							<span>Call</span>
-						</button>
 					</div>
 				</div>
 				<div class="mainMenu">
