@@ -194,8 +194,8 @@ header.headerLiferoads {
   margin: 0 5px;
 }
 
-.headerLiferoads .menuSection .mainMenuArea .socialSNS ul li a,
-.headerLiferoads .menuSection .mainMenuArea .socialSNS ul li button {
+.headerLiferoads .menuSection .mainMenuArea .socialSNS > ul > li > div > a,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS > ul > li > div > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,13 +206,13 @@ header.headerLiferoads {
   background-color: var(--color-white);
 }
 
-.headerLiferoads .menuSection .mainMenuArea .socialSNS li a:hover,
-.headerLiferoads .menuSection .mainMenuArea .socialSNS li button:hover {
+.headerLiferoads .menuSection .mainMenuArea .socialSNS > ul > li > div > a:hover,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS > ul > li > div > button:hover {
   background-color: var(--color-secondary);
 }
 
-.headerLiferoads .menuSection .mainMenuArea .socialSNS li a i,
-.headerLiferoads .menuSection .mainMenuArea .socialSNS li button i {
+.headerLiferoads .menuSection .mainMenuArea .socialSNS > ul > li > div > a i,
+.headerLiferoads .menuSection .mainMenuArea .socialSNS > ul > li > div > button i {
   color: var(--color-black-pure);
 }
 
@@ -233,25 +233,27 @@ header.headerLiferoads {
 }
 
 .headerLiferoads .socialSNS .searchBar {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  top: calc(100% + 15px);
+  top: calc(100% + 20px);
   right: 0;
   background-color: var(--color-secondary);
   -webkit-box-shadow: 0 2px 3px rgb(0 0 0 / 15%);
   box-shadow: 0 2px 3px rgb(0 0 0 / 15%);
+  transition: all 0.2s linear;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 991px) {
   .headerLiferoads .socialSNS .searchBar {
-      top: calc(100% + 30px);
       left: 0;
       margin: 0 20px;
   } 
 }
 
 .headerLiferoads .socialSNS .searchBar.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .headerLiferoads .socialSNS .searchBarWrap {
@@ -280,8 +282,12 @@ header.headerLiferoads {
   padding: 0;
   margin: 0;
   border: 0;
-  color: #0d0d0d;
+  color: var(--color-white);
   background-color: transparent;
+}
+
+.headerLiferoads .socialSNS .searchBarForm input::placeholder {
+  color: var(--color-white);
 }
 
 .headerLiferoads .socialSNS .searchBarForm button {
@@ -289,7 +295,7 @@ header.headerLiferoads {
   top: 0;
   right: 0;
   height: 42px;
-  color: #0d0d0d;
+  color: var(--color-white);
 }
 
 .headerLiferoads .menuSection .mainMenuArea .headerMobileMenu {
@@ -489,15 +495,11 @@ header.headerLiferoads {
   transition: none;
 }
 
-.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(3n+1) > *:hover {
-  color: var(--color-primary);
-}
-
-.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(3n + 2) > *:hover {
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(2n+1) > *:hover {
   color: var(--color-secondary);
 }
 
-.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(3n + 3) > *:hover {
+.headerLiferoads .mobileNavigationMenu .actionMenuContent li:nth-child(2n + 2) > *:hover {
   color: var(--color-quaternary);
 }
 
@@ -639,15 +641,11 @@ header.headerLiferoads {
   } 
 }
 
-.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(3n+1) > a:hover {
-  color: var(--color-primary);
-}
-
-.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(3n+2) > a:hover {
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(2n+1) > a:hover {
   color: var(--color-secondary);
 }
 
-.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(3n+3) > a:hover {
+.headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul li:nth-child(2n+2) > a:hover {
   color: var(--color-quaternary);
 }
 
@@ -658,7 +656,7 @@ header.headerLiferoads {
   left: 0;
   width: 3px;
   height: 100%;
-  background-color: var(--color-teritary);
+  background-color: var(--color-secondary);
 }
 
 .headerLiferoads .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li {
