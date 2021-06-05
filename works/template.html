@@ -431,11 +431,35 @@ header.headerLiferoads {
   display: flex;
   align-items: flex-end;
   margin: 0 0 30px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+  .headerLiferoads .mobileNavigationMenu .actionBtnsAndSearch {
+    width: initial;
+  }
+}
+
+.headerLiferoads .mobileNavigationMenu .actionMenuContent {
+  width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+  .headerLiferoads .mobileNavigationMenu .actionMenuContent {
+    width: initial;
+  }
 }
 
 .headerLiferoads .mobileNavigationMenu .actionMenuContent > ul {
   display: flex;
   align-items: flex-end;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 425px) {
+  .headerLiferoads .mobileNavigationMenu .actionMenuContent > ul {
+    justify-content: initial;
+  }
 }
 
 .headerLiferoads .mobileNavigationMenu .actionMenuContent > ul > li {
@@ -698,7 +722,7 @@ header.headerLiferoads {
 }
 
 .headerLiferoads .accessibilityMain {
-  position:absolute;
+  position: fixed;
   background-color: var(--color-white);
   box-shadow: 0 6px 10px rgb(0,0,0,0.1);
   width: 160px;
@@ -707,7 +731,7 @@ header.headerLiferoads {
   opacity: 0;
   visibility: hidden;
   z-index: 3;
-  top: calc(100% + 30px);
+  top: 220px;
 }
 
 .headerLiferoads.accessibilityOpen .accessibilityMain {
@@ -726,6 +750,124 @@ header.headerLiferoads {
   display: block;
   color: var(--color-white);
   background-color: var(--color-secondary);
+}
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Header Life Roads - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Alert Life Roads - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.alertLiferoads {
+  background-color: var(--color-black-pure);
+}
+
+.alertLiferoads .alertWrap {
+  display: flex;
+}
+
+.alertLiferoads .alertIcon {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary);
+  padding: 10px 8px;
+  margin: 0 20px 0 0;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertIcon {
+    margin: 0 30px 0 0;
+  }
+}
+
+.alertLiferoads .alertContent {
+  flex-grow: 1;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertContent {
+    flex-direction: row;
+  }
+}
+
+.alertLiferoads .alertContent .alertText {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  margin: 0 0 5px 0;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertContent .alertText {
+    margin: 0 20px 0 0;
+  }
+}
+
+.alertLiferoads .alertContent .alertText .Embed {
+  display: flex;
+  align-items: center;
+}
+
+.alertLiferoads .alertContent .alertBtn .Button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.alertLiferoads .alertContent .alertBtn p {
+  margin: 0;
+}
+
+.alertLiferoads .alertClose {
+  display: flex;
+  align-items: center;
+}
+
+.alertLiferoads .alertClose button {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  margin: 0 20px;
+}
+
+.alertLiferoads .alertClose button:hover {
+  color: var(--color-secondary);
+}
+
+
+.alertLiferoads .alertClose button:hover {
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+}
+
+.alertLiferoads .alertClose i {
+  margin: 0 5px 0 0;
+}
+
+.alertLiferoads .alertClose span {
+  font-size: var(--font-size-x-small);
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .alertLiferoads .alertClose span {
+    display: initial;
+  }
 }
 /*!
  |-----------------------------------------------------------------------------------------
