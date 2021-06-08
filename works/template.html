@@ -1,44 +1,33 @@
 <style>
 .galleryOahu {
-	display: flex;
-  width: 100%;
-  flex-wrap: wrap;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
 .galleryOahu .galleryItem:nth-child(6n + 1) {
   height: 350px;
-  width: calc((100%/3) - 30px);
-  margin: 0 30px 30px 0;
 }
 
 .galleryOahu .galleryItem:nth-child(6n + 2) {
   height: 255px;
-  width: calc((100%/3) - 30px);
-  margin: 0 30px 30px 0;
 }
 
 .galleryOahu .galleryItem:nth-child(6n + 3) {
   height: 350px;
-  width: calc((100%/3) - 30px);
-  margin: 0 0 30px 0;
 }
 
 .galleryOahu .galleryItem:nth-child(6n + 4) {
   height: 255px;
-  width: calc((100%/3) - 30px);
-  margin: 0 30px 30px 0;
 }
 
 .galleryOahu .galleryItem:nth-child(6n + 5) {
   height: 350px;
-  width: calc((100%/3) - 30px);
-  margin: 0 30px 30px 0;
 }
 
 .galleryOahu .galleryItem:nth-child(6n + 6) {
   height: 255px;
-  width: calc((100%/3) - 30px);
-  margin: 0 0 30px 0;
 }
 </style> 
 <div class="galleryOahu content-style">
