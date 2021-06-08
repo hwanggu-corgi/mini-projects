@@ -1,160 +1,23 @@
 <style>
-.eventsLiferoads .eventsLiferoadsHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 0 0 30px 0;
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Content - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.Content .blockContents *:last-child {
+	margin: 0;
 }
-
-.eventsLiferoads .eventsLiferoadsTitle {
-  margin: 0;
-}
-
-.eventsLiferoads .viewAllBtn {
-  color: var(--color-black-pure);
-  text-decoration: underline;
-  font-size: calc(var(--font-size-large)/1.16);
-}
-
-@media screen and (min-width: 991px) {
-  .eventsLiferoads .viewAllBtn {
-    font-size: var(--font-size-large);
-  }
-}
-
-.eventsLiferoads .viewAllBtn:hover {
-  color: var(--color-secondary);
-}
-
-.eventsLiferoads .eventsLiferoadsContentWrap {
-  display: grid;
-  row-gap: 15px;
-}
-
-.eventsLiferoads .eventsItem {
-  display: block;
-  padding: 10px;
-  background-color: var(--color-white);
-  box-shadow: 0 10px 30px rgb(0, 0, 0, 0.1);
-}
-
-.eventsLiferoads .eventsItem .eventItemWrap {
-  position: relative;
-}
-
-.eventsLiferoads .eventsItem .postsItemImgHolder {
-  overflow: hidden;
-} 
-
-.eventsLiferoads .eventsItem .eventItemBgImg {
-  padding: 69% 0 0 0;
-}
-
-.eventsLiferoads .eventsItem .eventItemBgImg {
-  transform: scale(1);
-  transition: all 0.2s linear;
-}
-
-.eventsLiferoads .eventsItem:hover .eventItemBgImg {
-  transform: scale(1.2);
-}
-
-.eventsLiferoads .eventsItem .eventItemOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: var(--color-black-pure);
-  opacity: 0.2;
-}
-
-.eventsLiferoads .eventsItem .eventsItemContent {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 767px) {
-  .eventsLiferoads .eventsItem .eventsItemContent {
-    padding: 30px 40px;
-  }
-}
-
-.eventsLiferoads .eventsItem .eventsItemRelease {
-  background-color: var(--color-white);
-  width: 64px;
-}
-
-@media screen and (min-width: 767px) {
-  .eventsLiferoads .eventsItem .eventsItemRelease {
-    width: 93px;
-  }
-}
-
-
-.eventsLiferoads .eventsItem .eventsItemReleaseDate,
-.eventsLiferoads .eventsItem .eventsItemReleaseMonth  {
-  display: block;
-  color: var(--color-black-pure);
-  text-align: center;
-  padding: 5px 20px;
-}
-
-.eventsLiferoads .eventsItem .eventsItemReleaseMonth {
-  background-color: var(--color-grey-lightened); 
-  font-size: var(--font-size-small);
-}
-
-@media screen and (min-width: 767px) {
-  .eventsLiferoads .eventsItem .eventsItemReleaseMonth {
-    font-size: var(--font-size-x-large);
-  }  
-}
-
-.eventsLiferoads .eventsItem .eventsItemReleaseDate {
-  font-size: var(--font-size-x-large);
-  font-weight: bold;
-}
-
-@media screen and (min-width: 767px) {
-  .eventsLiferoads .eventsItem .eventsItemReleaseDate {
-    font-size: var(--font-size-xxx-large);
-  }  
-}
-
-.eventsLiferoads .eventsItem .eventsItemTitle {
-  margin: 0;
-  max-width: 255px;
-  color: var(--color-white);
-  margin: 0 0 0 20px;
-  position: relative;
-  padding: 10px 0;
-  font-size: var(--font-size-xx-large);
-}
-
-@media screen and (min-width: 767px) {
-  .eventsLiferoads .eventsItem .eventsItemTitle {
-    font-size: var(--font-size-xxx-large);
-  }  
-}
-
-.eventsLiferoads .eventsItem:hover .eventsItemTitle {
-  color: var(--color-secondary);
-}
-
-.eventsLiferoads .eventsItem .eventsItemTitle::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 100%;
-  background-color: var(--color-secondary);
-  position: absolute;
-  top: 0;
-  left: -20px;
-}
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Content - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
 </style>
