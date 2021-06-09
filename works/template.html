@@ -1,29 +1,54 @@
 <style>
-	.iconBlockOahu .iconBlockOahuWrap {
-  display: grid;
-  grid-template-columns: 1fr;
+.iconBlockOahu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (min-width: 767px) {
-  .iconBlockOahu .iconBlockOahuWrap {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+.iconBlockOahu .iconBlockTitle {
+  max-width: 300px;
 
-@media screen and (min-width: 991px) {
-  .iconBlockOahu .iconBlockOahuWrap {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 </style>
-<div class="threeColOahu">
-	<div class="threeColItem">
-			<mwPageArea rel="column1" info="Column 1" sortable="page"></mwPageArea>
+<div class="iconBlockOahu bestFriend content-style">
+	<div class="iconBlockOahuWrap">
+		<h3 class="iconBlockTitle">
+			<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+		</h3>
+		<div class="iconBlockDescription">
+			<mwWidget rel="iconBlockDescription" info="Description Area" widget="Content"></mwWidget>
+		</div>
+		<div class="iconBlockBtn">
+		<mwWidget rel="iconBlockBtn" info="Button" widget="Button" global="0" link_text="Get Started" template="rounded.rounded_cta_oahu.php" button_size="medium" align="mwBtnCenter"></mwWidget>
+		</div>
 	</div>
-	<div class="threeColItem">
-			<mwPageArea rel="column2" info="Column 2" sortable="page"></mwPageArea>
+</div>
+
+<div class="iconBlockOahu save content-style">
+	<div class="iconBlockOahuWrap">
+		<h3 class="iconBlockTitle">
+			<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+		</h3>
+		<div class="iconBlockDescription">
+			<mwWidget rel="iconBlockDescription" info="Description Area" widget="Content"></mwWidget>
+		</div>
+		<div class="iconBlockBtn">
+		<mwWidget rel="iconBlockBtn" info="Button" widget="Button" global="0" link_text="Get Started" template="rounded.rounded_cta_oahu.php" button_size="medium" align="mwBtnCenter"></mwWidget>
+		</div>
 	</div>
-	<div class="threeColItem">
-			<mwPageArea rel="column3" info="Column 3" sortable="page"></mwPageArea>
+</div>
+
+<div class="iconBlockOahu vaccine content-style">
+	<div class="iconBlockOahuWrap">
+		<h3 class="iconBlockTitle">
+			<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+		</h3>
+		<div class="iconBlockDescription">
+			<mwWidget rel="iconBlockDescription" info="Description Area" widget="Content"></mwWidget>
+		</div>
+		<div class="iconBlockBtn">
+		<mwWidget rel="iconBlockBtn" info="Button" widget="Button" global="0" link_text="Get Started" template="rounded.rounded_cta_oahu.php" button_size="medium" align="mwBtnCenter"></mwWidget>
+		</div>
 	</div>
 </div>
