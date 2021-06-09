@@ -4,18 +4,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 490px;
+}
+
+.iconBlockOahu .iconBlockOahuWrap {
+  max-width: 300px;
+  position: relative;
+  top: -20px;
+}
+
+.iconBlockOahu .iconBlockHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconBlockOahu .icon {
+  margin: 0 0 20px 0;
 }
 
 .iconBlockOahu .iconBlockTitle {
-  max-width: 300px;
+  text-align: center;
+}
 
+.iconBlockOahu .iconBlockDescription {
+  text-align: center;
+  margin: 0 0 30px 0;
 }
 </style>
 <div class="iconBlockOahu bestFriend content-style">
 	<div class="iconBlockOahuWrap">
-		<h3 class="iconBlockTitle">
-			<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
-		</h3>
+		<div class="iconBlockHeader">
+			<img class="icon" src="/images/icons/icon-best-friend.svg" alt="Pet Friend Icon"/>
+			<h3 class="iconBlockTitle">
+				<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+			</h3>
+		</div>
 		<div class="iconBlockDescription">
 			<mwWidget rel="iconBlockDescription" info="Description Area" widget="Content"></mwWidget>
 		</div>
@@ -27,9 +51,12 @@
 
 <div class="iconBlockOahu save content-style">
 	<div class="iconBlockOahuWrap">
-		<h3 class="iconBlockTitle">
-			<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
-		</h3>
+		<div class="iconBlockHeader">
+			<img class="icon" src="/images/icons/icon-save.svg" alt="Pet Hospital Icon"/>
+			<h3 class="iconBlockTitle">
+				<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+			</h3>
+		</div>
 		<div class="iconBlockDescription">
 			<mwWidget rel="iconBlockDescription" info="Description Area" widget="Content"></mwWidget>
 		</div>
@@ -41,9 +68,12 @@
 
 <div class="iconBlockOahu vaccine content-style">
 	<div class="iconBlockOahuWrap">
-		<h3 class="iconBlockTitle">
-			<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
-		</h3>
+		<div class="iconBlockHeader">
+			<img class="icon" src="/images/icons/icon-vaccine.svg" alt="Vaccine Icon"/>
+			<h3 class="iconBlockTitle">
+				<mwWidget rel="iconBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+			</h3>
+		</div>
 		<div class="iconBlockDescription">
 			<mwWidget rel="iconBlockDescription" info="Description Area" widget="Content"></mwWidget>
 		</div>
