@@ -5,6 +5,45 @@
   justify-content: center;
   align-items: center;
   min-height: 490px;
+  position: relative;
+}
+
+.iconBlockOahu .iconBlockOahuBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--color-grey);
+  position: relative;
+}
+
+.iconBlockOahu .iconBlockOahuBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--color-grey);
+}
+
+.iconBlockOahu .iconBlockWave {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 50%);
+	width: 100vw;
+}
+
+.iconBlockOahu.save .iconBlockWave {
+	left: 0;
+}
+
+.iconBlockOahu.bestFriend .iconBlockWave {
+	left: calc(-100vw/3);
+}
+
+.iconBlockOahu.vaccine .iconBlockWave {
+	left: calc((-2 * 100vw)/3);
 }
 
 .iconBlockOahu .iconBlockOahuWrap {
