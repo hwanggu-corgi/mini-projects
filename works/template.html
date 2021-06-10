@@ -1,8 +1,14 @@
 <style>
 .twoColFullWidthEmbedRightOahu {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   color: var(--color-white);
+}
+
+@media screen and (min-width: 991px) {
+	.twoColFullWidthEmbedRightOahu {
+  	grid-template-columns: 1fr 1fr;
+	}
 }
 
 .twoColFullWidthEmbedRightOahu h1,
@@ -89,8 +95,13 @@
 </style>
 <div class="twoColFullWidthEmbedRightOahu content-style">
 	<div class="twoColContent">
-		<div class="wrapper">
-			<mwPageArea rel="content" info="Column" sortable="page"></mwPageArea>
+		<div class="twoColContentWrap">
+			<div class="twoColContentText">
+				<mwPageArea rel="content" info="Column" sortable="page"></mwPageArea>
+			</div>
+			<div class="twoColActionBtn">
+				<mwPageArea rel="content" info="Column" sortable="page"></mwPageArea>
+			</div>
 		</div>
 	</div>
 	<div class="twoColEmbed">
