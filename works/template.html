@@ -75,6 +75,15 @@
   height: 100%;
 }
 
+.twoColFullWidthEmbedRightOahu .Embed .blockContents,
+.twoColFullWidthEmbedRightOahu .Embed .Container {
+  height: 100%;
+}
+
+.twoColFullWidthEmbedRightOahu .Embed .gmap-iframe {
+  width: 100%;
+  height: 100%;
+}
 </style>
 <div class="twoColFullWidthEmbedRightOahu content-style">
 	<div class="twoColContent">
@@ -84,5 +93,22 @@
 	</div>
 	<div class="twoColEmbed">
 		<mwWidget rel="embed" widget="Embed" Info="Embed"></mwWidget>
+	</div>
+</div>
+
+<!--Two Col Buttons Aligh Left--->
+<style>
+.twoColButtonsOahu.left {
+  justify-content: flex-start;
+}
+</style>
+<div class="twoColButtonsOahu left">
+	<div class="twoColButtonsOahuWrap">
+		<div class="twoCol">
+			<mwPageArea rel="column1" info="Left Column" sortable="page"></mwPageArea>
+		</div>
+		<div class="twoCol">
+			<mwPageArea rel="column2" info="Right Column" sortable="page"></mwPageArea>
+		</div>
 	</div>
 </div>
