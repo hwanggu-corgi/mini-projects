@@ -35,8 +35,9 @@
   background-color: var(--color-primary);
   padding: 65px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+	max-width: 510px; 
 }
 
 .twoColFullWidthEmbedRightOahu .twoColContentWrap {
@@ -45,19 +46,20 @@
 
 @media screen and (min-width: 575px) {
   .twoColFullWidthEmbedRightOahu .twoColContentWrap {
-    max-width: calc(510px/2 - 65px);
+    max-width: 690px;
   }
 }
 
 @media screen and (min-width: 767px) {
   .twoColFullWidthEmbedRightOahu .twoColContentWrap {
-    max-width: calc(960px/2 - 65px);
+    max-width: 960px;
   }
 }
 
 @media screen and (min-width: 991px) {
   .twoColFullWidthEmbedRightOahu .twoColContentWrap {
     max-width: calc(930px/2 - 65px);
+		justify-content: flex-end;
   }
 }
 
