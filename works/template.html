@@ -1,132 +1,86 @@
-<style>
-.twoColFullWidthEmbedRightOahu {
-  display: grid;
-  grid-template-columns: 1fr;
-  color: var(--color-white);
-}
+<!-- Post Details -->
+<article class="postDetailsOahu content-style <?= empty($banner_url) ? 'no-banner' : 'has-banner' ?>">
+  <div class="container">
+    <div class="postDetailsOahuWrap">
+      <div class="postDetailsMain">
+        <!-- Post Details Header -->
+        <section class="postDetailsHeader">
+          <div class="postDetailsMetas">
+            <span class="postDetailsDate">{publishTime}</span>
+            <span> / </span>
+            <span class="postDetailsTime"><?php echo empty($custom_post_reading_time) ? "5" : $custom_post_reading_time ?> mins read</span>
+          </div>
+          <div>
+            <!-- Post Details Title -->
+            <h3 class="postDetailsTitle">{title}</h3>
+            <!-- Post Details Subheading -->
+            <?php if (!empty($custom_post_subheading)) { ?>
+              <h5 class="postDetailsSubheading">{custom_post_subheading}</h5>
+            <?php } ?>
+          </div>
+        </section>
 
-@media screen and (min-width: 991px) {
-	.twoColFullWidthEmbedRightOahu {
-  	grid-template-columns: 1fr 1fr;
-	}
-}
+        <!-- Post Details Subheader -->
+        <section class="postDetailsSubheader">
+          <!-- Post Details Info -->
+          <div class="postDetailsInfo">
+            <span>Write By</span> <span class="postDetailsAuthor"><strong><?php echo empty($custom_post_author) ? "Admin" : $custom_post_author ?></strong></span>
+          </div>
+          <!-- Post Details Share -->
+          <div class="postDetailsShare">
+            <socials></socials>
+          </div>
+        </section>
 
-.twoColFullWidthEmbedRightOahu h1,
-.twoColFullWidthEmbedRightOahu h2,
-.twoColFullWidthEmbedRightOahu h3,
-.twoColFullWidthEmbedRightOahu h4,
-.twoColFullWidthEmbedRightOahu h5,
-.twoColFullWidthEmbedRightOahu h6 {
-  color: var(--color-white);
-}
+        <!--Post Details Banner Image-->
+        <section class="postDetailsBannerImage">
+          <!-- Post Details Banner -->
+          <div class="postDetailsBanner">
+            <figure class="postDetailsBannerWrap">
+              <?php if (!empty($banner_url)) { ?>
+                <img class="postDetailsBannerImg" src='{banner_url}?resize=1920x0&crop=1920x1040' alt="{title}"/>
+              <?php } else { ?>
+                <img class="postDetailsBannerImg placeholder" src='/images/blog_placeholder_img.svg' alt="{title}"/>
+              <?php }?>
+            </figure>
+          </div>
+        </section>
 
-.twoColFullWidthEmbedRightOahu .twoColContent .Content {
-  color: var(--color-white);
-}
-
-.twoColFullWidthEmbedRightOahu .twoColContent .Content p {
-  font-weight: lighter;
-}
-
-.twoColFullWidthEmbedRightOahu .twoColContent .Content a {
-  color: var(--color-primary-lightened);
-}
-
-.twoColFullWidthEmbedRightOahu .twoColContent .Content a:hover {
-  color: var(--color-secondary);
-}
-
-.twoColFullWidthEmbedRightOahu .twoColContent {
-  height: 100%;
-  background-color: var(--color-primary);
-  padding: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	max-width: 510px; 
-}
-
-.twoColFullWidthEmbedRightOahu .twoColContentWrap {
-  width: 100%;
-}
-
-@media screen and (min-width: 575px) {
-  .twoColFullWidthEmbedRightOahu .twoColContentWrap {
-    max-width: 690px;
-  }
-}
-
-@media screen and (min-width: 767px) {
-  .twoColFullWidthEmbedRightOahu .twoColContentWrap {
-    max-width: 960px;
-  }
-}
-
-@media screen and (min-width: 991px) {
-  .twoColFullWidthEmbedRightOahu .twoColContentWrap {
-    max-width: calc(930px/2 - 65px);
-		justify-content: flex-end;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .twoColFullWidthEmbedRightOahu .twoColContentWrap {
-    max-width: calc(1110px/2 - 65px);
-  }
-}
-
-.twoColFullWidthEmbedRightOahu .twoColEmbed {
-  min-height: 740px;
-}
-
-.twoColFullWidthEmbedRightOahu .twoColEmbed .Embed {
-  height: 100%;
-}
-
-.twoColFullWidthEmbedRightOahu .Embed .blockContents,
-.twoColFullWidthEmbedRightOahu .Embed .Container {
-  height: 100%;
-}
-
-.twoColFullWidthEmbedRightOahu .Embed .gmap-iframe {
-  width: 100%;
-  height: 100%;
-}
-</style>
-<div class="twoColFullWidthEmbedRightOahu content-style">
-	<div class="twoColContent">
-		<div class="twoColContentWrap">
-			<h2 class="twoColContentTitle">
-				<mwWidget rel="title" info="Title Area" widget="Embed"></mwWidget>
-			</h2>
-			<div class="twoColContentBody">
-				<div class="twoColContentText">
-					<mwPageArea rel="content" info="Column" sortable="page"></mwPageArea>
-				</div>
-				<div class="twoColActionBtn">
-					<mwWidget rel="actionBtn" info="Action Button" widget="Include" template="columns.2_column_buttons_align_left_oahu.php"></mwWidget>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="twoColEmbed">
-		<mwWidget rel="embed" widget="Embed" Info="Embed"></mwWidget>
-	</div>
-</div>
-
-<!--Two Col Buttons Align Left--->
-<style>
-.twoColButtonsOahu.left {
-  justify-content: flex-start;
-}
-</style>
-<div class="twoColButtonsOahu left">
-	<div class="twoColButtonsOahuWrap">
-		<div class="twoCol">
-			<mwPageArea rel="column1" info="Left Column" sortable="page"></mwPageArea>
-		</div>
-		<div class="twoCol">
-			<mwPageArea rel="column2" info="Right Column" sortable="page"></mwPageArea>
-		</div>
-	</div>
-</div>
+        <!-- Post Details Body -->
+        <section class="postDetailsBody">
+          <div>
+            <!-- Post Details Content -->
+            <div class="postDetailsContent">{content}</div>
+          </div>
+        </section>
+      </div>
+      <div class="postDetailsSidebar">
+        <!--Search Bar-->
+        <div class="postDetailsSearchBar">
+          <form action="/search" method="GET">
+            <input type="text" name="q" value="" placeholder="Search">
+            <button type="submit">
+              <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Search Icon</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Group" fill="currentColor" fill-rule="nonzero">
+                    <path
+                      d="M21.693,20.458 L15.735,14.497 C18.5088713,11.0580106 18.1058743,6.04952756 14.8178275,3.09829765 C11.5297806,0.147067736 6.50702037,0.285590583 3.38663193,3.41355891 C0.266243492,6.54152725 0.13990727,11.5646088 3.09910596,14.8454857 C6.05830464,18.1263626 11.0677507,18.5172068 14.5,15.735 L20.458,21.697 C20.6759851,21.9291214 21.003064,22.0241419 21.3114897,21.9449495 C21.6199153,21.8657571 21.8607571,21.6249153 21.9399495,21.3164897 C22.0191419,21.008064 21.9241214,20.6809851 21.692,20.463 L21.693,20.458 Z M9.293,15.8380001 C6.64484434,15.8384038 4.25731253,14.243237 3.24409462,11.7965826 C2.23087672,9.34992811 2.79159486,6.53382083 4.664696,4.66186444 C6.53779713,2.78990806 9.35424668,2.23091162 11.8002813,3.24562507 C14.2463159,4.26033853 15.8400227,6.64884508 15.8380019,9.297 C15.8313882,12.9087039 12.9037079,15.834148 9.292,15.8380001 L9.293,15.8380001 Z"
+                      id="Path_1636"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <!--Post Details Category-->
+        <div class="postDetailsCategory">
+          <h4>Categories</h4>
+          <mwWidget rel="blogCategories" info="Category" widget="BlogsPosts"></mwWidget>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="/images/oahu-wave.svg" alt="Wave Image"/>
+</article>
