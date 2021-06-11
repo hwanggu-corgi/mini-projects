@@ -1,3 +1,100 @@
+<style>
+.postDetailsOahu {
+  background-color: var(--color-grey);
+  padding: 80px 0;
+  color: var(--color-primary);
+}
+
+.postDetailsOahu .postDetailsOahuWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--spacing-size);
+  column-gap: 30px;
+}
+
+@media screen and (min-width: 991px) {
+  .postDetailsOahu .postDetailsOahuWrap {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    column-gap: 30px;
+  } 
+}
+
+.postDetailsOahu .postDetailsMetas {
+  margin: 0 0 15px 0;
+}
+
+.postDetailsOahu .postDetailsTitle {
+  margin: 0 0 20px 0;
+}
+
+.postDetailsOahu .postDetailsBannerImage {
+  margin: 0 0 var(--spacing-size) 0;
+}
+
+.postDetailsOahu .postDetailsBannerImg.placeholder {
+  background-color: var(--color-grey-darkened);
+}
+
+.postDetailsOahu .postDetailsSidebar {
+  display: none;
+}
+
+@media screen and (min-width: 991px) {
+  .postDetailsOahu .postDetailsSidebar {
+    display: block;
+  } 
+}
+
+.postDetailsOahu .postDetailsSearchBar {
+  margin: 0 0 60px 0;
+}
+
+.postDetailsOahu .postDetailsSearchBar form {
+  border: 1px solid var(--color-primary);
+  border-radius: 100px;
+  padding: 8px 15px;
+  display: flex;
+}
+
+.postDetailsOahu .postDetailsSearchBar input {
+  background-color: transparent;
+  border: none;
+  flex-grow: 1;
+  font-size: var(--font-size-small);
+}
+
+.postDetailsOahu .postDetailsSearchBar input::placeholder {
+  opacity: 61%;
+  color: var(--color-primary);
+}
+
+.postDetailsOahu .postDetailsSearchBar button:hover {
+  color: var(--color-secondary);
+}
+
+.postDetailsOahu > .blogs-post-crop-icon {
+  display: none;
+}
+
+.postDetailsOahu img {
+  max-width: 100%;
+}
+
+.postDetailsOahu > img {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  min-height: 69px;
+  z-index: 3;
+}
+
+@media screen and (min-width: 991px) {
+  .postDetailsOahu > img {
+    width: 100%;
+  }
+}
+</style>
 <!-- Post Details -->
 <article class="postDetailsOahu content-style <?= empty($banner_url) ? 'no-banner' : 'has-banner' ?>">
   <div class="container">
