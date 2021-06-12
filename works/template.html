@@ -1,5 +1,5 @@
 <style>
-	.sliderOahu .sliderItem {
+.sliderOahu .sliderItem {
   display: flex;
   align-items: center;
   position: relative;
@@ -24,8 +24,9 @@
 
 .sliderOahu .sliderInner {
   position: relative;
-  text-align: left;
+  text-align: center;
   max-width: 670px;
+  margin: 0 auto;
 }
 
 .sliderOahu .sliderTitle {
@@ -276,19 +277,21 @@
 </style>
 <?php $slider_id = newSN('slider-', 14); ?>
 
-<div id="<?= $slider_id ?>" class="sliderOahu content-style">
+<div id="<?= $slider_id ?>" class="sliderOahu content-style dots-style-3">
 	<div class="sliderWrap">
 		<items thumb="768x0" preview="1920x0">
 			<div class="sliderItem">
 				<div class="sliderImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
 				<div class="sliderOverlay"></div>
-				<div class="sliderInner">
-					<h2 class="sliderTitle">{title}</h2>
-					<div class="sliderDescription">{description}</div>
-					<div class="sliderBtn btn">
-						<p>
-							<a class="medium" href="{url}" target="{target}">Learn More</a>
-						</p>
+				<div class="container">
+					<div class="sliderInner">
+						<h2 class="sliderTitle">{title}</h2>
+						<div class="sliderDescription">{description}</div>
+						<div class="sliderBtn btn">
+							<p>
+								<a class="medium" href="{url}" target="{target}">Learn More</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -302,26 +305,22 @@
 			$("#<?= $slider_id ?> .sliderWrap").slick({
 				prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">' + SVG["arrow-left-1"] + '</button>',
 				nextArrow: '<button class="slick-next" aria-label="Next" type="button">' + SVG["arrow-right-1"] + '</button>',
-				easing: 'swing',
 				speed: 1000,
 				autoplaySpeed: 6000,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				fade: true,
 				dots: true,
-				arrows: false,
+				arrows: true,
 				autoplay: true,
 				infinite: true,
 				accessibility: false,
-				customPaging: function (slider, i) {
-					return '<div class="slick-thumb" style="background-image: url(\'' + $('.sliderImg', slider.$slides[i]).css("background-image").replace(/^url\(['"](.+)['"]\)/, '$1') + '\')"><div class="slick-thumb-overlay"></div><h5 class="slick-thumb-title">' + $('.sliderTitle', slider.$slides[i]).text() + '</h5></div>';
-				},
+				easing: 'swing',
 				responsive: [
 					{
 						breakpoint: 991,
 						settings: {
-							dots: false,
-							arrows: true
+							dots: false
 						}
 					}
 				]
