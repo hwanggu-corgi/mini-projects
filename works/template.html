@@ -82,20 +82,6 @@
   right: 36px;
 }
 
-.sliderOahu ul.slick-dots {
-  top: 50%;
-  right: 50px;
-  bottom: auto;
-  width: auto;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.sliderOahu ul.slick-dots li {
-  display: block;
-  margin: 0;
-}
-
 .sliderOahu .sliderImg {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
@@ -236,6 +222,10 @@
   .sliderOahu .slick-next {
     right: 0;
   }
+}
+
+.sliderOahu .slickDots {
+  display: flex;
 }
 </style>
 <?php $slider_id = newSN('slider-', 14); ?>
