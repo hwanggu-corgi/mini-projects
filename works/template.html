@@ -227,6 +227,22 @@
 .sliderOahu .slickDots {
   display: flex;
 }
+
+.sliderOahu .slick-prev-custom svg,
+.sliderOahu .slick-next-custom svg {
+  width: 10px;
+}
+
+.sliderOahu .slick-dots {
+  position: static;
+  bottom: 0;
+  width: initial;
+  margin: 0;
+}
+
+.sliderOahu .slickDots ul li::before {
+	content: none;
+}
 </style>
 <?php $slider_id = newSN('slider-', 14); ?>
 <div id="<?= $slider_id ?>" class="sliderOahu content-style">
