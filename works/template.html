@@ -239,6 +239,7 @@
 }
 </style>
 <?php $slider_id = newSN('slider-', 14); ?>
+
 <div id="<?= $slider_id ?>" class="sliderOahu content-style">
 	<div class="sliderWrap">
 		<items thumb="768x0" preview="1920x0">
@@ -259,7 +260,12 @@
 			</div>
 		</items>
 	</div>
+	<div class="slickDots">
+		<div class="slickDotsWrap">
+		</div>
+	</div>
 </div>
+
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
@@ -277,6 +283,7 @@
 				infinite: true,
 				accessibility: false,
 				easing: 'swing',
+				appendDots: $("#<?= $slider_id ?> .slickDots"),
 				responsive: [
 					{
 						breakpoint: 991,
