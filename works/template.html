@@ -96,38 +96,6 @@
   margin: 0;
 }
 
-.sliderOahu ul.slick-dots li:not(:last-of-type) {
-  margin-bottom: 20px;
-}
-
-.sliderOahu.dots-style-1 ul.slick-dots li button:before {
-  background-color: var(--color-white);
-}
-
-.sliderOahu.dots-style-1 ul.slick-dots li:hover button,
-.sliderOahu.dots-style-1 ul.slick-dots li.slick-active button {
-  border-color: var(--color-white);
-}
-
-.sliderOahu.dots-style-2 ul.slick-dots li button:before,
-.sliderOahu.dots-style-2 ul.slick-dots li button:after {
-  border-color: var(--color-white);
-}
-
-.sliderOahu.dots-style-2 ul.slick-dots li:hover button:after,
-.sliderOahu.dots-style-2 ul.slick-dots li.slick-active button:after {
-  border-color: var(--color-white);
-  background-color: var(--color-white);
-}
-
-.sliderOahu.dots-style-3 ul.slick-dots li:after {
-  background-color: var(--color-white);
-}
-
-.sliderOahu.dots-style-3 ul.slick-dots li button {
-  color: var(--color-white);
-}
-
 .sliderOahu .sliderImg {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
@@ -271,7 +239,7 @@
 }
 </style>
 <?php $slider_id = newSN('slider-', 14); ?>
-<div id="<?= $slider_id ?>" class="sliderOahu content-style dots-style-3">
+<div id="<?= $slider_id ?>" class="sliderOahu content-style">
 	<div class="sliderWrap">
 		<items thumb="768x0" preview="1920x0">
 			<div class="sliderItem">
