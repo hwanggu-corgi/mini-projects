@@ -239,7 +239,6 @@
 }
 </style>
 <?php $slider_id = newSN('slider-', 14); ?>
-
 <div id="<?= $slider_id ?>" class="sliderOahu content-style">
 	<div class="sliderWrap">
 		<items thumb="768x0" preview="1920x0">
@@ -261,8 +260,14 @@
 		</items>
 	</div>
 	<div class="slickDots">
+		<button class="slick-prev-custom" aria-label="Previous">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="#666"></path></svg>
+		</button>
 		<div class="slickDotsWrap">
 		</div>
+		<button class="slick-next-custom" aria-label="Previous">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="#666"></path></g></svg>
+		</button>
 	</div>
 </div>
 
@@ -283,7 +288,7 @@
 				infinite: true,
 				accessibility: false,
 				easing: 'swing',
-				appendDots: $("#<?= $slider_id ?> .slickDots"),
+				appendDots: $("#<?= $slider_id ?> .slickDotsWrap"),
 				responsive: [
 					{
 						breakpoint: 991,
