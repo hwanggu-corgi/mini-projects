@@ -238,6 +238,12 @@
 .sliderOahu .slick-next-custom svg {
   width: 10px;
   transform: rotate(90deg);
+  color: var(--color-white);
+}
+
+.sliderOahu .slick-prev-custom path,
+.sliderOahu .slick-next-custom path {
+  stroke-width: 4;
 }
 
 .sliderOahu .slick-dots {
@@ -294,12 +300,12 @@
 	</div>
 	<div class="slickDots">
 		<button class="slick-prev-custom" aria-label="Previous">
-			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="#666"></path></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="currentColor"></path></svg>
 		</button>
 		<div class="slickDotsWrap">
 		</div>
 		<button class="slick-next-custom" aria-label="Previous">
-			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="#666"></path></g></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="currentColor"></path></g></svg>
 		</button>
 	</div>
 </div>
@@ -308,8 +314,8 @@
 	$(document).ready(function () {
 		(function () {
 			$("#<?= $slider_id ?> .sliderWrap").slick({
-				prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">' + SVG["arrow-left-1"] + '</button>',
-				nextArrow: '<button class="slick-next" aria-label="Next" type="button">' + SVG["arrow-right-1"] + '</button>',
+				prevArrow: $("#<?= $slider_id ?> .slick-prev-custom"),
+				nextArrow:$("#<?= $slider_id ?> .slick-next-custom"),
 				speed: 1000,
 				autoplaySpeed: 6000,
 				slidesToShow: 1,
