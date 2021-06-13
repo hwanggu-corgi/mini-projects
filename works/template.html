@@ -85,8 +85,7 @@
 }
 
 .sliderOahu .sliderTitle,
-.sliderOahu .sliderDescription,
-.sliderOahu .sliderBtn {
+.sliderOahu .sliderDescription {
   opacity: 0;
   -webkit-transform: translateY(50px);
   transform: translateY(50px);
@@ -207,10 +206,23 @@
   font-size: var(--font-size-x-small);
   color: var(--color-white);
   padding: 5px 15px;
+  display: inline-block;
+}
+
+.sliderOahu .sliderBtn p a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-white);
 }
 
 .sliderOahu .sliderBtn p a:hover {
   color: var(--color-secondary);
+}
+
+.sliderOahu .sliderBtn p a:hover::after {
+  background-color: var(--color-secondary);
 }
 
 @media screen and (min-width: 991px) {
@@ -218,11 +230,6 @@
     font-size: var(--font-size-medium);
     padding: 10px 30px;
   }
-}
-
-.sliderOahu .sliderBtn p a:hover {
-  font-size: 12px;
-  padding: 5px 15px;
 }
 
 .sliderOahu .decorations > .container {
@@ -233,7 +240,7 @@
   display: flex;
   align-items: center;
 	position: absolute;
-	bottom: 185px;
+	bottom: 200px;
 	left: 50%;
   transform: translate(-50%, 0);
 }
