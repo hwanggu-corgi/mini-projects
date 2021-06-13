@@ -200,6 +200,13 @@
   color: var(--color-white);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   margin: 0;
+  max-height: 48px;
+}
+
+@media screen and (min-width:576px) {
+  .sliderOahu .sliderDescription p {
+    max-height: 48px;
+  }  
 }
 
 .sliderOahu .sliderBtn p a {
@@ -239,18 +246,26 @@
 .sliderOahu .slickDots {
   display: flex;
   align-items: center;
-	position: absolute;
-	bottom: 200px;
-	left: 50%;
-  transform: translate(-50%, 0);
 }
 
 @media screen and (min-width: 991px) {
   .sliderOahu .slickDots {
     flex-direction: column;
-    bottom: 100px;
-	  right: 0;
-    left: initial;
+  }
+}
+
+.sliderOahu .decorations .slickDots {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .sliderOahu .decorations .slickDots {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
