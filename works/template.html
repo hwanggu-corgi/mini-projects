@@ -196,39 +196,16 @@
     font-size: 12px;
     padding: 5px 15px;
   }
+}
 
-  .sliderOahu .slick-prev,
-  .sliderOahu .slick-next {
-    top: 45%;
-    width: 20px;
-    height: 36px;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  .sliderOahu .slick-prev svg,
-  .sliderOahu .slick-next svg {
-    width: 20px;
-    height: 36px;
-  }
-
-  .sliderOahu .slick-prev svg path,
-  .sliderOahu .slick-next svg path {
-    stroke-width: 2px;
-  }
-
-  .sliderOahu .slick-prev {
-    left: 0;
-  }
-  .sliderOahu .slick-next {
-    right: 0;
-  }
+.sliderOahu .decorations > .container {
+  position: relative;
 }
 
 .sliderOahu .slickDots {
   display: flex;
   align-items: center;
   flex-direction: column;
-	margin: 0 70px 0 0;
 	position: absolute;
 	bottom: 120px;
 	right: 0;
@@ -279,7 +256,6 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 0 0 0 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,6 +265,7 @@
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 	color: var(--color-white);
+  font-weight: bold;
 }
 
 
@@ -339,18 +316,22 @@
 			</div>
 		</items>
 	</div>
-	<div class="slickDots">
-		<button class="slick-prev-custom" aria-label="Previous">
-			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="currentColor"></path></svg>
-		</button>
-		<div class="slickDotsWrap">
+	<div class="decorations">
+		<div class="container">
+			<div class="slickDots">
+				<button class="slick-prev-custom" aria-label="Previous">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="currentColor"></path></svg>
+				</button>
+				<div class="slickDotsWrap">
+				</div>
+				<button class="slick-next-custom" aria-label="Previous">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="currentColor"></path></g></svg>
+				</button>
+			</div>
+			<div class="scrollDownAnimation">
+				<span>Scroll to see</span>
+			</div>
 		</div>
-		<button class="slick-next-custom" aria-label="Previous">
-			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="currentColor"></path></g></svg>
-		</button>
-	</div>
-	<div class="scrollDownAnimation">
-		<span>Scroll to see more</span>
 	</div>
 </div>
 
