@@ -185,11 +185,6 @@
   .sliderOahu .sliderTitle {
     margin: 0 0 15px 0;
   }
-   
-  .sliderOahu .sliderBtn.btn p a {
-    font-size: 12px;
-    padding: 5px 15px;
-  }
 }
 
 .sliderOahu .sliderDescription {
@@ -206,6 +201,28 @@
   color: var(--color-white);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   margin: 0;
+}
+
+.sliderOahu .sliderBtn p a {
+  font-size: var(--font-size-x-small);
+  color: var(--color-white);
+  padding: 5px 15px;
+}
+
+.sliderOahu .sliderBtn p a:hover {
+  color: var(--color-secondary);
+}
+
+@media screen and (min-width: 991px) {
+  .sliderOahu .sliderBtn p a {
+    font-size: var(--font-size-medium);
+    padding: 10px 30px;
+  }
+}
+
+.sliderOahu .sliderBtn p a:hover {
+  font-size: 12px;
+  padding: 5px 15px;
 }
 
 .sliderOahu .decorations > .container {
@@ -355,7 +372,7 @@
 					<div class="sliderInner">
 						<h2 class="sliderTitle">{title}</h2>
 						<div class="sliderDescription">{description}</div>
-						<div class="sliderBtn btn">
+						<div class="sliderBtn">
 							<p>
 								<a class="medium" href="{url}" target="{target}">Learn More</a>
 							</p>
