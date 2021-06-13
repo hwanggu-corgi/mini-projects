@@ -467,14 +467,21 @@
 			// under assumption that it plays indefinitely
 			$("#<?= $slider_id ?> .sliderWrap").on("beforeChange", function (event, slick, currentSlide, nextSlide){
 				// get index of current slide
-				let currentSlideIndex = currentSlide.index();
-
+				let currentSlideIndex = currentSlide;
 				// get index of next slide
-				let newSlideIndex = nextSlide.index();
+				let newSlideIndex = nextSlide;
+				
+				// remove slick-active in all dots
+				$("#<?= $slider_id ?> .slickDots li").each(function() {
+					$(this).removeClass("slick-active");
+				})
 
 				// update slickDots (add slick-active to appropriate dot)
-				let currentSlideIndex = $("#<?= $slider_id ?> .slickDots li").get(newSlideIndex);
-				currentSlideIndex.addClass("slick-active");
+				let targetDot = $("#<?= $slider_id ?> .slickDots").each(function() {
+					$(this).find("li").removeClass("slick-active-custom");
+					let targetDot = $(this).find("li").get(newSlideIndex)
+					$(targetDot).addClass("slick-active-custom");
+				});
 			});
 		})();
 	});
