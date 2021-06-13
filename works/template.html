@@ -196,7 +196,7 @@
   margin-bottom: 70px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 991px) {
   .sliderOahu .sliderDescription {
     margin-bottom: 15px;
   }
@@ -221,14 +221,14 @@
   transform: translate(-50%, 0);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 991px) {
   .sliderOahu .slickDots {
     flex-direction: column;
     bottom: 100px;
 	  right: 0;
-    left: 0;
+    left: initial;
   }
-
+}
 
 .sliderOahu .slick-prev-custom svg,
 .sliderOahu .slick-next-custom svg {
@@ -236,7 +236,7 @@
   color: var(--color-white);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 991px) {
   .sliderOahu .slick-prev-custom svg,
   .sliderOahu .slick-next-custom svg {
     transform: rotate(90deg);
@@ -256,7 +256,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 991px) {
   .sliderOahu .slick-dots {
     flex-direction: column;
   }
@@ -279,7 +279,6 @@
 
 .sliderOahu .slickDots li button:before {
   color: var(--color-grey-x-darkened);
-  opacity: 0.44;
 }
 
 .sliderOahu .scrollDownAnimation {
@@ -292,7 +291,7 @@
   transform: translate(-50%,0);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 991px) {
   .sliderOahu .scrollDownAnimation {
     transform: none;
     left: 0;
@@ -307,15 +306,9 @@
 	display: none;
 }
 
-@media screen and (min-width: 767px) {
-	.sliderOahu .scrollDownAnimation span {
-		display: block;
-		font-size: var(--font-size-x-small);
-	}	
-}
-
 @media screen and (min-width: 991px) {
 	.sliderOahu .scrollDownAnimation span {
+    display: block;
 		font-size: var(--font-size-medium);
 	}	
 }
