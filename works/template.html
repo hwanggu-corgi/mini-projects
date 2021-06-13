@@ -254,6 +254,14 @@
   }
 }
 
+.sliderOahu .sliderItem .sliderInner .slickDots {
+  visibility: hidden;
+}
+
+.sliderOahu .sliderItem.slick-active .sliderInner .slickDots {
+  visibility: visible;
+}
+
 .sliderOahu .decorations .slickDots {
   position: absolute;
   bottom: 100px;
@@ -311,7 +319,7 @@
 }
 
 .sliderOahu .slickDots li.slick-active button:before {
-  color: var(--color-white) !important;
+  color: var(--color-white);
   opacity: 1;
   font-size: 8px;
 }
@@ -435,7 +443,7 @@
 				fade: true,
 				dots: true,
 				arrows: true,
-				autoplay: true,
+				autoplay: false,
 				infinite: true,
 				accessibility: false,
 				easing: 'swing',
