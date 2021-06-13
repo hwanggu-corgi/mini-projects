@@ -264,16 +264,45 @@
 	content: none;
 }
 
-.sliderOahu .slickDots li button:before {
-  opacity: 1;
-}
-
 .sliderOahu .slickDots li.slick-active button:before {
   color: var(--color-white);
+  opacity: 1;
+  font-size: 8px;
 }
 
 .sliderOahu .slickDots li button:before {
   color: var(--color-grey-x-darkened);
+  opacity: 0.44;
+}
+
+.sliderOahu span {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.sliderOahu .scrollDownAnimation::after {
+  display: block;
+  content: "";
+  height: 50px;
+  width: 3px;
+  background-color: var(--color-black-pure);
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+      opacity: 0;
+      transform: translateY(0) scaleY(1);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(50%) scaleY(0);
+  }
 }
 </style>
 
@@ -307,6 +336,9 @@
 		<button class="slick-next-custom" aria-label="Previous">
 			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="currentColor"></path></g></svg>
 		</button>
+	</div>
+	<div class="scrollDownAnimation">
+		<span>Scroll to see more</span>
 	</div>
 </div>
 
