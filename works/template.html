@@ -207,7 +207,7 @@
   align-items: center;
   flex-direction: column;
 	position: absolute;
-	bottom: 120px;
+	bottom: 100px;
 	right: 0;
 }
 
@@ -255,10 +255,18 @@
 .sliderOahu .scrollDownAnimation {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translate(-50%,0);
+}
+
+@media screen and (min-width: 767px) {
+  .sliderOahu .scrollDownAnimation {
+    transform: none;
+    left: 0;
+  }
 }
 
 .sliderOahu .scrollDownAnimation span {
@@ -285,7 +293,7 @@
 .sliderOahu .scrollDownAnimation::after {
   display: block;
   content: "";
-  height: 120px;
+  height: 80px;
   width: 3px;
   background-color: var(--color-white);
   -webkit-animation-duration: 2s;
@@ -296,10 +304,9 @@
   animation-name: scroll;
 }
 
-
 @media screen and (min-width: 991px) {
 	.sliderOahu .scrollDownAnimation::after {
-		height: 80px;
+		height: 100px;
 	}	
 }
 
