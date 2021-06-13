@@ -34,11 +34,6 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.sliderOahu .sliderDescription p {
-  color: var(--color-white);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-
 .sliderOahu .slick-prev,
 .sliderOahu .slick-next {
   z-index: 1;
@@ -187,11 +182,26 @@
     padding-right: 10px;
   }
 
-  .sliderOahu .sliderTitle,
-  .sliderOahu .sliderDescription p {
-    margin-bottom: 15px;
+  .sliderOahu .sliderTitle {
+    margin: 0 0 15px 0;
   }
 
+  .sliderOahu .sliderDescription {
+    margin-bottom: 70px;
+  }
+
+  @media screen and (min-width: 767px) {
+    .sliderOahu .sliderDescription {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .sliderOahu .sliderDescription p {
+    color: var(--color-white);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    margin: 0;
+  }
+   
   .sliderOahu .sliderBtn.btn p a {
     font-size: 12px;
     padding: 5px 15px;
@@ -205,17 +215,31 @@
 .sliderOahu .slickDots {
   display: flex;
   align-items: center;
-  flex-direction: column;
 	position: absolute;
-	bottom: 100px;
-	right: 0;
+	bottom: 185px;
+	left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media screen and (min-width: 767px) {
+  .sliderOahu .slickDots {
+    flex-direction: column;
+    bottom: 100px;
+	  right: 0;
+  }
 }
 
 .sliderOahu .slick-prev-custom svg,
 .sliderOahu .slick-next-custom svg {
   width: 10px;
-  transform: rotate(90deg);
   color: var(--color-white);
+}
+
+@media screen and (min-width: 767px) {
+  .sliderOahu .slick-prev-custom svg,
+  .sliderOahu .slick-next-custom svg {
+    transform: rotate(90deg);
+  }
 }
 
 .sliderOahu .slick-prev-custom path,
@@ -229,7 +253,12 @@
   margin: 0;
   display: flex;
   align-items: center;
-  flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  .sliderOahu .slick-dots {
+    flex-direction: column;
+  }
 }
 
 .sliderOahu .slickDots ul li {
@@ -355,11 +384,12 @@
 				</button>
 			</div>
 			<div class="scrollDownAnimation">
-				<span>Scroll to see</span>
+				<span>Scroll to See</span>
 			</div>
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript">
 	$(document).ready(function () {
 		(function () {
@@ -377,15 +407,7 @@
 				infinite: true,
 				accessibility: false,
 				easing: 'swing',
-				appendDots: $("#<?= $slider_id ?> .slickDotsWrap"),
-				responsive: [
-					{
-						breakpoint: 991,
-						settings: {
-							dots: false
-						}
-					}
-				]
+				appendDots: $("#<?= $slider_id ?> .slickDotsWrap")
 			});
 		})();
 	});
