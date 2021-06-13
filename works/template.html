@@ -179,6 +179,9 @@
   .sliderOahu .sliderInner {
     padding-left: 10px;
     padding-right: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .sliderOahu .sliderTitle {
@@ -187,26 +190,13 @@
 }
 
 .sliderOahu .sliderDescription {
-  margin-bottom: 70px;
-}
-
-@media screen and (min-width: 991px) {
-  .sliderOahu .sliderDescription {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 15px;
 }
 
 .sliderOahu .sliderDescription p {
   color: var(--color-white);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   margin: 0;
-  max-height: 48px;
-}
-
-@media screen and (min-width:576px) {
-  .sliderOahu .sliderDescription p {
-    max-height: 48px;
-  }  
 }
 
 .sliderOahu .sliderBtn p a {
@@ -251,6 +241,16 @@
 @media screen and (min-width: 991px) {
   .sliderOahu .slickDots {
     flex-direction: column;
+  }
+}
+
+.sliderOahu .sliderInner .slickDots {
+  margin: 0 auto 15px auto;
+}
+
+@media screen and (min-width: 991px) {
+  .sliderOahu .sliderInner .slickDots {
+    display: none;
   }
 }
 
@@ -311,7 +311,7 @@
 }
 
 .sliderOahu .slickDots li.slick-active button:before {
-  color: var(--color-white);
+  color: var(--color-white) !important;
   opacity: 1;
   font-size: 8px;
 }
