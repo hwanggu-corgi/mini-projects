@@ -266,8 +266,14 @@
   transform: rotate(-180deg);
 	color: var(--color-white);
   font-weight: bold;
+	display: none;
 }
 
+@media screen and (min-width: 991px) {
+	.sliderOahu .scrollDownAnimation span {
+		display: block;
+	}	
+}
 
 .sliderOahu .scrollDownAnimation::after {
   display: block;
