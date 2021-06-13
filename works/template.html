@@ -448,13 +448,15 @@
 			let totalSlides = $("#<?= $slider_id ?> .sliderItem").length;
 
 			$("#<?= $slider_id ?> .sliderWrap").slick({
+				prevArrow: $("#<?= $slider_id ?> .slick-prev-custom"),
+				nextArrow:$("#<?= $slider_id ?> .slick-next-custom"),
 				speed: 1000,
 				autoplaySpeed: 6000,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				fade: true,
 				dots: true,
-				arrows: false,
+				arrows: true,
 				autoplay: false,
 				infinite: true,
 				accessibility: false,
@@ -463,34 +465,16 @@
 			});
 
 			// under assumption that it plays indefinitely
-			$("#<?= $slider_id ?> .slick-prev-custom").on("click", function (){
+			$("#<?= $slider_id ?> .sliderWrap").on("beforeChange", function (event, slick, currentSlide, nextSlide){
 				// get index of current slide
-				let currentSlideIndex = $("#<?= $slider_id ?> .sliderWrap .sliderItem.slick-active").index();
+				let currentSlideIndex = currentSlide.index();
 
-				// get index of previous slide
-				let newSlideIndex = (currentSlideIndex - 1) % totalSlides;
+				// get index of next slide
+				let newSlideIndex = nextSlide.index();
 
-				// remove slick-active in current dots
-				let currentSlideIndex = $("#<?= $slider_id ?> .slickDots li.slick-active").removeClass("slick-active");
-
-				// update slickDots (add slick-active to appropriate dot) 
+				// update slickDots (add slick-active to appropriate dot)
 				let currentSlideIndex = $("#<?= $slider_id ?> .slickDots li").get(newSlideIndex);
-			});
-
-			$("#<?= $slider_id ?> .slick-next-custom").on("click", function (){
-				// get index of current slide
-
-				// get index of previous slide
-
-				// update slickDots (add slick-active to appropriate dot) 
-			});
-
-			$("#<?= $slider_id ?> .sliderWrap").on("beforeChange", function (){
-				// get index of current slide
-
-				// get index of previous slide
-
-				// update slickDots (add slick-active to appropriate dot) 
+				currentSlideIndex.addClass("slick-active");
 			});
 		})();
 	});
