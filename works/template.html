@@ -21,7 +21,8 @@
   transform: translate(-50%, -50%);
 }
 </style>
-<div class="logoCarouselOahu">
+<?php $slider_id = newSN('slider-', 14); ?>
+<div id="<?=$slider_id?>" class="logoCarouselOahu">
   <div class="container">
     <button aria-label="prev">
 			<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +87,35 @@
 
     }
 
-    fillEmpty
+    make() {
+
+		}
+
+		prev() {
+
+		}
+
+		next() {
+			
+		}
   }
+
+	$(document).ready(function() {
+		// init
+		(function() {
+			// get screen width 
+
+			// if screen width is above 5__ then
+
+			// if screen width is above 767 then
+
+			// if screen width is above 991 then, 
+			const logoCount = $("#<?=$slider_id?> .logoItem").length;
+			const numNeedFilling = logoCount % 6 
+		})();
+
+		(function() {
+
+		})();
+	});
 </script>
