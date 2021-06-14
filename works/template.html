@@ -1,8 +1,25 @@
 <style>
-	.logoCarouselOahu .logoCarouselOahuWrap {
-		display: grid;
-		grid-template-columns: repeat(10, 1fr);
-	}
+.logoCarouselOahu .logoCarouselOahuWrap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1px;
+}
+
+.logoCarouselOahu .logoItem {
+  padding-top: 100%;
+  position: relative;
+  background-color: transparent;
+  box-shadow:0 0 0 1px var(--color-primary-lightened);
+}
+
+.logoCarouselOahu .logoItem img {
+  position: absolute;
+  max-width: 110px;
+  max-height: 110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 <div class="logoCarouselOahu">
   <div class="container">
@@ -30,7 +47,9 @@
     </button>
     <div class="logoCarouselOahuWrap">
       <items>
-        <img src="{preview_url}" alt="Logo"/>
+				<div class="logoItem">
+					<img src="{preview_url}" alt="Logo"/>
+				</div>
       </items>	
     </div>
     <button aria-label="next">
@@ -66,5 +85,7 @@
     constructor() {
 
     }
+
+    fillEmpty
   }
 </script>
