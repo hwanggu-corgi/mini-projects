@@ -1,124 +1,129 @@
-<style>
-.logoCarouselOahu .logoCarouselOahuWrap {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1px;
-}
-
-.logoCarouselOahu .logoItem {
-  padding-top: 100%;
-  position: relative;
-  background-color: transparent;
-  box-shadow:0 0 0 1px var(--color-primary-lightened);
-}
-
-.logoCarouselOahu .logoItem img {
-  position: absolute;
-  max-width: 110px;
-  max-height: 110px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-</style>
 <?php $slider_id = newSN('slider-', 14); ?>
-<div id="<?=$slider_id?>" class="logoCarouselOahu">
-  <div class="container">
-    <button aria-label="prev">
-			<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink">
-				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-					<g id="Group_3083"
-						transform="translate(14.742000, 14.742000) rotate(180.000000) translate(-14.742000, -14.742000) translate(0.242000, 0.242000)">
-						<g id="arrow-pointing-to-right" transform="translate(1.121000, 8.288000)" fill="#48CAE4" fill-rule="nonzero">
-							<path
-								d="M16.722,5.276 L11.677,0.231 C11.4778244,0.0318244336 11.1875197,-0.0459624797 10.9154408,0.0269408374 C10.643362,0.0998441545 10.4308442,0.312361954 10.3579408,0.584440837 C10.2850375,0.856519721 10.3628244,1.14682443 10.562,1.346 L14.262,5.046 L0.788,5.046 C0.352523475,5.046 -0.0005,5.39902347 -0.0005,5.8345 C-0.0005,6.26997653 0.352523475,6.623 0.788,6.623 L14.261,6.623 L10.561,10.323 C10.2531013,10.6308988 10.2531013,11.1301012 10.561,11.438 C10.8688988,11.7458987 11.3681012,11.7458987 11.676,11.438 L16.721,6.393 C16.8697079,6.24524998 16.9534152,6.04433623 16.9536032,5.83470779 C16.9537906,5.62507935 16.8704432,5.42401604 16.722,5.276 L16.722,5.276 Z"
-								id="Path_14696"></path>
-						</g>
-						<g id="Ellipse_6" stroke-linecap="round" stroke-dasharray="67.99999999999999"
-							transform="translate(14.120882, 14.120526) rotate(80.000000) translate(-14.120882, -14.120526) translate(2.120882, 2.120526)">
-							<circle id="Oval" cx="12" cy="12" r="12"></circle>
-							<path
-								d="M12,23.5 C18.3512746,23.5 23.5,18.3512746 23.5,12 C23.5,5.64872538 18.3512746,0.5 12,0.5 C5.64872538,0.5 0.5,5.64872538 0.5,12 C0.5,18.3512746 5.64872538,23.5 12,23.5 Z"
-								id="Oval" stroke="#48CAE4"></path>
-						</g>
-					</g>
-				</g>
-			</svg>
-    </button>
-    <div class="logoCarouselOahuWrap">
-
-    </div>
-    <button aria-label="next">
-			<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink">
-				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-					<g id="Group"
-						transform="translate(16.000000, 15.000000) scale(-1, 1) translate(-16.000000, -15.000000) translate(1.000000, 0.000000)">
-						<g id="Group_3083"
-							transform="translate(14.742000, 14.742000) rotate(180.000000) translate(-14.742000, -14.742000) translate(0.242000, 0.242000)">
-							<g id="arrow-pointing-to-right" transform="translate(1.121000, 8.288000)" fill="#48CAE4" fill-rule="nonzero">
-								<path
-									d="M16.722,5.276 L11.677,0.231 C11.4778244,0.0318244336 11.1875197,-0.0459624797 10.9154408,0.0269408374 C10.643362,0.0998441545 10.4308442,0.312361954 10.3579408,0.584440837 C10.2850375,0.856519721 10.3628244,1.14682443 10.562,1.346 L14.262,5.046 L0.788,5.046 C0.352523475,5.046 -0.0005,5.39902347 -0.0005,5.8345 C-0.0005,6.26997653 0.352523475,6.623 0.788,6.623 L14.261,6.623 L10.561,10.323 C10.2531013,10.6308988 10.2531013,11.1301012 10.561,11.438 C10.8688988,11.7458987 11.3681012,11.7458987 11.676,11.438 L16.721,6.393 C16.8697079,6.24524998 16.9534152,6.04433623 16.9536032,5.83470779 C16.9537906,5.62507935 16.8704432,5.42401604 16.722,5.276 L16.722,5.276 Z"
-									id="Path_14696"></path>
-							</g>
-							<g id="Ellipse_6" stroke-linecap="round" stroke-dasharray="67.99999999999999"
-								transform="translate(14.120882, 14.120526) rotate(80.000000) translate(-14.120882, -14.120526) translate(2.120882, 2.120526)">
-								<circle id="Oval" cx="12" cy="12" r="12"></circle>
-								<path
-									d="M12,23.5 C18.3512746,23.5 23.5,18.3512746 23.5,12 C23.5,5.64872538 18.3512746,0.5 12,0.5 C5.64872538,0.5 0.5,5.64872538 0.5,12 C0.5,18.3512746 5.64872538,23.5 12,23.5 Z"
-									id="Oval" stroke="#48CAE4"></path>
-							</g>
-						</g>
-					</g>
-				</g>
-			</svg>
-    </button>
-  </div>
-	<div class="logoCarouselOahuTemp"> 
-		<items>
-			<div class="logoItem">
-				<img src="{preview_url}" alt="Logo"/>
+<div id="<?= $slider_id ?>" class="sliderOahu content-style">
+	<div class="sliderWrap">
+		<items thumb="768x0" preview="1920x0">
+			<div class="sliderItem">
+				<div class="sliderImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+				<div class="container">
+					<div class="sliderInner">
+						<h2 class="sliderTitle">{title}</h2>
+						<div class="sliderDescription">{description}</div>
+						<div class="slickDots">
+							<button class="slick-prev-custom" aria-label="Previous">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="currentColor"></path></svg>
+							</button>
+							<div class="slickDotsWrap">
+							</div>
+							<button class="slick-next-custom" aria-label="Previous">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="currentColor"></path></g></svg>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
-		</items>	
+		</items>
+	</div>
+	<div class="decorations">
+		<div class="container">
+			<div class="slickDots">
+				<button class="slick-prev-custom" aria-label="Previous">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M15,30,0,15,15,0" transform="translate(9 1)" fill="none" stroke-width="1" stroke="currentColor"></path></svg>
+				</button>
+				<div class="slickDotsWrap">
+				</div>
+				<button class="slick-next-custom" aria-label="Previous">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(-1351 -2914)"><path d="M2120.74,2581l-15,15,15,15" transform="translate(3479.74 5526) rotate(180)" fill="none" stroke-width="1" stroke="currentColor"></path></g></svg>
+				</button>
+			</div>
+			<div class="scrollDownAnimation">
+				<span>Scroll to See</span>
+			</div>
+		</div>
 	</div>
 </div>
 
+
+
 <script type="text/javascript">
-  class Slider {
-    constructor() {
+	$(document).ready(function () {
+		(function () {
+			const sliderItems = document.querySelectorAll(".sliderOahu .sliderItem");
 
-    }
+			if (sliderItems.length == 0) {
+				return;
+			}
 
-    make() {
+			for (let sliderItem of sliderItems) {
+				const candidates = sliderItem.querySelectorAll(".sliderDescription a");
+				const sliderInner = sliderItem.querySelector(".sliderInner");
+				
+				for (let candidate of candidates) {
+					const div = document.createElement("div");
+					div.classList.add("sliderBtn");
+					const p = document.createElement("p");
+					const a = document.createElement("a");
+					a.classList.add("medium")
+					a.href = candidate.href;
+					a.classList = candidate.classList;
+					a.innerHTML = candidate.innerHTML;
 
-		}
+					div.appendChild(p);
+					p.appendChild(a);
+					sliderInner.appendChild(div);
+				}
 
-		prev() {
-
-		}
-
-		next() {
-			
-		}
-  }
-
-	$(document).ready(function() {
-		// init
-		(function() {
-			// get screen width 
-
-			// if screen width is above 5__ then
-
-			// if screen width is above 767 then
-
-			// if screen width is above 991 then, 
-			const logoCount = $("#<?=$slider_id?> .logoItem").length;
-			const numNeedFilling = logoCount % 6 
+				for (let candidate of candidates) {
+					candidate.remove();
+				}
+			}
 		})();
 
-		(function() {
+		(function () {
+			let sliderNumber = 1;
+			let totalSlides = $("#<?= $slider_id ?> .sliderItem").length;
 
+			$("#<?= $slider_id ?> .sliderWrap").slick({
+				prevArrow: $("#<?= $slider_id ?> .slick-prev-custom"),
+				nextArrow:$("#<?= $slider_id ?> .slick-next-custom"),
+				speed: 1000,
+				autoplaySpeed: 6000,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				dots: true,
+				arrows: true,
+				autoplay: false,
+				infinite: true,
+				accessibility: false,
+				easing: 'swing',
+				appendDots: $("#<?= $slider_id ?> .slickDotsWrap")
+			});
+			
+			// Init 
+			let targetDot = $("#<?= $slider_id ?> .slickDots").each(function() {
+				$(this).find("li").removeClass("slick-active-custom");
+				let targetDot = $(this).find("li").get(0)
+				$(targetDot).addClass("slick-active-custom");
+			});
+
+			$("#<?= $slider_id ?> .sliderWrap").on("beforeChange", function (event, slick, currentSlide, nextSlide){
+				// get index of current slide
+				let currentSlideIndex = currentSlide;
+				// get index of next slide
+				let newSlideIndex = nextSlide;
+				
+				// remove slick-active in all dots
+				$("#<?= $slider_id ?> .slickDots li").each(function() {
+					$(this).removeClass("slick-active");
+				})
+
+				// update slickDots (add slick-active to appropriate dot)
+				let targetDot = $("#<?= $slider_id ?> .slickDots").each(function() {
+					$(this).find("li").removeClass("slick-active-custom");
+					let targetDot = $(this).find("li").get(newSlideIndex)
+					$(targetDot).addClass("slick-active-custom");
+				});
+			});
 		})();
 	});
 </script>
