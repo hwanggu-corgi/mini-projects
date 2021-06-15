@@ -1,5 +1,67 @@
+<style>
+.videoPlayerOahu {
+	margin-bottom: 30px;
+}
+.videoPlayerOahu .videoPlayerWrap {
+	overflow: hidden;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: 0 10px 30px rgb(0, 0, 0, 0.2);
+}
+.videoPlayerOahu .videoCover {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.videoPlayerOahu .videoCover:hover .coverPlayBtn {
+	color: white;
+	text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	-webkit-transform: scale(0.95);
+					transform: scale(0.95);
+}
+.videoPlayerOahu .coverInner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.videoPlayerOahu .coverPlayBtn {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 60px;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+}
+.videoPlayerOahu video {
+	opacity: 0;
+	display: block;
+	width: 100%;
+}
+.videoPlayerOahu .videoBar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+}
+.videoPlayerOahu .videoBar .barOuter {
+	padding: 4px;
+	border-radius: 50px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.videoPlayerOahu .videoBar .barInner {
+	height: 6px;
+	border-radius: 50px;
+	background-color: var(--color-primary);
+	transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+}
+</style>
 <image resize="1920x0" resizable="no" mode="bestfit">
-	<div class="videoPlayer videoPlayerOne">
+	<div class="videoPlayerOahu">
 		<div class="videoPlayerWrap _shadow-7">
 			<video controls>
 				<source src="{url}" type="video/mp4">
