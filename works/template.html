@@ -1,78 +1,31 @@
-<style>
-.videoPlayerOahu {
-	margin-bottom: 30px;
-}
-.videoPlayerOahu .videoPlayerWrap {
-	overflow: hidden;
-	position: relative;
-	border-radius: 3px;
-	box-shadow: 0 10px 30px rgb(0, 0, 0, 0.2);
-}
-.videoPlayerOahu .videoCover {
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.videoPlayerOahu .videoCover:hover .coverPlayBtn {
-	color: white;
-	text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	-webkit-transform: scale(0.95);
-					transform: scale(0.95);
-}
-.videoPlayerOahu .coverInner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-}
-.videoPlayerOahu .coverPlayBtn {
-	color: rgba(255, 255, 255, 0.8);
-	font-size: 60px;
-	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-	transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
-}
-.videoPlayerOahu video {
-	opacity: 0;
-	display: block;
-	width: 100%;
-}
-.videoPlayerOahu .videoBar {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: auto;
-	padding: 15px;
-}
-.videoPlayerOahu .videoBar .barOuter {
-	padding: 4px;
-	border-radius: 50px;
-	background-color: rgba(255, 255, 255, 0.6);
-}
-.videoPlayerOahu .videoBar .barInner {
-	height: 6px;
-	border-radius: 50px;
-	background-color: var(--color-primary);
-	transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
-}
-</style>
-
-<image resize="1920x0" resizable="no" mode="bestfit">
-	<div class="videoPlayerOahu">
-		<div class="videoPlayerWrap _shadow-7">
-			<video controls>
-				<source src="{url}" type="video/mp4">
-				Your browser does not support HTML video.
-			</video>
-			<div class="videoCover _bg-center" role="img" aria-label="Title" style="background-image: url('{src_url}')">
-				<div class="coverInner">
-					<i class="coverPlayBtn fas fa-play-circle"></i>
-				</div>
-			</div>
-		</div>
+<div class="imageBlockOahu cat content-style">
+	<div class="imageBlockHeader">
+		<h3 class="imageBlockTitle">
+			<mwWidget rel="imageBlockTitle" info="Title Area" widget="Embed"></mwWidget>
+		</h3>
+		<a class="imageBlockBtn" href="{url}" title="Learn More">
+			<span>Learn More</span>
+			<svg width="26px" height="25px" viewBox="0 0 26 25" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink">
+				<title>Arrow</title>
+				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<g id="Group" transform="translate(-1.000000, -2.000000)">
+						<g id="arrow-pointing-to-right" transform="translate(1.121000, 7.371000)" fill="#FFFFFF"
+							fill-rule="nonzero">
+							<path
+								d="M16.722,6.192 L11.677,1.147 C11.4778244,0.947824434 11.1875197,0.87003752 10.9154408,0.942940837 C10.643362,1.01584415 10.4308442,1.22836195 10.3579408,1.50044084 C10.2850375,1.77251972 10.3628244,2.06282443 10.562,2.262 L14.262,5.962 L0.788,5.962 C0.352523475,5.962 -0.0005,6.31502347 -0.0005,6.7505 C-0.0005,7.18597653 0.352523475,7.539 0.788,7.539 L14.261,7.539 L10.561,11.239 C10.2531013,11.5468988 10.2531013,12.0461012 10.561,12.354 C10.8688988,12.6618987 11.3681012,12.6618987 11.676,12.354 L16.721,7.309 C16.8697079,7.16124998 16.9534152,6.96033623 16.9536032,6.75070779 C16.9537906,6.54107935 16.8704432,6.34001604 16.722,6.192 L16.722,6.192 Z"
+								id="Path_14696"></path>
+						</g>
+						<g id="Ellipse_7" stroke-linecap="round" stroke-dasharray="67.99999999999999"
+							transform="translate(14.120882, 14.120526) rotate(80.000000) translate(-14.120882, -14.120526) translate(2.120882, 2.120526)">
+							<circle id="Oval" cx="12" cy="12" r="12"></circle>
+							<path
+								d="M12,23.5 C18.3512746,23.5 23.5,18.3512746 23.5,12 C23.5,5.64872538 18.3512746,0.5 12,0.5 C5.64872538,0.5 0.5,5.64872538 0.5,12 C0.5,18.3512746 5.64872538,23.5 12,23.5 Z"
+								id="Oval" stroke="#FFFFFF"></path>
+						</g>
+					</g>
+				</g>
+			</svg>
+		</a>
 	</div>
-</image>
+</div>
