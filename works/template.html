@@ -1,4 +1,102 @@
-<div class="imageBlockOahu cat content-style">
+<style>
+	.imageBlockOahu {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 90px 30px 30px 30px;
+}
+
+@media screen and (min-width: 991px) {
+  .imageBlockOahu {
+    height: 700px;
+  }
+}
+
+.imageBlockOahu.cat {
+  background-image: url("/images/kitty-1.jpg");
+}
+
+@media screen and (min-width: 991px) {
+  .imageBlockOahu.cat {
+    background-image: url("/images/kitty-2.jpg");
+  }
+}
+
+.imageBlockOahu.dog {
+  background-image: url("/images/dog-1.jpg");
+}
+
+@media screen and (min-width: 991px) {
+  .imageBlockOahu.dog {
+    background-image: url("/images/dog-2.jpg");
+  }
+}
+
+.imageBlockOahu .imageBlockTitle {
+  color: var(--color-white);
+}
+
+.imageBlockOahu .imageBlockBtn span {
+  color: var(--color-white);
+  display: inline-block;
+  margin: 0 10px 0 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.imageBlockOahu .imageBlockBtn:hover span {
+  color: var(--color-primary);
+}
+
+.imageBlockOahu .imageBlockBtn span::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-white);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.imageBlockOahu .imageBlockBtn:hover span::after {
+  background-color: var(--color-primary);
+}
+
+
+.imageBlockOahu .imageBlockBtn svg,
+.imageBlockOahu .imageBlockBtn g {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.imageBlockOahu .imageBlockBtn path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.imageBlockOahu .imageBlockBtn:hover g#arrow-pointing-to-right path {
+  fill: var(--color-primary);
+}
+
+.imageBlockOahu .imageBlockBtn:hover g#Ellipse_7 path {
+  stroke: var(--color-primary);
+}
+</style>
+<div class="` cat content-style">
 	<div class="imageBlockHeader">
 		<h3 class="imageBlockTitle">
 			<mwWidget rel="imageBlockTitle" info="Title Area" widget="Embed"></mwWidget>
