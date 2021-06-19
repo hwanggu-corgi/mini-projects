@@ -1,10 +1,49 @@
-<div class="postListNews">
-  <items>
-    <div class="postItem">
-      <h3><a href="{canonical_url}">{title}</a></h3>
-    </div>
-  </items>
-</div>
-<loader>
-  <div align="center"><img src="/images/preloader.gif" /></div>
-</loader>
+<style>
+	.postListNews {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 40px; 
+			row-gap: 40px;
+	}
+	
+	@media screen and (max-width: 690px) {
+			.postListNews {
+					grid-template-columns: repeat(2, 1fr);
+			}         
+	}
+	
+	@media screen and (max-width: 690px) {
+			.postListNews {
+					grid-template-columns: repeat(1, 1fr)
+			}         
+	}
+	
+	.postListNews .postItem {
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: white;
+			flex-direction: column;
+			min-height: 70px;
+	}
+	
+	.postListNews h3 {
+			font-size: 18px;
+	}
+	
+	.postListNews p {
+			font-size: 16px;
+			margin: 0; 
+	}
+	</style>
+	<div class="postListNews">
+		<items>
+			<div class="postItem">
+				<h3><a href="{canonical_url}">{title}</a></h3>
+			</div>
+		</items>
+	</div>
+	<loader>
+		<div align="center"><img src="/images/preloader.gif" /></div>
+	</loader>
