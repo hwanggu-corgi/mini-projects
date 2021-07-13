@@ -1,9 +1,53 @@
-<div class="sliderLandingPageCobbt">
-	<div class="sliderLandingPageCobbtWrap">
-		<items preview="1920x0">
-			<div class="">
-				
+<?php $slider_id = newSN('slider-', 14); ?>
+
+<div id="<?= $slider_id ?>" class="slider sliderOne content-style dots-style-2">
+	<div class="sliderWrap">
+		<items thumb="768x0" preview="1920x0">
+			<div class="sliderItem">
+				<div class="sliderImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+				<div class="sliderOverlay"></div>
+				<div class="container">
+					<div class="sliderInner">
+						<h2 class="sliderTitle">{title}</h2>
+						<div class="sliderDescription">{description}</div>
+						<div class="sliderBtn btn btnPrimary">
+							<p>
+								<a class="medium" href="{url}" target="{target}">Learn More</a>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</items>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		(function () {
+			$("#<?= $slider_id ?> .sliderWrap").slick({
+				prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">' + SVG["arrow-left-1"] + '</button>',
+				nextArrow: '<button class="slick-next" aria-label="Next" type="button">' + SVG["arrow-right-1"] + '</button>',
+				speed: 1000,
+				autoplaySpeed: 6000,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				dots: true,
+				arrows: true,
+				autoplay: true,
+				infinite: true,
+				accessibility: false,
+				easing: 'swing',
+				responsive: [
+					{
+						breakpoint: 991,
+						settings: {
+							dots: false
+						}
+					}
+				]
+			});
+		})();
+	});
+</script>
