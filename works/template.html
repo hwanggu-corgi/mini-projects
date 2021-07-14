@@ -1,6 +1,9 @@
+<style>
+
+</style>
 <?php $slider_id = newSN('slider-', 14); ?>
 
-<div id="<?= $slider_id ?>" class="slider sliderOne content-style dots-style-2">
+<div id="<?= $slider_id ?>" class="sliderHilltop content-style">
 	<div class="sliderWrap">
 		<items thumb="768x0" preview="1920x0">
 			<div class="sliderItem">
@@ -33,20 +36,12 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				fade: true,
-				dots: true,
+				dots: false,
 				arrows: true,
 				autoplay: true,
 				infinite: true,
 				accessibility: false,
-				easing: 'swing',
-				responsive: [
-					{
-						breakpoint: 991,
-						settings: {
-							dots: false
-						}
-					}
-				]
+				easing: 'swing'
 			});
 		})();
 	});
